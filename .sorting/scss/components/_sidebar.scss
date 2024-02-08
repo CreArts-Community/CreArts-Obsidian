@@ -1,0 +1,312 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Sidebar -> Left                                                                         ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Width
+.mod-left-split {
+  min-width: 272px !important;
+  max-width: 460px !important;
+}
+
+// Spacing
+.mod-left-split .workspace-tabs:nth-child(3) .workspace-leaf-content {
+  margin-top: var(--CREARTS-layout-margin);
+}
+
+.mod-left-split .workspace-tabs:last-child .workspace-leaf-content {
+  margin-bottom: calc(var(--CREARTS-layout-margin) + var(--CREARTS-height-statusbar));
+}
+
+.mod-left-split .workspace-tabs:last-child .workspace-leaf-content .nav-files-container,
+.mod-left-split .workspace-tabs:last-child .workspace-leaf-content .view-content,
+.mod-left-split .workspace-tabs:last-child .workspace-leaf-content .tag-container,
+.mod-left-split .workspace-tabs:last-child .workspace-leaf-content .search-result-container {
+  margin-bottom: 0px;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Sidebar -> Left (Top)                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Nav Header
+.mod-left-split .mod-top .nav-header {
+  height: var(--CREARTS-height-header);
+  max-height: var(--CREARTS-height-header);
+  margin-right: var(--CREARTS-layout-margin-half);
+  margin-bottom: var(--CREARTS-layout-margin-half);
+  margin-left: var(--CREARTS-layout-margin-half);
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+}
+
+// Content
+.mod-left-split .mod-top .nav-files-container,
+.mod-left-split .mod-top .view-content,
+.mod-left-split .mod-top .tag-container,
+.mod-left-split .mod-top .search-result-container {
+  width: auto;
+  margin-top: var(--CREARTS-layout-margin-half);
+  margin-right: var(--CREARTS-layout-margin-half);
+  margin-bottom: var(--CREARTS-layout-margin-half);
+  margin-left: var(--CREARTS-layout-margin-half);
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+}
+
+.mod-left-split .workspace-tabs:not(.mod-top, :last-child) .nav-files-container,
+.mod-left-split .workspace-tabs:not(.mod-top, :last-child) .view-content,
+.mod-left-split .workspace-tabs:not(.mod-top, :last-child) .tag-container,
+.mod-left-split .workspace-tabs:not(.mod-top, :last-child) .search-result-container {
+  margin-bottom: var(--CREARTS-layout-margin-half);
+}
+
+// Resize Handle
+.mod-left-split .workspace-leaf-resize-handle {
+  margin-left: var(--CREARTS-layout-margin-half);
+}
+
+// Buttons
+.mod-left-split .nav-buttons-container {
+  justify-content: flex-start;
+  height: 100%;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Sidebar -> Left (Bottom)                                                                ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Header
+.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+  margin-top: var(--CREARTS-layout-margin-half);
+  margin-right: var(--CREARTS-layout-margin-half);
+  margin-left: var(--CREARTS-layout-margin-half);
+  background: var(--CREARTS-background-secondary);
+  border: none;
+  border-radius: var(--CREARTS-radius-primary);
+}
+
+// Content
+.mod-left-split .workspace-tabs:not(.mod-top) .nav-files-container,
+.mod-left-split .workspace-tabs:not(.mod-top) .view-content,
+.mod-left-split .workspace-tabs:not(.mod-top) .tag-container,
+.mod-left-split .workspace-tabs:not(.mod-top) .search-result-container {
+  width: auto;
+  margin-top: var(--CREARTS-layout-margin-half);
+  margin-right: var(--CREARTS-layout-margin-half);
+  margin-left: var(--CREARTS-layout-margin-half);
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+}
+
+// Header
+.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+  min-height: var(--CREARTS-height-header);
+  margin-bottom: var(--CREARTS-layout-margin-half);
+}
+
+// Nav Header
+.mod-left-split .workspace-tabs:not(.mod-top) .nav-header {
+  min-height: var(--CREARTS-height-header);
+  margin-top: var(--CREARTS-layout-margin-half);
+  margin-right: var(--CREARTS-layout-margin-half);
+  margin-bottom: var(--CREARTS-layout-margin-half);
+  margin-left: var(--CREARTS-layout-margin-half);
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Sidebar -> Right                                                                        ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Width
+.mod-right-split {
+  min-width: 272px !important;
+  max-width: 460px !important;
+}
+
+// Spacing
+.mod-right-split .workspace-tabs:nth-child(3) .workspace-leaf-content {
+  margin-top: var(--CREARTS-layout-margin);
+}
+
+.mod-right-split .workspace-tabs:last-child .workspace-leaf-content {
+  margin-bottom: calc(var(--CREARTS-layout-margin) + var(--CREARTS-height-statusbar));
+}
+
+.mod-right-split .workspace-tabs:last-child .workspace-leaf-content .nav-files-container,
+.mod-right-split .workspace-tabs:last-child .workspace-leaf-content .view-content,
+.mod-right-split .workspace-tabs:last-child .workspace-leaf-content .tag-container,
+.mod-right-split .workspace-tabs:last-child .workspace-leaf-content .search-result-container {
+  margin-bottom: 0px;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Sidebar -> Right (Top)                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Nav Header
+.mod-right-split .mod-top .nav-header {
+  min-height: var(--CREARTS-height-header);
+  margin-right: var(--CREARTS-layout-margin-half);
+  margin-bottom: var(--CREARTS-layout-margin-half);
+  margin-left: var(--CREARTS-layout-margin-half);
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+}
+
+// Content
+.mod-right-split .mod-top .nav-files-container,
+.mod-right-split .mod-top .view-content,
+.mod-right-split .mod-top .tag-container,
+.mod-right-split .mod-top .search-result-container {
+  width: auto;
+  margin-top: var(--CREARTS-layout-margin-half);
+  margin-right: var(--CREARTS-layout-margin-half);
+  margin-bottom: var(--CREARTS-layout-margin-half);
+  margin-left: var(--CREARTS-layout-margin-half);
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+}
+
+// Resize Handle
+.mod-right-split .workspace-leaf-resize-handle {
+  margin-right: var(--CREARTS-layout-margin-half);
+}
+
+// Buttons
+.mod-right-split .nav-buttons-container {
+  justify-content: flex-start;
+  height: 100%;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Sidebar -> Right (Bottom)                                                               ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Header
+.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+  margin-top: var(--CREARTS-layout-margin-half);
+  margin-right: var(--CREARTS-layout-margin-half);
+  margin-left: var(--CREARTS-layout-margin-half);
+  background: var(--CREARTS-background-secondary);
+  border: none;
+  border-radius: var(--CREARTS-radius-primary);
+}
+
+// Content
+.mod-right-split .workspace-tabs:not(.mod-top) .nav-files-container,
+.mod-right-split .workspace-tabs:not(.mod-top) .view-content,
+.mod-right-split .workspace-tabs:not(.mod-top) .tag-container,
+.mod-right-split .workspace-tabs:not(.mod-top) .search-result-container {
+  width: auto;
+  margin-top: var(--CREARTS-layout-margin-half);
+  margin-right: var(--CREARTS-layout-margin-half);
+  margin-left: var(--CREARTS-layout-margin-half);
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+}
+
+.mod-right-split .workspace-tabs:not(.mod-top, :last-child) .nav-files-container,
+.mod-right-split .workspace-tabs:not(.mod-top, :last-child) .view-content,
+.mod-right-split .workspace-tabs:not(.mod-top, :last-child) .tag-container,
+.mod-right-split .workspace-tabs:not(.mod-top, :last-child) .search-result-container {
+  margin-bottom: var(--CREARTS-layout-margin-half);
+}
+
+// Header
+.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+  min-height: var(--CREARTS-height-header);
+  margin-bottom: var(--CREARTS-layout-margin-half);
+}
+
+// Nav Header
+.mod-right-split .workspace-tabs:not(.mod-top) .nav-header {
+  min-height: var(--CREARTS-height-header);
+  margin-top: var(--CREARTS-layout-margin-half);
+  margin-right: var(--CREARTS-layout-margin-half);
+  margin-bottom: var(--CREARTS-layout-margin-half);
+  margin-left: var(--CREARTS-layout-margin-half);
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Sidebar -> Search                                                                       ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.search-row {
+  gap: var(--CREARTS-layout-margin);
+  margin-top: 0px;
+}
+
+// Background
+.search-input-container input {
+  min-height: var(--CREARTS-height-header);
+  background: var(--CREARTS-background-secondary) !important;
+  border: none;
+  border-radius: var(--CREARTS-radius-primary);
+}
+
+.search-row > .clickable-icon {
+  min-width: var(--CREARTS-height-header);
+  min-height: var(--CREARTS-height-header);
+  background: var(--CREARTS-background-secondary) !important;
+  border-radius: var(--CREARTS-radius-primary);
+}
+
+.search-results-info {
+  min-height: var(--CREARTS-height-header);
+  margin-top: var(--CREARTS-layout-margin-half);
+  margin-right: calc(var(--CREARTS-layout-margin) / 2);
+  margin-left: calc(var(--CREARTS-layout-margin) / 2);
+  padding: var(--CREARTS-spacing-primary);
+  background: var(--CREARTS-background-secondary) !important;
+  border: none;
+  border-radius: var(--CREARTS-radius-primary);
+}
+
+.search-params {
+  min-height: var(--CREARTS-height-header);
+  margin-top: var(--CREARTS-layout-margin-half);
+  margin-right: calc(var(--CREARTS-layout-margin) / 2);
+  margin-bottom: var(--CREARTS-layout-margin-half);
+  margin-left: calc(var(--CREARTS-layout-margin) / 2);
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+}
+
+.search-params .setting-item {
+  padding: var(--CREARTS-spacing-primary);
+}
+
+.search-info-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: var(--CREARTS-height-header);
+  margin-top: var(--CREARTS-layout-margin-half);
+  margin-right: calc(var(--CREARTS-layout-margin) / 2);
+  margin-bottom: var(--CREARTS-layout-margin-half);
+  margin-left: calc(var(--CREARTS-layout-margin) / 2);
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+}
+
+.search-input-container:before {
+  top: 25%;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Sidebar -> Recent Files                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.workspace-leaf-content[data-type="recent-files"] .view-content {
+  margin-top: 0px;
+}
+
+.workspace-leaf-content[data-type="recent-files"] .nav-file-title {
+  padding-left: var(--CREARTS-spacing-primary);
+}

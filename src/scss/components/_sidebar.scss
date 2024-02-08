@@ -1,0 +1,336 @@
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Sidebar -> Left                                                                         ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Width
+.mod-left-split {
+  min-width: var(--CREARTS-width-left);
+}
+
+// Spacing (Top)
+.mod-left-split .workspace-tabs:nth-child(3) .workspace-leaf-content {
+  margin-top: var(--CREARTS-layout-margin-half);
+}
+
+// Spacing (Bottom)
+.mod-left-split .workspace-tabs:last-child .workspace-leaf-content {
+  margin-bottom: calc(var(--CREARTS-layout-margin) + var(--CREARTS-height-statusbar));
+}
+
+.mod-left-split .workspace-tabs:last-child .workspace-leaf-content .nav-files-container,
+.mod-left-split .workspace-tabs:last-child .workspace-leaf-content .view-content,
+.mod-left-split .workspace-tabs:last-child .workspace-leaf-content .tag-container,
+.mod-left-split .workspace-tabs:last-child .workspace-leaf-content .search-result-container {
+  margin-bottom: 0px;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Sidebar -> Left (Top)                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Nav Header
+.mod-left-split .mod-top .nav-header {
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+  margin: var(--CREARTS-layout-margin-half);
+  max-height: var(--CREARTS-height-header);
+  height: var(--CREARTS-height-header);
+}
+
+// Content
+.mod-left-split .mod-top .nav-files-container,
+.mod-left-split .mod-top .view-content,
+.mod-left-split .mod-top .tag-container,
+.mod-left-split .mod-top .search-result-container {
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+  margin: var(--CREARTS-layout-margin-half);
+  width: auto;
+  padding: var(--CREARTS-spacing-secondary);
+}
+
+
+.mod-left-split .workspace-tabs:not(.mod-top, :last-child) .nav-files-container,
+.mod-left-split .workspace-tabs:not(.mod-top, :last-child) .view-content,
+.mod-left-split .workspace-tabs:not(.mod-top, :last-child) .tag-container,
+.mod-left-split .workspace-tabs:not(.mod-top, :last-child) .search-result-container {
+  margin-bottom: var(--CREARTS-layout-margin-half);
+}
+
+// Resize Handle
+.mod-left-split .workspace-leaf-resize-handle {
+  margin-left: var(--CREARTS-layout-margin-half);
+}
+
+// Buttons
+.mod-left-split .nav-buttons-container {
+  justify-content: flex-start;
+  height: 100%;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Sidebar -> Left (Bottom)                                                                ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Header
+.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+  margin: var(--CREARTS-layout-margin-half) var(--CREARTS-layout-margin-half) 0px var(--CREARTS-layout-margin-half);
+  border: none;
+  border-radius: var(--CREARTS-radius-primary);
+  background: var(--CREARTS-background-secondary);
+  min-height: var(--CREARTS-height-header);
+}
+
+// Content
+.mod-left-split .workspace-tabs:not(.mod-top) .nav-files-container,
+.mod-left-split .workspace-tabs:not(.mod-top) .view-content,
+.mod-left-split .workspace-tabs:not(.mod-top) .tag-container,
+.mod-left-split .workspace-tabs:not(.mod-top) .search-result-container {
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+  margin: var(--CREARTS-layout-margin-half);
+  width: auto;
+}
+
+// Nav Header
+.mod-left-split .workspace-tabs:not(.mod-top) .nav-header {
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+  margin: var(--CREARTS-layout-margin-half) var(--CREARTS-layout-margin-half) 0px var(--CREARTS-layout-margin-half);
+  min-height: var(--CREARTS-height-header);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Sidebar -> Right                                                                        ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Width
+.mod-right-split {
+  min-width: var(--CREARTS-width-right);
+}
+
+// Spacing
+.mod-right-split .workspace-tabs:nth-child(3) .workspace-leaf-content {
+  margin-top: var(--CREARTS-layout-margin-half);
+}
+
+.mod-right-split .workspace-tabs:last-child .workspace-leaf-content {
+  margin-bottom: calc(var(--CREARTS-layout-margin) + var(--CREARTS-height-statusbar));
+}
+
+.mod-right-split .workspace-tabs:last-child .workspace-leaf-content .nav-files-container,
+.mod-right-split .workspace-tabs:last-child .workspace-leaf-content .view-content,
+.mod-right-split .workspace-tabs:last-child .workspace-leaf-content .tag-container,
+.mod-right-split .workspace-tabs:last-child .workspace-leaf-content .search-result-container {
+  margin-bottom: 0px;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Sidebar -> Right (Top)                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Nav Header
+.mod-right-split .mod-top .nav-header {
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+  margin: var(--CREARTS-layout-margin-half) var(--CREARTS-layout-margin-half) 0px var(--CREARTS-layout-margin-half);
+  max-height: var(--CREARTS-height-header);
+  height: var(--CREARTS-height-header);
+}
+
+// Content
+.mod-right-split .mod-top .nav-files-container,
+.mod-right-split .mod-top .view-content,
+.mod-right-split .mod-top .tag-container,
+.mod-right-split .mod-top .search-result-container {
+  width: auto;
+  margin: var(--CREARTS-layout-margin-half) var(--CREARTS-layout-margin) var(--CREARTS-layout-margin-half) var(--CREARTS-layout-margin-half);
+  border-radius: var(--CREARTS-radius-primary);
+  background: var(--CREARTS-background-secondary);
+}
+
+// Resize Handle
+.mod-right-split .workspace-leaf-resize-handle {
+  margin-right: var(--CREARTS-layout-margin-half);
+}
+
+// Buttons
+.mod-right-split .nav-buttons-container {
+  justify-content: flex-start;
+  height: 100%;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Sidebar -> Right (Bottom)                                                               ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Header
+.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+  margin: var(--CREARTS-layout-margin-half) var(--CREARTS-layout-margin) 0px var(--CREARTS-layout-margin-half) !important;
+  border: none;
+}
+
+// Content
+.mod-right-split .workspace-tabs:not(.mod-top) .nav-files-container,
+.mod-right-split .workspace-tabs:not(.mod-top) .view-content,
+.mod-right-split .workspace-tabs:not(.mod-top) .tag-container,
+.mod-right-split .workspace-tabs:not(.mod-top) .search-result-container {
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+  margin: var(--CREARTS-layout-margin-half) var(--CREARTS-layout-margin) 0px var(--CREARTS-layout-margin-half);
+  width: auto;
+}
+
+.mod-right-split .workspace-tabs:not(.mod-top, :last-child) .nav-files-container,
+.mod-right-split .workspace-tabs:not(.mod-top, :last-child) .view-content,
+.mod-right-split .workspace-tabs:not(.mod-top, :last-child) .tag-container,
+.mod-right-split .workspace-tabs:not(.mod-top, :last-child) .search-result-container {
+  margin-bottom: var(--CREARTS-layout-margin-half);
+}
+
+// Header
+.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
+  min-height: var(--CREARTS-height-header);
+  margin-bottom: var(--CREARTS-layout-margin-half);
+}
+
+// Nav Header
+.mod-right-split .workspace-tabs:not(.mod-top) .nav-header {
+  min-height: var(--CREARTS-height-header);
+  margin-top: var(--CREARTS-layout-margin-half);
+  margin-right: var(--CREARTS-layout-margin-half);
+  margin-bottom: var(--CREARTS-layout-margin-half);
+  margin-left: var(--CREARTS-layout-margin-half);
+  border-radius: var(--CREARTS-radius-primary);
+  background: var(--CREARTS-background-secondary);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Sidebar -> Search                                                                       ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.search-row {
+  margin-top: 0px;
+  gap: var(--CREARTS-layout-margin);
+}
+
+// Background
+.search-input-container input {
+  min-height: var(--CREARTS-height-header);
+  border: none;
+  border-radius: var(--CREARTS-radius-primary);
+  background: var(--CREARTS-background-secondary);
+}
+
+.search-row > .clickable-icon {
+  min-width: var(--CREARTS-height-header);
+  min-height: var(--CREARTS-height-header);
+  border-radius: var(--CREARTS-radius-primary);
+  background: var(--CREARTS-background-secondary);
+}
+
+.search-results-info {
+  min-height: var(--CREARTS-height-header);
+  margin-top: var(--CREARTS-layout-margin-half);
+  margin-right: calc(var(--CREARTS-layout-margin) / 2);
+  margin-left: calc(var(--CREARTS-layout-margin) / 2);
+  padding: var(--CREARTS-spacing-primary);
+  border: none;
+  border-radius: var(--CREARTS-radius-primary);
+  background: var(--CREARTS-background-secondary);
+}
+
+.search-params {
+  min-height: var(--CREARTS-height-header);
+  margin-top: var(--CREARTS-layout-margin-half);
+  margin-right: calc(var(--CREARTS-layout-margin) / 2);
+  margin-bottom: var(--CREARTS-layout-margin-half);
+  margin-left: calc(var(--CREARTS-layout-margin) / 2);
+  border-radius: var(--CREARTS-radius-primary);
+  background: var(--CREARTS-background-secondary);
+}
+
+.search-params .setting-item {
+  padding: var(--CREARTS-spacing-primary);
+}
+
+.search-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: var(--CREARTS-height-header);
+  margin-top: var(--CREARTS-layout-margin-half);
+  margin-right: calc(var(--CREARTS-layout-margin) / 2);
+  margin-bottom: var(--CREARTS-layout-margin-half);
+  margin-left: calc(var(--CREARTS-layout-margin) / 2);
+  border-radius: var(--CREARTS-radius-primary);
+  background: var(--CREARTS-background-secondary);
+}
+
+.search-input-container:before {
+  top: 25%;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Sidebar -> Recent Files                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.workspace-leaf-content[data-type="recent-files"] .view-content {
+  margin-top: 0px;
+}
+
+.workspace-leaf-content[data-type="recent-files"] .nav-file-title {
+  padding-left: var(--CREARTS-spacing-primary);
+}

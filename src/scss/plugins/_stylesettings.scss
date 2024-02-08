@@ -1,0 +1,23 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins                  ║ Style Settings                                                                          ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Light
+.theme-dark .setting-item[data-id="crearts"] + .style-settings-container .setting-item[data-id="skins-light"] {
+  display: none !important;
+}
+
+.theme-dark .setting-item[data-id="crearts"] + .style-settings-container .setting-item[data-id="skins-dark"] {
+  border-top: none;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+// Dark
+.theme-light .setting-item[data-id="crearts"] + .style-settings-container .setting-item[data-id="skins-dark"] {
+  display: none !important;
+}
+
+.theme-light .setting-item[data-id="crearts"] + .style-settings-container .setting-item[data-id="skins-light"] {
+  border-top: none;
+  border-bottom: 1px solid var(--background-modifier-border);
+}

@@ -1,0 +1,15 @@
+    - 
+        id: features
+        title: Features
+        description: "Customize UI with Toggles. Enable or disable various options."
+        description.de: "Passe die Benutzeroberfläche an. Aktiviere oder deaktiviere verschiedene Optionen."
+        description.ja: "トグルでUIをカスタマイズ。様々なオプションを有効/無効にできます。"
+        type: heading
+        level: 1
+        collapsed: true
+    - 
+        id: neumorphism
+        title: Neumorphism
+        description: Toggle the Neumorphism effects off.
+        type: class-toggle
+        default: true

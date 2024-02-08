@@ -1,0 +1,73 @@
+{
+  "name": "crearts-obsidian-theme",
+  "version": "0.0.1",
+  "author": "corellan",
+  "description": "CreArts is a customizable Obsidian theme that changes the appearance of Obsidian.",
+  "license": "MIT <license>",
+  "private": true,
+  "devDependencies": {
+    "fs-extra": "^11.1.1",
+    "merge-files": "^0.1.2",
+    "pnpm": "^8.7.6",
+    "prettier": "^3.0.3",
+    "prettier-plugin-css-order": "^2.0.0",
+    "sass": "^1.68.0",
+    "stylelint": "^15.10.3",
+    "stylelint-config-recommended-scss": "^13.0.0",
+    "stylelint-scss": "^5.2.1"
+  },
+  "scripts": {
+    "watch": "sass --no-source-map --watch src/scss/index.scss theme.css --style compressed",
+    "lint": "stylelint \"**/src/scss/**/*.scss\"",
+    "format": "prettier --write \"**/src/scss/**/*.{scss,css}\"",
+    "convert": "node scripts/convert.js",
+    "skins": "node scripts/skins.js",
+    "merge": "node scripts/merge.js",
+    "version": "node scripts/version.js",
+    "compile": "sass --no-source-map src/scss/index.scss src/css/main.css",
+    "compile:min": "sass --no-source-map src/scss/index.scss src/css/main.min.css --style compressed",
+    "build": "pnpm run version && pnpm run compile:min && pnpm run skins && pnpm run merge",
+    "release": "pnpm run version && pnpm run compile && pnpm run compile:min && pnpm run skins && pnpm run merge"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-css-order"
+    ],
+    "cssDeclarationSorterOrder": "smacss",
+    "printWidth": 124,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": false,
+    "quoteProps": "as-needed",
+    "jsxSingleQuote": false,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "bracketSameLine": true,
+    "arrowParens": "always",
+    "proseWrap": "always"
+  },
+  "stylelint": {
+    "plugins": [
+      "stylelint-scss"
+    ],
+    "extends": [
+      "stylelint-config-recommended-scss"
+    ],
+    "rules": {
+      "indentation": null,
+      "string-quotes": null,
+      "at-rule-empty-line-before": null,
+      "block-closing-brace-empty-line-before": null,
+      "declaration-block-semicolon-newline-after": null,
+      "declaration-empty-line-before": null,
+      "selector-list-comma-newline-after": null,
+      "value-list-comma-newline-after": null,
+      "no-missing-end-of-source-newline": null,
+      "no-empty-source": null,
+      "no-eol-whitespace": null,
+      "max-empty-lines": null,
+      "max-line-length": null
+    }
+  }
+}

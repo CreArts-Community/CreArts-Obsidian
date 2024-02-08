@@ -1,0 +1,68 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Statusbar                                                                               ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.status-bar {
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: var(--CREARTS-height-statusbar);
+  gap: calc(var(--CREARTS-spacing-primary) / 2);
+  border-top: var(--tab-outline-width) solid var(--tab-outline-color);
+  border-left: none;
+  border-radius: 0px;
+  background: var(--CREARTS-background-tertiary);
+}
+
+// Items
+.status-bar .status-bar-item {
+  z-index: 1;
+  height: 100%;
+  border-radius: var(--CREARTS-radius-tertiary);
+  background: var(--CREARTS-background-primary);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Statusbar -> Order                                                                      ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Editor Status
+.status-bar-item .plugin-editor-status {
+  order: 1;
+}
+
+// Reading Time
+.status-bar .plugin-obsidian-reading-time {
+  order: 2;
+}
+
+// Better Word Count
+.status-bar .plugin-better-word-count {
+  order: 3;
+}
+
+// Better Word Count
+.status-bar .plugin-properties {
+  order: 4;
+}
+
+// Backlinks
+.status-bar .plugin-backlink {
+  order: 5;
+}
+
+// My Snippets
+.status-bar .status-bar-item.plugin-mysnippets-plugin {
+  order: 8;
+}
+
+// Language Tool
+.status-bar .plugin-obsidian-languagetool-plugin {
+  order: 19;
+}
+
+.status-bar .plugin-obsidian-vault-statistics-plugin {
+  display: none;
+  order: 20;
+}

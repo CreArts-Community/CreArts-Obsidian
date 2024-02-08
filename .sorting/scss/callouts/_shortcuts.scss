@@ -1,0 +1,90 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts                 ║ Shortcuts                                                                               ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout="shortcuts"] {
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background: transparent !important;
+  user-select: none;
+}
+
+.callout[data-callout="shortcuts"] p {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 8px;
+  margin: 0px;
+}
+
+// Background
+.callout[data-callout="shortcuts"] kbd::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(180deg, var(--CREARTS-background-primary), var(--CREARTS-background-secondary));
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+// Highlight
+.callout[data-callout="shortcuts"] kbd::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 6px;
+  right: 6px;
+  background: linear-gradient(90deg, var(--CREARTS-background-secondary), var(--CREARTS-interface-secondary));
+  border-radius: 6px;
+  box-shadow: -10px -10px 10px var(--CREARTS-interface-secondary);
+  z-index: -1;
+}
+
+// Text
+.callout[data-callout="shortcuts"] kbd {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 0px 14px 0px 10px;
+  height: 40px;
+  min-width: 40px;
+  border-width: 2px !important;
+  border-color: var(--CREARTS-background-tertiary) !important;
+  border-style: var(--CREARTS-border-style) !important;
+  color: var(--CREARTS-text-primary);
+  font-weight: 500;
+  z-index: 3;
+}
+
+// Hover
+.callout[data-callout="shortcuts"] kbd:hover {
+  transform: scale(0.94);
+  transition: transform 100ms ease-in;
+}
+
+.callout[data-callout="shortcuts"] kbd:hover::after {
+  background: linear-gradient(90deg, var(--CREARTS-background-secondary), var(--CREARTS-interface-tertiary));
+  box-shadow: -10px -10px 10px var(--CREARTS-interface-tertiary);
+}
+
+.callout[data-callout="shortcuts"] kbd:hover::before {
+  background: linear-gradient(180deg, var(--CREARTS-background-secondary), var(--CREARTS-background-secondary));
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts                 ║ Shortcuts -> Remove                                                                     ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Remove Title
+.callout[data-callout="shortcuts"] .callout-title {
+  display: none;
+}

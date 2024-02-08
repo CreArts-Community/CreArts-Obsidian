@@ -1,0 +1,39 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts                 ║ Commands                                                                                ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+[data-callout="commands"] {
+  background: var(--CREARTS-background-primary);
+  border-radius: var(--CREARTS-radius-primary);
+  padding: var(--CREARTS-spacing-tertiary) !important;
+  margin: 0px !important;
+  margin-bottom: 20px !important;
+  box-shadow: var(--CREARTS-effects-flat);
+
+  border-width: var(--CREARTS-border-width) !important;
+  border-color: var(--CREARTS-border-primary) !important;
+  border-style: var(--CREARTS-border-style) !important;
+}
+
+[data-callout="commands"] .callout-content {
+margin-top: -16px;
+margin-bottom: -16px;
+}
+
+[data-callout="commands"] pre {
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+  box-shadow: var(--CREARTS-effects-pressed);
+  margin: 0px;
+  margin-bottom: 20px;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts                 ║ Commands -> Remove                                                                      ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Remove Title
+[data-callout="commands"] .callout-title {
+  display: none;
+}

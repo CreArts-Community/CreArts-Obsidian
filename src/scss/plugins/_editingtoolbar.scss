@@ -1,0 +1,52 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins                  ║ Editing Toolbar                                                                         ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.workspace-leaf-content[data-mode="source"] {
+  margin-bottom: calc(var(--CREARTS-layout-margin) + var(--CREARTS-height-statusbar) + 40px + var(--CREARTS-layout-margin));
+}
+
+
+
+
+#cMenuToolbarModalBar {
+  z-index: 99;
+  position: fixed !important;
+  top: unset !important;
+  bottom: 0px !important;
+  left: var(--CREARTS-layout-margin-half);
+  width: calc(100% - var(--CREARTS-layout-margin) / 2 - var(--CREARTS-layout-margin));
+  min-height: 40px;
+  margin-bottom: calc(var(--CREARTS-layout-margin) + var(--CREARTS-height-statusbar));
+  border: none !important;
+  border-radius: var(--CREARTS-radius-primary);
+  background: var(--CREARTS-background-secondary);
+  box-shadow: none;
+  transition: none !important;
+}
+
+.is-right-sidedock-open #cMenuToolbarModalBar {
+
+  width: calc(100% - var(--CREARTS-layout-margin));
+}
+
+
+
+#cMenuToolbarPopoverBar {
+  z-index: 99;
+  bottom: var(--CREARTS-layout-margin-half);
+}
+
+#cMenuToolbarPopoverBar .subitem {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  bottom: unset;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+// Remove Statusbar Item
+.plugin-editing-toolbar {
+  display: none !important;
+}

@@ -1,0 +1,9 @@
+    -
+        id: skins-dark
+        title: Skins
+        description: Here you have a choice of dark skins.
+        description.de: Hier haben Sie eine Auswahl an dunklen Skins.
+        type: class-select
+        allowEmpty: false
+        default: skin-dark-default
+        options:

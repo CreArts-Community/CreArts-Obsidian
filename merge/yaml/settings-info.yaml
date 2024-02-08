@@ -1,0 +1,11 @@
+name: CreArts
+id: crearts
+settings:
+    - 
+        id: crearts-info
+        title: Welcome to CreArts!
+        title.de: Willkommen bei CreArts!
+        description: With these settings you can customize the theme according to your wishes.
+        description.de: Mit diesen Einstellungen können Sie das Thema nach Ihren Wünschen anpassen.
+        type: info-text
+        markdown: true

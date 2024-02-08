@@ -1,0 +1,21 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins                  ║ Buttons                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.block-language-button {
+  margin-right: -4px;
+  margin-left: -4px !important;
+}
+
+// Normal
+.button-normal {
+  border-radius: var(--CREARTS-radius-secondary);
+  background: var(--CREARTS-background-primary) !important;
+  box-shadow: var(--CREARTS-effects-flat) !important;
+}
+
+// Hover
+.button-normal:hover {
+  box-shadow: var(--CREARTS-effects-pressed) !important;
+}

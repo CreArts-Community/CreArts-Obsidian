@@ -1,0 +1,46 @@
+/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
+/* ║ Skin                                                                      ║ */
+/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
+/* ║ Skin:                    ║ Default Edition                                ║ */
+/* ║ Author:                  ║ Corellan                                       ║ */
+/* ║ Credits:                 ║ https://github.com/CorellanStoma               ║ */
+/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
+
+.skin-light-default {
+/* Info */
+--SKIN-info-skin: "Default";
+--SKIN-info-author: "Corellan";
+
+/* Lightness */
+--SKIN-lightness: 0%;
+
+/* Grading */
+--SKIN-grading-primary: 0%;
+--SKIN-grading-secondary: 3%;
+--SKIN-grading-tertiary: 9%;
+
+/* Accent */
+--SKIN-accent-h: 227;
+--SKIN-accent-s: 58%;
+--SKIN-accent-l: 65%;
+--SKIN-accent-a: 1.0;
+
+/* Text */
+--SKIN-text-h: 227;
+--SKIN-text-s: 58%;
+--SKIN-text-l: 65%;
+--SKIN-text-a: 1.0;
+
+/* Interface */
+--SKIN-interface-h: 228;
+--SKIN-interface-s: 9%;
+--SKIN-interface-l: 89%;
+--SKIN-interface-a: 1.0;
+
+/* Background */
+--SKIN-background-h: 220;
+--SKIN-background-s: 8%;
+--SKIN-background-l: 23%;
+--SKIN-background-a: 1.0;
+}
+

@@ -1,0 +1,9 @@
+    - 
+        id: my-title
+        title: Shape
+        description: "Adjust spacing, corners, and radii to achieve a harmonious design. Round or square, design the user interface to your liking."
+        description.de: "Passen Sie Abstände, Ecken und Radien an, um ein harmonisches Design zu erzielen. Ob rund oder eckig, gestalten Sie die Benutzeroberfläche nach Ihren Wünschen."
+        description.ja: "間隔、コーナー、半径を調整し、調和のとれたデザインを実現。丸でも四角でも、お好みのユーザーインターフェイスをデザインしてください。"
+        type: heading
+        level: 1
+        collapsed: true

@@ -1,0 +1,42 @@
+
+/* ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗ */
+/* ║ Theme                    ║ Commands                                                                                ║ */
+/* ╠══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╣ */
+/* ║                                                                                                                    ║ */
+/* ║ pnpm run watch                                                                                                     ║ */
+/* ║                                                                                                                    ║ */
+/* ║ This command uses the SASS compiler to continuously monitor changes in the src/scss/index.scss file and            ║ */
+/* ║ automatically compile it into theme.css in compressed style when any changes occur.                                ║ */
+/* ║ It doesn't generate source maps.                                                                                   ║ */
+/* ║                                                                                                                    ║ */
+/* ╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣ */
+/* ║                                                                                                                    ║ */
+/* ║ pnpm run version                                                                                                   ║ */
+/* ║                                                                                                                    ║ */
+/* ║ Runs a custom Node.js script that replaces versions in files based on the version in the manifest.json.            ║ */
+/* ║                                                                                                                    ║ */
+/* ╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣ */
+/* ║                                                                                                                    ║ */
+/* ║ pnpm run compile                                                                                                   ║ */
+/* ║                                                                                                                    ║ */
+/* ║ This command compiles the src/scss/index.scss file using the SASS compiler and creates src/css/main.css            ║ */
+/* ║ without generating source maps.                                                                                    ║ */
+/* ║                                                                                                                    ║ */
+/* ╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣ */
+/* ║                                                                                                                    ║ */
+/* ║ pnpm run merge                                                                                                     ║ */
+/* ║                                                                                                                    ║ */
+/* ║ This command runs a Node.js script located at scripts/merge.js. The purpose of this script is not described        ║ */
+/* ║ in the provided script commands, but it likely performs some sort of merging or processing operation.              ║ */
+/* ║                                                                                                                    ║ */
+/* ╠════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣ */
+/* ║                                                                                                                    ║ */
+/* ║ pnpm run build                                                                                                     ║ */
+/* ║                                                                                                                    ║ */
+/* ║ This is a composite command that combines multiple steps. It first runs the "compile" and "compile:min"            ║ */
+/* ║ commands to generate both regular and minified CSS files. Then, it runs the "merge" command,                       ║ */
+/* ║ which presumably does some post-processing or merging related to the previously generated CSS files.               ║ */
+/* ║ This "build" command is likely intended for building the final version of your project.                            ║ */
+/* ║ It uses pnpm to manage and run the sub-commands.                                                                   ║ */
+/* ║                                                                                                                    ║ */
+/* ╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝ */

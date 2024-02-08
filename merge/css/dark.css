@@ -1,0 +1,139 @@
+/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
+/* ║ Skin                                                                      ║ */
+/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
+/* ║ Skin:                    ║ Cosmic Edition                                 ║ */
+/* ║ Author:                  ║ WmeLuna & Corellan                             ║ */
+/* ║ Credits:                 ║ https://github.com/WmeLuna                     ║ */
+/* ║                          ║ https://github.com/CorellanStoma               ║ */
+/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
+
+.theme-dark.skin-dark-cosmic {
+/* Info */
+--SKIN-info-skin: "Cosmic";
+--SKIN-info-author: "WmeLuna & Corellan";
+
+  /* Lightness */
+  --CREARTS-lightness: 0%;
+  
+  /* Grading */
+  --CREARTS-grading-primary: 0%;
+  --CREARTS-grading-secondary: 3%;
+  --CREARTS-grading-tertiary: 6%;
+  
+  /* Accent */
+  --CREARTS-accent-h: 338;
+  --CREARTS-accent-s: 92%;
+  --CREARTS-accent-l: 42%;
+  --CREARTS-accent-a: 1.0;
+  
+  /* Text */
+  --CREARTS-text-h: 227;
+  --CREARTS-text-s: 70%;
+  --CREARTS-text-l: 87%;
+  --CREARTS-text-a: 1.0;
+  
+  /* Interface */
+  --CREARTS-interface-h: 230;
+  --CREARTS-interface-s: 16%;
+  --CREARTS-interface-l: 30%;
+  --CREARTS-interface-a: 1.0;
+  
+  /* Background */
+  --CREARTS-background-h: 229;
+  --CREARTS-background-s: 19%;
+  --CREARTS-background-l: 23%;
+  --CREARTS-background-a: 1.0;
+  }
+  
+/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
+/* ║ Skin                                                                      ║ */
+/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
+/* ║ Skin:                    ║ Default Edition                                ║ */
+/* ║ Author:                  ║ Corellan                                       ║ */
+/* ║ Credits:                 ║ https://github.com/CorellanStoma               ║ */
+/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
+
+.theme-dark.skin-dark-default {
+/* Info */
+--SKIN-info-skin: "Default";
+--SKIN-info-author: "Corellan";
+
+/* Lightness */
+--CREARTS-lightness: 0%;
+
+/* Grading */
+--CREARTS-grading-primary: 0%;
+--CREARTS-grading-secondary: 3%;
+--CREARTS-grading-tertiary: 6%;
+
+/* Accent */
+--CREARTS-accent-h: 338;
+--CREARTS-accent-s: 92%;
+--CREARTS-accent-l: 42%;
+--CREARTS-accent-a: 1.0;
+
+/* Text */
+--CREARTS-text-h: 227;
+--CREARTS-text-s: 70%;
+--CREARTS-text-l: 87%;
+--CREARTS-text-a: 1.0;
+
+/* Interface */
+--CREARTS-interface-h: 230;
+--CREARTS-interface-s: 16%;
+--CREARTS-interface-l: 30%;
+--CREARTS-interface-a: 1.0;
+
+/* Background */
+--CREARTS-background-h: 229;
+--CREARTS-background-s: 19%;
+--CREARTS-background-l: 23%;
+--CREARTS-background-a: 1.0;
+}
+
+/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
+/* ║ Skin                                                                      ║ */
+/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
+/* ║ Skin:                    ║ Halcyon Edition                                ║ */
+/* ║ Author:                  ║ Corellan                                       ║ */
+/* ║ Credits:                 ║ https://github.com/CorellanStoma               ║ */
+/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
+
+.theme-dark.skin-dark-halcyon {
+/* Info */
+--SKIN-info-skin: "Halcyon";
+--SKIN-info-author: "Corellan";
+
+--SKIN-lightness: 0%;
+
+/* Options */
+--SKIN-lightness: 0%;
+--SKIN-saturation: var(--SKIN-saturation, 0%);
+--SKIN-alpha: var(--SKIN-alpha, 0%);
+
+--SKIN-accent-text: var(--SKIN-accent-text, 100%);
+
+/* Grading */
+--SKIN-grading-primary: 0%;
+--SKIN-grading-secondary: 3%;
+--SKIN-grading-tertiary: 9%;
+
+/* Accent */
+--SKIN-accent-h: 40;
+--SKIN-accent-s: 100%;
+--SKIN-accent-l: 71%;
+--SKIN-accent-a: 1.0;
+
+/* Content */
+--SKIN-content-h: 220;
+--SKIN-content-s: 70%;
+--SKIN-content-l: 87%;
+--SKIN-content-a: 1.0;
+
+/* Base */
+--SKIN-base-h: 218;
+--SKIN-base-s: 28%;
+--SKIN-base-l: 18%;
+--SKIN-base-a: 1.0;
+}
+

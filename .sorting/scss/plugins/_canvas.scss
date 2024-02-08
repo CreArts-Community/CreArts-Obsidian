@@ -1,0 +1,19 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins                  ║ Canvas                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+/* Background */
+.canvas-wrapper .canvas-node-container {
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+}
+
+/* Text */
+.canvas-wrapper .markdown-preview-view {
+  text-align: center;
+  text-align-last: center;
+  text-justify: inter-word;
+  hyphens: auto;
+}

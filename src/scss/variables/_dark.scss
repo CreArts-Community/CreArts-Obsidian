@@ -1,0 +1,99 @@
+
+/*
+.theme-dark {
+
+  // Accent
+  --CREARTS-accent-h: var(--SKIN-accent-h, 264);
+  --CREARTS-accent-s: var(--SKIN-accent-s, 100%);
+  --CREARTS-accent-l: var(--SKIN-accent-l, 66%);
+  --CREARTS-accent-a: var(--SKIN-accent-a, 1);
+
+  // Content
+  --CREARTS-content-h: var(--SKIN-content-h, 235) !important;
+  --CREARTS-content-s: var(--SKIN-content-s, 10%) !important;
+  --CREARTS-content-l: var(--SKIN-content-l, 80%) !important;
+  --CREARTS-content-a: var(--SKIN-content-a, 1);
+
+  // Base
+  --CREARTS-base-h: var(--SKIN-base-h, 240) !important;
+  --CREARTS-base-s: var(--SKIN-base-s, 10%) !important;
+  --CREARTS-base-l: var(--SKIN-base-l, 14%) !important;
+  --CREARTS-base-a: var(--SKIN-base-a, 1) !important;
+}
+*/
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Variables                ║ Skin                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.theme-dark {
+  // Settings
+  --CREARTS-lightness: var(--SKIN-lightness, 0%);
+  --CREARTS-saturation: var(--SKIN-saturation, 0%);
+  --CREARTS-alpha: var(--SKIN-alpha, 0%);
+
+  // Accent
+  --CREARTS-accent-h: var(--SKIN-accent-h, 338);
+  --CREARTS-accent-s: var(--SKIN-accent-s, 92%);
+  --CREARTS-accent-l: var(--SKIN-accent-l, 42%);
+  --CREARTS-accent-a: var(--SKIN-accent-a, 1);
+
+  // Content
+  --CREARTS-content-h: var(--SKIN-content-h, 230);
+  --CREARTS-content-s: var(--SKIN-content-s, 70%);
+  --CREARTS-content-l: var(--SKIN-content-l, 86%);
+  --CREARTS-content-a: var(--SKIN-content-a, 1);
+
+  // Base
+  --CREARTS-base-h: var(--SKIN-base-h, 230);
+  --CREARTS-base-s: var(--SKIN-base-s, 19%);
+  --CREARTS-base-l: var(--SKIN-base-l, 23%);
+  --CREARTS-base-a: var(--SKIN-base-a, 1);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Variables                ║ Dark                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.theme-dark {
+
+  // Accent
+  --CREARTS-accent-primary: hsla(var(--CREARTS-accent-h), var(--CREARTS-accent-s), calc(var(--CREARTS-accent-l) - 8%), var(--CREARTS-accent-a));
+  --CREARTS-accent-secondary: hsla(var(--CREARTS-accent-h), var(--CREARTS-accent-s), calc(var(--CREARTS-accent-l) - 8%), var(--CREARTS-accent-a));
+  --CREARTS-accent-tertiary: hsla(var(--CREARTS-accent-h), var(--CREARTS-accent-s), calc(var(--CREARTS-accent-l) - 16%), var(--CREARTS-accent-a));
+
+  // Text
+  --CREARTS-text-primary: hsla(var(--CREARTS-content-h), var(--CREARTS-content-s), calc(var(--CREARTS-content-l) - 0%), var(--CREARTS-content-a));
+  --CREARTS-text-secondary: hsla(var(--CREARTS-content-h), calc(var(--CREARTS-content-s) - 24%), calc(var(--CREARTS-content-l) - 6%), var(--CREARTS-content-a));
+  --CREARTS-text-tertiary: hsla(var(--CREARTS-content-h), calc(var(--CREARTS-content-s) - 48%), calc(var(--CREARTS-content-l) - 12%), var(--CREARTS-content-a));
+  --CREARTS-text-accent: hsla(var(--CREARTS-text-h), var(--CREARTS-text-s), calc(var(--CREARTS-text-l)));
+
+  // Background
+  --CREARTS-background-primary: hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) - 0% + var(--CREARTS-lightness)), var(--CREARTS-base-a));
+  --CREARTS-background-secondary: hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) - 3% + var(--CREARTS-lightness)), var(--CREARTS-base-a));
+  --CREARTS-background-tertiary: hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) - 6% + var(--CREARTS-lightness)), var(--CREARTS-base-a));
+
+  // Interface
+  --CREARTS-interface-primary: hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) + 8% + var(--CREARTS-lightness)), var(--CREARTS-base-a));
+  --CREARTS-interface-secondary: hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) + 16% + var(--CREARTS-lightness)), var(--CREARTS-base-a));
+  --CREARTS-interface-tertiary: hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) + 24% + var(--CREARTS-lightness)), var(--CREARTS-base-a));
+
+  // Border
+  --CREARTS-border-primary: var(--CREARTS-interface-primary);
+  --CREARTS-border-secondary: var(--CREARTS-interface-secondary);
+  --CREARTS-border-tertiary: var(--CREARTS-interface-tertiary);
+
+  // Effects
+  --CREARTS-effects-flat: 2px 2px 20px hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) - 3% + var(--CREARTS-lightness) - 6%), var(--CREARTS-base-a)), -2px -2px 12px var(--CREARTS-background-secondary);
+  --CREARTS-effects-pressed: inset 6px 6px 20px hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) - 3% + var(--CREARTS-lightness) - 6%), var(--CREARTS-base-a)), inset -6px -6px 20px var(--CREARTS-background-secondary);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Variables                ║ Features                                                                                ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Neumorphism
+.neumorphism {
+  --CREARTS-effects-flat: none !important;
+  --CREARTS-effects-pressed: none !important;
+}

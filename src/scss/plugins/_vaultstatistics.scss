@@ -1,0 +1,20 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins                  ║ Vault Statistics                                                                        ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.plugin-obsidian-vault-statistics-plugin {
+  margin: 0px;
+  padding: 0px;
+  background: transparent !important;
+}
+
+.plugin-obsidian-vault-statistics-plugin > span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  margin: 0px calc(var(--CREARTS-spacing-primary) / 2) 0px 0px;
+  padding: calc(var(--CREARTS-spacing-primary) / 2);
+  border-radius: var(--CREARTS-radius-tertiary);
+  background: var(--CREARTS-background-primary);
+}

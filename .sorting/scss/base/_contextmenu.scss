@@ -1,0 +1,18 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Base                     ║ Context Menu                                                                            ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.menu {
+  max-height: 70vh;
+  background: var(--CREARTS-background-primary);
+  border: none;
+}
+
+.menu-item.selected:not(.is-disabled):not(.is-label) {
+  background-color: var(--CREARTS-hightlight-red);
+  color: var(--CREARTS-text-accent);
+}
+
+.menu-item.selected:not(.is-disabled):not(.is-label) .menu-item-icon {
+  color: var(--CREARTS-text-accent);
+}

@@ -1,0 +1,9 @@
+    - 
+        id: palette
+        title: Palette
+        description: "Choose from a variety of colors to customize the look of your user interface. From backgrounds to accents, everything is possible here."
+        description.de: "Wählen Sie aus einer Vielzahl von Farben, um das Erscheinungsbild Ihrer Benutzeroberfläche individuell zu gestalten. Von Hintergründen bis zu Akzenten, hier ist alles möglich."
+        description.ja: "様々な色から選んで、ユーザーインターフェースの外観をカスタマイズしましょう。背景からアクセントまで、ここですべてが可能です。"
+        type: heading
+        level: 1
+        collapsed: true

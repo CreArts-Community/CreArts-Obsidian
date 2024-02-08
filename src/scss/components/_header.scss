@@ -1,0 +1,64 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Header                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Focused
+.is-focused .mod-top {
+  --titlebar-background-focused: var(--CREARTS-background-tertiary) !important;
+}
+
+.is-focused .mod-left:before {
+  width: calc(var(--CREARTS-layout-margin) + var(--CREARTS-width-ribbon) + var(--CREARTS-layout-margin));
+  background: var(--CREARTS-background-tertiary) !important;
+}
+
+// Spacing
+.workspace-ribbon .sidebar-toggle-button {
+  width: calc(var(--CREARTS-layout-margin) + var(--CREARTS-width-ribbon) + var(--CREARTS-layout-margin));
+}
+
+.workspace-ribbon.mod-left:before {
+  width: calc(var(--CREARTS-layout-margin) + var(--CREARTS-width-ribbon) + var(--CREARTS-layout-margin) / 2);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Header -> Home Tab                                                                      ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Normal
+[aria-label="Home"] {
+  max-width: 40px !important;
+}
+
+[aria-label="Home"] .workspace-tab-header-inner-title {
+  display: none;
+}
+
+[aria-label="Home"] .mod-pinned {
+  display: none;
+}
+
+[aria-label="Home"] .workspace-tab-header-inner-close-button {
+  display: none;
+}
+
+// Hover
+[aria-label="Home"]:hover {
+  max-width: 80px !important;
+}
+
+[aria-label="Home"]:hover .workspace-tab-header-inner-title {
+  display: none;
+}
+
+[aria-label="Home"]:hover .mod-pinned {
+  display: flex;
+}
+
+[aria-label="Home"]:hover .workspace-tab-header-inner-close-button {
+  display: block;
+}
+
+.workspace-tab-header:not([aria-label="Home"]) {
+  max-width: 140px !important;
+}

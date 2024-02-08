@@ -1,0 +1,9 @@
+    -
+        id: skins-light
+        title: Skins
+        description: Here you have a choice of light skins.
+        description.de: Hier haben Sie eine Auswahl an hellen Skins.
+        type: class-select
+        allowEmpty: false
+        default: skin-light-default
+        options:

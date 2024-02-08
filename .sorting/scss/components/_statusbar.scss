@@ -1,0 +1,32 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ components               ║ Statusbar                                                                               ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.status-bar {
+  width: 100%;
+  height: var(--CREARTS-height-statusbar);
+  background: var(--CREARTS-background-tertiary) !important;
+  border-top: var(--tab-outline-width) solid var(--tab-outline-color);
+  border-left: none;
+  border-radius: 0px;
+}
+
+.plugin-editor-status:hover,
+.plugin-backlink:hover {
+  cursor: pointer !important;
+}
+
+.status-bar-item[aria-label="Export to PDF"] {
+  cursor: pointer !important;
+}
+
+.status-bar-item[aria-label="Export to PDF"]::after {
+  content: "Export to PDF";
+  position: relative;
+  margin-left: 8px;
+  padding: 0px 4px 0px 0px;
+  font-size: var(--font-adaptive-smallest);
+  color: var(--text-muted) !important;
+  text-align: center;
+}

@@ -1,0 +1,12 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins                  ║ Custom Frames                                                                           ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.custom-frames-frame {
+  background: transparent;
+}
+
+.mod-left-split .custom-frames-view,
+.mod-right-split .custom-frames-view {
+  margin-top: 0px !important;
+}

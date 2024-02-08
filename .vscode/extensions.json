@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    // Editor Config
+    "EditorConfig.EditorConfig",
+    // Prettier
+    "esbenp.prettier-vscode"
+  ]
+}

@@ -1,0 +1,55 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Variables                ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.theme-dark, .theme-light {
+  // Info
+  --CREARTS-info-version: "v0.0.1";
+  --CREARTS-info-skin: var(--SKIN-info-skin, "Default Edition");
+  --CREARTS-info-author: var(--SKIN-info-author, "Corellan");
+
+  // Wallpaper
+  --CREARTS-wallpaper: url("https://i.imgur.com/ctKj4SU.jpg");
+  --CREARTS-wallpaper-opacity: 0;
+
+  // Opacity
+  
+  // Fonts
+  --CREARTS-font-titlebar: "";
+  --CREARTS-font-primary: "";
+  --CREARTS-font-code: "";
+
+  // Opacity
+  --CREARTS-opacity-titlebar-title: "";
+
+  // Layout
+  --CREARTS-layout-margin: 18px;
+  --CREARTS-layout-margin-half: calc(var(--CREARTS-layout-margin) / 2);
+
+  // Spacing
+  --CREARTS-spacing-primary: 8px;
+  --CREARTS-spacing-secondary: 12px;
+  --CREARTS-spacing-tertiary: 16px;
+
+  // Width
+  --CREARTS-width-ribbon: 44px;
+  --CREARTS-width-left: 260px;
+  --CREARTS-width-right: 260px;
+  --CREARTS-width-kanban: 200px;
+  --CREARTS-width-divider: 1px;
+  --CREARTS-width-divider-hover: 3px;
+
+  // Height
+  --CREARTS-height-header: 40px;
+  --CREARTS-height-titlebar: 30px;
+  --CREARTS-height-statusbar: 30px;
+
+  // Radius
+  --CREARTS-radius-primary: 12px;
+  --CREARTS-radius-secondary: 10px;
+  --CREARTS-radius-tertiary: 6px;
+
+  // Border
+  --CREARTS-border-width: 1px;
+  --CREARTS-border-style: solid;
+}

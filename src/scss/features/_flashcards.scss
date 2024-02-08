@@ -1,0 +1,225 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Features                 ║ Flashcards                                                                              ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.flashcards div > div:has(p) + div:has(p),
+.flashcards div > div:has(p) + div:has(ul),
+.flashcards div > div:has(p) + div:has(img),
+.flashcards div > div:has(ul) + div:has(ul),
+.flashcards div > div:has(ul) + div:has(p),
+.flashcards div > div:has(ul) + div:has(img),
+.flashcards
+  div
+  > div:has(img)
+  + div:has(img)
+  .flashcards
+  div
+  > div:has(img)
+  + div:has(p)
+  .flashcards
+  div
+  > div:has(img)
+  + div:has(ul) {
+  margin-top: 20px;
+  border-radius: var(--CREARTS-radius-secondary) !important;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Features                 ║ Flashcards -> Highlights                                                                ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Bold
+.flashcards h2 strong,
+.flashcards h3 strong,
+.flashcards h4 strong,
+.flashcards h5 strong,
+.flashcards h6 strong,
+.flashcards .has-list-bullet strong,
+.flashcards p strong {
+  color: var(--CREARTS-accent-primary);
+  font-weight: 800;
+}
+
+// Italic
+.flashcards h2 em,
+.flashcards h3 em,
+.flashcards h4 em,
+.flashcards h5 em,
+.flashcards h6 em,
+.flashcards .has-list-bullet em,
+.flashcards p em {
+  color: var(--CREARTS-accent-primary);
+  font-weight: 800;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Features                 ║ Flashcards -> Header                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.flashcards h2,
+.flashcards h3,
+.flashcards h4,
+.flashcards h5,
+.flashcards h6 {
+  margin-top: 40px;
+  margin-bottom: 0px;
+  padding: var(--CREARTS-spacing-tertiary) var(--CREARTS-spacing-tertiary) var(--CREARTS-spacing-tertiary)
+    calc(var(--CREARTS-spacing-tertiary) * 2) !important;
+  border-width: var(--CREARTS-border-width) !important;
+  border-style: var(--CREARTS-border-style) !important;
+  border-radius: var(--CREARTS-radius-primary) var(--CREARTS-radius-primary) 0px 0px;
+  border-color: var(--CREARTS-border-primary) !important;
+  border-bottom: none !important;
+  background: var(--CREARTS-background-primary);
+}
+
+// Collapsed
+.flashcards .is-collapsed h2,
+.flashcards .is-collapsed h3,
+.flashcards .is-collapsed h4,
+.flashcards .is-collapsed h5,
+.flashcards .is-collapsed h6 {
+  border-width: var(--CREARTS-border-width) !important;
+  border-style: var(--CREARTS-border-style) !important;
+  border-radius: var(--CREARTS-radius-primary);
+  border-color: var(--CREARTS-border-primary) !important;
+}
+
+// Indicator
+.flashcards h2 .collapse-indicator,
+.flashcards h3 .collapse-indicator,
+.flashcards h4 .collapse-indicator,
+.flashcards h5 .collapse-indicator,
+.flashcards h6 .collapse-indicator {
+  opacity: 1;
+}
+
+// Tag
+.flashcards div > div:has(h2) .tag,
+.flashcards div > div:has(h3) .tag,
+.flashcards div > div:has(h4) .tag,
+.flashcards div > div:has(h5) .tag,
+.flashcards div > div:has(h6) .tag {
+  visibility: hidden;
+}
+
+.flashcards div > div:has(h2):hover .tag,
+.flashcards div > div:has(h3):hover .tag,
+.flashcards div > div:has(h4):hover .tag,
+.flashcards div > div:has(h5):hover .tag,
+.flashcards div > div:has(h6):hover .tag {
+  visibility: visible;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Custom CSS               ║ Flashcards -> Content (Paragraph)                                                       ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.flashcards > div > div:has(p) {
+  position: relative;
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-radius: 0px 0px var(--CREARTS-radius-primary) var(--CREARTS-radius-primary);
+  border-color: var(--CREARTS-border-primary);
+  background: var(--CREARTS-background-primary);
+}
+
+// Inner
+.flashcards p {
+  margin: var(--CREARTS-spacing-tertiary);
+  padding: var(--CREARTS-spacing-tertiary);
+  border-radius: var(--CREARTS-radius-primary);
+  background: var(--CREARTS-background-secondary);
+  box-shadow: var(--CREARTS-effects-pressed);
+}
+
+.flashcards .has-list-bullet {
+  margin: 0px !important;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Custom CSS               ║ Flashcards -> Content (Bullet)                                                          ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.flashcards > div > div:has(.has-list-bullet) {
+  position: relative;
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-radius: 0px 0px var(--CREARTS-radius-primary) var(--CREARTS-radius-primary);
+  border-color: var(--CREARTS-border-primary);
+  background: var(--CREARTS-background-primary);
+}
+
+// Inner
+.flashcards .has-list-bullet {
+  margin: var(--CREARTS-spacing-tertiary) !important;
+  padding: var(--CREARTS-spacing-tertiary) 0px var(--CREARTS-spacing-tertiary) calc(20px + var(--CREARTS-spacing-tertiary)) !important;
+  border-radius: var(--CREARTS-radius-primary);
+  background: var(--CREARTS-background-secondary);
+  box-shadow: var(--CREARTS-effects-pressed);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Features                 ║ Flashcards -> Image                                                                     ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Image
+.flashcards div > div p:has(span) {
+  height: auto !important;
+  padding: 0px !important;
+  box-shadow: none;
+}
+
+.flashcards div > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--CREARTS-radius-secondary);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Custom CSS               ║ Flashcards -> Buttons                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.flashcards:not(.markdown-source-view) .block-language-button {
+  padding: 0px !important;
+}
+
+// Position
+.flashcards:not(.markdown-source-view) .flashcard-button-create,
+.flashcards:not(.markdown-source-view) .flashcard-button-pdf {
+  z-index: 20;
+  position: fixed;
+}
+
+// Normal
+.flashcards:not(.markdown-source-view) .flashcard-button-create,
+.flashcards:not(.markdown-source-view) .flashcard-button-pdf {
+  bottom: calc(var(--CREARTS-height-statusbar) + var(--CREARTS-layout-margin) + var(--CREARTS-spacing-primary));
+  border-radius: var(--CREARTS-radius-secondary);
+  background: var(--CREARTS-background-primary) !important;
+  box-shadow: var(--CREARTS-effects-flat) !important;
+}
+
+// Hover
+.flashcards:not(.markdown-source-view) .flashcard-button-create:hover,
+.flashcards:not(.markdown-source-view) .flashcard-button-pdf:hover {
+  box-shadow: var(--CREARTS-effects-pressed) !important;
+}
+
+// Export PDF
+.flashcards .flashcard-button-pdf {
+  left: calc(var(--CREARTS-spacing-primary) + var(--size-4-8));
+  width: 90px;
+  margin-bottom: var(--CREARTS-spacing-tertiary);
+}
+
+// Create Flashcard
+.flashcards .flashcard-button-create {
+  left: calc(var(--CREARTS-spacing-primary) + var(--size-4-8) + 90px + var(--CREARTS-spacing-primary));
+  margin-bottom: var(--CREARTS-spacing-tertiary);
+}

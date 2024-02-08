@@ -1,0 +1,83 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Content                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.mod-root .workspace-leaf-content {
+  margin-top: var(--CREARTS-layout-margin);
+  margin-bottom: calc(var(--CREARTS-layout-margin) + var(--CREARTS-height-statusbar));
+}
+
+// Header
+.mod-root .view-header {
+  min-height: var(--CREARTS-height-header);
+  margin-right: var(--CREARTS-layout-margin);
+  margin-bottom: var(--CREARTS-layout-margin-half);
+  margin-left: calc(var(--CREARTS-layout-margin) / 2);
+  border-radius: var(--CREARTS-radius-primary);
+  background: var(--CREARTS-background-secondary) !important;
+}
+
+.is-right-sidedock-open .mod-root .view-header {
+  margin-right: calc(var(--CREARTS-layout-margin) / 2);
+}
+
+// Content
+.mod-root .view-content {
+  width: auto;
+  margin-top: var(--CREARTS-layout-margin-half);
+  margin-right: var(--CREARTS-layout-margin);
+  margin-left: calc(var(--CREARTS-layout-margin) / 2);
+  border-radius: var(--CREARTS-radius-primary);
+  background: var(--CREARTS-background-secondary) !important;
+
+}
+
+.is-right-sidedock-open .mod-root .view-content {
+  margin-right: calc(var(--CREARTS-layout-margin) / 2);
+}
+
+// Remove Gradient
+.view-header-title-container:not(.mod-at-end):after {
+  display: none;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Content -> Gutters                                                                      ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.cm-gutters .cm-gutterElement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  font-weight: 600;
+}
+
+// Active
+.cm-gutters .cm-active {
+  font-weight: 800;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Content -> Metadata                                                                     ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Remove Metadata Preview
+[data-mode="preview"] .metadata-container {
+  display: none !important;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Content -> Canvas                                                                       ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.mod-root .canvas-wrapper {
+  background: var(--CREARTS-background-secondary);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components               ║ Content -> PDF                                                                          ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝

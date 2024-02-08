@@ -1,0 +1,83 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts                 ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+[data-callout="tables"] {
+  background: transparent;
+  padding: 0.1px;
+
+}
+
+// Spacing
+[data-callout="tables"] .callout-content {
+  margin-top: -16px;
+  margin-bottom: -16px;
+}
+
+// Remove Title
+[data-callout="tables"] .callout-title {
+  display: none;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts                 ║ Table                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Table
+[data-callout="tables"] table {
+  width: calc(100% + 7px + 7px);
+  border-collapse: separate;
+  border-spacing: var(--CREARTS-spacing-primary);
+  margin-left: calc(var(--CREARTS-spacing-primary) * -1);
+}
+
+// Header
+[data-callout="tables"] thead th {
+  border: none;
+}
+
+// Body
+[data-callout="tables"] tbody tr:nth-child(odd) {
+  background: var(--CREARTS-interface-primary) !important;
+}
+
+[data-callout="tables"] tbody tr:nth-child(even) {
+  background: var(--CREARTS-background-primary);
+}
+
+[data-callout="tables"] td {
+  padding: var(--CREARTS-spacing-primary);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-radius: var(--CREARTS-radius-primary);
+  vertical-align: middle;
+}
+
+[data-callout="tables"] tbody tr:nth-child(odd) td {
+  border-color: var(--CREARTS-border-secondary) !important;
+}
+
+[data-callout="tables"] tbody tr:nth-child(even) td {
+  border-color: var(--CREARTS-border-primary) !important;
+}
+
+// Empty
+td:empty {
+  padding: var(--CREARTS-spacing-secondary) !important;
+}
+
+// Image
+[data-callout="tables"] img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--CREARTS-radius-secondary);
+}
+
+
+
+
+[data-callout="tables"] td:first-child {
+  white-space: nowrap;
+}

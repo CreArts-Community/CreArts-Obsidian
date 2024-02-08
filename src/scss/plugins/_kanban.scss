@@ -1,0 +1,366 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins                  ║ Kanban                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.kanban-plugin,
+.kanban-plugin__scroll-container.kanban-plugin__horizontal {
+  display: block;
+}
+
+// Spacing
+.kanban-plugin__board > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  padding: var(--CREARTS-spacing-secondary);
+  overflow-y: scroll;
+  gap: var(--CREARTS-spacing-secondary);
+  background: var(--CREARTS-background-secondary);
+}
+
+.kanban-plugin__lane-wrapper {
+  width: unset;
+  height: 100%;
+  margin-right: 0px;
+}
+
+// Drag Fix
+.something-is-dragging .kanban-plugin__lane-wrapper[style*="display: none;"] {
+  display: flex !important;
+  visibility: hidden;
+}
+
+// Background
+.kanban-plugin__lane {
+  border: none;
+  background: transparent;
+}
+
+.kanban-plugin__lane-items {
+  margin: 0px -20px;
+  padding: 0px;
+  border: none;
+  background: transparent;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins                  ║ Kanban -> Cards                                                                         ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.kanban-plugin__item-wrapper {
+  margin-top: var(--CREARTS-spacing-secondary) !important;
+  margin: 0px 20px;
+  cursor: grab !important;
+}
+
+// Border
+.kanban-plugin__item {
+  border-width: var(--CREARTS-border-width) !important;
+  border-style: var(--CREARTS-border-style) !important;
+  border-radius: var(--CREARTS-radius-secondary) !important;
+  border-color: var(--CREARTS-border-primary) !important;
+  box-shadow: var(--CREARTS-effects-flat);
+}
+
+// Background
+.kanban-plugin__item-title-wrapper {
+  margin: 0px;
+  padding: 0px;
+  background: var(--CREARTS-background-primary);
+}
+
+.kanban-plugin__item-title-wrapper:hover {
+  border-color: var(--CREARTS-border-secondary) !important;
+  background: var(--CREARTS-interface-primary);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins                  ║ Kanban -> Header                                                                        ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.kanban-plugin__lane-header-wrapper {
+  border-width: var(--CREARTS-border-width) !important;
+  border-style: var(--CREARTS-border-style) !important;
+  border-radius: var(--CREARTS-radius-secondary) !important;
+  border-color: var(--CREARTS-border-primary) !important;
+  background: var(--CREARTS-background-primary) !important;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins                  ║ Kanban -> Create Button                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Grid
+.kanban-plugin__lane {
+  display: grid !important;
+  grid-template-rows: 40px auto;
+  grid-template-columns: 1fr auto;
+}
+
+// Order
+.kanban-plugin__lane-header-wrapper {
+  order: 1;
+}
+
+.kanban-plugin__item-button-wrapper {
+  order: 2;
+}
+
+.kanban-plugin__lane-items {
+  grid-column: 1 / span 2;
+  order: 3;
+}
+
+// Background
+.kanban-plugin__item-button-wrapper {
+  margin: 0px 0px 0px var(--CREARTS-spacing-secondary) !important;
+  padding: 0px;
+  border: none !important;
+  border-width: var(--CREARTS-border-width) !important;
+  border-style: var(--CREARTS-border-style) !important;
+  border-radius: var(--CREARTS-radius-secondary) !important;
+  border-color: var(--CREARTS-border-primary) !important;
+  background: var(--CREARTS-background-primary) !important;
+}
+
+.kanban-plugin__new-item-button {
+  height: 100%;
+  box-shadow: none !important;
+  font-size: 0px;
+  cursor: pointer !important;
+}
+
+// Hover
+.kanban-plugin__item-button-wrapper:hover {
+  border-color: var(--CREARTS-border-secondary) !important;
+  background: var(--CREARTS-interface-primary) !important;
+}
+
+.kanban-plugin__new-item-button:hover {
+  background-color: unset;
+  color: unset;
+}
+
+// Pseudo
+.kanban-plugin__new-item-button::after {
+  width: 18px;
+  height: 18px;
+  background: var(--CREARTS-text-primary);
+  content: "";
+  -webkit-mask: var(--icon) center/contain no-repeat;
+  mask: var(--icon) center/contain no-repeat;
+  --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='svg-icon lucide-plus'%3E%3Cline x1='12' y1='5' x2='12' y2='19'%3E%3C/line%3E%3Cline x1='5' y1='12' x2='19' y2='12'%3E%3C/line%3E%3C/svg%3E");
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins                  ║ Kanban -> Edit List                                                                     ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.kanban-plugin__lane-setting-wrapper {
+  grid-column: 1 / span 2;
+  order: 3;
+  margin-top: var(--CREARTS-spacing-secondary) !important;
+  border: none;
+  border-width: var(--CREARTS-border-width) !important;
+  border-style: var(--CREARTS-border-style) !important;
+  border-radius: var(--CREARTS-radius-secondary);
+  border-color: var(--CREARTS-border-primary) !important;
+  background: var(--CREARTS-background-primary) !important;
+}
+
+.kanban-plugin__lane-setting-wrapper > div {
+  margin: 0px !important;
+  border: none !important;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins                  ║ Kanban -> Input                                                                         ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.kanban-plugin__item-form {
+  grid-column: 1 / span 2;
+  order: 2;
+  margin: var(--CREARTS-spacing-secondary) 0px 0px 0px;
+  padding: 0px;
+  border: none !important;
+}
+
+// Background
+.kanban-plugin__item-input-wrapper {
+  display: -ms-inline-flexbox;
+  justify-content: center;
+  min-height: 40px !important;
+  border: none !important;
+  border-radius: var(--CREARTS-radius-secondary) !important;
+  background: var(--CREARTS-background-primary) !important;
+  box-shadow: var(--CREARTS-effects-pressed) !important;
+}
+
+.kanban-plugin__grow-wrap > textarea {
+  background: transparent !important;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins                  ║ Kanban -> Content                                                                       ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Header
+.kanban-plugin__item-wrapper h1,
+.kanban-plugin__item-wrapper h2,
+.kanban-plugin__item-wrapper h3,
+.kanban-plugin__item-wrapper h4,
+.kanban-plugin__item-wrapper h5,
+.kanban-plugin__item-wrapper h6 {
+  margin: var(--CREARTS-spacing-secondary) !important;
+}
+
+// Paragraph
+.kanban-plugin__item-wrapper p {
+  margin: var(--CREARTS-spacing-secondary);
+  margin-top: var(--CREARTS-spacing-secondary) !important;
+  margin-bottom: var(--CREARTS-spacing-secondary) !important;
+}
+
+// Image
+.kanban-plugin__item-wrapper img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--CREARTS-radius-secondary);
+}
+
+// Image with Text
+.kanban-plugin__item-wrapper p + p img {
+  width: calc(100% - (var(--CREARTS-spacing-secondary) + var(--CREARTS-spacing-secondary)));
+  margin-left: var(--CREARTS-spacing-secondary);
+}
+
+.kanban-plugin__item-wrapper p + p:has(img) {
+  margin: 0px;
+  margin-bottom: var(--CREARTS-spacing-secondary) !important;
+}
+
+// Full Image
+.kanban-plugin__item-wrapper p:has(img) {
+  margin: 0px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  border-radius: 0px;
+}
+
+// List
+.kanban-plugin__item-wrapper ul {
+  margin-bottom: var(--CREARTS-spacing-secondary) !important;
+  padding-left: 40px !important;
+}
+
+.kanban-plugin__item-wrapper .callout[data-callout="shortcuts"] p {
+  margin-top: 0px !important;
+  margin-left: var(--CREARTS-spacing-secondary);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins                  ║ Kanban -> Content Button                                                                ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.kanban-plugin__item-postfix-button-wrapper {
+  position: absolute;
+  right: calc(8px + 20px);
+  margin-top: 8px;
+}
+
+// Hover
+.kanban-plugin__item-postfix-button {
+  width: 24px;
+  height: 24px;
+  border-radius: 90%;
+  background: var(--CREARTS-interface-primary);
+  opacity: 0;
+}
+
+.kanban-plugin__item-postfix-button:hover {
+  background: var(--CREARTS-interface-secondary) !important;
+}
+
+.kanban-plugin__item:hover .kanban-plugin__item-postfix-button {
+  opacity: 1;
+}
+
+.kanban-plugin__item-title-wrapper:has(img) .kanban-plugin__item-postfix-button {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.kanban-plugin__item-title-wrapper:has(img) .kanban-plugin__item-postfix-button:hover {
+  background: rgba(0, 0, 0, 0.8) !important;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins                  ║ Kanban -> Remove                                                                        ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Remove Placeholder
+.kanban-plugin__lane-placeholder {
+  display: none;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins                  ║ Kanban -> Add List                                                                      ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.kanban-plugin__lane-form-wrapper {
+  display: flex;
+  position: relative;
+  top: 0;
+  left: 0;
+  flex-direction: row;
+  width: auto;
+  margin: var(--CREARTS-spacing-secondary) var(--CREARTS-spacing-secondary) 0px var(--CREARTS-spacing-secondary) !important;
+  gap: 20px !important;
+  border-width: var(--CREARTS-border-width) !important;
+  border-style: var(--CREARTS-border-style) !important;
+  border-color: var(--CREARTS-border-primary) !important;
+  border: none !important;
+  border-radius: var(--CREARTS-radius-secondary) !important;
+  background: var(--CREARTS-background-primary);
+  box-shadow: none;
+}
+
+.kanban-plugin__board.is-adding-lane > div {
+  padding-right: var(--CREARTS-spacing-secondary);
+}
+
+.kanban-plugin__lane-input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: 1;
+  width: 40%;
+  margin: 20px;
+  border-radius: var(--CREARTS-radius-secondary);
+  background: var(--CREARTS-background-secondary);
+  box-shadow: var(--CREARTS-effects-pressed);
+}
+
+.kanban-plugin__checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: 3;
+  width: 40%;
+  margin: 20px;
+  border: none !important;
+}
+
+.kanban-plugin__lane-input-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: 3;
+  width: 20%;
+  margin: 20px;
+  padding: 0px;
+}

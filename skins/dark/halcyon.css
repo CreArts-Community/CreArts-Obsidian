@@ -1,0 +1,46 @@
+/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
+/* ║ Skin                                                                      ║ */
+/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
+/* ║ Skin:                    ║ Halcyon Edition                                ║ */
+/* ║ Author:                  ║ Corellan                                       ║ */
+/* ║ Credits:                 ║ https://github.com/CorellanStoma               ║ */
+/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
+
+.theme-dark.skin-dark-halcyon {
+/* Info */
+--SKIN-info-skin: "Halcyon";
+--SKIN-info-author: "Corellan";
+
+--SKIN-lightness: 0%;
+
+/* Options */
+--SKIN-lightness: 0%;
+--SKIN-saturation: var(--SKIN-saturation, 0%);
+--SKIN-alpha: var(--SKIN-alpha, 0%);
+
+--SKIN-accent-text: var(--SKIN-accent-text, 100%);
+
+/* Grading */
+--SKIN-grading-primary: 0%;
+--SKIN-grading-secondary: 3%;
+--SKIN-grading-tertiary: 9%;
+
+/* Accent */
+--SKIN-accent-h: 40;
+--SKIN-accent-s: 100%;
+--SKIN-accent-l: 71%;
+--SKIN-accent-a: 1.0;
+
+/* Content */
+--SKIN-content-h: 220;
+--SKIN-content-s: 70%;
+--SKIN-content-l: 87%;
+--SKIN-content-a: 1.0;
+
+/* Base */
+--SKIN-base-h: 218;
+--SKIN-base-s: 28%;
+--SKIN-base-l: 18%;
+--SKIN-base-a: 1.0;
+}
+

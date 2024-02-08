@@ -1,0 +1,9 @@
+    - 
+        id: my-title
+        title: Typography
+        description: "Choose from different font styles and sizes to customize the text in your application. From headings to body text, everything is customizable."
+        description.de: "Wählen Sie aus verschiedenen Schriftarten und -größen, um den Text in Ihrer Anwendung anzupassen. Von Überschriften bis zum Fließtext, alles ist anpassbar."
+        description.ja: "さまざまなフォントスタイルとサイズから選択して、アプリケーションのテキストをカスタマイズできます。見出しから本文まで、すべてがカスタマイズ可能です。"
+        type: heading
+        level: 1
+        collapsed: true
