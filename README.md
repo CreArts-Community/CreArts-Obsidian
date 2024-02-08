@@ -21,7 +21,7 @@
 * Style Settings
 * Tags
 * Tenki
-* vault Statistics
+* Vault Statistics
 
 ## Kanban:
 ![image](https://github.com/CreArts-Community/CreArts-Obsidian/assets/58918358/4b34dae8-cf62-4b94-a8ac-f0959e5b7c8b)
