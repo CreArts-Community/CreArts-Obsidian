@@ -1,7 +1,7 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Plugins                  ║ Custom Frames                                                                           ║
+// ║ Plugins                  ║ Open Gates                                                                              ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.custom-frames-frame {
-  background: transparent;
+.open-gate-view .open-gate-iframe, .open-gate-view .open-gate-webview {
+  background-color: transparent !important;
 }

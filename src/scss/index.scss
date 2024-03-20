@@ -16,10 +16,11 @@
 // ║ Source                   ║ Callouts                                                                                ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-
+@forward "callouts/callout";
 @forward "callouts/colors";
 @forward "callouts/column";
 @forward "callouts/commands";
+@forward "callouts/infobox";
 @forward "callouts/shortcuts";
 @forward "callouts/tables";
 @forward "callouts/tasks";
@@ -60,8 +61,10 @@
 @forward "plugins/hometab";
 @forward "plugins/iconize";
 @forward "plugins/kanban";
+@forward "plugins/opengates";
 @forward "plugins/settingssearch";
 @forward "plugins/stylesettings";
+@forward "plugins/sortable";
 @forward "plugins/tags";
 @forward "plugins/tenki";
 @forward "plugins/vaultstatistics";

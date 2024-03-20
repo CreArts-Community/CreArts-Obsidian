@@ -2,7 +2,55 @@
 // ║ Plugins                  ║ Home Tab                                                                                ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
+// Spacing
+.block-language-search-bar {
+  margin-bottom: var(--CREARTS-spacing-tertiary);
+}
+
 .home-tab-searchbar {
   width: 100% !important;
   border: none !important;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Features                 ║ Home -> Home Tab (Search)                                                               ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.home-tab-searchbar {
+  max-width: unset !important;
+  border-radius: var(--CREARTS-radius-primary) !important;
+  background: var(--CREARTS-background-primary) !important;
+  box-shadow: var(--CREARTS-effects-pressed);
+}
+
+// Background (Active)
+.home-tab-searchbar.is-active {
+  border-radius: var(--CREARTS-radius-primary) !important;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Features                 ║ Home -> Home Tab (suggestion)                                                           ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.home .home-tab-suggestion-container {
+  width: 100% !important;
+  max-width: unset;
+  margin-top: var(--CREARTS-spacing-tertiary);
+  border: none !important;
+  border-radius: var(--CREARTS-radius-primary);
+  background: var(--CREARTS-background-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  opacity: 1;
+}
+
+// Normal
+.home .suggestion-item {
+  border-radius: var(--CREARTS-radius-secondary);
+}
+
+// Hover
+.home .suggestion-item:hover {
+  background: var(--CREARTS-interface-primary);
 }

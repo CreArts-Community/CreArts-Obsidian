@@ -1,0 +1,43 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins                  ║ Sortable                                                                                ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Ascending
+th[sortable-style="sortable-asc"] {
+  background-image: none !important;
+}
+
+th[sortable-style="sortable-asc"]::after {
+  position: absolute;
+  right: 40px;
+  width: 26px;
+  height: 26px;
+  margin-top: -2px;
+  background: var(--CREARTS-text-primary);
+  content: "";
+  -webkit-mask: var(--arrows-up) center/contain no-repeat;
+  mask: var(--arrows-up) center/contain no-repeat;
+}
+
+// Descending
+th[sortable-style="sortable-desc"] {
+  background-image: none !important;
+}
+
+th[sortable-style="sortable-desc"]::after {
+  position: absolute;
+  right: 40px;
+  width: 26px;
+  height: 26px;
+  margin-top: -2px;
+  background: var(--CREARTS-text-primary);
+  content: "";
+  -webkit-mask: var(--arrows-down) center/contain no-repeat;
+  mask: var(--arrows-down) center/contain no-repeat;
+}
+
+
+
+.markdown-preview-view th {
+  padding-left: 0px;
+}

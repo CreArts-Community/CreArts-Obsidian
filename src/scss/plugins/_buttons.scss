@@ -8,6 +8,11 @@
   margin-left: -4px !important;
 }
 
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins                  ║ Buttons -> Normal)                                                                      ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
 // Normal
 .button-normal {
   border-radius: var(--CREARTS-radius-secondary);
@@ -17,5 +22,22 @@
 
 // Hover
 .button-normal:hover {
+  box-shadow: var(--CREARTS-effects-pressed) !important;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins                  ║ Buttons -> Large                                                                        ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Normal
+.button-wide {
+  border-radius: var(--CREARTS-radius-secondary);
+  background: var(--CREARTS-background-primary) !important;
+  box-shadow: var(--CREARTS-effects-flat) !important;
+  width: 100%;
+}
+
+// Hover
+.button-wide:hover {
   box-shadow: var(--CREARTS-effects-pressed) !important;
 }

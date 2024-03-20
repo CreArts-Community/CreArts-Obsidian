@@ -6,7 +6,7 @@
 [data-callout="tables"] {
   background: transparent;
   padding: 0.1px;
-
+  overflow: hidden !important;
 }
 
 // Spacing
@@ -26,7 +26,7 @@
 
 // Table
 [data-callout="tables"] table {
-  width: calc(100% + 7px + 7px);
+  width: calc(100% + var(--CREARTS-spacing-primary) + var(--CREARTS-spacing-primary) - 1px);
   border-collapse: separate;
   border-spacing: var(--CREARTS-spacing-primary);
   margin-left: calc(var(--CREARTS-spacing-primary) * -1);
@@ -74,9 +74,6 @@ td:empty {
   justify-content: center;
   border-radius: var(--CREARTS-radius-secondary);
 }
-
-
-
 
 [data-callout="tables"] td:first-child {
   white-space: nowrap;
