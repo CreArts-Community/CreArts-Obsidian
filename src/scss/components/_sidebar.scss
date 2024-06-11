@@ -303,26 +303,33 @@ width: 20px;
 
 
 .mod-left-split .workspace-tab-header-container-inner, .mod-right-split .workspace-tab-header-container-inner {
-padding: 0px;
-  margin: var(--CREARTS-spacing-primary);
+  padding: 0px;
+  margin:  var(--CREARTS-spacing-primary) 0px ;
   gap: var(--CREARTS-spacing-primary-half);
-
 }
 
 
 
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Sidebar                  ║ Vault Profile                                                                           ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
+// Background
 .mod-left-split .workspace-sidedock-vault-profile {
   background: var(--CREARTS-background-secondary) !important;
   border-radius: var(--CREARTS-radius-primary);
   margin: var(--CREARTS-layout-margin-half);
   width: auto;
   padding: var(--CREARTS-spacing-secondary);
-
-border: none !important;
-
-
-
-
+  border: none !important;
   margin-bottom: calc(var(--CREARTS-layout-margin) + var(--CREARTS-height-statusbar));
+}
+
+
+.workspace-drawer-vault-actions {
+  order: -1;
+}
+
+.workspace-drawer-vault-actions .clickable-icon:nth-child(1) {
+  display: none !important;
 }

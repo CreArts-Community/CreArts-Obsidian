@@ -1,7 +1,3 @@
-.nav-folder-title .iconize-icon {
-  display: none;
-}
-
 .tree-item-children .iconize-icon {
   display: block;
 }
@@ -14,19 +10,10 @@
   border: none;
 }
 
-
-
 // Files
 .iconize-icon path {
   fill: var(--CREARTS-text-primary) !important;
 }
-
-
-
-
-
-
-
 
 // Preview
 .iconize-icon-preview path {
@@ -59,17 +46,11 @@
   background: var(--CREARTS-interface-primary);
 }
 
-
-
 // Sorting...
 
 .iconize-icon-folder-icon path {
   fill: var(--CREARTS-text-primary) !important;
 }
-
-
-
-
 
 .iconize-icon-in-link {
   display: none;
