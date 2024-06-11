@@ -66,3 +66,99 @@
   display: none;
   order: 20;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗ */
+/* ║ Statusbar                ║ General                                                                                 ║ */
+/* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
+
+
+// Spacing
+.plugin-editor-status::after {
+  margin-left: 4px;
+  padding: 0px 4px 0px 0px;
+  text-align: center;
+}
+
+/* ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗ */
+/* ║ Statusbar                ║ Reading                                                                                 ║ */
+/* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
+
+
+
+/* Pseudo */
+.plugin-editor-status[aria-label="Reading"]::after {
+  content: "Reading";
+}
+
+/* ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗ */
+/* ║ Statusbar                ║ Source Mode                                                                             ║ */
+/* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
+
+// Pseudo
+.plugin-editor-status[aria-label="Source mode"]::after {
+  content: "Source mode";
+}
+
+/* Background */
+.plugin-editor-status[aria-label="Source mode"] {
+  color: var(--text-on-accent) !important;
+  background-color: var(--interactive-accent) !important;
+}
+
+/* Hover */
+.status-bar-item.mod-clickable[aria-label="Source mode"]:hover {
+  color: var(--text-on-accent) !important;
+  background-color: var(--interactive-accent) !important;
+}
+
+
+
+/* ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗ */
+/* ║ Statusbar                ║ Live Preview                                                                            ║ */
+/* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
+
+// Pseudo
+.plugin-editor-status[aria-label="Live Preview"]::after {
+  content: "Live Preview";
+}
+
+/* Background */
+.plugin-editor-status[aria-label="Live Preview"] {
+  color: var(--text-on-accent) !important;
+  background-color: var(--interactive-accent) !important;
+}
+
+/* Hover */
+.status-bar-item.mod-clickable[aria-label="Live Preview"]:hover {
+  color: var(--text-on-accent) !important;
+  background-color: var(--interactive-accent) !important;
+}

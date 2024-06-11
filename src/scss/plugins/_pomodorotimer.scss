@@ -1,19 +1,16 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Features                 ║ Home                                                                                    ║
+// ║ Pomodoro Timer           ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Spacing
-.home .markdown-preview-sizer {
-  padding-bottom: 0px !important;
+.plugin-pomodoro-timer {
+  position: absolute;
+  right: calc(var(--CREARTS-spacing-primary) / 2);
+  height: calc(100% - var(--CREARTS-spacing-primary)) !important;
 }
 
-// Divider
-.home hr {
-  margin: var(--CREARTS-spacing-secondary) 0;
-  opacity: 0;
-}
-
-// Buttons
-.home .button-normal {
-  width: 100%;
+.status-bar:has(.plugin-obsidian-grandfather) .plugin-pomodoro-timer {
+  position: absolute;
+  right: calc(var(--CREARTS-spacing-primary) / 2 + 40px);
+  height: calc(100% - var(--CREARTS-spacing-primary)) !important;
+  width: 64px;
 }

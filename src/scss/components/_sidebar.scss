@@ -1,6 +1,5 @@
-
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components               ║ Sidebar -> Left                                                                         ║
+// ║ Sidebar                  ║ Left                                                                                    ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Width
@@ -9,13 +8,13 @@
 }
 
 // Spacing (Top)
-.mod-left-split .workspace-tabs:nth-child(3) .workspace-leaf-content {
+.mod-left-split .workspace-tabs:nth-child(4) .workspace-leaf-content {
   margin-top: var(--CREARTS-layout-margin-half);
 }
 
 // Spacing (Bottom)
 .mod-left-split .workspace-tabs:last-child .workspace-leaf-content {
-  margin-bottom: calc(var(--CREARTS-layout-margin) + var(--CREARTS-height-statusbar));
+  margin-bottom: calc(var(--CREARTS-layout-margin-half));
 }
 
 .mod-left-split .workspace-tabs:last-child .workspace-leaf-content .nav-files-container,
@@ -23,10 +22,11 @@
 .mod-left-split .workspace-tabs:last-child .workspace-leaf-content .tag-container,
 .mod-left-split .workspace-tabs:last-child .workspace-leaf-content .search-result-container {
   margin-bottom: 0px;
+  margin-top: var(--CREARTS-layout-margin-half) !important;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components               ║ Sidebar -> Left (Top)                                                                   ║
+// ║ Sidebar                  ║ Left (Top)                                                                              ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Nav Header
@@ -70,7 +70,7 @@
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components               ║ Sidebar -> Left (Bottom)                                                                ║
+// ║ Sidebar                  ║ Left (Bottom)                                                                           ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Header
@@ -101,55 +101,8 @@
   min-height: var(--CREARTS-height-header);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components               ║ Sidebar -> Right                                                                        ║
+// ║ Sidebar                  ║ Right                                                                                   ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Width
@@ -174,7 +127,7 @@
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components               ║ Sidebar -> Right (Top)                                                                  ║
+// ║ Sidebar                  ║ Right (Top)                                                                             ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Nav Header
@@ -190,7 +143,9 @@
 .mod-right-split .mod-top .nav-files-container,
 .mod-right-split .mod-top .view-content,
 .mod-right-split .mod-top .tag-container,
-.mod-right-split .mod-top .search-result-container {
+.mod-right-split .mod-top .search-result-container,
+.mod-right-split .mod-top .weather-container,
+.mod-right-split .mod-top .clock-container {
   width: auto;
   margin: var(--CREARTS-layout-margin-half) var(--CREARTS-layout-margin) var(--CREARTS-layout-margin-half) var(--CREARTS-layout-margin-half);
   border-radius: var(--CREARTS-radius-primary);
@@ -209,7 +164,7 @@
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components               ║ Sidebar -> Right (Bottom)                                                               ║
+// ║ Sidebar                  ║ Right (Bottom)                                                                          ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Header
@@ -224,7 +179,9 @@
 .mod-right-split .workspace-tabs:not(.mod-top) .nav-files-container,
 .mod-right-split .workspace-tabs:not(.mod-top) .view-content,
 .mod-right-split .workspace-tabs:not(.mod-top) .tag-container,
-.mod-right-split .workspace-tabs:not(.mod-top) .search-result-container {
+.mod-right-split .workspace-tabs:not(.mod-top) .search-result-container,
+.mod-right-split .workspace-tabs:not(.mod-top) .weather-container,
+.mod-right-split .workspace-tabs:not(.mod-top) .clock-container {
   background: var(--CREARTS-background-secondary);
   border-radius: var(--CREARTS-radius-primary);
   margin: var(--CREARTS-layout-margin-half) var(--CREARTS-layout-margin) 0px var(--CREARTS-layout-margin-half);
@@ -234,7 +191,9 @@
 .mod-right-split .workspace-tabs:not(.mod-top, :last-child) .nav-files-container,
 .mod-right-split .workspace-tabs:not(.mod-top, :last-child) .view-content,
 .mod-right-split .workspace-tabs:not(.mod-top, :last-child) .tag-container,
-.mod-right-split .workspace-tabs:not(.mod-top, :last-child) .search-result-container {
+.mod-right-split .workspace-tabs:not(.mod-top, :last-child) .search-result-container,
+.mod-right-split .workspace-tabs:not(.mod-top, :last-child) .weather-container,
+.mod-right-split .workspace-tabs:not(.mod-top, :last-child) .clock-container  {
   margin-bottom: var(--CREARTS-layout-margin-half);
 }
 
@@ -256,81 +215,114 @@
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components               ║ Sidebar -> Search                                                                       ║
+// ║ Sidebar                  ║ Folder                                                                                  ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Spacing
-.search-row {
-  margin-top: 0px;
-  gap: var(--CREARTS-layout-margin);
+// Spacing (Item)
+.tree-item-self.is-clickable {
+  border-radius: var(--CREARTS-radius-secondary) !important;
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: transparent;
+  margin: 0px;
 }
 
 // Background
-.search-input-container input {
-  min-height: var(--CREARTS-height-header);
-  border: none;
+.nav-files-container > .nav-folder > .nav-folder-children > .nav-folder:not(.is-collapsed) {
+  background: var(--CREARTS-background-primary) !important;
+  border-radius: var(--CREARTS-radius-secondary) !important;
+  transition: 0.1s ease;
+  margin-bottom: var(--CREARTS-spacing-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+  border-color: var(--CREARTS-border-primary);
+}
+
+// Remove
+/*
+.nav-folder .tree-item-children .nav-folder-children {
+  border: none !important;
+}
+*/
+
+.nav-folder.mod-root .nav-folder > .nav-folder-children {
+  border-left: 2px solid;
+  border-color: var(--CREARTS-border-primary);
+}
+
+
+/*
+.nav-folder.mod-root .nav-folder > .nav-folder-children .tree-item::before {
+  content: "";
+  position: absolute;
+
+  border-left: 2px solid;
+
+  border-color: var(--CREARTS-border-primary);
+  margin-left: -6px !important;
+
+height: 30px;
+width: 20px;
+
+}
+*/
+
+
+
+.nav-folder.mod-root .nav-folder > .nav-folder-children .tree-item::before {
+  content: "";
+  position: absolute;
+  border-radius: var(--CREARTS-radius-primary) !important;
+  border-width: 2px;
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+  margin-left: -6px !important;
+  margin-top: 6px;
+  clip-path: inset(50% 50% 0 0);
+  width: 16px;
+  height: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mod-left-split .workspace-tab-header-container-inner, .mod-right-split .workspace-tab-header-container-inner {
+padding: 0px;
+  margin: var(--CREARTS-spacing-primary);
+  gap: var(--CREARTS-spacing-primary-half);
+
+}
+
+
+
+
+.mod-left-split .workspace-sidedock-vault-profile {
+  background: var(--CREARTS-background-secondary) !important;
   border-radius: var(--CREARTS-radius-primary);
-  background: var(--CREARTS-background-secondary);
-}
+  margin: var(--CREARTS-layout-margin-half);
+  width: auto;
+  padding: var(--CREARTS-spacing-secondary);
 
-.search-row > .clickable-icon {
-  min-width: var(--CREARTS-height-header);
-  min-height: var(--CREARTS-height-header);
-  border-radius: var(--CREARTS-radius-primary);
-  background: var(--CREARTS-background-secondary);
-}
+border: none !important;
 
-.search-results-info {
-  min-height: var(--CREARTS-height-header);
-  margin-top: var(--CREARTS-layout-margin-half);
-  margin-right: calc(var(--CREARTS-layout-margin) / 2);
-  margin-left: calc(var(--CREARTS-layout-margin) / 2);
-  padding: var(--CREARTS-spacing-primary);
-  border: none;
-  border-radius: var(--CREARTS-radius-primary);
-  background: var(--CREARTS-background-secondary);
-}
 
-.search-params {
-  min-height: var(--CREARTS-height-header);
-  margin-top: var(--CREARTS-layout-margin-half);
-  margin-right: calc(var(--CREARTS-layout-margin) / 2);
-  margin-bottom: var(--CREARTS-layout-margin-half);
-  margin-left: calc(var(--CREARTS-layout-margin) / 2);
-  border-radius: var(--CREARTS-radius-primary);
-  background: var(--CREARTS-background-secondary);
-}
 
-.search-params .setting-item {
-  padding: var(--CREARTS-spacing-primary);
-}
 
-.search-info-container {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  height: var(--CREARTS-height-header);
-  margin-top: var(--CREARTS-layout-margin-half);
-  margin-right: calc(var(--CREARTS-layout-margin) / 2);
-  margin-bottom: var(--CREARTS-layout-margin-half);
-  margin-left: calc(var(--CREARTS-layout-margin) / 2);
-  border-radius: var(--CREARTS-radius-primary);
-  background: var(--CREARTS-background-secondary);
-}
-
-.search-input-container:before {
-  top: 25%;
-}
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components               ║ Sidebar -> Recent Files                                                                 ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// Spacing
-.workspace-leaf-content[data-type="recent-files"] .view-content {
-  margin-top: 0px;
-}
-
-.workspace-leaf-content[data-type="recent-files"] .nav-file-title {
-  padding-left: var(--CREARTS-spacing-primary);
+  margin-bottom: calc(var(--CREARTS-layout-margin) + var(--CREARTS-height-statusbar));
 }

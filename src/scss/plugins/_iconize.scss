@@ -1,6 +1,20 @@
+.nav-folder-title .iconize-icon {
+  display: none;
+}
+
+.tree-item-children .iconize-icon {
+  display: block;
+}
+
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Plugins                  ║ Icon Folder                                                                             ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.iconize-icon {
+  border: none;
+}
+
+
 
 // Files
 .iconize-icon path {
@@ -51,4 +65,12 @@
 
 .iconize-icon-folder-icon path {
   fill: var(--CREARTS-text-primary) !important;
+}
+
+
+
+
+
+.iconize-icon-in-link {
+  display: none;
 }

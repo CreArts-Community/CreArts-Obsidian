@@ -1,24 +1,24 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Banners                  ║ General                                                                                 ║
+// ║ Accent                   ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Backgrund
-.obsidian-banner {
-  border-radius: var(--CREARTS-radius-primary);
+.tree-item-self.is-clickable:hover {
+  color: var(--text-on-accent) !important;
+  background-color: var(--interactive-accent) !important;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Banners                  ║ Properties                                                                              ║
+// ║ Accent                   ║ Tabs                                                                                    ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Show Properties
-.show-properties:has(.obsidian-banner) .metadata-container {
-  margin-top: var(--banner-height);
+/*
+.mod-left-split .workspace-tab-header.is-active,
+.mod-right-split .workspace-tab-header.is-active {
+  background-color: var(--interactive-accent) !important;
 }
 
-// Properties
-.show-properties:has(.obsidian-banner) .obsidian-banner-wrapper {
-  padding-top: 0px;
-  margin: 0px;
+.mod-left-split .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+.mod-right-split .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+  color: var(--text-on-accent) !important;
 }
-
+*/

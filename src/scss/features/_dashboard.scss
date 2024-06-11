@@ -1,9 +1,19 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Plugins                  ║ Grandfather                                                                             ║
+// ║ Features                 ║ Dashboard                                                                               ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.plugin-obsidian-grandfather {
-  position: absolute;
-  right: calc(var(--CREARTS-spacing-primary) / 2);
-  height: calc(100% - var(--CREARTS-spacing-primary)) !important;
+// Spacing
+.dashboard .markdown-preview-sizer {
+  padding-bottom: 0px !important;
+}
+
+// Divider
+.dashboard hr {
+  margin: var(--CREARTS-spacing-secondary) 0;
+}
+
+
+// Buttons
+.dashboard .button-normal {
+  width: 100%;
 }

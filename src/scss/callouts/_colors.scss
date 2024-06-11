@@ -119,3 +119,17 @@
 [data-callout="colors-1"] span {
   width: var(--colors-columns-1);
 }
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Colors                   ║ Selection                                                                               ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+
+[data-callout="colors-4"] ::selection,
+[data-callout="colors-3"] ::selection,
+[data-callout="colors-2"] ::selection,
+[data-callout="colors-1"] ::selection {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+}

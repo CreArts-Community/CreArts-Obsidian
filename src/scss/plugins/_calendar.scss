@@ -2,20 +2,57 @@
 // ║ Plugins                  ║ Calendar                                                                                ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
+// Spacing
 #calendar-container {
   margin: 0px !important;
   padding: 0px !important;
 }
 
+#calendar-container .nav.svelte-1vwr9dd.svelte-1vwr9dd {
+  margin: 0px 0px var(--CREARTS-spacing-primary) 0px !important;
+  padding: 0px 0px 0px 0px;
+
+}
+
+
+
+
+
+#calendar-container .title {
+  border-width: var(--CREARTS-border-width) !important;
+  border-style: var(--CREARTS-border-style) !important;
+  border-radius: var(--CREARTS-radius-primary);
+  border-color: var(--CREARTS-border-primary) !important;
+  background: var(--CREARTS-background-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+}
+
+#calendar-container .right-nav {
+  border-width: var(--CREARTS-border-width) !important;
+  border-style: var(--CREARTS-border-style) !important;
+  border-radius: var(--CREARTS-radius-primary);
+  border-color: var(--CREARTS-border-primary) !important;
+  background: var(--CREARTS-background-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+}
+
+
+// Font
 #calendar-container .month,
 #calendar-container .title,
 #calendar-container .year {
-  color: var(--text-normal);
   font-weight: 600;
   font-size: calc(var(--font-adaptive-small) + 2px);
 }
 
-
-.day.today {
+// Today
+#calendar-container .day.today {
   font-weight: 800;
+padding: 0px;
+  border-width: var(--CREARTS-border-width) !important;
+  border-style: var(--CREARTS-border-style) !important;
+  border-radius: var(--CREARTS-radius-secondary);
+  border-color: var(--CREARTS-border-primary) !important;
+  background: var(--CREARTS-background-primary);
+  box-shadow: var(--CREARTS-effects-flat);
 }

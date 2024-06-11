@@ -9,7 +9,6 @@
   align-items: center;
   justify-content: start;
   height: 100%;
-  margin: var(--CREARTS-layout-margin-half) var(--CREARTS-layout-margin) var(--CREARTS-layout-margin-half) var(--CREARTS-layout-margin-half);
   padding: var(--CREARTS-spacing-secondary);
   overflow-y: scroll;
   border-radius: var(--CREARTS-radius-primary);
@@ -64,10 +63,10 @@
 .forecast-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: start;
   justify-content: stretch;
   width: 100%;
-  margin: calc(var(--CREARTS-spacing-primary) / 2) 0px;
+  height: 100%;
   padding: 0px;
   gap: var(--CREARTS-spacing-primary);
 }
@@ -76,8 +75,8 @@
 .forecast-container .forecast-day-container {
   width: 100%;
   max-width: unset;
+  height: 100%;
   padding: var(--CREARTS-spacing-primary) 0px;
-  border: none;
   border-width: var(--CREARTS-border-width) !important;
   border-style: var(--CREARTS-border-style) !important;
   border-radius: var(--CREARTS-radius-secondary);
@@ -97,7 +96,9 @@
 
 // Spacing
 .weather-container .current-container {
+  align-items: start;
   width: 100%;
+  height: 100%;
   padding: 0px !important;
 }
 
@@ -106,6 +107,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;
+  height: 100%;
   margin: calc(var(--CREARTS-spacing-primary) / 2) 0px;
   gap: var(--CREARTS-spacing-primary) !important;
 }
@@ -116,7 +118,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 30px;
+  height: 100%;
   border-width: var(--CREARTS-border-width) !important;
   border-style: var(--CREARTS-border-style) !important;
   border-radius: var(--CREARTS-radius-secondary);
@@ -179,6 +181,7 @@
 // ║ Plugins                  ║ Tenki -> Replace Icons                                                                  ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
+/*
 // Icon
 .weather-container .forecast-icon {
   object-position: -99999px 99999px;
@@ -186,6 +189,7 @@
   background-position-x: center !important;
   background-position-y: bottom !important;
 }
+*/
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Plugins                  ║ Tenki -> Icons (Day)                                                                    ║
@@ -439,18 +443,34 @@
 // ║ Plugins                  ║ Tenki -> Hover                                                                          ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
+// Remove Location
+.weather-container .location {
+  display: none;
+}
+
+// Remove Stats
+.weather-container .current-stats-container {
+  display: none !important;
+}
+
+.weather-container .current-container {
+  display: none;
+}
+
+// Forecast
 .weather-container:hover .forecast-container {
   display: none;
 }
 
-.weather-container:hover .location {
-  display: none;
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Tenki                    ║ Remove                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Stats
+.weather-container:hover .current-container {
+  display: flex;
 }
 
 .weather-container:hover .current-stats-container {
   display: grid !important;
-}
-
-.current-stats-container {
-  display: none !important;
 }

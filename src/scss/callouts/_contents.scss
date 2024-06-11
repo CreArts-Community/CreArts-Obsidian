@@ -1,90 +1,83 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components               ║ Content                                                                                 ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// Spacing
-.mod-root .workspace-leaf-content {
-  margin-top: var(--CREARTS-layout-margin);
-  margin-bottom: calc(var(--CREARTS-layout-margin) + var(--CREARTS-height-statusbar));
-}
-
-// Header
-.mod-root .view-header {
-  min-height: var(--CREARTS-height-header);
-  margin-right: var(--CREARTS-layout-margin);
-  margin-bottom: var(--CREARTS-layout-margin-half);
-  margin-left: calc(var(--CREARTS-layout-margin) / 2);
-  border-radius: var(--CREARTS-radius-primary);
-  background: var(--CREARTS-background-secondary) !important;
-}
-
-.is-right-sidedock-open .mod-root .view-header {
-  margin-right: calc(var(--CREARTS-layout-margin) / 2);
-}
-
-// Content
-.mod-root .view-content {
-  width: auto;
-  margin-top: var(--CREARTS-layout-margin-half);
-  margin-right: var(--CREARTS-layout-margin);
-  margin-left: calc(var(--CREARTS-layout-margin) / 2);
-  border-radius: var(--CREARTS-radius-primary);
-  background: var(--CREARTS-background-secondary) !important;
-
-}
-
-.is-right-sidedock-open .mod-root .view-content {
-  margin-right: calc(var(--CREARTS-layout-margin) / 2);
-}
-
-// Remove Gradient
-.view-header-title-container:not(.mod-at-end):after {
-  display: none;
-}
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components               ║ Content -> Gutters                                                                      ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// Spacing
-.cm-gutters .cm-gutterElement {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  font-weight: 600;
-}
-
-// Active
-.cm-gutters .cm-active {
-  font-weight: 800;
-}
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components               ║ Content -> Canvas                                                                       ║
+// ║ Contents                 ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.mod-root .canvas-wrapper {
-  background: var(--CREARTS-background-secondary);
-}
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components               ║ Content -> PDF                                                                          ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Content                  ║ Properties                                                                              ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-.metadata-container {
+.callout[data-callout="contents"] {
   background: var(--CREARTS-background-primary);
+  border-radius: var(--CREARTS-radius-primary);
+  /* width: 220px; */
+  min-width: 220px;
+  padding: 0px;
+  margin-top: 0px !important;
+  margin-bottom: 20px !important;
   box-shadow: var(--CREARTS-effects-flat);
+
   border-width: var(--CREARTS-border-width);
   border-style: var(--CREARTS-border-style);
-  border-radius: var(--CREARTS-radius-primary);
   border-color: var(--CREARTS-border-primary);
-  padding: var(--CREARTS-spacing-secondary);
-  transform: none;
 }
+
+
+.callout[data-callout="contents"] .callout-title {
+  margin: var(--CREARTS-spacing-primary) var(--CREARTS-spacing-tertiary);
+  color: var(--CREARTS-text-primary);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Contents                 ║ Text                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+
+
+// Text
+.callout[data-callout="contents"] .has-list-bullet {
+  font-size: calc(var(--font-text-size) / 2 + 5px);
+  hyphens: auto;
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+margin: 0px var(--CREARTS-spacing-primary) var(--CREARTS-spacing-primary) var(--CREARTS-spacing-tertiary);
+}
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Contents                 ║ Remove                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+/* Remove - */
+.callout[data-callout="contents"] .has-list-bullet::before {
+  display: none;
+}
+
+
+/* Remove - Icon */
+.callout[data-callout="contents"] .callout-icon {
+  display: none;
+}
+
+/*
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Infobox                  ║ Left                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Float
+.callout[data-callout="contents"][data-callout-metadata="left"] {
+  margin-right: var(--CREARTS-spacing-tertiary);
+  margin-bottom: var(--CREARTS-spacing-tertiary);
+  float: left;
+  clear: left;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Infobox                  ║ Right                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Float
+.callout[data-callout="contents"][data-callout-metadata="right"] {
+  margin-left: var(--CREARTS-spacing-tertiary);
+  margin-bottom: var(--CREARTS-spacing-tertiary);
+  float: right;
+  clear: right;
+}
+*/

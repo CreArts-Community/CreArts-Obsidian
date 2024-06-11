@@ -1,38 +1,48 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Column                   ║ General                                                                                 ║
+// ║ Tags                     ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.callout[data-callout="column"] {
+.callout[data-callout="tags"] {
   background: transparent;
   border-radius: 0px;
-  margin: 0px;
   padding: 0px;
+  margin: 0px;
 }
 
 // Spacing
-.callout[data-callout="column"] .callout-content {
+.callout[data-callout="tags"] .has-list-bullet {
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
-  align-items: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: var(--CREARTS-spacing-secondary);
+  padding: 0px;
 }
 
-
-// Buttons
-.callout[data-callout="column"] .mb-button {
-  width: 100%;
+// Tag
+.callout[data-callout="tags"] .has-list-bullet li{
+  color: var(--text-on-accent) !important;
+  background-color: var(--interactive-accent) !important;
+  border-radius: var(--CREARTS-radius-primary);
+  padding: 0px var(--CREARTS-spacing-primary) 0px var(--CREARTS-spacing-primary);
 }
 
-.callout[data-callout="column"] .mb-button-inner {
-  width: 100%;
+.callout[data-callout="tags"] .has-list-bullet li::before{
+content: "#";
+position: relative;
+}
+
+// Remove - Bullet Point
+.callout[data-callout="tags"] .list-bullet {
+  display: none;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Column                   ║ Remove                                                                                  ║
+// ║ Tags                     ║ Remove                                                                                  ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Remove Title
-.callout[data-callout="column"] .callout-title {
+.callout[data-callout="tags"] .callout-title {
   display: none;
 }

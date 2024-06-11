@@ -1,0 +1,66 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Search                   ║ Search                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.search-row {
+  margin-top: 0px;
+  gap: var(--CREARTS-layout-margin);
+}
+
+// Background
+.search-input-container input {
+  min-height: var(--CREARTS-height-header);
+  border: none;
+  border-radius: var(--CREARTS-radius-primary);
+  background: var(--CREARTS-background-secondary);
+}
+
+.search-row > .clickable-icon {
+  min-width: var(--CREARTS-height-header);
+  min-height: var(--CREARTS-height-header);
+  border-radius: var(--CREARTS-radius-primary);
+  background: var(--CREARTS-background-secondary);
+}
+
+.search-results-info {
+  min-height: var(--CREARTS-height-header);
+  margin-top: var(--CREARTS-layout-margin-half);
+  margin-right: calc(var(--CREARTS-layout-margin) / 2);
+  margin-left: calc(var(--CREARTS-layout-margin) / 2);
+  padding: var(--CREARTS-spacing-primary);
+  border: none;
+  border-radius: var(--CREARTS-radius-primary);
+  background: var(--CREARTS-background-secondary);
+}
+
+.search-params {
+  min-height: var(--CREARTS-height-header);
+  margin-top: var(--CREARTS-layout-margin-half);
+  margin-right: calc(var(--CREARTS-layout-margin) / 2);
+  margin-bottom: var(--CREARTS-layout-margin-half);
+  margin-left: calc(var(--CREARTS-layout-margin) / 2);
+  border-radius: var(--CREARTS-radius-primary);
+  background: var(--CREARTS-background-secondary);
+}
+
+.search-params .setting-item {
+  padding: var(--CREARTS-spacing-primary);
+}
+
+.search-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: var(--CREARTS-height-header);
+  margin-top: var(--CREARTS-layout-margin-half);
+  margin-right: calc(var(--CREARTS-layout-margin) / 2);
+  margin-bottom: var(--CREARTS-layout-margin-half);
+  margin-left: calc(var(--CREARTS-layout-margin) / 2);
+  border-radius: var(--CREARTS-radius-primary);
+  background: var(--CREARTS-background-secondary);
+}
+
+.search-input-container:before {
+  top: 25%;
+}

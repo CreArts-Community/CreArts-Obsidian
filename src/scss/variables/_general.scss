@@ -31,6 +31,10 @@
   --CREARTS-spacing-secondary: 12px;
   --CREARTS-spacing-tertiary: 16px;
 
+  --CREARTS-spacing-primary-half: calc(var(--CREARTS-spacing-primary) / 2);
+  --CREARTS-spacing-secondary-half: calc(var(--CREARTS-spacing-secondary) / 2);
+  --CREARTS-spacing-tertiary-half: calc(var(--CREARTS-spacing-tertiary) / 2);
+
   // Width
   --CREARTS-width-ribbon: 44px;
   --CREARTS-width-left: 260px;

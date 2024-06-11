@@ -1,51 +1,93 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Callouts                 ║ Infobox                                                                                 ║
+// ║ Infobox                  ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Backgground
+// Background
 .callout[data-callout="infobox"] {
   background: var(--CREARTS-background-primary);
   border-radius: var(--CREARTS-radius-primary);
-  width: 260px;
+  width: 250px;
   padding: 0px;
   margin-top: 0px !important;
   margin-bottom: 0px !important;
   box-shadow: var(--CREARTS-effects-flat);
+
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
 }
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Infobox                  ║ Image                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
-.callout[data-callout="infobox"] .callout-content {
-  margin-bottom: 12px;
-}
-
-.callout[data-callout="infobox"] p {
+.callout[data-callout="infobox"] p:has(img) {
   margin-block-start: 0px;
   margin-block-end: 0px;
+  padding: 0px;
 }
-
 
 // Image
 .callout[data-callout="infobox"] img {
   border-radius: var(--CREARTS-radius-primary);
+  object-fit: cover !important;
+  max-height: 220px;
+  width: 100%;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Infobox                  ║ Text                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Text
+.callout[data-callout="infobox"] p {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  padding: 12px;
+  font-size: 0px;
+  hyphens: auto;
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
 }
 
 // Title
-.callout[data-callout="infobox"] h1 {
-  margin: 4px 12px 8px 12px;
+.callout[data-callout="infobox"] h1,
+.callout[data-callout="infobox"] h2,
+.callout[data-callout="infobox"] h3,
+.callout[data-callout="infobox"] h4,
+.callout[data-callout="infobox"] h5,
+.callout[data-callout="infobox"] h6 {
+  margin: var(--CREARTS-spacing-primary);
 }
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Infobox                  ║ Table                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Table
 .callout[data-callout="infobox"] table {
-  margin: 0px !important;
+  margin: 0px 0px var(--CREARTS-spacing-primary) 0px !important;
   padding: 0px !important;
+  width: 100%;
 }
 
 // td
 .callout[data-callout="infobox"] td {
   border: none;
-  padding-left: 12px; 
-  padding-right: 0px;
+  padding: calc(var(--CREARTS-spacing-primary) / 2) var(--CREARTS-spacing-primary) calc(var(--CREARTS-spacing-primary) / 2) var(--CREARTS-spacing-primary) !important;
+  font-size: calc(var(--font-text-size) / 2 + 4px);
+  hyphens: auto;
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+  max-width: 0px !important;
 }
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Infobox                  ║ Remove                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Remove Title
 .callout[data-callout="infobox"] .callout-title {
@@ -58,27 +100,36 @@
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Callouts                 ║ Infobox -> Left                                                                         ║
+// ║ Infobox                  ║ Left                                                                                    ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Float
 .callout[data-callout="infobox"][data-callout-metadata="left"] {
+  margin-right: var(--CREARTS-spacing-tertiary);
+  margin-bottom: var(--CREARTS-spacing-tertiary);
   float: left;
-  margin-right: 12px;
+  clear: left;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Callouts                 ║ Infobox -> Right                                                                        ║
+// ║ Infobox                  ║ Right                                                                                   ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Float
 .callout[data-callout="infobox"][data-callout-metadata="right"] {
+  margin-left: var(--CREARTS-spacing-tertiary);
+  margin-bottom: var(--CREARTS-spacing-tertiary);
   float: right;
-  margin-left: 12px;
+  clear: right;
 }
 
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Infobox                  ║ Reponsive                                                                               ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-
-
-
-
+/*
+.callout[data-callout="infobox"] {
+  width: 100% !important;
+  margin-bottom: 8px !important;
+}
+*/

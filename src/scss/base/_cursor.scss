@@ -1,83 +1,60 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Hover                    ║ Sidebar                                                                                 ║
+// ║ Cursor                   ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-/*
-// Normal
-.mod-horizontal .mod-top .nav-files-container,
-.mod-horizontal .mod-top .view-content,
-.mod-horizontal .mod-top .tag-container {
-  margin-top: 0px !important;
-}
-*/
-
-.mod-horizontal .nav-header,
-.mod-horizontal .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
-  display: none;
+.clickable-icon {
+  cursor: pointer !important;
 }
 
-// Hover
-.mod-horizontal:hover .mod-top .nav-files-container,
-.mod-horizontal:hover .mod-top .view-content,
-.mod-horizontal:hover .mod-top .tag-container {
-  margin-top: var(--CREARTS-layout-margin-half);
-}
-
-.mod-horizontal:hover .nav-header,
-.mod-horizontal:hover .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
-  display: flex !important;
+.titlebar-button {
+  cursor: pointer !important;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Hover                    ║ Left Sidebar                                                                            ║
+// ║ Cursor                   ║ Tabs                                                                                    ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-/*
-.mod-left-split .mod-top-left-space .workspace-tab-header-container-inner {
-  display: none;
-}
 
-.mod-left-split:hover .mod-top-left-space .workspace-tab-header-container-inner {
-  display: flex;
-}
-*/
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Hover                    ║ Right Sidebar                                                                           ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-.mod-right-split .mod-top-right-space .workspace-tab-header-container-inner {
-  display: none;
-}
-
-.mod-right-split:hover .mod-top-right-space .workspace-tab-header-container-inner {
-  display: flex;
+.workspace-tab-header:not(.is-active) {
+  cursor: pointer !important;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Hover                    ║ Resize Handle                                                                           ║
+// ║ Cursor                   ║ Callout                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Normal
-.mod-horizontal .workspace-leaf-resize-handle {
-  opacity: 0 !important;
-}
-
-// Hover
-.mod-horizontal:hover .workspace-leaf-resize-handle {
-  opacity: 1 !important;
+.callout-title {
+  cursor: pointer !important;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Hover                    ║ Header Tab List                                                                         ║
+// ║ Cursor                   ║ Files                                                                                   ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Normal
-.workspace-tab-header-tab-list {
-  display: none !important;
+body:not(.is-grabbing) .tree-item-self.is-clickable:hover {
+  cursor: pointer !important;
 }
 
-// Hover
-.workspace-tab-header-container:hover .workspace-tab-header-tab-list {
-  display: flex !important;
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Cursor                   ║ Settings                                                                                ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+button {
+  cursor: pointer;
+}
+
+.dropdown {
+  cursor: pointer;
+}
+
+.dropdown option[value="obsidian"] {
+  cursor: pointer !important;
+}
+
+.checkbox-container {
+  cursor: pointer;
+}
+
+input[type="color"] {
+  cursor: pointer;
 }

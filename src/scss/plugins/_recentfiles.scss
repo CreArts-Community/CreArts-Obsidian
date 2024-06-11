@@ -1,9 +1,12 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Plugins                  ║ Grandfather                                                                             ║
+// ║ Recent Files             ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.plugin-obsidian-grandfather {
-  position: absolute;
-  right: calc(var(--CREARTS-spacing-primary) / 2);
-  height: calc(100% - var(--CREARTS-spacing-primary)) !important;
+// Spacing
+.workspace-leaf-content[data-type="recent-files"] .view-content {
+  margin-top: 0px !important;
+}
+
+.workspace-leaf-content[data-type="recent-files"] .nav-file-title {
+  padding-left: var(--CREARTS-spacing-primary) !important;
 }

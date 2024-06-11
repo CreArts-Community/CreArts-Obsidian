@@ -21,10 +21,10 @@
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Callouts                 ║ Table                                                                                   ║
+// ║ Table                    ║ Table                                                                                   ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Table
+
 [data-callout="tables"] table {
   width: calc(100% + var(--CREARTS-spacing-primary) + var(--CREARTS-spacing-primary) - 1px);
   border-collapse: separate;
@@ -32,14 +32,22 @@
   margin-left: calc(var(--CREARTS-spacing-primary) * -1);
 }
 
-// Header
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Table                    ║ Header                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
 [data-callout="tables"] thead th {
   border: none;
+  
 }
 
-// Body
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Table                    ║ Body                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
 [data-callout="tables"] tbody tr:nth-child(odd) {
   background: var(--CREARTS-interface-primary) !important;
+ 
 }
 
 [data-callout="tables"] tbody tr:nth-child(even) {
@@ -47,27 +55,34 @@
 }
 
 [data-callout="tables"] td {
-  padding: var(--CREARTS-spacing-primary);
   border-width: var(--CREARTS-border-width);
   border-style: var(--CREARTS-border-style);
   border-radius: var(--CREARTS-radius-primary);
   vertical-align: middle;
+  user-select: all;
 }
 
 [data-callout="tables"] tbody tr:nth-child(odd) td {
-  border-color: var(--CREARTS-border-secondary) !important;
+  border-color: var(--CREARTS-border-secondary);
 }
 
 [data-callout="tables"] tbody tr:nth-child(even) td {
-  border-color: var(--CREARTS-border-primary) !important;
+  border-color: var(--CREARTS-border-primary);
 }
 
-// Empty
-td:empty {
-  padding: var(--CREARTS-spacing-secondary) !important;
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Table                    ║ Empty                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+[data-callout="tables"] td:empty {
+visibility: hidden;
+padding: var(--CREARTS-spacing-primary);
 }
 
-// Image
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Table                    ║ Image                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
 [data-callout="tables"] img {
   display: flex;
   align-items: center;
@@ -78,3 +93,29 @@ td:empty {
 [data-callout="tables"] td:first-child {
   white-space: nowrap;
 }
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Table                    ║ Outline                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+[data-callout="tables"][data-callout-metadata="outline"] tbody tr:nth-child(odd),
+[data-callout="tables"][data-callout-metadata="outline"] tbody tr:nth-child(even) {
+  background: transparent !important;
+}
+
+
+
+
+
+/*
+.markdown-rendered td, .markdown-rendered th {
+  max-width: unset !important;
+  min-width: unset !important;
+}
+
+
+.markdown-rendered td:nth-child(6) {
+  max-width: 0px !important;
+  min-width: 0px !important;
+}
+*/

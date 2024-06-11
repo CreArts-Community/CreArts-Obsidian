@@ -1,24 +1,41 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Banners                  ║ General                                                                                 ║
+// ║ Image Zoom               ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Backgrund
-.obsidian-banner {
-  border-radius: var(--CREARTS-radius-primary);
+/* Background */
+.view-content .image-embed:active::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1000%;
+  background: rgba(0, 0, 0, 0.9);
+  content: "";
+}
+
+/* Image */
+.view-content .image-embed:active img {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 80%;
+  max-height: 60vh;
+  margin: auto;
+  transform: translate(-50%, -50%);
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Banners                  ║ Properties                                                                              ║
+// ║ Image Zoom               ║ Cursor                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Show Properties
-.show-properties:has(.obsidian-banner) .metadata-container {
-  margin-top: var(--banner-height);
+/* Hover */
+.view-content .image-embed img {
+  max-width: 100%;
+  cursor: zoom-in;
 }
 
-// Properties
-.show-properties:has(.obsidian-banner) .obsidian-banner-wrapper {
-  padding-top: 0px;
-  margin: 0px;
+/* Active */
+.view-content .image-embed img:active {
+  cursor: zoom-out;
 }
-
