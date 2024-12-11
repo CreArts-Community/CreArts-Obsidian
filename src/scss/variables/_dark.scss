@@ -31,7 +31,16 @@
 // Effects
 --CREARTS-effects-flat: 2px 2px 20px hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) - 3% + var(--CREARTS-lightness) - 6%), var(--CREARTS-base-a)), -2px -2px 12px var(--CREARTS-background-secondary);
 --CREARTS-effects-pressed: inset 6px 6px 20px hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) - 3% + var(--CREARTS-lightness) - 6%), var(--CREARTS-base-a)), inset -6px -6px 20px var(--CREARTS-background-secondary);
+
+// Colors
+--CREARTS-colors-red: 206, 9, 81;
+--CREARTS-colors-green: 9, 206, 133;
+--CREARTS-colors-yellow: 255, 215, 97;
+--CREARTS-colors-orange: 230, 114, 91;
+--CREARTS-colors-blue: 97, 136, 255;
+--CREARTS-colors-purple: 176, 97, 255;
 }
+
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Dark                     ║ Default                                                                                 ║
@@ -93,11 +102,6 @@
 // ╔══════════════════════════╗
 // ║ Color Accent             ║
 // ╚══════════════════════════╝
-
-//--color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
-//--color-accent: var(--CREARTS-accent-primary, hsl(var(--accent-h), var(--accent-s), var(--accent-l)));
-//--color-accent-1: var(--CREARTS-accent-primary, hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 3.8%)));
-//--color-accent-2: var(--CREARTS-accent-secondary, hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 3.8%)));
 
 //--color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
 //--color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));

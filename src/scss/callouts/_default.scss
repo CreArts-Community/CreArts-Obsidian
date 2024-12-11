@@ -2,58 +2,100 @@
 // ║ Default                  ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
+// Background
 .callout {
-  margin: 0px;
-  margin-bottom: 20px;
-  padding: var(--CREARTS-spacing-tertiary);
+  background: var(--CREARTS-background-primary);
   border-radius: var(--CREARTS-radius-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+  box-sizing: border-box;
+  mix-blend-mode: unset;
+  overflow: visible;
+  padding: var(--CREARTS-spacing-tertiary);
 }
 
-
-/*
-.callout p {
-  margin-block-start: var(--CREARTS-spacing-primary);
-  margin-block-end: var(--CREARTS-spacing-primary);
+// Content
+.callout-content {
+  overflow: visible;
 }
-*/
+
+// Title & Icon
+.callout-icon .svg-icon,
+.callout-title {
+  color: var(--CREARTS-text-primary);
+}
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Default                  ║ None                                                                                    ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-[data-callout-metadata="none"] {
+// Background
+.callout[data-callout-metadata="none"],
+.callout[data-callout-metadata="none-headless"] {
   background: transparent;
-  padding: 0px;
-  border-radius: 0px;
+  border-radius: unset;
+  box-shadow: unset;
+  border-width: unset;
+  border-style: unset;
+  border-color: unset;
+  padding: unset;
+}
+
+// Remove Title
+.callout[data-callout-metadata="none-headless"] .callout-title {
+  display: none;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Default                  ║ Flat                                                                                    ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-[data-callout-metadata="flat"] {
+// Background
+.callout[data-callout-metadata="flat"],
+.callout[data-callout-metadata="flat-headless"] {
+  background: var(--CREARTS-background-primary);
+  border-radius: var(--CREARTS-radius-primary);
+  box-shadow: var(--CREARTS-effects-flat);
   border-width: var(--CREARTS-border-width);
   border-style: var(--CREARTS-border-style);
-  border-radius: var(--CREARTS-radius-primary);
   border-color: var(--CREARTS-border-primary);
-  background: var(--CREARTS-background-primary);
-  box-shadow: var(--CREARTS-effects-flat);
+}
+
+// Remove Title
+.callout[data-callout-metadata="flat-headless"] .callout-title {
+  display: none;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Default                  ║ Pressed                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-[data-callout-metadata="pressed"] {
+// Background
+.callout[data-callout-metadata="pressed"],
+.callout[data-callout-metadata="pressed-headless"] {
   background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
   box-shadow: var(--CREARTS-effects-pressed);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: transparent;
 }
+
+// Remove Title
+.callout[data-callout-metadata="pressed-headless"] .callout-title {
+  display: none;
+}
+
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Default                  ║ Outline                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-[data-callout-metadata="outline"] {
+// Background
+.callout[data-callout-metadata="outline"],
+.callout[data-callout-metadata="outline-headless"] {
   border-width: var(--CREARTS-border-width);
   border-style: var(--CREARTS-border-style);
   border-radius: var(--CREARTS-radius-primary);
@@ -62,55 +104,283 @@
   box-shadow: none;
 }
 
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Default                  ║ Accent                                                                                  ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+// Remove Title
+.callout[data-callout-metadata="outline-headless"] .callout-title {
+  display: none;
+}
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Default                  ║ Red                                                                                     ║
+// ║ Default                  ║ Custom -> Red                                                                           ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout-metadata="red"],
+.callout[data-callout-metadata="red-headless"] {
+  background: rgba(var(--CREARTS-colors-red), 0.1);
+  border-radius: var(--CREARTS-radius-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: rgba(var(--CREARTS-colors-red), 0.4);
+}
+
+// Title & Icon
+.callout[data-callout-metadata="red"] .svg-icon,
+.callout[data-callout-metadata="red"] .callout-title {
+  color: rgba(var(--CREARTS-colors-red), 1.0);
+}
+
+// Remove Title
+.callout[data-callout-metadata="red-headless"] .callout-title {
+  display: none;
+}
+
+// Code
+.callout[data-callout-metadata="red"] code,
+.callout[data-callout-metadata="red-headless"] code {
+  background: rgba(var(--CREARTS-colors-red), 0.2);
+}
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Default                  ║ Green                                                                                   ║
+// ║ Default                  ║ Custom -> Green                                                                         ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout-metadata="green"],
+.callout[data-callout-metadata="green-headless"] {
+  background: rgba(var(--CREARTS-colors-green), 0.1);
+  border-radius: var(--CREARTS-radius-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: rgba(var(--CREARTS-colors-green), 0.4);
+}
+
+// Title & Icon
+.callout[data-callout-metadata="green"] .svg-icon,
+.callout[data-callout-metadata="green"] .callout-title {
+  color: rgba(var(--CREARTS-colors-green), 1.0);
+}
+
+// Remove Title
+.callout[data-callout-metadata="green-headless"] .callout-title {
+  display: none;
+}
+
+// Code
+.callout[data-callout-metadata="green"] code,
+.callout[data-callout-metadata="green-headless"] code {
+  background: rgba(var(--CREARTS-colors-green), 0.2);
+}
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Default                  ║ Yellow                                                                                  ║
+// ║ Default                  ║ Custom -> Yellow                                                                        ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout-metadata="yellow"],
+.callout[data-callout-metadata="yellow-headless"] {
+  background: rgba(var(--CREARTS-colors-yellow), 0.1);
+  border-radius: var(--CREARTS-radius-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: rgba(var(--CREARTS-colors-yellow), 0.4);
+}
+
+// Title & Icon
+.callout[data-callout-metadata="yellow"] .svg-icon,
+.callout[data-callout-metadata="yellow"] .callout-title {
+  color: rgba(var(--CREARTS-colors-yellow), 1.0);
+}
+
+// Remove Title
+.callout[data-callout-metadata="yellow-headless"] .callout-title {
+  display: none;
+}
+
+// Code
+.callout[data-callout-metadata="yellow"] code,
+.callout[data-callout-metadata="green-headless"] code {
+  background: rgba(var(--CREARTS-colors-yellow), 0.2);
+}
+
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Default                  ║ Orange                                                                                  ║
+// ║ Default                  ║ Custom -> Orange                                                                        ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout-metadata="orange"],
+.callout[data-callout-metadata="orange-headless"] {
+  background: rgba(var(--CREARTS-colors-orange), 0.1);
+  border-radius: var(--CREARTS-radius-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: rgba(var(--CREARTS-colors-orange), 0.4);
+}
+
+// Title & Icon
+.callout[data-callout-metadata="orange"] .svg-icon,
+.callout[data-callout-metadata="orange"] .callout-title {
+  color: rgba(var(--CREARTS-colors-orange), 1.0);
+}
+
+// Remove Title
+.callout[data-callout-metadata="orange-headless"] .callout-title {
+  display: none;
+}
+
+// Code
+.callout[data-callout-metadata="orange"] code,
+.callout[data-callout-metadata="orange-headless"] code {
+  background: rgba(var(--CREARTS-colors-orange), 0.2);
+}
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Default                  ║ Blue                                                                                    ║
+// ║ Default                  ║ Custom -> Blue                                                                          ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout-metadata="blue"],
+.callout[data-callout-metadata="blue-headless"] {
+  background: rgba(var(--CREARTS-colors-blue), 0.1);
+  border-radius: var(--CREARTS-radius-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: rgba(var(--CREARTS-colors-blue), 0.4);
+}
+
+// Title & Icon
+.callout[data-callout-metadata="blue"] .svg-icon,
+.callout[data-callout-metadata="blue"] .callout-title {
+  color: rgba(var(--CREARTS-colors-blue), 1.0);
+}
+
+// Remove Title
+.callout[data-callout-metadata="blue-headless"] .callout-title {
+  display: none;
+}
+
+// Code
+.callout[data-callout-metadata="blue"] code,
+.callout[data-callout-metadata="blue-headless"] code {
+  background: rgba(var(--CREARTS-colors-blue), 0.2);
+}
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Default                  ║ Purple                                                                                  ║
+// ║ Default                  ║ Custom -> Purple                                                                        ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
+// Background
+.callout[data-callout-metadata="purple"],
+.callout[data-callout-metadata="purple-headless"] {
+  background: rgba(var(--CREARTS-colors-purple), 0.1);
+  border-radius: var(--CREARTS-radius-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: rgba(var(--CREARTS-colors-purple), 0.4);
+}
 
+// Title & Icon
+.callout[data-callout-metadata="purple"] .svg-icon,
+.callout[data-callout-metadata="purple"] .callout-title {
+  color: rgba(var(--CREARTS-colors-purple), 1.0);
+}
 
+// Remove Title
+.callout[data-callout-metadata="purple-headless"] .callout-title {
+  display: none;
+}
 
+// Code
+.callout[data-callout-metadata="purple"] code,
+.callout[data-callout-metadata="purple-headless"] code {
+  background: rgba(var(--CREARTS-colors-purple), 0.2);
+}
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Default                  ║ Style -> Headless                                                                       ║
+// ║ Default                  ║ Default -> Turquoise                                                                    ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
+// Background
+.callout[data-callout="abstract"],
+.callout[data-callout="summary"],
+.callout[data-callout="tldr"],
+.callout[data-callout="important"],
+.callout[data-callout="tip"],
+.callout[data-callout="hint"] {
+  background: rgba(var(--callout-color), 0.1);
+  border-color: rgba(var(--callout-color), 0.4);
+}
 
-
-
+// Code
+.callout[data-callout="abstract"] code,
+.callout[data-callout="summary"] code,
+.callout[data-callout="tldr"] code,
+.callout[data-callout="important"] code,
+.callout[data-callout="tip"] code,
+.callout[data-callout="hint"] code {
+  background: rgba(var(--callout-color), 0.2);
+}
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Default                  ║ Header                                                                                  ║
+// ║ Default                  ║ Default -> Red                                                                          ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout="failure"],
+.callout[data-callout="fail"],
+.callout[data-callout="missing"],
+.callout[data-callout="danger"],
+.callout[data-callout="error"],
+.callout[data-callout="bug"] {
+  background: rgba(var(--callout-color), 0.1);
+  border-color: rgba(var(--callout-color), 0.4);
+}
+
+// Code
+.callout[data-callout="failure"] code,
+.callout[data-callout="fail"] code,
+.callout[data-callout="missing"] code,
+.callout[data-callout="danger"] code,
+.callout[data-callout="error"] code,
+.callout[data-callout="bug"] code {
+  background: rgba(var(--callout-color), 0.2);
+}
+
+
+
+
 
 
 
 /*
-// Remove Title
-.callout-title {
-  display: none !important;
-}
+.callout[data-callout="example"]
+
+.callout[data-callout="info"]
+
+.callout[data-callout="todo"]
+
+
+
+
+.callout[data-callout="success"], .callout[data-callout="check"], .callout[data-callout="done"]
+
+.callout[data-callout="question"], .callout[data-callout="help"], .callout[data-callout="faq"]
+
+.callout[data-callout="warning"], .callout[data-callout="caution"], .callout[data-callout="attention"]
+
+.callout[data-callout="failure"], .callout[data-callout="fail"], .callout[data-callout="missing"]
+
+.callout[data-callout="danger"], .callout[data-callout="error"]
+
+.callout[data-callout="bug"]
+
+
+
+.callout[data-callout="quote"], .callout[data-callout="cite"]
 */

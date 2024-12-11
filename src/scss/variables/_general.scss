@@ -3,6 +3,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 .theme-dark, .theme-light {
+
 // Info
 --CREARTS-info-version: "v1.0.0";
 --CREARTS-info-skin: var(--SKIN-info-skin, "Default");
@@ -47,6 +48,7 @@
 --CREARTS-width-divider: 1px; // Default: 1px
 --CREARTS-width-divider-hover: 3px; // Default: 3px
 --CREARTS-width-kanban: 200px; // Default: 200px
+--CREARTS-width-graph: 250px; // Default: 240px
 
 // Radius
 --CREARTS-radius-primary: 12px; // Default 12px
@@ -81,6 +83,7 @@
 //--footnote-size: var(--font-smaller);
 --titlebar-height: var(--CREARTS-height-titlebar);
 //--clickable-icon-radius: var(--radius-s);
+--caret-color: var(--text-normal);
 
 // ╔══════════════════════════╗
 // ║ Animation                ║
@@ -127,130 +130,141 @@
 //--callout-title-padding: 0;
 //--callout-title-size: inherit;
 //--callout-title-weight: calc(var(--font-weight) + var(--bold-modifier));
-
---callout-content-padding: 0;
---callout-content-background: transparent;
---callout-bug: var(--color-red-rgb);
---callout-default: var(--color-blue-rgb);
---callout-error: var(--color-red-rgb);
---callout-example: var(--color-purple-rgb);
---callout-fail: var(--color-red-rgb);
---callout-important: var(--color-cyan-rgb);
---callout-info: var(--color-blue-rgb);
---callout-question: var(--color-yellow-rgb);
---callout-success: var(--color-green-rgb);
---callout-summary: var(--color-cyan-rgb);
---callout-tip: var(--color-cyan-rgb);
---callout-todo: var(--color-blue-rgb);
---callout-warning: var(--color-orange-rgb);
---callout-quote: 158, 158, 158;
-
+//--callout-content-padding: 0;
+//--callout-content-background: transparent;
+//--callout-bug: var(--color-red-rgb);
+//--callout-default: var(--color-blue-rgb);
+//--callout-error: var(--color-red-rgb);
+//--callout-example: var(--color-purple-rgb);
+//--callout-fail: var(--color-red-rgb);
+//--callout-important: var(--color-cyan-rgb);
+//--callout-info: var(--color-blue-rgb);
+//--callout-question: var(--color-orange-rgb);
+//--callout-success: var(--color-green-rgb);
+//--callout-summary: var(--color-cyan-rgb);
+//--callout-tip: var(--color-cyan-rgb);
+//--callout-todo: var(--color-blue-rgb);
+//--callout-warning: var(--color-orange-rgb);
+//--callout-quote: 158, 158, 158;
 
 // ╔══════════════════════════╗
 // ║ Canvas                   ║
 // ╚══════════════════════════╝
 
---canvas-background: var(--background-primary);
---canvas-card-label-color: var(--text-faint);
---canvas-color-1: var(--CREARTS-hightlight-red);
---canvas-color-2: var(--CREARTS-hightlight-orange);
---canvas-color-3: var(--CREARTS-hightlight-yellow);
---canvas-color-4: var(--CREARTS-hightlight-green);
---canvas-color-5: var(--CREARTS-hightlight-blue);
---canvas-color-6: var(--CREARTS-hightlight-purple);
+//--canvas-background: var(--background-primary);
+//--canvas-card-label-color: var(--text-faint);
+//--canvas-color-1: var(--color-red-rgb);
+//--canvas-color-2: var(--color-orange-rgb);
+//--canvas-color-3: var(--color-yellow-rgb);
+//--canvas-color-4: var(--color-green-rgb);
+//--canvas-color-5: var(--color-cyan-rgb);
+//--canvas-color-6: var(--color-purple-rgb);
 --canvas-dot-pattern: var(--CREARTS-interface-primary);
 
 // ╔══════════════════════════╗
 // ║ Checkbox                 ║
 // ╚══════════════════════════╝
 
---checkbox-radius: var(--radius-s);
---checkbox-size: var(--font-text-size);
---checkbox-marker-color: var(--background-primary);
---checkbox-color: var(--interactive-accent);
---checkbox-color-hover: var(--interactive-accent-hover);
---checkbox-border-color: var(--text-faint);
---checkbox-border-color-hover: var(--text-muted);
+//--checkbox-radius: var(--radius-s);
+//--checkbox-size: var(--font-text-size);
+//--checkbox-marker-color: var(--background-primary);
+//--checkbox-color: var(--interactive-accent);
+//--checkbox-color-hover: var(--interactive-accent-hover);
+//--checkbox-border-color: var(--text-faint);
+//--checkbox-border-color-hover: var(--text-muted);
+//--checkbox-margin-inline-start: 0.85em;
 
 // ╔══════════════════════════╗
 // ║ Checklist                ║
 // ╚══════════════════════════╝
 
---checklist-done-decoration: line-through;
---checklist-done-color: var(--text-muted);
+//--checklist-done-decoration: line-through;
+//--checklist-done-color: var(--text-muted);
 
 // ╔══════════════════════════╗
 // ║ Code                     ║
 // ╚══════════════════════════╝
 
---code-white-space: pre-wrap;
---code-size: var(--font-smaller);
---code-background: var(--background-primary-alt);
---code-normal: var(--text-muted);
---code-comment: var(--text-faint);
---code-function: var(--color-yellow);
---code-important: var(--color-orange);
---code-keyword: var(--color-pink);
---code-operator: var(--color-red);
---code-property: var(--color-cyan);
---code-punctuation: var(--text-muted);
---code-string: var(--color-green);
---code-tag: var(--color-red);
---code-value: var(--color-purple);
+//--code-white-space: pre-wrap;
+//--code-radius: var(--radius-s);
+//--code-size: var(--font-smaller);
+//--code-background: var(--background-primary-alt);
+//--code-normal: var(--text-muted);
+//--code-comment: var(--text-faint);
+//--code-function: var(--color-yellow);
+//--code-important: var(--color-orange);
+//--code-keyword: var(--color-pink);
+//--code-operator: var(--color-red);
+//--code-property: var(--color-cyan);
+//--code-punctuation: var(--text-muted);
+//--code-string: var(--color-green);
+//--code-tag: var(--color-red);
+//--code-value: var(--color-purple);
 
 // ╔══════════════════════════╗
 // ║ Collapse                 ║
 // ╚══════════════════════════╝
 
---collapse-icon-color: var(--text-faint);
---collapse-icon-color-collapsed: var(--text-accent);
+//--collapse-icon-color: var(--text-faint);
+//--collapse-icon-color-collapsed: var(--text-accent);
 
 // ╔══════════════════════════╗
 // ║ Cursor                   ║
 // ╚══════════════════════════╝
 
---cursor: default;
---cursor-link: pointer;
+//--cursor: default;
+//--cursor-link: pointer;
 
 // ╔══════════════════════════╗
 // ║ Dialog                   ║
 // ╚══════════════════════════╝
 
---dialog-width: 560px;
---dialog-max-width: 80vw;
---dialog-max-height: 85vh;
+//--dialog-width: 560px;
+//--dialog-max-width: 80vw;
+//--dialog-max-height: 85vh;
 
 // ╔══════════════════════════╗
 // ║ Divider                  ║
 // ╚══════════════════════════╝
 
---divider-color: var(--CREARTS-interface-primary);
---divider-color-hover: var(--interactive-accent);
---divider-width: var(--CREARTS-width-divider);
---divider-width-hover: var(--CREARTS-width-divider-hover);
---divider-vertical-height: calc(100% - var(--header-height));
+--divider-color: var(--CREARTS-interface-primary, var(--background-modifier-border));
+//--divider-color-hover: var(--interactive-accent);
+--divider-width: var(--CREARTS-width-divider, 1px);
+--divider-width-hover: var(--CREARTS-width-divider-hover, 3px);
+//--divider-vertical-height: calc(100% - var(--header-height));
 
 // ╔══════════════════════════╗
 // ║ Drag                     ║
 // ╚══════════════════════════╝
 
---drag-ghost-background: rgba(0, 0, 0, 0.85);
---drag-ghost-text-color: #fff;
+//--drag-ghost-background: rgba(0, 0, 0, 0.85);
+//--drag-ghost-text-color: #fff;
+
+// ╔══════════════════════════╗
+// ║ Drop Down                ║
+// ╚══════════════════════════╝
+
+//--dropdown-background: var(--interactive-normal);
+//--dropdown-background-blend-mode: hard-light;
+//--dropdown-background-hover: var(--interactive-hover);
+//--dropdown-background-position: right 0.5em top 50%, 0 0;
+//--dropdown-background-size: 1em auto, 100%;
+//--dropdown-padding: 0 1.9em 0 0.8em;
 
 // ╔══════════════════════════╗
 // ║ Embed                    ║
 // ╚══════════════════════════╝
 
---embed-max-height: 4000px;
---embed-canvas-max-height: 400px;
---embed-background: inherit;
---embed-border-left: 2px solid var(--interactive-accent);
---embed-border-right: none;
---embed-border-top: none;
---embed-border-bottom: none;
---embed-padding: 0 0 0 var(--size-4-6);
---embed-font-style: inherit;
---embed-block-shadow-hover: 0 0 0 1px var(--background-modifier-border), inset 0 0 0 1px var(--background-modifier-border);
+//--embed-max-height: 4000px;
+//--embed-canvas-max-height: 400px;
+//--embed-background: inherit;
+//--embed-border-left: 2px solid var(--interactive-accent);
+//--embed-border-right: none;
+//--embed-border-top: none;
+//--embed-border-bottom: none;
+//--embed-padding: 0 0 0 var(--size-4-6);
+//--embed-font-style: inherit;
+//--embed-block-shadow-hover: 0 0 0 1px var(--background-modifier-border), inset 0 0 0 1px var(--background-modifier-border);
 
 // ╔══════════════════════════╗
 // ║ File                     ║
@@ -305,13 +319,13 @@
 // ║ Graph                    ║
 // ╚══════════════════════════╝
 
---graph-controls-width: 220px;
---graph-text: var(--text-normal);
---graph-line: var(--CREARTS-background-primary);
---graph-node: var(--CREARTS-background-primary);
---graph-node-unresolved: var(--text-faint);
---graph-node-focused: var(--text-accent);
---graph-node-tag: var(--text-normal);
+--graph-controls-width: var(--CREARTS-width-graph, 240px);
+//--graph-text: var(--text-normal);
+--graph-line: var(--CREARTS-background-primary, var(--background-modifier-border-focus));
+--graph-node: var(--CREARTS-background-primary, var(--text-muted));
+//--graph-node-unresolved: var(--text-faint);
+//--graph-node-focused: var(--text-accent);
+--graph-node-tag: var(--text-normal, var(--color-green));
 --graph-node-attachment: #ffd861;
 
 // ╔══════════════════════════╗
@@ -362,12 +376,12 @@
 // ║ Header Style             ║
 // ╚══════════════════════════╝
 
---h1-style: normal;
---h2-style: normal;
---h3-style: normal;
---h4-style: normal;
---h5-style: normal;
---h6-style: normal;
+//--h1-style: normal;
+//--h2-style: normal;
+//--h3-style: normal;
+//--h4-style: normal;
+//--h5-style: normal;
+//--h6-style: normal;
 
 // ╔══════════════════════════╗
 // ║ Header Variant           ║
@@ -445,11 +459,17 @@
 --input-font-weight: var(--font-normal);
 --input-border-width: 1px;
 
-// Italic
+// ╔══════════════════════════╗
+// ║ Italic                   ║
+// ╚══════════════════════════╝
+
 --italic-color: inherit;
 --italic-weight: inherit;
 
-// Layer
+// ╔══════════════════════════╗
+// ║ Layer                    ║
+// ╚══════════════════════════╝
+
 --layer-cover: 5;
 --layer-sidedock: 10;
 --layer-status-bar: 15;
@@ -461,11 +481,17 @@
 --layer-tooltip: 70;
 --layer-dragged-item: 80;
 
-// Line
+// ╔══════════════════════════╗
+// ║ Line                     ║
+// ╚══════════════════════════╝
+
 --line-height-normal: 1.5;
 --line-height-tight: 1.3;
 
-// Link
+// ╔══════════════════════════╗
+// ║ Link                     ║
+// ╚══════════════════════════╝
+
 --link-color: var(--text-accent);
 --link-color-hover: var(--text-accent-hover);
 --link-decoration: underline;
@@ -482,7 +508,10 @@
 --link-unresolved-decoration-style: solid;
 --link-unresolved-decoration-color: hsla(var(--interactive-accent-hsl), 0.3);
 
-// List
+// ╔══════════════════════════╗
+// ║ List                     ║
+// ╚══════════════════════════╝
+
 --list-indent: 2em;
 --list-spacing: 0.075em;
 --list-marker-color: var(--text-faint);
@@ -494,7 +523,10 @@
 --list-bullet-transform: none;
 --list-numbered-style: decimal;
 
-// Nav
+// ╔══════════════════════════╗
+// ║ Nav                      ║
+// ╚══════════════════════════╝
+
 --nav-item-size: var(--font-ui-small);
 --nav-item-color: var(--text-muted);
 --nav-item-color-hover: var(--text-normal);
@@ -517,7 +549,10 @@
 --nav-collapse-icon-color: var(--collapse-icon-color);
 --nav-collapse-icon-color-collapsed: var(--text-faint);
 
-// Metadata
+// ╔══════════════════════════╗
+// ║ Metadata                 ║
+// ╚══════════════════════════╝
+
 --metadata-background: transparent;
 --metadata-display-reading: block;
 --metadata-display-editing: block;
@@ -552,7 +587,10 @@
 --metadata-sidebar-label-font-size: var(--font-ui-small);
 --metadata-sidebar-input-font-size: var(--font-ui-small);
 
-// Modal
+// ╔══════════════════════════╗
+// ║ Modal                    ║
+// ╚══════════════════════════╝
+
 --modal-background: var(--background-primary);
 --modal-width: 90vw;
 --modal-height: 85vh;
@@ -564,14 +602,20 @@
 --modal-radius: var(--radius-l);
 --modal-community-sidebar-width: 280px;
 
-// PDF
+// ╔══════════════════════════╗
+// ║ PDF                      ║
+// ╚══════════════════════════╝
+
 --pdf-background: var(--background-primary);
 --pdf-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0, 0, 0, 0.1);
 --pdf-spread-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
 --pdf-sidebar-background: var(--background-primary);
 --pdf-thumbnail-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.2);
 
-// Popover
+// ╔══════════════════════════╗
+// ║ Popover                  ║
+// ╚══════════════════════════╝
+
 --popover-width: 450px;
 --popover-height: 400px;
 --popover-max-height: 70vh;
@@ -579,38 +623,56 @@
 --popover-pdf-height: 800px;
 --popover-font-size: var(--font-text-size);
 
-// Prompt
+// ╔══════════════════════════╗
+// ║ Prompt                   ║
+// ╚══════════════════════════╝
+
 --prompt-width: 700px;
 --prompt-max-width: 80vw;
 --prompt-max-height: 70vh;
 --prompt-border-width: var(--border-width);
 --prompt-border-color: var(--color-base-40, var(--background-modifier-border-focus));
 
-// Radius
+// ╔══════════════════════════╗
+// ║ Radius                   ║
+// ╚══════════════════════════╝
+
 --radius-s: 4px;
 --radius-m: 8px;
 --radius-l: 12px;
 --radius-xl: 16px;
 
-// Ribbon
+// ╔══════════════════════════╗
+// ║ Ribbon                   ║
+// ╚══════════════════════════╝
+
 --ribbon-background: var(--background-secondary);
 --ribbon-background-collapsed: var(--background-primary);
 --ribbon-width: var(--CREARTS-width-ribbon);
 --ribbon-padding: var(--size-4-2) var(--size-4-1) var(--size-4-3);
 
-// Scrollbar
+// ╔══════════════════════════╗
+// ║ Scrollbar                ║
+// ╚══════════════════════════╝
+
 --scrollbar-active-thumb-bg: rgba(var(--mono-rgb-100), 0.2);
 --scrollbar-bg: rgba(var(--mono-rgb-100), 0.05);
 --scrollbar-thumb-bg: rgba(var(--mono-rgb-100), 0.1);
 
-// Search
+// ╔══════════════════════════╗
+// ║ Search                   ║
+// ╚══════════════════════════╝
+
 --search-clear-button-color: var(--text-muted);
 --search-clear-button-size: 13px;
 --search-icon-color: var(--text-muted);
 --search-icon-size: 18px;
 --search-result-background: var(--background-primary);
 
-// Size
+// ╔══════════════════════════╗
+// ║ Size                     ║
+// ╚══════════════════════════╝
+
 --size-2-1: 2px;
 --size-2-2: 4px;
 --size-2-3: 6px;
@@ -626,11 +688,17 @@
 --size-4-16: 64px;
 --size-4-18: 72px;
 
-// Sidebar
+// ╔══════════════════════════╗
+// ║ Sidebar                  ║
+// ╚══════════════════════════╝
+
 --sidebar-markdown-font-size: calc(var(--font-text-size) * 0.9);
 --sidebar-tab-text-display: none;
 
-// Slider
+// ╔══════════════════════════╗
+// ║ Slider                   ║
+// ╚══════════════════════════╝
+
 --slider-thumb-border-width: 1px;
 --slider-thumb-border-color: var(--background-modifier-border-hover);
 --slider-thumb-height: 18px;
@@ -642,7 +710,10 @@
 --slider-track-background: var(--background-modifier-border);
 --slider-track-height: 3px;
 
-// Status Bar
+// ╔══════════════════════════╗
+// ║ Status Bar               ║
+// ╚══════════════════════════╝
+
 --status-bar-background: var(--CREARTS-background-tertiary);
 --status-bar-border-color: var(--divider-color);
 --status-bar-border-width: 1px 0 0 1px;
@@ -652,13 +723,19 @@
 --status-bar-radius: var(--radius-m) 0 0 0;
 --status-bar-scroll-padding: calc(var(--status-bar-font-size) + 18px);
 
-// Swatch
+// ╔══════════════════════════╗
+// ║ Swatch                   ║
+// ╚══════════════════════════╝
+
 --swatch-radius: 14px;
 --swatch-height: 24px;
 --swatch-width: 24px;
 --swatch-shadow: inset 0 0 0 1px rgba(var(--mono-rgb-100), 0.15);
 
-// Tab
+// ╔══════════════════════════╗
+// ║ Tab                      ║
+// ╚══════════════════════════╝
+
 --tab-background-active: var(--background-primary);
 --tab-text-color: var(--text-faint);
 --tab-text-color-active: var(--text-muted);
@@ -686,7 +763,10 @@
 --tab-stacked-text-writing-mode: vertical-lr;
 --tab-stacked-shadow: -8px 0 8px 0 rgba(0, 0, 0, 0.05);
 
-// Table
+// ╔══════════════════════════╗
+// ║ Table                    ║
+// ╚══════════════════════════╝
+
 --table-background: transparent;
 --table-border-width: 1px;
 --table-border-color: var(--background-modifier-border);
@@ -725,7 +805,10 @@
 --table-add-button-border-width: var(--table-border-width);
 --table-add-button-border-color: var(--background-modifier-border);
 
-// Tag
+// ╔══════════════════════════╗
+// ║ Tag                      ║
+// ╚══════════════════════════╝
+
 --tag-size: var(--font-smaller);
 --tag-color: var(--text-accent);
 --tag-color-hover: var(--text-accent);
@@ -741,7 +824,10 @@
 --tag-radius: 2em;
 --tag-weight: inherit;
 
-// Titlebar
+// ╔══════════════════════════╗
+// ║ Titlebar                 ║
+// ╚══════════════════════════╝
+
 --titlebar-background: var(--CREARTS-background-tertiary);
 --titlebar-background-focused: var(--background-secondary-alt);
 --titlebar-border-width: 0px;
@@ -750,7 +836,10 @@
 --titlebar-text-color-focused: var(--text-normal);
 --titlebar-text-weight: var(--font-bold);
 
-// Toggle
+// ╔══════════════════════════╗
+// ║ Toogle                   ║
+// ╚══════════════════════════╝
+
 --toggle-border-width: 2px;
 --toggle-width: 40px;
 --toggle-radius: 18px;
@@ -763,26 +852,41 @@
 --toggle-s-thumb-height: 15px;
 --toggle-s-thumb-width: 15px;
 
-// Vault
+// ╔══════════════════════════╗
+// ║ Vault                    ║
+// ╚══════════════════════════╝
+
 --vault-name-font-size: var(--font-ui-small);
 --vault-name-font-weight: var(--font-medium);
 --vault-name-color: var(--text-normal);
 
-// Workspace
+// ╔══════════════════════════╗
+// ║ Workspace                ║
+// ╚══════════════════════════╝
+
 --workspace-background-translucent: rgba(var(--mono-rgb-0), 0.6);
 
-// Accent
+// ╔══════════════════════════╗
+// ║ Accent                   ║
+// ╚══════════════════════════╝
+
 --accent-h: 254;
 --accent-s: 80%;
 --accent-l: 68%;
 
-// Background
+// ╔══════════════════════════╗
+// ║ Background               ║
+// ╚══════════════════════════╝
+
 --background-primary: var(--CREARTS-background-primary);
 --background-primary-alt: var(--CREARTS-background-primary);
 --background-secondary: var(--CREARTS-background-primary);
 --background-secondary-alt: var(--CREARTS-interface-primary);
 
-// Background Modifier
+// ╔══════════════════════════╗
+// ║ Background Modifier      ║
+// ╚══════════════════════════╝
+
 --background-modifier-hover: var(--CREARTS-interface-primary);
 --background-modifier-active-hover: hsla(var(--interactive-accent-hsl), 0.15);
 --background-modifier-border: var(--CREARTS-interface-primary);
@@ -798,7 +902,10 @@
 --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
 --background-modifier-cover: rgba(10, 10, 10, 0.4);
 
-// Text
+// ╔══════════════════════════╗
+// ║ Text                     ║
+// ╚══════════════════════════╝
+
 --text-normal: var(--CREARTS-text-primary);
 --text-muted: var(--CREARTS-text-primary);
 --text-faint: var(--CREARTS-text-tertiary);
@@ -813,14 +920,20 @@
 --text-warning: var(--color-orange);
 --text-highlight-bg-rgb: 255, 208, 0;
 
-// Interactive
+// ╔══════════════════════════╗
+// ║ Interactive              ║
+// ╚══════════════════════════╝
+
 --interactive-normal: var(--color-base-00);
 --interactive-hover: var(--color-base-10);
 --interactive-accent-hsl: var(--color-accent-hsl);
 --interactive-accent: var(--color-accent-1);
 --interactive-accent-hover: var(--color-accent-2);
 
-// Vault Profile
+// ╔══════════════════════════╗
+// ║ Vault Profile            ║
+// ╚══════════════════════════╝
+
 --vault-profile-display: flex;
 --vault-profile-actions-display: flex;
 --vault-profile-font-size: var(--font-ui-small);
@@ -828,17 +941,14 @@
 --vault-profile-color: var(--text-normal);
 --vault-profile-color-hover: var(--vault-profile-color);
 
+
+
+
+
 // NEW UNSORTED:
 
---caret-color: var(--text-normal);
---checkbox-margin-inline-start: 0.85em;
---dropdown-background: var(--interactive-normal);
---dropdown-background-blend-mode: hard-light;
---dropdown-background-hover: var(--interactive-hover);
---dropdown-background-position: right 0.5em top 50%, 0 0;
---dropdown-background-size: 1em auto, 100%;
---dropdown-padding: 0 1.9em 0 0.8em;
---code-radius: var(--radius-s);
+
+
 --embed-border-start: 2px solid var(--interactive-accent);
 --embed-border-end: none;
 --file-header-font: var(--font-interface);
