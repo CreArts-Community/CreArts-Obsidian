@@ -1,45 +1,46 @@
 /* ╔═══════════════════════════════════════════════════════════════════════════╗ */
 /* ║ Skin                                                                      ║ */
 /* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
-/* ║ Skin:                    ║ Default Edition                                ║ */
+/* ║ Skin:                    ║ Default                                        ║ */
 /* ║ Author:                  ║ Corellan                                       ║ */
 /* ║ Credits:                 ║ https://github.com/CorellanStoma               ║ */
 /* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
 
 .theme-dark.skin-dark-default {
+
 /* Info */
 --SKIN-info-skin: "Default";
 --SKIN-info-author: "Corellan";
 
-/* Lightness */
---CREARTS-lightness: 0%;
-
-/* Grading */
---CREARTS-grading-primary: 0%;
---CREARTS-grading-secondary: 3%;
---CREARTS-grading-tertiary: 6%;
+/* Settings */
+--SKIN-lightness: 0%;
+--SKIN-saturation: 0%;
+--SKIN-alpha: 0%;
 
 /* Accent */
---CREARTS-accent-h: 338;
---CREARTS-accent-s: 92%;
---CREARTS-accent-l: 42%;
---CREARTS-accent-a: 1.0;
+--SKIN-accent-h: 338;
+--SKIN-accent-s: 92%;
+--SKIN-accent-l: 42%;
+--SKIN-accent-a: 1;
 
-/* Text */
---CREARTS-text-h: 227;
---CREARTS-text-s: 70%;
---CREARTS-text-l: 87%;
---CREARTS-text-a: 1.0;
+/* Content */
+--SKIN-content-h: 230;
+--SKIN-content-s: 70%;
+--SKIN-content-l: 86%;
+--SKIN-content-a: 1;
 
-/* Interface */
---CREARTS-interface-h: 230;
---CREARTS-interface-s: 16%;
---CREARTS-interface-l: 30%;
---CREARTS-interface-a: 1.0;
+/* Base */
+--SKIN-base-h: 230;
+--SKIN-base-s: 19%;
+--SKIN-base-l: 23%;
+--SKIN-base-a: 1;
 
-/* Background */
---CREARTS-background-h: 229;
---CREARTS-background-s: 19%;
---CREARTS-background-l: 23%;
---CREARTS-background-a: 1.0;
+/* Grading */
+--SKIN-grading-background-primary: 0%;
+--SKIN-grading-background-secondary: 3%;
+--SKIN-grading-background-tertiary: 6%;
+
+--SKIN-grading-interface-primary: 8%;
+--SKIN-grading-interface-secondary: 16%;
+--SKIN-grading-interface-tertiary: 24%;
 }

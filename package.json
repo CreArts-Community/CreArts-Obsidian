@@ -1,20 +1,20 @@
 {
   "name": "crearts-obsidian-theme",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "author": "corellan",
   "description": "CreArts is a customizable Obsidian theme that changes the appearance of Obsidian.",
   "license": "MIT <license>",
   "private": true,
   "devDependencies": {
-    "fs-extra": "^11.1.1",
+    "fs-extra": "^11.2.0",
     "merge-files": "^0.1.2",
-    "pnpm": "^8.7.6",
-    "prettier": "^3.0.3",
-    "prettier-plugin-css-order": "^2.0.0",
-    "sass": "^1.68.0",
-    "stylelint": "^15.10.3",
-    "stylelint-config-recommended-scss": "^13.0.0",
-    "stylelint-scss": "^5.2.1"
+    "pnpm": "^8.15.9",
+    "prettier": "^3.4.1",
+    "prettier-plugin-css-order": "^2.1.2",
+    "sass": "^1.81.0",
+    "stylelint": "^15.11.0",
+    "stylelint-config-recommended-scss": "^13.1.0",
+    "stylelint-scss": "^5.3.2"
   },
   "scripts": {
     "watch": "sass --no-source-map --watch src/scss/index.scss theme.css --style compressed",
@@ -54,20 +54,6 @@
     "extends": [
       "stylelint-config-recommended-scss"
     ],
-    "rules": {
-      "indentation": null,
-      "string-quotes": null,
-      "at-rule-empty-line-before": null,
-      "block-closing-brace-empty-line-before": null,
-      "declaration-block-semicolon-newline-after": null,
-      "declaration-empty-line-before": null,
-      "selector-list-comma-newline-after": null,
-      "value-list-comma-newline-after": null,
-      "no-missing-end-of-source-newline": null,
-      "no-empty-source": null,
-      "no-eol-whitespace": null,
-      "max-empty-lines": null,
-      "max-line-length": null
-    }
+    "rules": {}
   }
 }

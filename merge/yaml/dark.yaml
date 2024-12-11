@@ -1,11 +1,35 @@
             - 
-                label: Cosmic
-                value: skin-dark-cosmic
-
-            - 
                 label: Default
                 value: skin-dark-default
 
             - 
+                label: Cosmic
+                value: skin-dark-cosmic
+
+            - 
+                label: GitHub
+                value: skin-dark-github
+
+            - 
+                label: Goon
+                value: skin-dark-goon
+
+            - 
                 label: Halcyon
                 value: skin-dark-halcyon
+
+            - 
+                label: Lavender
+                value: skin-dark-lavender
+
+            - 
+                label: Nebula
+                value: skin-dark-nebula
+
+            - 
+                label: Notion
+                value: skin-dark-notion
+
+            - 
+                label: Obsidian
+                value: skin-dark-obsidian

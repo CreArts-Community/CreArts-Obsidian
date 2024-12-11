@@ -1,50 +1,44 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Plugins                  ║ Editing Toolbar                                                                         ║
+// ║ Editing Toolbar          ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
+// Spacing
 .workspace-leaf-content[data-mode="source"] {
-  margin-bottom: calc(var(--CREARTS-layout-margin) + var(--CREARTS-height-statusbar) + 40px + var(--CREARTS-layout-margin));
+  margin-bottom: calc(var(--CREARTS-layout-margin) + var(--CREARTS-height-statusbar) + var(--CREARTS-height-header) + var(--CREARTS-layout-margin));
 }
 
+.is-right-sidedock-open #cMenuToolbarModalBar {
+  width: calc(100% - var(--CREARTS-layout-margin));
+}
 
-
-
+// Background
 #cMenuToolbarModalBar {
   z-index: 99;
   position: fixed !important;
   top: unset !important;
-  bottom: 0px !important;
+  bottom: 0px;
   left: var(--CREARTS-layout-margin-half);
   width: calc(100% - var(--CREARTS-layout-margin) / 2 - var(--CREARTS-layout-margin));
-  min-height: 40px;
+  min-height: var(--CREARTS-height-header);
   margin-bottom: calc(var(--CREARTS-layout-margin) + var(--CREARTS-height-statusbar));
   border: none !important;
   border-radius: var(--CREARTS-radius-primary);
   background: var(--CREARTS-background-secondary);
-  box-shadow: none;
-  transition: none !important;
 }
 
-.is-right-sidedock-open #cMenuToolbarModalBar {
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Editing Toolbar          ║ Popover                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-  width: calc(100% - var(--CREARTS-layout-margin));
+:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem] >.subitem {
+  border-radius: var(--CREARTS-radius-secondary);
+  box-shadow: var(--CREARTS-effects-flat);
+  transform: translateY(-140%) translateX(-20%);
 }
 
-
-
-#cMenuToolbarPopoverBar {
-  z-index: 99;
-  bottom: var(--CREARTS-layout-margin-half);
-}
-
-#cMenuToolbarPopoverBar .subitem {
-  position: absolute;
-  top: -25px;
-  right: 0;
-  bottom: unset;
-  border: none !important;
-  box-shadow: none !important;
-}
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Editing Toolbar          ║ Remove                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Remove Statusbar Item
 .plugin-editing-toolbar {

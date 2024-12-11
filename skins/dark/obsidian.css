@@ -1,0 +1,46 @@
+/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
+/* ║ Skin                                                                      ║ */
+/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
+/* ║ Skin:                    ║ Obsidian                                       ║ */
+/* ║ Author:                  ║ Corellan                                       ║ */
+/* ║ Credits:                 ║ https://github.com/CorellanStoma               ║ */
+/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
+
+.theme-dark.skin-dark-obsidian {
+
+  /* Info */
+  --SKIN-info-skin: "Obsidian";
+  --SKIN-info-author: "Corellan";
+  
+  /* Settings */
+  --SKIN-lightness: 0%;
+  --SKIN-saturation: 0%;
+  --SKIN-alpha: 0%;
+  
+  /* Accent */
+  --SKIN-accent-h: 254;
+  --SKIN-accent-s: 76%;
+  --SKIN-accent-l: 67%;
+  --SKIN-accent-a: 1;
+  
+  /* Content */
+  --SKIN-content-h: 0;
+  --SKIN-content-s: 0%;
+  --SKIN-content-l: 85%;
+  --SKIN-content-a: 1;
+  
+  /* Base */
+  --SKIN-base-h: 0;
+  --SKIN-base-s: 0%;
+  --SKIN-base-l: 18%;
+  --SKIN-base-a: 1;
+  
+  /* Grading */
+  --SKIN-grading-background-primary: 0%;
+  --SKIN-grading-background-secondary: 3%;
+  --SKIN-grading-background-tertiary: 6%;
+  
+  --SKIN-grading-interface-primary: 8%;
+  --SKIN-grading-interface-secondary: 16%;
+  --SKIN-grading-interface-tertiary: 24%;
+  }  

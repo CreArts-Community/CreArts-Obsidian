@@ -1,0 +1,47 @@
+/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
+/* ║ Skin                                                                      ║ */
+/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
+/* ║ Skin:                    ║ Nebula                                         ║ */
+/* ║ Author:                  ║ Corellan & Loremly                             ║ */
+/* ║ Credits:                 ║ https://github.com/CorellanStoma               ║ */
+/* ║                          ║ https://github.com/Loremly                     ║ */
+/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
+
+.theme-dark.skin-dark-nebula {
+
+/* Info */
+--SKIN-info-skin: "Nebula";
+--SKIN-info-author: "Corellan & Loremly";
+
+/* Settings */
+--SKIN-lightness: 0%;
+--SKIN-saturation: 0%;
+--SKIN-alpha: 0%;
+
+/* Accent */
+--SKIN-accent-h: 168;
+--SKIN-accent-s: 49%;
+--SKIN-accent-l: 50%;
+--SKIN-accent-a: 1;
+
+/* Content */
+--SKIN-content-h: 226;
+--SKIN-content-s: 49%;
+--SKIN-content-l: 88%;
+--SKIN-content-a: 1;
+
+/* Base */
+--SKIN-base-h: 232;
+--SKIN-base-s: 34%;
+--SKIN-base-l: 26%;
+--SKIN-base-a: 1;
+
+/* Grading */
+--SKIN-grading-background-primary: 0%;
+--SKIN-grading-background-secondary: 3%;
+--SKIN-grading-background-tertiary: 6%;
+
+--SKIN-grading-interface-primary: 8%;
+--SKIN-grading-interface-secondary: 16%;
+--SKIN-grading-interface-tertiary: 24%;
+}

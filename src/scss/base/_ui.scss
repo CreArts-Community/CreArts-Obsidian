@@ -1,0 +1,329 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ UI                       ║ Text                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Live Preview
+.markdown-preview-view {
+  hyphens: auto;
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+  line-height: 1.6;
+  word-spacing: 0.04em;
+  letter-spacing: 0.02em;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ UI                       ║ Bullet List                                                                             ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.has-list-bullet {
+  text-align: left !important;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ UI                       ║ Table                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+table {
+  text-align: left !important;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ UI                       ║ Divider                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+hr {
+  margin: var(--CREARTS-spacing-secondary) 0;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ UI                       ║ Dropdown                                                                                ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ UI                       ║ Frontmatter                                                                             ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+/* color YAML value text */
+span.cm-meta.cm-hmd-frontmatter + span.cm-hmd-frontmatter {
+  color: inherit;
+}
+
+/* color YAML value - if it's a number */
+span.cm-number.cm-hmd-frontmatter {
+  color: inherit !important;
+}
+
+/* color YAML key text */
+span.cm-atom.cm-hmd-frontmatter {
+  color: #CD0952 !important;
+  font-weight: 600;
+}
+
+/* color YAML separator text */
+span.cm-meta.cm-hmd-frontmatter {
+  color: #CD0952 !important;
+  font-weight: 600;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ UI                       ║ Codeblock                                                                               ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Comments
+.HyperMD-codeblock .cm-comment {
+  color: var(--CREARTS-text-tertiary);
+  font-weight: 100;
+}
+
+// Keyword
+.HyperMD-codeblock .cm-keyword {
+  color: #CD0952;
+  font-weight: 500;
+}
+
+// Operator
+.HyperMD-codeblock .cm-operator {
+  color: #CD0952;
+  font-weight: 500;
+}
+
+// Property
+.HyperMD-codeblock .cm-property {
+  color: #FFD861;
+  font-weight: 500;
+}
+
+// Variable
+.HyperMD-codeblock .cm-variable,
+.HyperMD-codeblock .cm-variable-2 {
+  color: #6189FF;
+  font-weight: 500;
+}
+
+// String
+.HyperMD-codeblock .cm-string,
+.HyperMD-codeblock .cm-string-2 {
+  color: #09CD85;
+  font-weight: 500;
+}
+
+// Numbers
+.HyperMD-codeblock .cm-number {
+  color: #B061FF;
+  font-weight: 500;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ UI                       ║ Callout                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.cm-hmd-callout {
+  color: var(--CREARTS-accent-primary) !important;
+  font-weight: 600;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ UI                       ║ Context Menu                                                                            ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.menu {
+  max-height: 70vh;
+  background: var(--CREARTS-background-primary);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ UI                       ║ Properties                                                                              ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.markdown-source-view .metadata-container,
+.markdown-reading-view .metadata-container {
+  background: var(--CREARTS-background-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-radius: var(--CREARTS-radius-primary);
+  border-color: var(--CREARTS-border-primary);
+  padding: var(--CREARTS-spacing-secondary);
+  transform: none;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ UI                       ║ Sidedock                                                                                ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Order
+.workspace-drawer-vault-actions .clickable-icon:nth-child(1) {
+  order: 2;
+}
+
+.workspace-drawer-vault-actions .clickable-icon:nth-child(2) {
+  order: 1;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ UI                       ║ Sidebar Toogle Button                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.workspace-ribbon.mod-left:not(.is-collapsed) .sidebar-toggle-button {
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-radius: var(--tab-radius-active);
+  border-color: var(--CREARTS-border-primary);
+  background: var(--CREARTS-background-primary);
+  border-bottom: none;
+
+  width: var(--CREARTS-width-ribbon);
+  height:calc(var(--CREARTS-height-header) - var(--CREARTS-border-width) - 4px);
+
+  margin: 5px var(--CREARTS-layout-margin) 0px var(--CREARTS-layout-margin);
+
+  padding: 0 0 7px 0;
+}
+
+// Roundings
+.workspace-ribbon.mod-left:not(.is-collapsed) .sidebar-toggle-button::before,
+.workspace-ribbon.mod-left:not(.is-collapsed) .sidebar-toggle-button::after {
+  position: absolute;
+  bottom: 0;
+  content: '';
+  width: calc(var(--tab-curve)* 2);
+  height: calc(var(--tab-curve)* 2);
+  border-radius: 100%;
+  box-shadow: inset 0 0 0 var(--tab-outline-width) var(--tab-outline-color), 0 0 0 calc(var(--tab-curve)* 4) var(--tab-background-active);
+}
+
+.workspace-ribbon.mod-left:not(.is-collapsed) .sidebar-toggle-button::before {
+  left: calc(var(--tab-curve)* -2);
+  clip-path: inset(50% calc(var(--tab-curve)* -1) 0 50%);
+}
+
+.workspace-ribbon.mod-left:not(.is-collapsed) .sidebar-toggle-button::after {
+  right: calc(var(--tab-curve)* -2);
+  clip-path: inset(50% 50% 0 calc(var(--tab-curve)* -1));
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ UI                       ║ Navigation                                                                              ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.mod-sidedock .workspace-leaf-content .nav-buttons-container {
+  gap: var(--CREARTS-spacing-primary-half);
+}
+
+// Button
+.mod-sidedock .workspace-leaf-content .clickable-icon {
+  flex: 1 1 auto;
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-radius: var(--CREARTS-radius-tertiary);
+  border-color: transparent;
+  padding: unset;
+}
+
+// Button (Hover)
+.mod-sidedock .workspace-leaf-content .clickable-icon:hover {
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-radius: var(--CREARTS-radius-tertiary);
+  border-color: var(--CREARTS-border-secondary);
+  background: var(--CREARTS-interface-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ UI                       ║ Tabs                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.workspace-tab-header {
+  width: var(--CREARTS-width-tab);
+}
+
+
+.workspace-tab-header {
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: transparent;
+}
+
+.workspace-tab-header.is-active {
+  border-color: var(--CREARTS-border-primary);
+  background: var(--CREARTS-background-primary) !important;
+  box-shadow: var(--CREARTS-effects-flat);
+}
+
+.mod-root .workspace-tab-header {
+  border-bottom: none !important;
+}
+
+.workspace .mod-root .workspace-tab-header-inner::after {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mod-vertical  .workspace-tab-header-container {
+  padding-left: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.workspace-tab-header-container-inner {
+  margin: var(--CREARTS-spacing-primary-half) -5px calc(var(--tab-outline-width)* -1);
+}

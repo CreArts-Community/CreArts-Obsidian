@@ -72,19 +72,3 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Components               ║ Content -> PDF                                                                          ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Content                  ║ Properties                                                                              ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-.metadata-container {
-  background: var(--CREARTS-background-primary);
-  box-shadow: var(--CREARTS-effects-flat);
-  border-width: var(--CREARTS-border-width);
-  border-style: var(--CREARTS-border-style);
-  border-radius: var(--CREARTS-radius-primary);
-  border-color: var(--CREARTS-border-primary);
-  padding: var(--CREARTS-spacing-secondary);
-  transform: none;
-}

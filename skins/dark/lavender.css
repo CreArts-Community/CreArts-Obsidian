@@ -1,0 +1,47 @@
+/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
+/* ║ Skin                                                                      ║ */
+/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
+/* ║ Skin:                    ║ Default                                        ║ */
+/* ║ Author:                  ║ Corellan & Obscure                             ║ */
+/* ║ Credits:                 ║ https://github.com/CorellanStoma               ║ */
+/* ║                          ║ https://github.com/kritishd8                   ║ */
+/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
+
+.theme-dark.skin-dark-lavender {
+
+/* Info */
+--SKIN-info-skin: "Lavender";
+--SKIN-info-author: "Corellan & Obscure";
+
+/* Settings */
+--SKIN-lightness: 0%;
+--SKIN-saturation: 0%;
+--SKIN-alpha: 0%;
+
+/* Accent */
+--SKIN-accent-h: 240;
+--SKIN-accent-s: 93%;
+--SKIN-accent-l: 73%;
+--SKIN-accent-a: 1;
+
+/* Content */
+--SKIN-content-h: 200;
+--SKIN-content-s: 13%;
+--SKIN-content-l: 75%;
+--SKIN-content-a: 1;
+
+/* Base */
+--SKIN-base-h: 240;
+--SKIN-base-s: 14%;
+--SKIN-base-l: 14%;
+--SKIN-base-a: 1;
+
+/* Grading */
+--SKIN-grading-background-primary: 0%;
+--SKIN-grading-background-secondary: 3%;
+--SKIN-grading-background-tertiary: 6%;
+
+--SKIN-grading-interface-primary: 8%;
+--SKIN-grading-interface-secondary: 16%;
+--SKIN-grading-interface-tertiary: 24%;
+}

@@ -1,0 +1,25 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Metabind                 ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.mb-button {
+  min-width: 20px !important;
+  width: 	100%;
+  display: flex;
+  overflow: visible;
+  margin-bottom: var(--CREARTS-spacing-primary);
+}
+
+.mb-button-inner {
+  border-width: var(--CREARTS-border-width) !important;
+  border-style: var(--CREARTS-border-style) !important;
+  border-radius: var(--CREARTS-radius-primary) !important;
+  border-color: var(--CREARTS-border-primary) !important;
+  background: var(--CREARTS-background-primary) !important;
+  box-shadow: var(--CREARTS-effects-flat) !important;
+}
+
+.mb-button-inner:hover {
+  background: var(--CREARTS-background-secondary) !important;
+  box-shadow: var(--CREARTS-effects-pressed) !important;
+}

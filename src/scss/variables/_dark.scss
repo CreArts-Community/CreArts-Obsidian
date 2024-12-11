@@ -1,99 +1,123 @@
-
-/*
-.theme-dark {
-
-  // Accent
-  --CREARTS-accent-h: var(--SKIN-accent-h, 264);
-  --CREARTS-accent-s: var(--SKIN-accent-s, 100%);
-  --CREARTS-accent-l: var(--SKIN-accent-l, 66%);
-  --CREARTS-accent-a: var(--SKIN-accent-a, 1);
-
-  // Content
-  --CREARTS-content-h: var(--SKIN-content-h, 235) !important;
-  --CREARTS-content-s: var(--SKIN-content-s, 10%) !important;
-  --CREARTS-content-l: var(--SKIN-content-l, 80%) !important;
-  --CREARTS-content-a: var(--SKIN-content-a, 1);
-
-  // Base
-  --CREARTS-base-h: var(--SKIN-base-h, 240) !important;
-  --CREARTS-base-s: var(--SKIN-base-s, 10%) !important;
-  --CREARTS-base-l: var(--SKIN-base-l, 14%) !important;
-  --CREARTS-base-a: var(--SKIN-base-a, 1) !important;
-}
-*/
-
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Variables                ║ Skin                                                                                    ║
+// ║ Dark                     ║ Custom                                                                                  ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 .theme-dark {
-  // Settings
-  --CREARTS-lightness: var(--SKIN-lightness, 0%);
-  --CREARTS-saturation: var(--SKIN-saturation, 0%);
-  --CREARTS-alpha: var(--SKIN-alpha, 0%);
+// Accent
+--CREARTS-accent-primary: hsla(var(--CREARTS-accent-h), var(--CREARTS-accent-s), calc(var(--CREARTS-accent-l) - 0%), var(--CREARTS-accent-a));
+--CREARTS-accent-secondary: hsla(var(--CREARTS-accent-h), var(--CREARTS-accent-s), calc(var(--CREARTS-accent-l) - 8%), var(--CREARTS-accent-a));
+--CREARTS-accent-tertiary: hsla(var(--CREARTS-accent-h), var(--CREARTS-accent-s), calc(var(--CREARTS-accent-l) - 16%), var(--CREARTS-accent-a));
 
-  // Accent
-  --CREARTS-accent-h: var(--SKIN-accent-h, 338);
-  --CREARTS-accent-s: var(--SKIN-accent-s, 92%);
-  --CREARTS-accent-l: var(--SKIN-accent-l, 42%);
-  --CREARTS-accent-a: var(--SKIN-accent-a, 1);
+// Text
+--CREARTS-text-primary: hsla(var(--CREARTS-content-h), var(--CREARTS-content-s), var(--CREARTS-content-l), calc(var(--CREARTS-content-a) - 0));
+--CREARTS-text-secondary: hsla(var(--CREARTS-content-h), var(--CREARTS-content-s), var(--CREARTS-content-l), calc(var(--CREARTS-content-a) - 0.2));
+--CREARTS-text-tertiary: hsla(var(--CREARTS-content-h), var(--CREARTS-content-s), var(--CREARTS-content-l), calc(var(--CREARTS-content-a) - 0.4));
 
-  // Content
-  --CREARTS-content-h: var(--SKIN-content-h, 230);
-  --CREARTS-content-s: var(--SKIN-content-s, 70%);
-  --CREARTS-content-l: var(--SKIN-content-l, 86%);
-  --CREARTS-content-a: var(--SKIN-content-a, 1);
+// Background
+--CREARTS-background-primary: hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) - var(--CREARTS-grading-background-primary) + var(--CREARTS-lightness)), var(--CREARTS-base-a));
+--CREARTS-background-secondary: hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) - var(--CREARTS-grading-background-secondary) + var(--CREARTS-lightness)), var(--CREARTS-base-a));
+--CREARTS-background-tertiary: hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) - var(--CREARTS-grading-background-tertiary) + var(--CREARTS-lightness)), var(--CREARTS-base-a));
 
-  // Base
-  --CREARTS-base-h: var(--SKIN-base-h, 230);
-  --CREARTS-base-s: var(--SKIN-base-s, 19%);
-  --CREARTS-base-l: var(--SKIN-base-l, 23%);
-  --CREARTS-base-a: var(--SKIN-base-a, 1);
+// Interface
+--CREARTS-interface-primary: hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) + var(--CREARTS-grading-interface-primary) + var(--CREARTS-lightness)), var(--CREARTS-base-a));
+--CREARTS-interface-secondary: hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) + var(--CREARTS-grading-interface-secondary) + var(--CREARTS-lightness)), var(--CREARTS-base-a));
+--CREARTS-interface-tertiary: hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) + var(--CREARTS-grading-interface-tertiary) + var(--CREARTS-lightness)), var(--CREARTS-base-a));
+
+// Border
+--CREARTS-border-primary: var(--CREARTS-interface-primary);
+--CREARTS-border-secondary: var(--CREARTS-interface-secondary);
+--CREARTS-border-tertiary: var(--CREARTS-interface-tertiary);
+
+// Effects
+--CREARTS-effects-flat: 2px 2px 20px hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) - 3% + var(--CREARTS-lightness) - 6%), var(--CREARTS-base-a)), -2px -2px 12px var(--CREARTS-background-secondary);
+--CREARTS-effects-pressed: inset 6px 6px 20px hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) - 3% + var(--CREARTS-lightness) - 6%), var(--CREARTS-base-a)), inset -6px -6px 20px var(--CREARTS-background-secondary);
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Variables                ║ Dark                                                                                    ║
+// ║ Dark                     ║ Default                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 .theme-dark {
 
-  // Accent
-  --CREARTS-accent-primary: hsla(var(--CREARTS-accent-h), var(--CREARTS-accent-s), calc(var(--CREARTS-accent-l) - 8%), var(--CREARTS-accent-a));
-  --CREARTS-accent-secondary: hsla(var(--CREARTS-accent-h), var(--CREARTS-accent-s), calc(var(--CREARTS-accent-l) - 8%), var(--CREARTS-accent-a));
-  --CREARTS-accent-tertiary: hsla(var(--CREARTS-accent-h), var(--CREARTS-accent-s), calc(var(--CREARTS-accent-l) - 16%), var(--CREARTS-accent-a));
+// ╔══════════════════════════╗
+// ║ Highlight                ║
+// ╚══════════════════════════╝
 
-  // Text
-  --CREARTS-text-primary: hsla(var(--CREARTS-content-h), var(--CREARTS-content-s), calc(var(--CREARTS-content-l) - 0%), var(--CREARTS-content-a));
-  --CREARTS-text-secondary: hsla(var(--CREARTS-content-h), calc(var(--CREARTS-content-s) - 24%), calc(var(--CREARTS-content-l) - 6%), var(--CREARTS-content-a));
-  --CREARTS-text-tertiary: hsla(var(--CREARTS-content-h), calc(var(--CREARTS-content-s) - 48%), calc(var(--CREARTS-content-l) - 12%), var(--CREARTS-content-a));
-  --CREARTS-text-accent: hsla(var(--CREARTS-text-h), var(--CREARTS-text-s), calc(var(--CREARTS-text-l)));
+//--highlight-mix-blend-mode: lighten;
 
-  // Background
-  --CREARTS-background-primary: hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) - 0% + var(--CREARTS-lightness)), var(--CREARTS-base-a));
-  --CREARTS-background-secondary: hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) - 3% + var(--CREARTS-lightness)), var(--CREARTS-base-a));
-  --CREARTS-background-tertiary: hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) - 6% + var(--CREARTS-lightness)), var(--CREARTS-base-a));
+// ╔══════════════════════════╗
+// ║ Mono                     ║
+// ╚══════════════════════════╝
 
-  // Interface
-  --CREARTS-interface-primary: hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) + 8% + var(--CREARTS-lightness)), var(--CREARTS-base-a));
-  --CREARTS-interface-secondary: hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) + 16% + var(--CREARTS-lightness)), var(--CREARTS-base-a));
-  --CREARTS-interface-tertiary: hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) + 24% + var(--CREARTS-lightness)), var(--CREARTS-base-a));
+//--mono-rgb-0: 0, 0, 0;
+//--mono-rgb-100: 255, 255, 255;
 
-  // Border
-  --CREARTS-border-primary: var(--CREARTS-interface-primary);
-  --CREARTS-border-secondary: var(--CREARTS-interface-secondary);
-  --CREARTS-border-tertiary: var(--CREARTS-interface-tertiary);
+// ╔══════════════════════════╗
+// ║ Color                    ║
+// ╚══════════════════════════╝
 
-  // Effects
-  --CREARTS-effects-flat: 2px 2px 20px hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) - 3% + var(--CREARTS-lightness) - 6%), var(--CREARTS-base-a)), -2px -2px 12px var(--CREARTS-background-secondary);
-  --CREARTS-effects-pressed: inset 6px 6px 20px hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) - 3% + var(--CREARTS-lightness) - 6%), var(--CREARTS-base-a)), inset -6px -6px 20px var(--CREARTS-background-secondary);
-}
+//--color-red: #fb464c;
+//--color-red-rgb: 251, 70, 76;
+//--color-orange: #e9973f;
+//--color-orange-rgb: 233, 151, 63;
+//--color-yellow: #e0de71;
+//--color-yellow-rgb: 224, 222, 113;
+//--color-green: #44cf6e;
+//--color-green-rgb: 68, 207, 110;
+//--color-cyan: #53dfdd;
+//--color-cyan-rgb: 83, 223, 221;
+//--color-blue: #027aff;
+//--color-blue-rgb: 2, 122, 255;
+//--color-purple: #a882ff;
+//--color-purple-rgb: 168, 130, 255;
+//--color-pink: #fa99cd;
+//--color-pink-rgb: 250, 153, 205;
 
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Variables                ║ Features                                                                                ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+// ╔══════════════════════════╗
+// ║ Color Base               ║
+// ╚══════════════════════════╝
 
-// Neumorphism
-.neumorphism {
-  --CREARTS-effects-flat: none !important;
-  --CREARTS-effects-pressed: none !important;
+//--color-base-00: #1e1e1e;
+//--color-base-05: #212121;
+//--color-base-10: #242424;
+//--color-base-20: #262626;
+//--color-base-25: #2a2a2a;
+//--color-base-30: #363636;
+//--color-base-35: #3f3f3f;
+//--color-base-40: #555555;
+//--color-base-50: #666666;
+//--color-base-60: #999999;
+//--color-base-70: #bababa;
+//--color-base-100: #dadada;
+
+// ╔══════════════════════════╗
+// ║ Color Accent             ║
+// ╚══════════════════════════╝
+
+//--color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
+//--color-accent: var(--CREARTS-accent-primary, hsl(var(--accent-h), var(--accent-s), var(--accent-l)));
+//--color-accent-1: var(--CREARTS-accent-primary, hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 3.8%)));
+//--color-accent-2: var(--CREARTS-accent-secondary, hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 3.8%)));
+
+//--color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
+//--color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+--color-accent-1: var(--CREARTS-accent-primary, hsl(calc(258 - 3), calc(88% * 1.02), calc(66% * 1.15)));
+--color-accent-2: var(--CREARTS-accent-secondary, hsl(calc(258 - 5), calc(88% * 1.05), calc(66% * 1.29)));
+
+// ╔══════════════════════════╗
+// ║ Input Shadow             ║
+// ╚══════════════════════════╝
+
+//--input-shadow: inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09), 0 2px 4px 0 rgba(0, 0, 0, 0.15),
+//0 1px 1.5px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 0 0 0 transparent;
+//--input-shadow-hover: inset 0 0.5px 1px 0.5px rgba(255, 255, 255, 0.16), 0 2px 3px 0 rgba(0, 0, 0, 0.3),
+//0 1px 1.5px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.4), 0 0 0 0 transparent;
+
+// ╔══════════════════════════╗
+// ║ Shadow                   ║
+// ╚══════════════════════════╝
+
+//--shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.121), 0px 3.4px 6.7px rgba(0, 0, 0, 0.179), 0px 15px 30px rgba(0, 0, 0, 0.3);
+//--shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071), 0px 6.3px 24.7px rgba(0, 0, 0, 0.112), 0px 30px 90px rgba(0, 0, 0, 0.2);
+
 }
