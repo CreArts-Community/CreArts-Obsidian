@@ -45,12 +45,22 @@
 @forward "components/titlebar";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Source                   ║ Dataview                                                                                ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+@forward "dataview/grid";
+@forward "dataview/list";
+@forward "dataview/masonry";
+@forward "dataview/subscriptions";
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Source                   ║ Features                                                                                ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 //@forward "features/hover";
-@forward "features/imagezoom";
+//@forward "features/imagezoom";
 @forward "features/neumorphism";
+@forward "features/order";
 @forward "features/skinpreview";
 @forward "features/wallpaper";
 
@@ -59,8 +69,6 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 @forward "pages/dashboard";
-@forward "pages/dataview";
-@forward "pages/flashcards";
 @forward "pages/paper";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -145,4 +153,15 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
   height: var(--CREARTS-height-header);
   padding-top: 0px;
   padding-bottom: 0px;
+}
+
+
+
+
+
+.infobox {
+  background: red;
+  width: 200px;
+  float: right;
+  margin: 0px 0px 20px 20px;
 }

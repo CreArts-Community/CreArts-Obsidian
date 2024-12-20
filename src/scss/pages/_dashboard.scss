@@ -3,14 +3,14 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
-
-
 .dashboard .block-language-search-bar {
   margin-top: var(--CREARTS-spacing-tertiary);
   margin-bottom: var(--CREARTS-spacing-tertiary);
 }
 
-.dashboard h1, h2, h3 {
+.dashboard h1,
+.dashboard h2,
+.dashboard h3 {
   margin: 0px;
 }
 

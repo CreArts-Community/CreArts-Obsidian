@@ -76,13 +76,13 @@
 
 
 
-.installed-plugins-container {
+.vertical-tab-content-container .installed-plugins-container {
   padding-top: 0px;
   border-top: unset;
 }
 
 // Item
-.setting-item:not(.setting-item-heading) {
+.vertical-tab-content-container .setting-item:not(.setting-item-heading) {
   border-width: var(--CREARTS-border-width) !important;
   border-style: var(--CREARTS-border-style) !important;
   border-radius: var(--CREARTS-radius-primary);
