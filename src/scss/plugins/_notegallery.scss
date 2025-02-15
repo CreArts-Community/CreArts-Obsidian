@@ -16,10 +16,10 @@
   background: var(--CREARTS-background-primary);
   box-shadow: var(--CREARTS-effects-flat);
 
-  --height: 200px;
-  height: var(--height);
-  max-height: var(--height);
-  min-height: var(--height);
+
+
+  max-height: 160px !important;
+  min-height: 160px;
 }
 
 
@@ -45,4 +45,12 @@
 
 .note-card:has(> img) img {
   transition: transform 0.3s ease;
+}
+
+
+
+
+
+.search-empty-state {
+  display: none;
 }

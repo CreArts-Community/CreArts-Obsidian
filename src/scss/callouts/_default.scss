@@ -2,6 +2,27 @@
 // ║ Callouts                 ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
+// Content
+.callout-content {
+  overflow: visible;
+  margin-top: calc(-1 * var(--CREARTS-spacing-tertiary));
+  margin-bottom: calc(-1 * var(--CREARTS-spacing-tertiary));
+}
+
+// Nested
+.callout .callout {
+  box-shadow: none;
+}
+
+// Codeblock
+.language-css .language-css {
+  background: transparent !important;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts                 ║ Default                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
 // Background
 .callout {
   background: var(--CREARTS-background-primary);
@@ -16,19 +37,30 @@
   padding: var(--CREARTS-spacing-tertiary);
 }
 
-// Content
-.callout-content {
-  overflow: visible;
+// Icon
+.callout-icon .svg-icon {
+  color: var(--CREARTS-text-primary);
 }
 
-// Title & Icon
-.callout-icon .svg-icon,
+// Title
 .callout-title {
   color: var(--CREARTS-text-primary);
 }
 
+// Code
+.callout code {
+  background: var(--CREARTS-interface-primary);
+}
+
+// Codeblock
+.callout pre {
+  background: var(--CREARTS-background-secondary);
+  box-shadow: var(--CREARTS-effects-pressed);
+  border-radius: var(--CREARTS-radius-secondary);
+}
+
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Callouts                 ║ None                                                                                    ║
+// ║ Callouts                 ║ Style (None)                                                                            ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
@@ -49,7 +81,7 @@
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Callouts                 ║ Flat                                                                                    ║
+// ║ Callouts                 ║ Style (Flat)                                                                            ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
@@ -69,7 +101,7 @@
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Callouts                 ║ Pressed                                                                                 ║
+// ║ Callouts                 ║ Style (Pressed)                                                                         ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
@@ -88,9 +120,8 @@
   display: none;
 }
 
-
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Callouts                 ║ Outline                                                                                 ║
+// ║ Callouts                 ║ Style (Outline)                                                                         ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
@@ -109,249 +140,203 @@
   display: none;
 }
 
+
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Callouts                 ║ Flat (Red)                                                                              ║
+// ║ Callouts                 ║ Default (Cyan)                                                                          ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.callout[data-callout-metadata="red"],
-.callout[data-callout-metadata="red-headless"] {
-  background: rgba(var(--CREARTS-colors-red), 0.1);
-  border-radius: var(--CREARTS-radius-primary);
-  box-shadow: var(--CREARTS-effects-flat);
-  border-width: var(--CREARTS-border-width);
-  border-style: var(--CREARTS-border-style);
-  border-color: rgba(var(--CREARTS-colors-red), 0.4);
-}
-
-// Title & Icon
-.callout[data-callout-metadata="red"] .svg-icon,
-.callout[data-callout-metadata="red"] .callout-title {
-  color: rgba(var(--CREARTS-colors-red), 1.0);
-}
-
-// Remove Title
-.callout[data-callout-metadata="red-headless"] .callout-title {
-  display: none;
-}
-
-// Code
-.callout[data-callout-metadata="red"] code,
-.callout[data-callout-metadata="red-headless"] code {
-  background: rgba(var(--CREARTS-colors-red), 0.2);
-}
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Callouts                 ║ Flat (Green)                                                                            ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// Background
-.callout[data-callout-metadata="green"],
-.callout[data-callout-metadata="green-headless"] {
-  background: rgba(var(--CREARTS-colors-green), 0.1);
-  border-radius: var(--CREARTS-radius-primary);
-  box-shadow: var(--CREARTS-effects-flat);
-  border-width: var(--CREARTS-border-width);
-  border-style: var(--CREARTS-border-style);
-  border-color: rgba(var(--CREARTS-colors-green), 0.4);
-}
-
-// Title & Icon
-.callout[data-callout-metadata="green"] .svg-icon,
-.callout[data-callout-metadata="green"] .callout-title {
-  color: rgba(var(--CREARTS-colors-green), 1.0);
-}
-
-// Remove Title
-.callout[data-callout-metadata="green-headless"] .callout-title {
-  display: none;
-}
-
-// Code
-.callout[data-callout-metadata="green"] code,
-.callout[data-callout-metadata="green-headless"] code {
-  background: rgba(var(--CREARTS-colors-green), 0.2);
-}
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Callouts                 ║ Flat (Yellow)                                                                           ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// Background
-.callout[data-callout-metadata="yellow"],
-.callout[data-callout-metadata="yellow-headless"] {
-  background: rgba(var(--CREARTS-colors-yellow), 0.1);
-  border-radius: var(--CREARTS-radius-primary);
-  box-shadow: var(--CREARTS-effects-flat);
-  border-width: var(--CREARTS-border-width);
-  border-style: var(--CREARTS-border-style);
-  border-color: rgba(var(--CREARTS-colors-yellow), 0.4);
-}
-
-// Title & Icon
-.callout[data-callout-metadata="yellow"] .svg-icon,
-.callout[data-callout-metadata="yellow"] .callout-title {
-  color: rgba(var(--CREARTS-colors-yellow), 1.0);
-}
-
-// Remove Title
-.callout[data-callout-metadata="yellow-headless"] .callout-title {
-  display: none;
-}
-
-// Code
-.callout[data-callout-metadata="yellow"] code,
-.callout[data-callout-metadata="green-headless"] code {
-  background: rgba(var(--CREARTS-colors-yellow), 0.2);
-}
-
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Callouts                 ║ (Orange)                                                                                ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// Background
-.callout[data-callout-metadata="orange"],
-.callout[data-callout-metadata="orange-headless"] {
-  background: rgba(var(--CREARTS-colors-orange), 0.1);
-  border-radius: var(--CREARTS-radius-primary);
-  box-shadow: var(--CREARTS-effects-flat);
-  border-width: var(--CREARTS-border-width);
-  border-style: var(--CREARTS-border-style);
-  border-color: rgba(var(--CREARTS-colors-orange), 0.4);
-}
-
-// Title & Icon
-.callout[data-callout-metadata="orange"] .svg-icon,
-.callout[data-callout-metadata="orange"] .callout-title {
-  color: rgba(var(--CREARTS-colors-orange), 1.0);
-}
-
-// Remove Title
-.callout[data-callout-metadata="orange-headless"] .callout-title {
-  display: none;
-}
-
-// Code
-.callout[data-callout-metadata="orange"] code,
-.callout[data-callout-metadata="orange-headless"] code {
-  background: rgba(var(--CREARTS-colors-orange), 0.2);
-}
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Callouts                 ║ Blue                                                                                    ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// Background
-.callout[data-callout-metadata="blue"],
-.callout[data-callout-metadata="blue-headless"] {
-  background: rgba(var(--CREARTS-colors-blue), 0.1);
-  border-radius: var(--CREARTS-radius-primary);
-  box-shadow: var(--CREARTS-effects-flat);
-  border-width: var(--CREARTS-border-width);
-  border-style: var(--CREARTS-border-style);
-  border-color: rgba(var(--CREARTS-colors-blue), 0.4);
-}
-
-// Title & Icon
-.callout[data-callout-metadata="blue"] .svg-icon,
-.callout[data-callout-metadata="blue"] .callout-title {
-  color: rgba(var(--CREARTS-colors-blue), 1.0);
-}
-
-// Remove Title
-.callout[data-callout-metadata="blue-headless"] .callout-title {
-  display: none;
-}
-
-// Code
-.callout[data-callout-metadata="blue"] code,
-.callout[data-callout-metadata="blue-headless"] code {
-  background: rgba(var(--CREARTS-colors-blue), 0.2);
-}
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Callouts                 ║ Purple                                                                                  ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// Background
-.callout[data-callout-metadata="purple"],
-.callout[data-callout-metadata="purple-headless"] {
-  background: rgba(var(--CREARTS-colors-purple), 0.1);
-  border-radius: var(--CREARTS-radius-primary);
-  box-shadow: var(--CREARTS-effects-flat);
-  border-width: var(--CREARTS-border-width);
-  border-style: var(--CREARTS-border-style);
-  border-color: rgba(var(--CREARTS-colors-purple), 0.4);
-}
-
-// Title & Icon
-.callout[data-callout-metadata="purple"] .svg-icon,
-.callout[data-callout-metadata="purple"] .callout-title {
-  color: rgba(var(--CREARTS-colors-purple), 1.0);
-}
-
-// Remove Title
-.callout[data-callout-metadata="purple-headless"] .callout-title {
-  display: none;
-}
-
-// Code
-.callout[data-callout-metadata="purple"] code,
-.callout[data-callout-metadata="purple-headless"] code {
-  background: rgba(var(--CREARTS-colors-purple), 0.2);
-}
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Callouts                 ║ Turquoise                                                                               ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// Background
+.callout[data-callout="tip"],
+.callout[data-callout="hint"],
+.callout[data-callout="important"],
 .callout[data-callout="abstract"],
 .callout[data-callout="summary"],
-.callout[data-callout="tldr"],
-.callout[data-callout="important"],
-.callout[data-callout="tip"],
-.callout[data-callout="hint"] {
-  background: rgba(var(--callout-color), 0.1);
-  border-color: rgba(var(--callout-color), 0.4);
+.callout[data-callout="tldr"] {
+  background: rgba(var(--color-cyan-rgb), 0.1);
+  border-color: rgba(var(--color-cyan-rgb), 0.4);
 }
 
-.callout[data-callout="abstract"] .callout-title,
-.callout[data-callout="summary"] .callout-title,
-.callout[data-callout="tldr"] .callout-title,
-.callout[data-callout="important"] .callout-title,
-.callout[data-callout="tip"] .callout-title,
-.callout[data-callout="hint"]
-
-.callout[data-callout="abstract"] .svg-icon,
-.callout[data-callout="summary"] .svg-icon,
-.callout[data-callout="tldr"] .svg-icon,
-.callout[data-callout="important"] .svg-icon,
-.callout[data-callout="tip"] .svg-icon,
-.callout[data-callout="hint"] .svg-icon {
-  color: rgba(var(--CREARTS-colors-purple), 1.0);
+// Icon
+.callout[data-callout="tip"] > .callout-title .svg-icon,
+.callout[data-callout="hint"] > .callout-title .svg-icon,
+.callout[data-callout="important"] > .callout-title .svg-icon,
+.callout[data-callout="abstract"] > .callout-title .svg-icon,
+.callout[data-callout="summary"] > .callout-title .svg-icon,
+.callout[data-callout="tldr"] > .callout-title .svg-icon {
+  color: rgba(var(--color-cyan-rgb), 1.0);
 }
 
-
-// Title & Icon
-.callout[data-callout-metadata="purple"] .svg-icon,
-.callout[data-callout-metadata="purple"] .callout-title {
-  color: rgba(var(--CREARTS-colors-purple), 1.0);
+// Title
+.callout[data-callout="tip"] > .callout-title,
+.callout[data-callout="hint"] > .callout-title,
+.callout[data-callout="important"] > .callout-title,
+.callout[data-callout="abstract"] > .callout-title,
+.callout[data-callout="summary"] > .callout-title,
+.callout[data-callout="tldr"] > .callout-title {
+  color: rgba(var(--color-cyan-rgb), 1.0);
 }
 
 // Code
-.callout[data-callout="abstract"] code,
-.callout[data-callout="summary"] code,
-.callout[data-callout="tldr"] code,
-.callout[data-callout="important"] code,
-.callout[data-callout="tip"] code,
-.callout[data-callout="hint"] code {
-  background: rgba(var(--callout-color), 0.2);
+.callout[data-callout="tip"] code:not(pre code),
+.callout[data-callout="hint"] code:not(pre code),
+.callout[data-callout="important"] code:not(pre code),
+.callout[data-callout="abstract"] code:not(pre code),
+.callout[data-callout="summary"] code:not(pre code),
+.callout[data-callout="tldr"] code:not(pre code) {
+  background: rgba(var(--color-cyan-rgb), 0.2);
+  color: rgba(var(--color-cyan-rgb), 1.0);
+}
+
+// Codeblock
+.callout[data-callout="tip"] pre,
+.callout[data-callout="hint"] pre,
+.callout[data-callout="important"] pre,
+.callout[data-callout="abstract"] pre,
+.callout[data-callout="summary"] pre,
+.callout[data-callout="tldr"] pre {
+  background: transparent !important;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Callouts                 ║ Red                                                                                     ║
+// ║ Callouts                 ║ Default (Blue)                                                                          ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout="info"],
+.callout[data-callout="note"],
+.callout[data-callout="todo"] {
+  background: rgba(var(--color-blue-rgb), 0.1);
+  border-color: rgba(var(--color-blue-rgb), 0.4);
+}
+
+// Icon
+.callout[data-callout="info"] > .callout-title .svg-icon,
+.callout[data-callout="note"] > .callout-title .svg-icon,
+.callout[data-callout="todo"] > .callout-title .svg-icon{
+  color: rgba(var(--color-blue-rgb), 1.0);
+}
+
+// Title
+.callout[data-callout="info"] > .callout-title,
+.callout[data-callout="note"] > .callout-title,
+.callout[data-callout="todo"] > .callout-title {
+  color: rgba(var(--color-blue-rgb), 1.0);
+}
+
+// Code
+.callout[data-callout="info"] code:not(pre code),
+.callout[data-callout="note"] code:not(pre code),
+.callout[data-callout="todo"] code:not(pre code) {
+  background: rgba(var(--color-blue-rgb), 0.2);
+  color: rgba(var(--color-blue-rgb), 1.0);
+}
+
+// Codeblock
+.callout[data-callout="info"] pre,
+.callout[data-callout="note"] pre,
+.callout[data-callout="todo"] pre {
+  background: transparent !important;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts                 ║ Default (Green)                                                                         ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout="success"],
+.callout[data-callout="check"],
+.callout[data-callout="done"] {
+  background: rgba(var(--color-green-rgb), 0.1);
+  border-color: rgba(var(--color-green-rgb), 0.4);
+}
+
+// Icon
+.callout[data-callout="success"] .callout-title .svg-icon,
+.callout[data-callout="check"] .callout-title .svg-icon,
+.callout[data-callout="done"] .callout-title .svg-icon {
+  color: rgba(var(--color-green-rgb), 1.0);
+}
+
+// Title
+.callout[data-callout="success"] > .callout-title,
+.callout[data-callout="check"] > .callout-title,
+.callout[data-callout="done"] > .callout-title {
+  color: rgba(var(--color-green-rgb), 1.0);
+}
+
+// Code
+.callout[data-callout="success"] code:not(pre code),
+.callout[data-callout="check"] code:not(pre code),
+.callout[data-callout="done"] code:not(pre code) {
+  background: rgba(var(--color-green-rgb), 0.2);
+  color: rgba(var(--color-green-rgb), 1.0);
+}
+
+// Codeblock
+.callout[data-callout="success"] pre,
+.callout[data-callout="check"] pre,
+.callout[data-callout="done"] pre {
+  background: transparent !important;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts                 ║ Default (Orange)                                                                        ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout="question"],
+.callout[data-callout="help"],
+.callout[data-callout="faq"],
+.callout[data-callout="warning"],
+.callout[data-callout="caution"],
+.callout[data-callout="attention"] {
+  background: rgba(var(--color-orange-rgb), 0.1);
+  border-color: rgba(var(--color-orange-rgb), 0.4);
+}
+
+// Icon
+.callout[data-callout="question"] .callout-title .svg-icon,
+.callout[data-callout="help"] .callout-title .svg-icon,
+.callout[data-callout="faq"] .callout-title .svg-icon,
+.callout[data-callout="warning"] .callout-title .svg-icon,
+.callout[data-callout="caution"] .callout-title .svg-icon,
+.callout[data-callout="attention"] .callout-title .svg-icon {
+  color: rgba(var(--color-orange-rgb), 1.0);
+}
+
+// Title
+.callout[data-callout="question"] > .callout-title,
+.callout[data-callout="help"] > .callout-title,
+.callout[data-callout="faq"] > .callout-title,
+.callout[data-callout="warning"] > .callout-title,
+.callout[data-callout="caution"] > .callout-title,
+.callout[data-callout="attention"] > .callout-title {
+  color: rgba(var(--color-orange-rgb), 1.0);
+}
+
+// Code
+.callout[data-callout="question"] code:not(pre code),
+.callout[data-callout="help"] code:not(pre code),
+.callout[data-callout="faq"] code:not(pre code),
+.callout[data-callout="warning"] code:not(pre code),
+.callout[data-callout="caution"] code:not(pre code),
+.callout[data-callout="attention"] code:not(pre code) {
+  background: rgba(var(--color-orange-rgb), 0.2);
+  color: rgba(var(--color-orange-rgb), 1.0);
+}
+
+// Codeblock
+.callout[data-callout="question"] pre,
+.callout[data-callout="help"] pre,
+.callout[data-callout="faq"] pre,
+.callout[data-callout="warning"] pre,
+.callout[data-callout="caution"] pre,
+.callout[data-callout="attention"] pre {
+  background: transparent !important;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts                 ║ Default (Red)                                                                           ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
@@ -361,70 +346,109 @@
 .callout[data-callout="danger"],
 .callout[data-callout="error"],
 .callout[data-callout="bug"] {
-  background: rgba(var(--callout-color), 0.1);
-  border-color: rgba(var(--callout-color), 0.4);
+  background: rgba(var(--color-red-rgb), 0.1);
+  border-color: rgba(var(--color-red-rgb), 0.4);
+}
+
+// Icon
+.callout[data-callout="failure"] .callout-title .svg-icon,
+.callout[data-callout="fail"] .callout-title .svg-icon,
+.callout[data-callout="missing"] .callout-title .svg-icon,
+.callout[data-callout="danger"] .callout-title .svg-icon,
+.callout[data-callout="error"] .callout-title .svg-icon,
+.callout[data-callout="bug"] .callout-title .svg-icon {
+  color: rgba(var(--color-red-rgb), 1.0);
+}
+
+// Title
+.callout[data-callout="failure"] > .callout-title,
+.callout[data-callout="fail"] > .callout-title,
+.callout[data-callout="missing"] > .callout-title,
+.callout[data-callout="danger"] > .callout-title,
+.callout[data-callout="error"] > .callout-title,
+.callout[data-callout="bug"] > .callout-title {
+  color: rgba(var(--color-red-rgb), 1.0);
 }
 
 // Code
-.callout[data-callout="failure"] code,
-.callout[data-callout="fail"] code,
-.callout[data-callout="missing"] code,
-.callout[data-callout="danger"] code,
-.callout[data-callout="error"] code,
-.callout[data-callout="bug"] code {
-  background: rgba(var(--callout-color), 0.2);
+.callout[data-callout="failure"] code:not(pre code),
+.callout[data-callout="fail"] code:not(pre code),
+.callout[data-callout="missing"] code:not(pre code),
+.callout[data-callout="danger"] code:not(pre code),
+.callout[data-callout="error"] code:not(pre code),
+.callout[data-callout="bug"] code:not(pre code) {
+  background: rgba(var(--color-red-rgb), 0.2);
+  color: rgba(var(--color-red-rgb), 1.0);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Codeblock
+.callout[data-callout="failure"] pre,
+.callout[data-callout="fail"] pre,
+.callout[data-callout="missing"] pre,
+.callout[data-callout="danger"] pre,
+.callout[data-callout="error"] pre,
+.callout[data-callout="bug"] pre {
+  background: transparent !important;
+}
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Callouts                 ║ Default                                                                                 ║
+// ║ Callouts                 ║ Default (Purple)                                                                        ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
+// Background
+.callout[data-callout="example"] {
+  background: rgba(var(--color-purple-rgb), 0.1);
+  border-color: rgba(var(--color-purple-rgb), 0.4);
+}
 
+// Icon
+.callout[data-callout="example"] > .callout-title .svg-icon {
+  color: rgba(var(--color-purple-rgb), 1.0);
+}
 
+// Title
+.callout[data-callout="example"] > .callout-title {
+  color: rgba(var(--color-purple-rgb), 1.0);
+}
 
-/*
-.callout[data-callout="example"]
+// Code
+.callout[data-callout="example"] code:not(pre code) {
+  background: rgba(var(--color-purple-rgb), 0.2);
+  color: rgba(var(--color-purple-rgb), 1.0);
+}
 
-.callout[data-callout="info"]
+// Codeblock
+.callout[data-callout="example"] pre {
+  background: transparent !important;
+}
 
-.callout[data-callout="todo"]
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts                 ║ Default (Purple)                                                                        ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
+// Background
+.callout[data-callout="quote"] {
+  background: rgba(var(--color-yellow-rgb), 0.1);
+  border-color: rgba(var(--color-yellow-rgb), 0.4);
+}
 
+// Icon
+.callout[data-callout="quote"] > .callout-title .svg-icon {
+  color: rgba(var(--color-yellow-rgb), 1.0);
+}
 
+// Title
+.callout[data-callout="quote"] .callout-title {
+  color: rgba(var(--color-yellow-rgb), 1.0);
+}
 
-.callout[data-callout="success"], .callout[data-callout="check"], .callout[data-callout="done"]
+// Code
+.callout[data-callout="quote"] code:not(pre code) {
+  background: rgba(var(--color-yellow-rgb), 0.2);
+  color: rgba(var(--color-yellow-rgb), 1.0);
+}
 
-.callout[data-callout="question"], .callout[data-callout="help"], .callout[data-callout="faq"]
-
-.callout[data-callout="warning"], .callout[data-callout="caution"], .callout[data-callout="attention"]
-
-.callout[data-callout="failure"], .callout[data-callout="fail"], .callout[data-callout="missing"]
-
-.callout[data-callout="danger"], .callout[data-callout="error"]
-
-.callout[data-callout="bug"]
-
-
-
-.callout[data-callout="quote"], .callout[data-callout="cite"]
-*/
+// Codeblock
+.callout[data-callout="quote"] pre {
+  background: transparent !important;
+}

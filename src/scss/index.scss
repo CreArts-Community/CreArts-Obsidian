@@ -5,8 +5,10 @@
 @forward "base/colors";
 @forward "base/cursor";
 @forward "base/fullscreen";
+@forward "base/image";
 @forward "base/mobile";
 //@forward "base/print";
+@forward "base/text";
 @forward "base/typography";
 @forward "base/remove";
 @forward "base/ui";
@@ -16,21 +18,21 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 @forward "callouts/default";
+@forward "callouts/custom";
 
-/*
-@forward "callouts/callout";
-@forward "callouts/caption";
-@forward "callouts/colors";
-@forward "callouts/columns";
-@forward "callouts/commands";
-@forward "callouts/contents";
-@forward "callouts/infobox";
-@forward "callouts/message";
-@forward "callouts/shortcuts";
-@forward "callouts/tables";
-@forward "callouts/tags";
-@forward "callouts/tasks";
-*/
+//@forward "callouts/callout";
+//@forward "callouts/caption";
+//@forward "callouts/colors";
+//@forward "callouts/columns";
+//@forward "callouts/commands";
+//@forward "callouts/contents";
+//@forward "callouts/infobox";
+//@forward "callouts/message";
+//@forward "callouts/shortcuts";
+//@forward "callouts/tables";
+//@forward "callouts/tags";
+//@forward "callouts/tasks";
+
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Source                   ║ Components                                                                              ║
@@ -154,9 +156,6 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
   padding-top: 0px;
   padding-bottom: 0px;
 }
-
-
-
 
 
 .infobox {

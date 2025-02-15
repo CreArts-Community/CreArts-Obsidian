@@ -90,6 +90,11 @@
   color: var(--CREARTS-text-primary);
 }
 
+// Remove Shadow
+.forecast-container .forecast-icon {
+  box-shadow: none !important;
+}
+
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Plugins                  ║ Tenki -> Stats                                                                          ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
@@ -183,7 +188,8 @@
 
 /*
 // Icon
-.weather-container .forecast-icon {
+.weather-container .forecast-icon
+ {
   object-position: -99999px 99999px;
   background-repeat: no-repeat !important;
   background-position-x: center !important;

@@ -1,0 +1,51 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Mobile                   ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Mobile                   ║ Navigation                                                                              ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.is-mobile .mobile-navbar {
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+  height: var(--CREARTS-height-header);
+  margin: 0px var(--CREARTS-layout-margin) var(--CREARTS-layout-margin) var(--CREARTS-layout-margin);
+  padding: 0px;
+}
+
+.mobile-navbar-actions {
+  height: var(--CREARTS-height-header);
+  padding: var(--CREARTS-spacing-primary);
+}
+
+
+// Icon
+.is-mobile .mobile-navbar-action .svg-icon {
+  width: auto;
+  height: auto;
+}
+
+.is-mobile .mobile-navbar-action .mobile-navbar-tabs-action {
+  width: 20px;
+  height: 20px;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Mobile                   ║ Header                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.is-mobile .mod-root .view-header {
+  margin-left: var(--CREARTS-layout-margin);
+}
+
+.is-mobile .mod-root .view-content {
+  margin-top: var(--CREARTS-layout-margin-half);
+  margin-left: var(--CREARTS-layout-margin);
+}
+
+.is-mobile .mod-root .workspace-leaf-content {
+  margin-bottom: var(--CREARTS-layout-margin);
+}
