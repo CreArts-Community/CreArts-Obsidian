@@ -1,8 +1,13 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Plugins                  ║ Canvas                                                                                  ║
+// ║ Plugins (Canvas)         ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
+.mod-root .canvas-wrapper {
+  background: var(--CREARTS-background-secondary);
+}
+
+// Element
 .canvas-wrapper .canvas-node-container {
   border-width: var(--CREARTS-border-width);
   border-style: var(--CREARTS-border-style);

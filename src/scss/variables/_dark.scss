@@ -31,6 +31,7 @@
 // Effects
 --CREARTS-effects-flat: 2px 2px 20px hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) - 3% + var(--CREARTS-lightness) - 6%), var(--CREARTS-base-a)), -2px -2px 12px var(--CREARTS-background-secondary);
 --CREARTS-effects-pressed: inset 6px 6px 20px hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) - 3% + var(--CREARTS-lightness) - 6%), var(--CREARTS-base-a)), inset -6px -6px 20px var(--CREARTS-background-secondary);
+--CREARTS-effects-colors: inset 6px 6px 20px rgba(0, 0, 0, 0.40), inset -6px -6px 20px rgba(0, 0, 0, 0.40);
 
 // Colors
 --CREARTS-colors-red: 206, 9, 81;

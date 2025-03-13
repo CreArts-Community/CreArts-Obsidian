@@ -1,0 +1,99 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Columns)       ║ Base                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.callout[data-callout="columns"] .callout .callout-content {
+  margin-top: calc(-1 * var(--CREARTS-spacing-tertiary));
+}
+
+// Background
+.callout[data-callout="columns"] {
+  background: transparent;
+  border-radius: 0px;
+  box-shadow: none;
+  border: none;
+  overflow: visible;
+  padding: 0px;
+
+}
+
+.callout[data-callout="columns"] .callout {
+  background: transparent;
+  border-radius: 0px;
+  box-shadow: none;
+  border: none;
+  overflow: visible;
+  margin-top: 0px;
+  padding: 0px;
+}
+
+// Spacing
+.callout[data-callout="columns"] .callout-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  column-gap: var(--CREARTS-spacing-tertiary);
+  row-gap: var(--CREARTS-spacing-tertiary);
+  overflow: visible;
+}
+
+// Remove Title
+.callout[data-callout="columns"] .callout-title {
+  display: none;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Columns                  ║ Reponsive                                                                               ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+
+.callout[data-callout="columns"] .callout {
+  flex: 1 1;
+  box-sizing: border-box;
+  min-width: 200px;
+}
+
+.callout[data-callout="columns"][data-callout-metadata="2"] .callout {
+  flex: 1 1 calc(100% / 2 - var(--CREARTS-spacing-tertiary));
+  min-width: 100px;
+}
+
+.callout[data-callout="columns"][data-callout-metadata="3"] .callout {
+  flex: 1 1 calc(100% / 3 - var(--CREARTS-spacing-tertiary));
+  min-width: 200px;
+}
+
+.callout[data-callout="columns"][data-callout-metadata="4"] .callout {
+  flex: 1 1 calc(100% / 4 - var(--CREARTS-spacing-tertiary));
+  min-width: 200px;
+}
+
+.callout[data-callout="columns"][data-callout-metadata="5"] .callout {
+  flex: 1 1 calc(100% / 5 - var(--CREARTS-spacing-tertiary));
+  min-width: 200px;
+}
+
+.callout[data-callout="columns"][data-callout-metadata="6"] .callout {
+  flex: 1 1 calc(100% / 6 - var(--CREARTS-spacing-tertiary));
+  min-width: 200px;
+}
+
+.callout[data-callout="columns"][data-callout-metadata="7"] .callout {
+  flex: 1 1 calc(100% / 7 - var(--CREARTS-spacing-tertiary));
+  min-width: 200px;
+}
+
+.callout[data-callout="columns"][data-callout-metadata="8"] .callout {
+  flex: 1 1 calc(100% / 8 - var(--CREARTS-spacing-tertiary));
+  min-width: 200px;
+}
+
+.callout[data-callout="columns"][data-callout-metadata="9"] .callout {
+  flex: 1 1 calc(100% / 9 - var(--CREARTS-spacing-tertiary));
+  min-width: 200px;
+}
+
+.callout[data-callout="columns"] .callout:nth-last-child(1) {
+  flex-grow: 1;
+}

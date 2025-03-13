@@ -1,27 +1,17 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Plugins                  ║ Home Tab                                                                                ║
+// ║ Plugins (Home Tab)       ║ Searchbar                                                                               ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
-.block-language-search-bar {
-  margin-bottom: var(--CREARTS-spacing-tertiary);
-}
-
 .home-tab-searchbar {
   width: 100% !important;
   border: none !important;
-}
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Features                 ║ Home -> Home Tab (Search)                                                               ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// Background
-.home-tab-searchbar {
   max-width: unset !important;
+  background: var(--CREARTS-background-secondary) !important;
+  box-shadow: var(--CREARTS-effects-pressed) !important;
   border-radius: var(--CREARTS-radius-primary) !important;
-  background: var(--CREARTS-background-primary) !important;
-  box-shadow: var(--CREARTS-effects-pressed);
+  margin-bottom: var(--CREARTS-spacing-tertiary) !important;
+
 }
 
 // Background (Active)
@@ -54,17 +44,3 @@
 .home .suggestion-item:hover {
   background: var(--CREARTS-interface-primary);
 }
-
-
-
-
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Features                 ║                                                                                         ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-/*
-.home-tab {
-  margin-top: 14vh !important;
-}
-*/

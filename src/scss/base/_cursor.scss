@@ -23,7 +23,7 @@
 // ║ Cursor                   ║ Callout                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.callout-title {
+.callout.is-collapsible .callout-title {
   cursor: pointer !important;
 }
 
