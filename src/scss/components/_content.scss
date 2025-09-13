@@ -1,5 +1,5 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components               ║ Content                                                                                 ║
+// ║ Components (Default)     ║ Content                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
@@ -59,3 +59,101 @@
 .cm-gutters .cm-active {
   font-weight: 800;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components (Popout)      ║ left                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.is-popout-window .mod-top-left-space .workspace-leaf-content {
+  margin-top: var(--CREARTS-layout-margin);
+  margin-bottom: var(--CREARTS-layout-margin);
+}
+
+
+// Header
+.is-popout-window .mod-top-left-space .view-header {
+  margin-right: var(--CREARTS-layout-margin-half);
+  margin-left: var(--CREARTS-layout-margin);
+}
+
+
+// Content
+.is-popout-window .mod-top-left-space .view-content  {
+  margin-right: var(--CREARTS-layout-margin-half);
+  margin-left: var(--CREARTS-layout-margin);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components (Popout)      ║ Mid                                                                                     ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.is-popout-window .mod-top:not(.mod-top-left-space,.mod-top-right-space) .workspace-leaf-content {
+  margin-top: var(--CREARTS-layout-margin);
+  margin-bottom: var(--CREARTS-layout-margin);
+}
+
+
+// Header
+.is-popout-window .mod-top:not(.mod-top-left-space,.mod-top-right-space) .view-header {
+  margin-right: var(--CREARTS-layout-margin-half);
+  margin-left: var(--CREARTS-layout-margin-half);
+}
+
+
+// Content
+.is-popout-window .mod-top:not(.mod-top-left-space,.mod-top-right-space) .view-content  {
+  margin-right: var(--CREARTS-layout-margin-half);
+  margin-left: var(--CREARTS-layout-margin-half);
+}
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components (Popout)      ║ Right                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.is-popout-window .mod-top-right-space .workspace-leaf-content {
+  margin-top: var(--CREARTS-layout-margin);
+  margin-bottom: var(--CREARTS-layout-margin);
+}
+
+
+// Header
+.is-popout-window .mod-top-right-space .view-header {
+  margin-right: var(--CREARTS-layout-margin);
+  margin-left: var(--CREARTS-layout-margin-half);
+}
+
+
+// Content
+.is-popout-window .mod-top-right-space .view-content  {
+  margin-right: var(--CREARTS-layout-margin);
+  margin-left: var(--CREARTS-layout-margin-half);
+}
+

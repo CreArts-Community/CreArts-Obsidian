@@ -1,46 +1,74 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Editing Toolbar          ║ General                                                                                 ║
+// ║ Plugins (Canvas)         ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Spacing
-.workspace-leaf-content[data-mode="source"] {
-  margin-bottom: calc(var(--CREARTS-layout-margin) + var(--CREARTS-height-statusbar) + var(--CREARTS-height-header) + var(--CREARTS-layout-margin));
-}
-
-.is-right-sidedock-open #cMenuToolbarModalBar {
-  width: calc(100% - var(--CREARTS-layout-margin));
-}
-
 // Background
-#cMenuToolbarModalBar {
-  z-index: 99;
-  position: fixed !important;
-  top: unset !important;
-  bottom: 0px;
-  left: var(--CREARTS-layout-margin-half);
-  width: calc(100% - var(--CREARTS-layout-margin) / 2 - var(--CREARTS-layout-margin));
-  min-height: var(--CREARTS-height-header);
-  margin-bottom: calc(var(--CREARTS-layout-margin) + var(--CREARTS-height-statusbar));
-  border: none !important;
-  border-radius: var(--CREARTS-radius-primary);
+.mod-root .canvas-wrapper {
   background: var(--CREARTS-background-secondary);
 }
 
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Editing Toolbar          ║ Popover                                                                                 ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-:is(#cMenuToolbarModalBar,#cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem] >.subitem {
-  border-radius: var(--CREARTS-radius-secondary);
+// Element
+/*
+.canvas-wrapper .canvas-node-container {
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
   box-shadow: var(--CREARTS-effects-flat);
-  transform: translateY(-140%) translateX(-20%);
 }
+*/
+
+
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Editing Toolbar          ║ Remove                                                                                  ║
+// ║ Plugins (Canvas)         ║ Control                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Remove Statusbar Item
-.plugin-editing-toolbar {
-  display: none !important;
+
+.canvas-control-group {
+  border-radius: var(--CREARTS-radius-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
 }
+
+
+.canvas-control-item {
+  background: var(--CREARTS-background-primary);
+  border: none;
+}
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins (Canvas)         ║ Menu                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.canvas-card-menu {
+  background: var(--CREARTS-background-primary);
+  border-radius: var(--CREARTS-radius-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+
+
+
+
+
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  left: unset;
+  transform: unset;
+  right: 0;
+  margin:  var(--size-4-2);
+  bottom: 0;
+}
+
+// Icons
+.canvas-card-menu-button svg.svg-icon {
+    --icon-size: var(--icon-s);
+    --icon-stroke: var(--icon-s-stroke-width);
+}
+

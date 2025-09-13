@@ -1,0 +1,305 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Palette)       ║ Red                                                                                     ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout-metadata="red"],
+.callout[data-callout-metadata="red-headless"] {
+  background: rgba(var(--CREARTS-colors-red), 0.1);
+  border-color: rgba(var(--CREARTS-colors-red), 0.4);
+}
+
+// Icon
+.callout[data-callout-metadata="red"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="red-headless"] > .callout-title .svg-icon{
+  color: rgba(var(--CREARTS-colors-red), 1.0);
+}
+
+// Title
+.callout[data-callout-metadata="red"] > .callout-title,
+.callout[data-callout-metadata="red-headless"] > .callout-title {
+  color: rgba(var(--CREARTS-colors-red), 1.0);
+}
+
+// Arrow
+.callout[data-callout-metadata="red"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="red-headless"] > .callout-title .lucide-chevron-down {
+  background: rgba(var(--CREARTS-colors-red), 1.0);
+}
+
+// Code
+.callout[data-callout-metadata="red"] code:not(pre code),
+.callout[data-callout-metadata="red-headless"] code:not(pre code) {
+  background: rgba(var(--CREARTS-colors-red), 0.2);
+  color: rgba(var(--CREARTS-colors-red), 1.0);
+}
+
+// Codeblock
+.callout[data-callout-metadata="red"] pre,
+.callout[data-callout-metadata="red-headless"] pre {
+  background: transparent !important;
+  border-color: rgba(var(--CREARTS-colors-red), 0.2);
+  box-shadow: var(--CREARTS-effects-colors);
+}
+
+// Checkbox
+.callout[data-callout-metadata="red"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="red-headless"] input[type=checkbox]:checked {
+  background-color: rgba(var(--CREARTS-colors-red), 1.0);
+  border-color: rgba(var(--CREARTS-colors-red), 1.0);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Palette)       ║ Green                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout-metadata="green"],
+.callout[data-callout-metadata="green-headless"] {
+  background: rgba(var(--CREARTS-colors-green), 0.1);
+  border-color: rgba(var(--CREARTS-colors-green), 0.4);
+}
+
+// Icon
+.callout[data-callout-metadata="green"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="green-headless"] > .callout-title .svg-icon{
+  color: rgba(var(--CREARTS-colors-green), 1.0);
+}
+
+// Title
+.callout[data-callout-metadata="green"] > .callout-title,
+.callout[data-callout-metadata="green-headless"] > .callout-title {
+  color: rgba(var(--CREARTS-colors-green), 1.0);
+}
+
+// Arrow
+.callout[data-callout-metadata="green"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="green-headless"] > .callout-title .lucide-chevron-down {
+  background: rgba(var(--CREARTS-colors-green), 1.0);
+}
+
+// Code
+.callout[data-callout-metadata="green"] code:not(pre code),
+.callout[data-callout-metadata="green-headless"] code:not(pre code) {
+  background: rgba(var(--CREARTS-colors-green), 0.2);
+  color: rgba(var(--CREARTS-colors-green), 1.0);
+}
+
+// Codeblock
+.callout[data-callout-metadata="green"] pre,
+.callout[data-callout-metadata="green-headless"] pre {
+  background: transparent !important;
+  border-color: rgba(var(--CREARTS-colors-green), 0.2);
+  box-shadow: var(--CREARTS-effects-colors);
+}
+
+// Checkbox
+.callout[data-callout-metadata="green"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="green-headless"] input[type=checkbox]:checked {
+  background-color: rgba(var(--CREARTS-colors-green), 1.0);
+  border-color: rgba(var(--CREARTS-colors-green), 1.0);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Palette)       ║ Yellow                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout-metadata="yellow"],
+.callout[data-callout-metadata="yellow-headless"] {
+  background: rgba(var(--CREARTS-colors-yellow), 0.1);
+  border-color: rgba(var(--CREARTS-colors-yellow), 0.4);
+}
+
+// Icon
+.callout[data-callout-metadata="yellow"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="yellow-headless"] > .callout-title .svg-icon{
+  color: rgba(var(--CREARTS-colors-yellow), 1.0);
+}
+
+// Title
+.callout[data-callout-metadata="yellow"] > .callout-title,
+.callout[data-callout-metadata="yellow-headless"] > .callout-title {
+  color: rgba(var(--CREARTS-colors-yellow), 1.0);
+}
+
+// Arrow
+.callout[data-callout-metadata="yellow"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="yellow-headless"] > .callout-title .lucide-chevron-down {
+  background: rgba(var(--CREARTS-colors-yellow), 1.0);
+}
+
+// Code
+.callout[data-callout-metadata="yellow"] code:not(pre code),
+.callout[data-callout-metadata="yellow-headless"] code:not(pre code) {
+  background: rgba(var(--CREARTS-colors-yellow), 0.2);
+  color: rgba(var(--CREARTS-colors-yellow), 1.0);
+}
+
+// Codeblock
+.callout[data-callout-metadata="yellow"] pre,
+.callout[data-callout-metadata="yellow-headless"] pre {
+  background: transparent !important;
+  border-color: rgba(var(--CREARTS-colors-yellow), 0.2);
+  box-shadow: var(--CREARTS-effects-colors);
+}
+
+// Checkbox
+.callout[data-callout-metadata="yellow"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="yellow-headless"] input[type=checkbox]:checked {
+  background-color: rgba(var(--CREARTS-colors-yellow), 1.0);
+  border-color: rgba(var(--CREARTS-colors-yellow), 1.0);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Palette)       ║ Orange                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout-metadata="orange"],
+.callout[data-callout-metadata="orange-headless"] {
+  background: rgba(var(--CREARTS-colors-orange), 0.1);
+  border-color: rgba(var(--CREARTS-colors-orange), 0.4);
+}
+
+// Icon
+.callout[data-callout-metadata="orange"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="orange-headless"] > .callout-title .svg-icon{
+  color: rgba(var(--CREARTS-colors-orange), 1.0);
+}
+
+// Title
+.callout[data-callout-metadata="orange"] > .callout-title,
+.callout[data-callout-metadata="orange-headless"] > .callout-title {
+  color: rgba(var(--CREARTS-colors-orange), 1.0);
+}
+
+// Arrow
+.callout[data-callout-metadata="orange"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="orange-headless"] > .callout-title .lucide-chevron-down {
+  background: rgba(var(--CREARTS-colors-orange), 1.0);
+}
+
+// Code
+.callout[data-callout-metadata="orange"] code:not(pre code),
+.callout[data-callout-metadata="orange-headless"] code:not(pre code) {
+  background: rgba(var(--CREARTS-colors-orange), 0.2);
+  color: rgba(var(--CREARTS-colors-orange), 1.0);
+}
+
+// Codeblock
+.callout[data-callout-metadata="orange"] pre,
+.callout[data-callout-metadata="orange-headless"] pre {
+  background: transparent !important;
+  border-color: rgba(var(--CREARTS-colors-orange), 0.2);
+  box-shadow: var(--CREARTS-effects-colors);
+}
+
+// Checkbox
+.callout[data-callout-metadata="orange"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="orange-headless"] input[type=checkbox]:checked {
+  background-color: rgba(var(--CREARTS-colors-orange), 1.0);
+  border-color: rgba(var(--CREARTS-colors-orange), 1.0);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Palette)       ║ Blue                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout-metadata="blue"],
+.callout[data-callout-metadata="blue-headless"] {
+  background: rgba(var(--CREARTS-colors-blue), 0.1);
+  border-color: rgba(var(--CREARTS-colors-blue), 0.4);
+}
+
+// Icon
+.callout[data-callout-metadata="blue"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="blue-headless"] > .callout-title .svg-icon{
+  color: rgba(var(--CREARTS-colors-blue), 1.0);
+}
+
+// Title
+.callout[data-callout-metadata="blue"] > .callout-title,
+.callout[data-callout-metadata="blue-headless"] > .callout-title {
+  color: rgba(var(--CREARTS-colors-blue), 1.0);
+}
+
+// Arrow
+.callout[data-callout-metadata="blue"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="blue-headless"] > .callout-title .lucide-chevron-down {
+  background: rgba(var(--CREARTS-colors-blue), 1.0);
+}
+
+// Code
+.callout[data-callout-metadata="blue"] code:not(pre code),
+.callout[data-callout-metadata="blue-headless"] code:not(pre code) {
+  background: rgba(var(--CREARTS-colors-blue), 0.2);
+  color: rgba(var(--CREARTS-colors-blue), 1.0);
+}
+
+// Codeblock
+.callout[data-callout-metadata="blue"] pre,
+.callout[data-callout-metadata="blue-headless"] pre {
+  background: transparent !important;
+  border-color: rgba(var(--CREARTS-colors-blue), 0.2);
+  box-shadow: var(--CREARTS-effects-colors);
+}
+
+// Checkbox
+.callout[data-callout-metadata="blue"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="blue-headless"] input[type=checkbox]:checked {
+  background-color: rgba(var(--CREARTS-colors-blue), 1.0);
+  border-color: rgba(var(--CREARTS-colors-blue), 1.0);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Palette)       ║ Purple                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout-metadata="purple"],
+.callout[data-callout-metadata="purple-headless"] {
+  background: rgba(var(--CREARTS-colors-purple), 0.1);
+  border-color: rgba(var(--CREARTS-colors-purple), 0.4);
+}
+
+// Icon
+.callout[data-callout-metadata="purple"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="purple-headless"] > .callout-title .svg-icon{
+  color: rgba(var(--CREARTS-colors-purple), 1.0);
+}
+
+// Title
+.callout[data-callout-metadata="purple"] > .callout-title,
+.callout[data-callout-metadata="purple-headless"] > .callout-title {
+  color: rgba(var(--CREARTS-colors-purple), 1.0);
+}
+
+// Arrow
+.callout[data-callout-metadata="purple"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="purple-headless"] > .callout-title .lucide-chevron-down {
+  background: rgba(var(--CREARTS-colors-purple), 1.0);
+}
+
+// Code
+.callout[data-callout-metadata="purple"] code:not(pre code),
+.callout[data-callout-metadata="purple-headless"] code:not(pre code) {
+  background: rgba(var(--CREARTS-colors-purple), 0.2);
+  color: rgba(var(--CREARTS-colors-purple), 1.0);
+}
+
+// Codeblock
+.callout[data-callout-metadata="purple"] pre,
+.callout[data-callout-metadata="purple-headless"] pre {
+  background: transparent !important;
+  border-color: rgba(var(--CREARTS-colors-purple), 0.2);
+  box-shadow: var(--CREARTS-effects-colors);
+}
+
+// Checkbox
+.callout[data-callout-metadata="purple"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="purple-headless"] input[type=checkbox]:checked {
+  background-color: rgba(var(--CREARTS-colors-purple), 1.0);
+  border-color: rgba(var(--CREARTS-colors-purple), 1.0);
+}

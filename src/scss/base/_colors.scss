@@ -2,9 +2,16 @@
 // ║ Colors                   ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
+
+
 .tree-item-self.is-clickable:hover {
-  color: var(--text-on-accent) !important;
-  background-color: var(--interactive-accent) !important;
+  background: var(--CREARTS-background-primary) !important;
+  border-radius: var(--CREARTS-radius-primary) !important;
+  box-shadow: var(--CREARTS-effects-flat) !important;
+  border-width: var(--CREARTS-border-width) !important;
+  border-style: var(--CREARTS-border-style) !important;
+  border-color: var(--CREARTS-border-primary) !important;
+
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗

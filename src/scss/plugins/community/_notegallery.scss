@@ -1,65 +1,56 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Cursor                   ║ General                                                                                 ║
+// ║ Note Gallery             ║ Base                                                                                    ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.clickable-icon {
-  cursor: pointer !important;
-}
-
-.titlebar-button {
-  cursor: pointer !important;
+// Background
+.view-content:has(div):has(.block-language-note-gallery) {
+  background: var(--CREARTS-background-secondary) !important;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Cursor                   ║ Tabs                                                                                    ║
+// ║ Note Gallery             ║ Masonry                                                                                    ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
+// Background
+.note-card {
+  background: var(--CREARTS-background-primary);
+  border-radius: var(--CREARTS-spacing-primary);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-radius: var(--CREARTS-radius-secondary);
+  border-color: var(--CREARTS-border-primary);
+  background: var(--CREARTS-background-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  padding: 0px !important;
+}
 
-.workspace-tab-header:not(.is-active) {
-  cursor: pointer !important;
+// Hover
+.note-card:hover {
+  border-color: var(--CREARTS-border-secondary) !important;
+  background: var(--CREARTS-interface-primary);
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Cursor                   ║ Callout                                                                                 ║
+// ║ Note Gallery             ║ Image                                                                                   ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.callout.is-collapsible .callout-title {
-  cursor: pointer !important;
+// Normal
+.masonry-grid .note-card img {
+  display: block;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+// Hover
+.masonry-grid img:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Cursor                   ║ Files                                                                                   ║
+// ║ Note Gallery             ║ Search State                                                                            ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-body:not(.is-grabbing) .tree-item-self.is-clickable:hover {
-  cursor: pointer !important;
+.search-empty-state {
+  display: none;
 }
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Cursor                   ║ Settings                                                                                ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-button {
-  cursor: pointer;
-}
-
-.dropdown {
-  cursor: pointer;
-}
-
-.dropdown option[value="obsidian"] {
-  cursor: pointer !important;
-}
-
-.checkbox-container {
-  cursor: pointer;
-}
-
-input[type="color"] {
-  cursor: pointer;
-}
-
-.vertical-tab-nav-item {
-  cursor: pointer;
-}
-

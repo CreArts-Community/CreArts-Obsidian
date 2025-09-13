@@ -11,16 +11,21 @@
 @forward "base/text";
 @forward "base/typography";
 @forward "base/remove";
+@forward "base/callouts";
+
+@forward "base/tables";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Source                   ║ Callouts                                                                                ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-@forward "callouts/default";
+@forward "callouts/palette";
+
 
 //@forward "callouts/callout";
 //@forward "callouts/caption";
 //@forward "callouts/colors";
+@forward "callouts/chat";
 @forward "callouts/columns";
 //@forward "callouts/commands";
 //@forward "callouts/contents";
@@ -46,24 +51,21 @@
 @forward "components/ui";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Source                   ║ Dataview                                                                                ║
+// ║ Source                   ║ Effects                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-@forward "dataview/grid";
-@forward "dataview/list";
-@forward "dataview/masonry";
-@forward "dataview/subscriptions";
+//@forward "effects/hover";
+//@forward "effects/imagezoom";
+@forward "effects/neumorphism";
+@forward "effects/order";
+@forward "effects/skinpreview";
+@forward "effects/wallpaper";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Source                   ║ Features                                                                                ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-//@forward "features/hover";
-//@forward "features/imagezoom";
-@forward "features/neumorphism";
-@forward "features/order";
-@forward "features/skinpreview";
-@forward "features/wallpaper";
+@forward "features/infobox";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Source                   ║ Icons                                                                                   ║
@@ -81,35 +83,41 @@
 @forward "pages/paper";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Source                   ║ Plugins                                                                                 ║
+// ║ Source                   ║ Plugins (Community)                                                                     ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-@forward "plugins/banners";
-@forward "plugins/buttons";
-@forward "plugins/calendar";
-@forward "plugins/canvas";
-@forward "plugins/columns";
-@forward "plugins/customframes";
-@forward "plugins/editingtoolbar";
-@forward "plugins/flashcards";
-@forward "plugins/grandfather";
-@forward "plugins/graph";
-@forward "plugins/hometab";
-@forward "plugins/iconize";
-@forward "plugins/kanban";
-@forward "plugins/metabind";
-@forward "plugins/notegallery";
-@forward "plugins/opengates";
-@forward "plugins/pomodorotimer";
-@forward "plugins/recentfiles";
-@forward "plugins/search";
-@forward "plugins/settingssearch";
-@forward "plugins/stylesettings";
-@forward "plugins/sortable";
-@forward "plugins/tags";
-@forward "plugins/tenki";
-@forward "plugins/tokei";
-@forward "plugins/vaultstatistics";
+@forward "plugins/community/banners";
+@forward "plugins/community/buttons";
+@forward "plugins/community/calendar";
+@forward "plugins/community/columns";
+@forward "plugins/community/customframes";
+@forward "plugins/community/editingtoolbar";
+@forward "plugins/community/flashcards";
+@forward "plugins/community/grandfather";
+@forward "plugins/community/graph";
+@forward "plugins/community/hometab";
+@forward "plugins/community/iconize";
+@forward "plugins/community/kanban";
+@forward "plugins/community/metabind";
+@forward "plugins/community/notegallery";
+@forward "plugins/community/opengates";
+@forward "plugins/community/pomodorotimer";
+@forward "plugins/community/recentfiles";
+@forward "plugins/community/settingssearch";
+@forward "plugins/community/sortable";
+@forward "plugins/community/stylesettings";
+@forward "plugins/community/tenki";
+@forward "plugins/community/tokei";
+@forward "plugins/community/vaultstatistics";
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Source                   ║ Plugins (Core)                                                                          ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+@forward "plugins/core/bases";
+@forward "plugins/core/canvas";
+@forward "plugins/core/search";
+@forward "plugins/core/tags";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Source                   ║ Variables                                                                               ║
@@ -219,5 +227,41 @@ pre:has(.language-css)::before {
 /*
 pre:has(.language-scss)::before {
   content: "SCSS";
+}
+*/
+
+
+/* WIO SPACING TEST */
+/*
+.has-list-bullet {
+  margin-top: calc(var(--p-spacing) * -1) !important;
+}
+  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.nav-folder-children {
+  opacity: 0.4;
+  transition: opacity 0.08s ease-in-out;
+}
+
+.nav-folder-children:hover {
+  opacity: 1.0 !important;
+    transition: opacity 0.08s ease-in-out;
 }
 */

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "corellan",
   "description": "CreArts is a customizable Obsidian theme that changes the appearance of Obsidian.",
-  "license": "MIT <license>",
+  "license": "MIT",
   "private": true,
   "devDependencies": {
     "fs-extra": "^11.2.0",

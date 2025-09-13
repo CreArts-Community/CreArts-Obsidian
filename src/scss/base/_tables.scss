@@ -1,65 +1,112 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Cursor                   ║ General                                                                                 ║
+// ║ Table                    ║ Table                                                                                   ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.clickable-icon {
-  cursor: pointer !important;
+// Spacing
+.markdown-preview-view table {
+  border-collapse: separate;
+  border-spacing: var(--CREARTS-spacing-primary);
+  margin: 0;
 }
 
-.titlebar-button {
-  cursor: pointer !important;
+// Background
+.markdown-preview-view td {
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-radius: var(--CREARTS-radius-primary);
+  vertical-align: middle;
+  user-select: all;
+  white-space: pre;
+  word-break: keep-all;
+  padding: var(--CREARTS-spacing-primary);
+  text-align: center;
+}
+
+/*
+// Image Spacing
+.markdown-preview-view td:not(:has(img)) {
+  width: 100%;
+}
+*/
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Table                    ║ Header                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.markdown-preview-view thead th {
+  border: none  !important;
+}
+
+
+// Odd
+.markdown-preview-view tbody tr:nth-child(odd) {
+  background: var(--CREARTS-interface-primary) !important;
+}
+
+// Border
+.markdown-preview-view tbody tr:nth-child(odd) td {
+  border-color: var(--CREARTS-border-secondary) !important;
+}
+
+// Even
+.markdown-preview-view tbody tr:nth-child(even) {
+  background: var(--CREARTS-background-primary) !important;
+}
+
+// Border
+.markdown-preview-view tbody tr:nth-child(even) td {
+  border-color: var(--CREARTS-border-primary) !important;
+}
+
+
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Table                    ║ Empty                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.markdown-preview-view td:empty {
+  visibility: hidden;
+  padding: 0px;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Cursor                   ║ Tabs                                                                                    ║
+// ║ Table                    ║ Image                                                                                   ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-
-.workspace-tab-header:not(.is-active) {
-  cursor: pointer !important;
+// Spacing
+.markdown-preview-view td img {
+  display: block;
+  margin: auto;
 }
 
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Cursor                   ║ Callout                                                                                 ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-.callout.is-collapsible .callout-title {
-  cursor: pointer !important;
+.markdown-preview-view td:has(img) {
+  padding: 0px;
+  margin: 0px;
 }
 
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Cursor                   ║ Files                                                                                   ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-body:not(.is-grabbing) .tree-item-self.is-clickable:hover {
-  cursor: pointer !important;
+// Transition
+td img {
+  transition: transform 0.3s ease;
 }
 
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Cursor                   ║ Settings                                                                                ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-button {
-  cursor: pointer;
+td img:hover {
+  transform: scale(1.2);
 }
 
-.dropdown {
-  cursor: pointer;
-}
 
-.dropdown option[value="obsidian"] {
-  cursor: pointer !important;
-}
 
-.checkbox-container {
-  cursor: pointer;
-}
 
-input[type="color"] {
-  cursor: pointer;
-}
 
-.vertical-tab-nav-item {
-  cursor: pointer;
-}
 
+
+
+
+
+
+
+
+// Hover
+.markdown-preview-view td:hover {
+  background: var(--CREARTS-interface-secondary) !important;
+}

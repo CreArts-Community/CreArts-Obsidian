@@ -62,6 +62,13 @@
   line-height: 1.6;
   word-spacing: 0.04em;
   letter-spacing: 0.02em;
+  
+}
+
+// Background
+.cm-line:has(.cm-tag) {
+  background: var(--CREARTS-background-primary); /* dezenter Hintergrund */
+  text-align: left;
 }
 
 // Header
@@ -73,3 +80,7 @@
   word-spacing: 0.04em;
   letter-spacing: 0.02em;
 }
+
+
+
+ 
