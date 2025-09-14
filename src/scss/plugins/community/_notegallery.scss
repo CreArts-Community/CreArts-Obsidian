@@ -1,0 +1,56 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Note Gallery             ║ Base                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.view-content:has(div):has(.block-language-note-gallery) {
+  background: var(--CREARTS-background-secondary) !important;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Note Gallery             ║ Masonry                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.note-card {
+  background: var(--CREARTS-background-primary);
+  border-radius: var(--CREARTS-spacing-primary);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-radius: var(--CREARTS-radius-secondary);
+  border-color: var(--CREARTS-border-primary);
+  background: var(--CREARTS-background-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  padding: 0px !important;
+}
+
+// Hover
+.note-card:hover {
+  border-color: var(--CREARTS-border-secondary) !important;
+  background: var(--CREARTS-interface-primary);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Note Gallery             ║ Image                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Normal
+.masonry-grid .note-card img {
+  display: block;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+// Hover
+.masonry-grid img:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Note Gallery             ║ Search State                                                                            ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.search-empty-state {
+  display: none;
+}

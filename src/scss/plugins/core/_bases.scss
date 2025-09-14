@@ -1,0 +1,60 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins (Bases)          ║ Header                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.bases-header {
+  margin: var(--CREARTS-spacing-secondary) var(--CREARTS-spacing-secondary) 0px var(--CREARTS-spacing-secondary);
+  border-radius: var(--CREARTS-spacing-primary);
+  background: var(--CREARTS-background-primary);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-radius: var(--CREARTS-radius-secondary);
+  border-color: var(--CREARTS-border-primary);
+  background: var(--CREARTS-background-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins (Bases)          ║ Cards                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.bases-cards-item {
+  background: var(--CREARTS-background-primary);
+  border-radius: var(--CREARTS-spacing-primary);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-radius: var(--CREARTS-radius-secondary);
+  border-color: var(--CREARTS-border-primary);
+  background: var(--CREARTS-background-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+
+}
+
+.bases-cards-cover {
+  background: transparent;
+}
+
+// Hover
+.bases-cards-item:hover {
+  background: var(--CREARTS-interface-primary);
+  border-radius: var(--CREARTS-spacing-primary);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-radius: var(--CREARTS-radius-secondary);
+  border-color: var(--CREARTS-interface-secondary);
+}
+
+
+
+
+
+
+
+
+.bases-view {
+    margin: var(--CREARTS-spacing-secondary);
+}
+
+

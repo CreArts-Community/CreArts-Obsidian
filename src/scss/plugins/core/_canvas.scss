@@ -1,0 +1,74 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins (Canvas)         ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.mod-root .canvas-wrapper {
+  background: var(--CREARTS-background-secondary);
+}
+
+// Element
+/*
+.canvas-wrapper .canvas-node-container {
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+}
+*/
+
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins (Canvas)         ║ Control                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+
+.canvas-control-group {
+  border-radius: var(--CREARTS-radius-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+}
+
+
+.canvas-control-item {
+  background: var(--CREARTS-background-primary);
+  border: none;
+}
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins (Canvas)         ║ Menu                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.canvas-card-menu {
+  background: var(--CREARTS-background-primary);
+  border-radius: var(--CREARTS-radius-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+
+
+
+
+
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  left: unset;
+  transform: unset;
+  right: 0;
+  margin:  var(--size-4-2);
+  bottom: 0;
+}
+
+// Icons
+.canvas-card-menu-button svg.svg-icon {
+    --icon-size: var(--icon-s);
+    --icon-stroke: var(--icon-s-stroke-width);
+}
+

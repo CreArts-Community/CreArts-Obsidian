@@ -1,0 +1,114 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Skins                    ║ Dark                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.theme-dark {
+// Settings
+--CREARTS-lightness: var(--SKIN-lightness, 0%);
+--CREARTS-saturation: var(--SKIN-saturation, 0%);
+--CREARTS-alpha: var(--SKIN-alpha, 0%);
+
+// Accent
+--CREARTS-accent-h: var(--SKIN-accent-h, 338);
+--CREARTS-accent-s: var(--SKIN-accent-s, 92%);
+--CREARTS-accent-l: var(--SKIN-accent-l, 42%);
+--CREARTS-accent-a: var(--SKIN-accent-a, 1);
+
+// Content
+--CREARTS-content-h: var(--SKIN-content-h, 230);
+--CREARTS-content-s: var(--SKIN-content-s, 70%);
+--CREARTS-content-l: var(--SKIN-content-l, 86%);
+--CREARTS-content-a: var(--SKIN-content-a, 1);
+
+// Base
+--CREARTS-base-h: var(--SKIN-base-h, 230);
+--CREARTS-base-s: var(--SKIN-base-s, 19%);
+--CREARTS-base-l: var(--SKIN-base-l, 23%);
+--CREARTS-base-a: var(--SKIN-base-a, 1);
+
+// Grading
+--CREARTS-grading-background-primary: var(--SKIN-grading-background-primary, 0%);
+--CREARTS-grading-background-secondary: var(--SKIN-grading-background-secondary, 3%);
+--CREARTS-grading-background-tertiary: var(--SKIN-grading-background-tertiary, 6%);
+
+--CREARTS-grading-interface-primary: var(--SKIN-grading-interface-primary, 8%);
+--CREARTS-grading-interface-secondary: var(--SKIN-grading-interface-secondary, 16%);
+--CREARTS-grading-interface-tertiary: var(--SKIN-grading-interface-tertiary, 24%);
+
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Skins                    ║ Light                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.theme-light {
+// Settings
+--CREARTS-lightness: var(--SKIN-lightness, 0%);
+--CREARTS-saturation: var(--SKIN-saturation, 0%);
+--CREARTS-alpha: var(--SKIN-alpha, 0%);
+
+// Accent
+--CREARTS-accent-h: var(--SKIN-accent-h, 338);
+--CREARTS-accent-s: var(--SKIN-accent-s, 92%);
+--CREARTS-accent-l: var(--SKIN-accent-l, 42%);
+--CREARTS-accent-a: var(--SKIN-accent-a, 1);
+
+// Content
+--CREARTS-content-h: var(--SKIN-content-h, 230);
+--CREARTS-content-s: var(--SKIN-content-s, 20%);
+--CREARTS-content-l: var(--SKIN-content-l, 20%);
+--CREARTS-content-a: var(--SKIN-content-a, 1);
+
+// Base
+--CREARTS-base-h: var(--SKIN-base-h, 230);
+--CREARTS-base-s: var(--SKIN-base-s, 20%);
+--CREARTS-base-l: var(--SKIN-base-l, 100%);
+--CREARTS-base-a: var(--SKIN-base-a, 1);
+
+// Grading
+--CREARTS-grading-background-primary: var(--SKIN-grading-background-primary, 3%);
+--CREARTS-grading-background-secondary: var(--SKIN-grading-background-secondary, 0%);
+--CREARTS-grading-background-tertiary: var(--SKIN-grading-background-tertiary, 9%);
+
+--CREARTS-grading-interface-primary: var(--SKIN-grading-interface-primary, -8%);
+--CREARTS-grading-interface-secondary: var(--SKIN-grading-interface-secondary, -16%);
+--CREARTS-grading-interface-tertiary: var(--SKIN-grading-interface-tertiary, -24%);
+
+
+// Colors - Red
+--CREARTS-colors-red-h: var(--SKIN-colors-red-h, 338);
+--CREARTS-colors-red-s: var(--SKIN-colors-red-s, 92%);
+--CREARTS-colors-red-l: var(--SKIN-colors-red-l, 42%);
+--CREARTS-colors-red-a: var(--SKIN-colors-red-a, 1);
+
+// Colors - Green
+--CREARTS-colors-green-h: var(--SKIN-colors-green-h, 158);
+--CREARTS-colors-green-s: var(--SKIN-colors-green-s, 92%);
+--CREARTS-colors-green-l: var(--SKIN-colors-green-l, 42%);
+--CREARTS-colors-green-a: var(--SKIN-colors-green-a, 1);
+
+// Colors - Yellow
+--CREARTS-colors-yellow-h: var(--SKIN-colors-yellow-h, 45);
+--CREARTS-colors-yellow-s: var(--SKIN-colors-yellow-s, 100%);
+--CREARTS-colors-yellow-l: var(--SKIN-colors-yellow-l, 69%);
+--CREARTS-colors-yellow-a: var(--SKIN-colors-yellow-a, 1);
+
+// Colors - Orange
+--CREARTS-colors-orange-h: var(--SKIN-colors-orange-h, 10);
+--CREARTS-colors-orange-s: var(--SKIN-colors-orange-s, 74%);
+--CREARTS-colors-orange-l: var(--SKIN-colors-orange-l, 63%);
+--CREARTS-colors-orange-a: var(--SKIN-colors-orange-a, 1);
+
+// Colors - Blue
+--CREARTS-colors-blue-h: var(--SKIN-colors-blue-h, 225);
+--CREARTS-colors-blue-s: var(--SKIN-colors-blue-s, 100%);
+--CREARTS-colors-blue-l: var(--SKIN-colors-blue-l, 69%);
+--CREARTS-colors-blue-a: var(--SKIN-colors-blue-a, 1);
+
+// Colors - Purple
+--CREARTS-colors-purple-h: var(--SKIN-colors-purple-h, 270);
+--CREARTS-colors-purple-s: var(--SKIN-colors-purple-s, 100%);
+--CREARTS-colors-purple-l: var(--SKIN-colors-purple-l, 69%);
+--CREARTS-colors-purple-a: var(--SKIN-colors-purple-a, 1);
+
+}

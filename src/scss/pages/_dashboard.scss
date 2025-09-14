@@ -1,0 +1,61 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Features                 ║ Dashboard                                                                               ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.dashboard .block-language-search-bar {
+  margin-top: var(--CREARTS-spacing-tertiary);
+  margin-bottom: var(--CREARTS-spacing-tertiary);
+}
+
+.dashboard h1,
+.dashboard h2,
+.dashboard h3 {
+  margin: 0px;
+}
+
+
+.dashboard .button .mb-button-inner {
+  width: 100% !important;
+  margin-bottom: var(--CREARTS-spacing-primary);
+
+
+  border-width: var(--CREARTS-border-width) !important;
+  border-style: var(--CREARTS-border-style) !important;
+  border-radius: var(--CREARTS-radius-primary);
+  border-color: var(--CREARTS-border-primary) !important;
+  background: var(--CREARTS-background-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+}
+
+/*
+
+// Spacing
+.dashboard .markdown-preview-sizer {
+  padding-bottom: 0px !important;
+}
+
+// Buttons
+.dashboard .button-normal {
+  width: 100%;
+}
+*/
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Features                 ║ Dashboard                                                                               ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.dashboard .bases-view {
+  overflow: visible !important;
+}
+
+
+
+.dashboard .bases-header {
+  display: none;
+}
+
+.dashboard .bases-view {
+   height: 100%;
+}

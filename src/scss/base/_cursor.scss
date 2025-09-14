@@ -23,7 +23,7 @@
 // ║ Cursor                   ║ Callout                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.callout-title {
+.callout.is-collapsible .callout-title {
   cursor: pointer !important;
 }
 
@@ -58,3 +58,8 @@ button {
 input[type="color"] {
   cursor: pointer;
 }
+
+.vertical-tab-nav-item {
+  cursor: pointer;
+}
+

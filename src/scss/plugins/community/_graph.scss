@@ -1,0 +1,36 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins                  ║ Graph                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Position
+.mod-left-split .workspace-tabs:not(.mod-top) .graph-controls {
+  right: unset;
+  left: var(--size-4-3);
+}
+
+// Normal
+.workspace-leaf-content .graph-controls.is-close {
+  opacity: 0;
+}
+
+// Hover
+.workspace-leaf-content:hover .graph-controls.is-close {
+  opacity: 1;
+}
+
+.graph-controls {
+  border-radius: var(--CREARTS-radius-secondary);
+  box-shadow: var(--CREARTS-effects-flat);
+}
+
+
+
+.graph-color-group input[type="color"] {
+  order: -1;
+  margin: 0px 6px 0px 0px;
+}
+
+
+.graph-color-group .clickable-icon {
+margin-left: 6px;
+}

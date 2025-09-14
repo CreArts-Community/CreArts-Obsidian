@@ -1,0 +1,31 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Colors                   ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+
+
+.tree-item-self.is-clickable:hover {
+  background: var(--CREARTS-background-primary) !important;
+  border-radius: var(--CREARTS-radius-primary) !important;
+  box-shadow: var(--CREARTS-effects-flat) !important;
+  border-width: var(--CREARTS-border-width) !important;
+  border-style: var(--CREARTS-border-style) !important;
+  border-color: var(--CREARTS-border-primary) !important;
+
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Colors                   ║ Tabs                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+/*
+.mod-left-split .workspace-tab-header.is-active,
+.mod-right-split .workspace-tab-header.is-active {
+  background-color: var(--interactive-accent) !important;
+}
+
+.mod-left-split .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+.mod-right-split .workspace-tab-header.is-active .workspace-tab-header-inner-icon {
+  color: var(--text-on-accent) !important;
+}
+*/

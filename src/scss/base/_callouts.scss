@@ -1,0 +1,633 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Default)       ║ Base                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout {
+  background: var(--CREARTS-background-primary);
+  border-radius: var(--CREARTS-radius-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+  box-sizing: border-box;
+  mix-blend-mode: unset;
+  overflow: visible;
+  padding: var(--CREARTS-spacing-tertiary);
+}
+
+// Icon
+.callout-icon .svg-icon {
+  color: var(--CREARTS-text-primary);
+}
+
+// Title
+.callout-title {
+  color: var(--CREARTS-text-primary);
+}
+
+// Code
+.callout code {
+  background: var(--CREARTS-interface-primary);
+}
+
+// Codeblock
+.callout pre {
+  background: var(--CREARTS-background-secondary);
+  box-shadow: var(--CREARTS-effects-pressed);
+  border-radius: var(--CREARTS-radius-secondary);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Default)       ║ Pressed                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout-metadata="pressed"],
+.callout[data-callout-metadata="pressed-headless"] {
+  background: var(--CREARTS-background-secondary);
+  box-shadow: var(--CREARTS-effects-pressed);
+  border-color: transparent;
+}
+
+// Codeblock
+.callout[data-callout-metadata="pressed"] pre,
+.callout[data-callout-metadata="pressed-headless"] pre {
+  background: var(--CREARTS-background-primary);
+  border-color: var(--CREARTS-border-secondary);
+  box-shadow: var(--CREARTS-effects-flat);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Default)       ║ Outline                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout-metadata="outline"],
+.callout[data-callout-metadata="outline-headless"] {
+  background: none;
+  box-shadow: none;
+}
+
+// Codeblock
+.callout[data-callout-metadata="outline"] pre,
+.callout[data-callout-metadata="outline-headless"] pre {
+  background: transparent;
+  border-color: var(--CREARTS-border-secondary);
+  box-shadow: none;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Default)       ║ Cyan                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout="tip"],
+.callout[data-callout="hint"],
+.callout[data-callout="important"],
+.callout[data-callout="abstract"],
+.callout[data-callout="summary"],
+.callout[data-callout="tldr"] {
+  background: rgba(var(--color-cyan-rgb), 0.1);
+  border-color: rgba(var(--color-cyan-rgb), 0.4);
+}
+
+// Icon
+.callout[data-callout="tip"] > .callout-title .svg-icon,
+.callout[data-callout="hint"] > .callout-title .svg-icon,
+.callout[data-callout="important"] > .callout-title .svg-icon,
+.callout[data-callout="abstract"] > .callout-title .svg-icon,
+.callout[data-callout="summary"] > .callout-title .svg-icon,
+.callout[data-callout="tldr"] > .callout-title .svg-icon {
+  color: rgba(var(--color-cyan-rgb), 1.0);
+}
+
+// Title
+.callout[data-callout="tip"] > .callout-title,
+.callout[data-callout="hint"] > .callout-title,
+.callout[data-callout="important"] > .callout-title,
+.callout[data-callout="abstract"] > .callout-title,
+.callout[data-callout="summary"] > .callout-title,
+.callout[data-callout="tldr"] > .callout-title {
+  color: rgba(var(--color-cyan-rgb), 1.0);
+}
+
+// Arrow
+.callout[data-callout="tip"] > .callout-title .lucide-chevron-down,
+.callout[data-callout="hint"] > .callout-title .lucide-chevron-down,
+.callout[data-callout="important"] > .callout-title .lucide-chevron-down,
+.callout[data-callout="abstract"] > .callout-title .lucide-chevron-down,
+.callout[data-callout="summary"] > .callout-title .lucide-chevron-down,
+.callout[data-callout="tldr"] > .callout-title .lucide-chevron-down {
+  background: rgba(var(--color-cyan-rgb), 1.0);
+}
+
+// Code
+.callout[data-callout="tip"] code:not(pre code),
+.callout[data-callout="hint"] code:not(pre code),
+.callout[data-callout="important"] code:not(pre code),
+.callout[data-callout="abstract"] code:not(pre code),
+.callout[data-callout="summary"] code:not(pre code),
+.callout[data-callout="tldr"] code:not(pre code) {
+  background: rgba(var(--color-cyan-rgb), 0.2);
+  color: rgba(var(--color-cyan-rgb), 1.0);
+}
+
+// Codeblock
+.callout[data-callout="tip"] pre,
+.callout[data-callout="hint"] pre,
+.callout[data-callout="important"] pre,
+.callout[data-callout="abstract"] pre,
+.callout[data-callout="summary"] pre,
+.callout[data-callout="tldr"] pre {
+  background: transparent !important;
+  border-color: rgba(var(--color-cyan-rgb), 0.2);
+  box-shadow: var(--CREARTS-effects-colors);
+}
+
+// Checkbox
+.callout[data-callout="tip"] input,
+.callout[data-callout="hint"] input,
+.callout[data-callout="important"] input,
+.callout[data-callout="abstract"] input,
+.callout[data-callout="summary"] input,
+.callout[data-callout="tldr"] input {
+  border-color: rgba(var(--color-cyan-rgb), 1.0);
+}
+
+.callout[data-callout="tip"] .is-checked input,
+.callout[data-callout="hint"] .is-checked input,
+.callout[data-callout="important"] .is-checked input,
+.callout[data-callout="abstract"] .is-checked input,
+.callout[data-callout="summary"] .is-checked input,
+.callout[data-callout="tldr"] .is-checked input {
+    background-color: rgba(var(--color-cyan-rgb), 1.0);
+    border-color: rgba(var(--color-cyan-rgb), 1.0);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Default)       ║ Blue                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout="info"],
+.callout[data-callout="note"],
+.callout[data-callout="todo"] {
+  background: rgba(var(--color-blue-rgb), 0.1);
+  border-color: rgba(var(--color-blue-rgb), 0.4);
+}
+
+// Icon
+.callout[data-callout="info"] > .callout-title .svg-icon,
+.callout[data-callout="note"] > .callout-title .svg-icon,
+.callout[data-callout="todo"] > .callout-title .svg-icon{
+  color: rgba(var(--color-blue-rgb), 1.0);
+}
+
+// Title
+.callout[data-callout="info"] > .callout-title,
+.callout[data-callout="note"] > .callout-title,
+.callout[data-callout="todo"] > .callout-title {
+  color: rgba(var(--color-blue-rgb), 1.0);
+}
+
+// Arrow
+.callout[data-callout="info"] > .callout-title .lucide-chevron-down,
+.callout[data-callout="note"] > .callout-title .lucide-chevron-down,
+.callout[data-callout="todo"] > .callout-title .lucide-chevron-down{
+  background: rgba(var(--color-blue-rgb), 1.0);
+}
+
+// Code
+.callout[data-callout="info"] code:not(pre code),
+.callout[data-callout="note"] code:not(pre code),
+.callout[data-callout="todo"] code:not(pre code) {
+  background: rgba(var(--color-blue-rgb), 0.2);
+  color: rgba(var(--color-blue-rgb), 1.0);
+}
+
+// Codeblock
+.callout[data-callout="info"] pre,
+.callout[data-callout="note"] pre,
+.callout[data-callout="todo"] pre {
+  background: transparent !important;
+  border-color: rgba(var(--color-blue-rgb), 0.2);
+  box-shadow: var(--CREARTS-effects-colors);
+}
+
+// Checkbox
+.callout[data-callout="info"] input,
+.callout[data-callout="note"] input,
+.callout[data-callout="todo"] input {
+  border-color: rgba(var(--color-blue-rgb), 1.0);
+}
+
+.callout[data-callout="info"] .is-checked input,
+.callout[data-callout="note"] .is-checked input,
+.callout[data-callout="todo"] .is-checked input {
+    background-color: rgba(var(--color-blue-rgb), 1.0);
+    border-color: rgba(var(--color-blue-rgb), 1.0);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Default)       ║ Green                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout="success"],
+.callout[data-callout="check"],
+.callout[data-callout="done"] {
+  background: rgba(var(--color-green-rgb), 0.1);
+  border-color: rgba(var(--color-green-rgb), 0.4);
+}
+
+// Icon
+.callout[data-callout="success"] > .callout-title .svg-icon,
+.callout[data-callout="check"] > .callout-title .svg-icon,
+.callout[data-callout="done"] > .callout-title .svg-icon {
+  color: rgba(var(--color-green-rgb), 1.0);
+}
+
+// Title
+.callout[data-callout="success"] > .callout-title,
+.callout[data-callout="check"] > .callout-title,
+.callout[data-callout="done"] > .callout-title {
+  color: rgba(var(--color-green-rgb), 1.0);
+}
+
+// Arrow
+.callout[data-callout="success"] > .callout-title .lucide-chevron-down,
+.callout[data-callout="check"] > .callout-title .lucide-chevron-down,
+.callout[data-callout="done"] > .callout-title .lucide-chevron-down {
+  background: rgba(var(--color-green-rgb), 1.0);
+}
+
+// Code
+.callout[data-callout="success"] code:not(pre code),
+.callout[data-callout="check"] code:not(pre code),
+.callout[data-callout="done"] code:not(pre code) {
+  background: rgba(var(--color-green-rgb), 0.2);
+  color: rgba(var(--color-green-rgb), 1.0);
+}
+
+// Codeblock
+.callout[data-callout="success"] pre,
+.callout[data-callout="check"] pre,
+.callout[data-callout="done"] pre {
+  background: transparent !important;
+  border-color: rgba(var(--color-green-rgb), 0.2);
+  box-shadow: var(--CREARTS-effects-colors);
+}
+
+// Checkbox
+.callout[data-callout="success"] input,
+.callout[data-callout="check"] input,
+.callout[data-callout="done"] input {
+  border-color: rgba(var(--color-green-rgb), 1.0);
+}
+
+.callout[data-callout="success"] .is-checked input,
+.callout[data-callout="check"] .is-checked input,
+.callout[data-callout="done"] .is-checked input {
+    background-color: rgba(var(--color-green-rgb), 1.0);
+    border-color: rgba(var(--color-green-rgb), 1.0);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Default)       ║ Orange                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout="question"],
+.callout[data-callout="help"],
+.callout[data-callout="faq"],
+.callout[data-callout="warning"],
+.callout[data-callout="caution"],
+.callout[data-callout="attention"] {
+  background: rgba(var(--color-orange-rgb), 0.1);
+  border-color: rgba(var(--color-orange-rgb), 0.4);
+}
+
+// Icon
+.callout[data-callout="question"] > .callout-title .svg-icon,
+.callout[data-callout="help"] > .callout-title .svg-icon,
+.callout[data-callout="faq"] > .callout-title .svg-icon,
+.callout[data-callout="warning"] > .callout-title .svg-icon,
+.callout[data-callout="caution"] > .callout-title .svg-icon,
+.callout[data-callout="attention"] > .callout-title .svg-icon {
+  color: rgba(var(--color-orange-rgb), 1.0);
+}
+
+// Title
+.callout[data-callout="question"] > .callout-title,
+.callout[data-callout="help"] > .callout-title,
+.callout[data-callout="faq"] > .callout-title,
+.callout[data-callout="warning"] > .callout-title,
+.callout[data-callout="caution"] > .callout-title,
+.callout[data-callout="attention"] > .callout-title {
+  color: rgba(var(--color-orange-rgb), 1.0);
+}
+
+// Arrow
+.callout[data-callout="question"] > .callout-title .lucide-chevron-down,
+.callout[data-callout="help"] > .callout-title .lucide-chevron-down,
+.callout[data-callout="faq"] > .callout-title .lucide-chevron-down,
+.callout[data-callout="warning"] > .callout-title .lucide-chevron-down,
+.callout[data-callout="caution"] > .callout-title .lucide-chevron-down,
+.callout[data-callout="attention"] > .callout-title .lucide-chevron-down {
+  background: rgba(var(--color-orange-rgb), 1.0);
+}
+
+// Code
+.callout[data-callout="question"] code:not(pre code),
+.callout[data-callout="help"] code:not(pre code),
+.callout[data-callout="faq"] code:not(pre code),
+.callout[data-callout="warning"] code:not(pre code),
+.callout[data-callout="caution"] code:not(pre code),
+.callout[data-callout="attention"] code:not(pre code) {
+  background: rgba(var(--color-orange-rgb), 0.2);
+  color: rgba(var(--color-orange-rgb), 1.0);
+}
+
+// Codeblock
+.callout[data-callout="question"] pre,
+.callout[data-callout="help"] pre,
+.callout[data-callout="faq"] pre,
+.callout[data-callout="warning"] pre,
+.callout[data-callout="caution"] pre,
+.callout[data-callout="attention"] pre {
+  background: transparent !important;
+  border-color: rgba(var(--color-orange-rgb), 0.2);
+  box-shadow: var(--CREARTS-effects-colors);
+}
+
+// Checkbox
+.callout[data-callout="question"] input,
+.callout[data-callout="help"] input,
+.callout[data-callout="faq"] input,
+.callout[data-callout="warning"] input,
+.callout[data-callout="caution"] input,
+.callout[data-callout="attention"] input {
+  border-color: rgba(var(--color-orange-rgb), 1.0);
+}
+
+.callout[data-callout="question"] .is-checked input,
+.callout[data-callout="help"] .is-checked input,
+.callout[data-callout="faq"] .is-checked input,
+.callout[data-callout="warning"] .is-checked input,
+.callout[data-callout="caution"] .is-checked input,
+.callout[data-callout="attention"].is-checked input {
+    background-color: rgba(var(--color-orange-rgb), 1.0);
+    border-color: rgba(var(--color-orange-rgb), 1.0);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Default)       ║ Red                                                                                     ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout="failure"],
+.callout[data-callout="fail"],
+.callout[data-callout="missing"],
+.callout[data-callout="danger"],
+.callout[data-callout="error"],
+.callout[data-callout="bug"] {
+  background: rgba(var(--color-red-rgb), 0.1);
+  border-color: rgba(var(--color-red-rgb), 0.4);
+}
+
+// Icon
+.callout[data-callout="failure"] > .callout-title .svg-icon,
+.callout[data-callout="fail"] > .callout-title .svg-icon,
+.callout[data-callout="missing"] > .callout-title .svg-icon,
+.callout[data-callout="danger"] > .callout-title .svg-icon,
+.callout[data-callout="error"] > .callout-title .svg-icon,
+.callout[data-callout="bug"] > .callout-title .svg-icon {
+  color: rgba(var(--color-red-rgb), 1.0);
+}
+
+// Title
+.callout[data-callout="failure"] > .callout-title,
+.callout[data-callout="fail"] > .callout-title,
+.callout[data-callout="missing"] > .callout-title,
+.callout[data-callout="danger"] > .callout-title,
+.callout[data-callout="error"] > .callout-title,
+.callout[data-callout="bug"] > .callout-title {
+  color: rgba(var(--color-red-rgb), 1.0);
+}
+
+// Arrow
+.callout[data-callout="failure"] > .callout-title .lucide-chevron-down,
+.callout[data-callout="fail"] > .callout-title .lucide-chevron-down,
+.callout[data-callout="missing"] > .callout-title .lucide-chevron-down,
+.callout[data-callout="danger"] > .callout-title .lucide-chevron-down,
+.callout[data-callout="error"] > .callout-title .lucide-chevron-down,
+.callout[data-callout="bug"] > .callout-title .lucide-chevron-down {
+  background: rgba(var(--color-red-rgb), 1.0);
+}
+
+// Code
+.callout[data-callout="failure"] code:not(pre code),
+.callout[data-callout="fail"] code:not(pre code),
+.callout[data-callout="missing"] code:not(pre code),
+.callout[data-callout="danger"] code:not(pre code),
+.callout[data-callout="error"] code:not(pre code),
+.callout[data-callout="bug"] code:not(pre code) {
+  background: rgba(var(--color-red-rgb), 0.2);
+  color: rgba(var(--color-red-rgb), 1.0);
+}
+
+// Codeblock
+.callout[data-callout="failure"] pre,
+.callout[data-callout="fail"] pre,
+.callout[data-callout="missing"] pre,
+.callout[data-callout="danger"] pre,
+.callout[data-callout="error"] pre,
+.callout[data-callout="bug"] pre {
+  background: transparent !important;
+  border-color: rgba(var(--color-red-rgb), 0.2);
+  box-shadow: var(--CREARTS-effects-colors);
+}
+
+// Checkbox
+.callout[data-callout="failure"] input,
+.callout[data-callout="fail"] input,
+.callout[data-callout="missing"] input,
+.callout[data-callout="danger"] input,
+.callout[data-callout="error"] input,
+.callout[data-callout="bug"] input {
+  border-color: rgba(var(--color-red-rgb), 1.0);
+}
+
+.callout[data-callout="failure"] .is-checked input,
+.callout[data-callout="fail"] .is-checked input,
+.callout[data-callout="missing"] .is-checked input,
+.callout[data-callout="danger"] .is-checked input,
+.callout[data-callout="error"] .is-checked input,
+.callout[data-callout="bug"] .is-checked input {
+    background-color: rgba(var(--color-red-rgb), 1.0);
+    border-color: rgba(var(--color-red-rgb), 1.0);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Default)       ║ Purple                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout="example"] {
+  background: rgba(var(--color-purple-rgb), 0.1);
+  border-color: rgba(var(--color-purple-rgb), 0.4);
+}
+
+// Icon
+.callout[data-callout="example"] > .callout-title .svg-icon {
+  color: rgba(var(--color-purple-rgb), 1.0);
+}
+
+// Title
+.callout[data-callout="example"] > .callout-title {
+  color: rgba(var(--color-purple-rgb), 1.0);
+}
+
+// Arrow
+.callout[data-callout="example"] > .callout-title .lucide-chevron-down {
+  background: rgba(var(--color-purple-rgb), 1.0);
+}
+
+// Code
+.callout[data-callout="example"] code:not(pre code) {
+  background: rgba(var(--color-purple-rgb), 0.2);
+  color: rgba(var(--color-purple-rgb), 1.0);
+}
+
+// Codeblock
+.callout[data-callout="example"] pre {
+  background: transparent !important;
+  border-color: rgba(var(--color-purple-rgb), 0.2);
+  box-shadow: var(--CREARTS-effects-colors);
+} 
+
+// Checkbox
+.callout[data-callout="example"] input {
+  border-color: rgba(var(--color-purple-rgb), 1.0);
+}
+
+.callout[data-callout="example"] .is-checked input {
+    background-color: rgba(var(--color-purple-rgb), 1.0);
+    border-color: rgba(var(--color-purple-rgb), 1.0);
+}
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Default)       ║ Yellow                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout="quote"] {
+  background: rgba(var(--color-yellow-rgb), 0.1);
+  border-color: rgba(var(--color-yellow-rgb), 0.4);
+}
+
+// Icon
+.callout[data-callout="quote"] > .callout-title .svg-icon {
+  color: rgba(var(--color-yellow-rgb), 1.0);
+}
+
+// Title
+.callout[data-callout="quote"] .callout-title {
+  color: rgba(var(--color-yellow-rgb), 1.0);
+}
+
+// Arrow
+.callout[data-callout="quote"] .callout-title .lucide-chevron-down {
+  background: rgba(var(--color-yellow-rgb), 1.0);
+}
+
+// Code
+.callout[data-callout="quote"] code:not(pre code) {
+  background: rgba(var(--color-yellow-rgb), 0.2);
+  color: rgba(var(--color-yellow-rgb), 1.0);
+}
+
+// Codeblock
+.callout[data-callout="quote"] pre {
+  background: transparent !important;
+  border-color: rgba(var(--color-yellow-rgb), 0.2);
+  box-shadow: var(--CREARTS-effects-colors);
+}
+
+// Quote
+.callout[data-callout="example"] input {
+  border-color: rgba(var(--color-yellow-rgb), 1.0);
+}
+
+.callout[data-callout="example"] .is-checked input {
+    background-color: rgba(var(--color-yellow-rgb), 1.0);
+    border-color: rgba(var(--color-yellow-rgb), 1.0);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Default)       ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.callout-content {
+  overflow: visible;
+  margin-bottom: calc(-1 * var(--CREARTS-spacing-tertiary));
+}
+
+// Nested
+.callout .callout {
+  box-shadow: none;
+}
+
+// Font
+.callout-title {
+  font-size: var(--h2-size);
+}
+
+/*
+// Codeblock
+.language-css .language-css {
+  background: transparent !important;
+}
+*/
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Default)       ║ Headless                                                                                ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.callout[data-callout-metadata="flat-headless"] .callout-content,
+.callout[data-callout-metadata="pressed-headless"] .callout-content,
+.callout[data-callout-metadata="outline-headless"] .callout-content,
+.callout[data-callout-metadata="red-headless"] .callout-content,
+.callout[data-callout-metadata="green-headless"] .callout-content {
+  margin-top: calc(-1 * var(--CREARTS-spacing-tertiary));
+}
+
+// Remove Title
+.callout[data-callout-metadata="flat-headless"] .callout-title,
+.callout[data-callout-metadata="pressed-headless"] .callout-title,
+.callout[data-callout-metadata="outline-headless"] .callout-title,
+.callout[data-callout-metadata="red-headless"] .callout-title,
+.callout[data-callout-metadata="green-headless"] .callout-title {
+  display: none;
+}
+
+// Remove Icon
+.callout[data-callout-metadata="flat"] .callout-icon,
+.callout[data-callout-metadata="pressed"] .callout-icon,
+.callout[data-callout-metadata="outline"] .callout-icon,
+.callout[data-callout-metadata="red-headless"] .callout-icon,
+.callout[data-callout-metadata="green-headless"] .callout-icon {
+  display: none;
+}
+
+
+
+
+

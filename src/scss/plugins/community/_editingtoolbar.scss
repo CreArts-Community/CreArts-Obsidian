@@ -1,0 +1,83 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Editing Toolbar          ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.workspace-leaf-content:has(#cMenuToolbarModalBar)[data-mode="source"] {
+  margin-bottom: calc(var(--CREARTS-layout-margin) + var(--CREARTS-height-statusbar) + var(--CREARTS-height-header) + var(--CREARTS-layout-margin));
+}
+
+.is-right-sidedock-open #cMenuToolbarModalBar {
+  width: calc(100% - var(--CREARTS-layout-margin)) !important;
+}
+
+// Background
+#cMenuToolbarModalBar {
+  position: fixed !important;
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+  top: unset !important;
+  bottom: 0px;
+  width: calc(100% - var(--CREARTS-layout-margin) / 2 - var(--CREARTS-layout-margin));
+  min-height: var(--CREARTS-height-header);
+  margin-bottom: calc(var(--CREARTS-layout-margin) + var(--CREARTS-height-statusbar));
+  border: none !important;
+  
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Editing Toolbar          ║ Popover                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+[class^=cMenuToolbarCommandsubItem] > .subitem {
+  background: var(--CREARTS-background-primary) !important;
+  border-radius: var(--CREARTS-radius-secondary) !important;
+  box-shadow: var(--CREARTS-effects-flat) !important;
+  border-width: var(--CREARTS-border-width) !important;
+  border-style: var(--CREARTS-border-style) !important;
+  border-color: var(--CREARTS-border-primary) !important;
+  bottom: var(--CREARTS-layout-margin-half) !important;
+  right: var(--CREARTS-layout-margin-half) !important;
+  transform: translateY(-176%) translateX(0%) !important;
+}
+
+
+
+/*
+// Background
+#cMenuToolbarPopoverBar {
+  background: var(--CREARTS-background-primary) !important;
+  border-radius: var(--CREARTS-radius-secondary) !important;
+  box-shadow: var(--CREARTS-effects-flat) !important;
+  border-width: var(--CREARTS-border-width) !important;
+  border-style: var(--CREARTS-border-style) !important;
+  border-color: var(--CREARTS-border-primary) !important;
+  bottom: var(--CREARTS-layout-margin-half) !important;
+  right: var(--CREARTS-layout-margin) !important;
+  margin: 0px;
+}
+*/
+
+
+
+
+
+
+/*
+#cMenuToolbarPopoverBar > [class^=cMenuToolbarCommandsubItem] > .subitem {
+  background: var(--CREARTS-background-primary) !important;
+  border-radius: var(--CREARTS-radius-secondary) !important;
+  box-shadow: var(--CREARTS-effects-flat) !important;
+  border-width: var(--CREARTS-border-width) !important;
+  border-style: var(--CREARTS-border-style) !important;
+  border-color: var(--CREARTS-border-primary) !important;
+  bottom: 0 !important;
+  right: 0 !important;
+
+
+  margin: 0px !important;
+
+
+}
+*/

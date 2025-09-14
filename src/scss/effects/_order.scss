@@ -1,0 +1,34 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Order                    ║ Community Plugins                                                                       ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.installed-plugins-container .setting-item {
+  display: flex;
+}
+
+.installed-plugins-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.installed-plugins-container .setting-item:has(.is-enabled) {
+  order: 1;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Order                    ║ Core Plugins                                                                            ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.plugin-list-plugins div:not(.setting-item) .setting-item {
+  display: flex;
+}
+
+.plugin-list-plugins > div:not(.setting-item) {
+  display: flex;
+  flex-direction: column;
+}
+
+.plugin-list-plugins div:not(.setting-item) .setting-item:has(.is-enabled) {
+  order: 1;
+}
+

@@ -1,0 +1,83 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins                  ║ Calendar                                                                                ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.workspace-tab-container:has(#calendar-container) .view-content {
+  overflow: hidden;
+}
+
+
+
+
+
+// Spacing
+#calendar-container {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+#calendar-container .nav.svelte-1vwr9dd.svelte-1vwr9dd {
+  margin: 0px 0px var(--CREARTS-spacing-primary) 0px;
+  padding: 0px;
+}
+
+
+
+#calendar-container .title {
+  padding: var(--CREARTS-spacing-primary-half) 0px var(--CREARTS-spacing-primary-half) var(--CREARTS-spacing-primary);
+}
+
+#calendar-container .nav {
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-radius: var(--CREARTS-radius-secondary);
+  border-color: var(--CREARTS-border-primary);
+  background: var(--CREARTS-background-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+}
+
+
+
+// Font
+#calendar-container .month,
+#calendar-container .title,
+#calendar-container .year {
+  font-weight: 600;
+  font-size: calc(var(--font-adaptive-small) + 2px);
+}
+
+// Today
+#calendar-container .day.today {
+  font-weight: 800;
+  border-width: var(--CREARTS-border-width) !important;
+  border-style: var(--CREARTS-border-style) !important;
+  border-radius: var(--CREARTS-radius-secondary);
+  border-color: var(--CREARTS-border-primary) !important;
+  background: var(--CREARTS-background-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+}
+
+
+
+#calendar-container .calendar {
+  overflow: auto;
+}
+
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Calendar                 ║ Navigation                                                                               ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Reset Button (Normal)
+.reset-button.svelte-1vwr9dd.svelte-1vwr9dd {
+  font-size: 12px !important;
+  margin: 0px !important;
+  padding: 0px 4px;  
+}
+
+// Reset Button (Hover)
+.reset-button.svelte-1vwr9dd.svelte-1vwr9dd:hover {
+  background: var(--interactive-accent-hover);
+  color: var(--text-on-accent);
+}

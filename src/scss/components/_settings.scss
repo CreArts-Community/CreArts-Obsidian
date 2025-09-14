@@ -2,4 +2,209 @@
 // ║ Settings                 ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
+// Spacing
+.vertical-tab-content {
+  padding-top: var(--CREARTS-spacing-tertiary);
+  padding-bottom: var(--CREARTS-spacing-tertiary);
+  padding-inline-start: var(--CREARTS-spacing-tertiary);
+  padding-inline-end: var(--CREARTS-spacing-tertiary);
+}
+
+.vertical-tab-content .setting-item-headin {
+  font-weight: var(--font-semibold);
+}
+
+// Font
+.setting-item.setting-item-heading .setting-item-name {
+  color: var(--text-normal);
+  font-size: var(--font-ui-large);
+  line-height: var(--line-height-tight);
+}
+
+.vertical-tab-header-group-title {
+  font-size: var(--font-ui-medium);
+  color: var(--CREARTS-text-primary);
+}
+
+
+
+
+
+
+
+
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Settings                 ║ Header                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.vertical-tab-header {
+  padding: var(--CREARTS-layout-margin);
+  border: none !important;
+  width: var(--width) !important;
+  min-width: var(--width) !important;
+  max-width: var(--width) !important;
+  --width: var(--CREARTS-width-settings) !important;
+}
+
+// Background
+.vertical-tab-header-group {
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+  margin: 0px 0px var(--CREARTS-layout-margin) 0px;
+  padding: var(--CREARTS-spacing-primary);
+
+}
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Settings                 ║ Content                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.vertical-tab-content-container .vertical-tab-content {
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+  margin: var(--CREARTS-layout-margin) var(--CREARTS-layout-margin) var(--CREARTS-layout-margin) 0px;
+}
+
+
+
+
+
+
+
+.vertical-tab-content-container .installed-plugins-container {
+  padding-top: 0px;
+  border-top: unset;
+}
+
+// Item
+.vertical-tab-content-container .setting-item:not(.setting-item-heading) {
+  border-width: var(--CREARTS-border-width) !important;
+  border-style: var(--CREARTS-border-style) !important;
+  border-radius: var(--CREARTS-radius-primary);
+  border-color: var(--CREARTS-border-primary) !important;
+  background: var(--CREARTS-background-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  margin-bottom: var(--CREARTS-spacing-tertiary);
+  padding: var(--CREARTS-spacing-tertiary) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Settings                 ║ Fullscreen                                                                              ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+
+/*
+.modal-container {
+  align-items: end;
+}
+
+
+.modal-container .mod-sidebar-layout {
+  display: flex;
+
+
+  padding: unset;
+  width: 100%;
+  min-height: calc(100% - var(--CREARTS-height-titlebar));
+  height: calc(100% - var(--CREARTS-height-titlebar));
+  max-width: unset;
+  max-height: calc(100% - var(--CREARTS-height-titlebar));
+  overflow: hidden;
+
+  flex-direction: column;
+  border-radius: unset;
+
+  border: none;
+}
+*/
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Settings                 ║ Plugins                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Tenki - Tokei
+.vertical-tab-content:has(.recent-files-donation) {
+  display: flex;
+  flex-direction: column;
+}
+
+.recent-files-donation {
+  order: 99;
+}
+
+.recent-files-donation {
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-radius: var(--CREARTS-radius-primary);
+  border-color: var(--CREARTS-border-primary);
+  background: var(--CREARTS-background-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  padding: var(--CREARTS-spacing-tertiary) !important;
+  width: 100%
+}
+
+// Highlightr
+.hltrDonationSection {
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-radius: var(--CREARTS-radius-primary);
+  border-color: var(--CREARTS-border-primary);
+  background: var(--CREARTS-background-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  padding: var(--CREARTS-spacing-tertiary) !important;
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+.setting-item-control input{
+  background: var(--CREARTS-background-secondary);
+  box-shadow: var(--CREARTS-effects-pressed);
+  border-radius: var(--CREARTS-radius-secondary);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+}
+
+
+
+.setting-item-control .dropdown {
+  background-color: var(--CREARTS-background-tertiary);
+  border-radius: var(--CREARTS-radius-secondary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+}
+
 

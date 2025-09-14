@@ -2,35 +2,42 @@
 // ║ Source                   ║ Base                                                                                    ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-@forward "base/accent";
-@forward "base/contextmenu";
+@forward "base/colors";
 @forward "base/cursor";
-@forward "base/fonts";
-@forward "base/dropdown";
 @forward "base/fullscreen";
-//@forward "base/hover";
+@forward "base/image";
 @forward "base/mobile";
-@forward "base/print";
-@forward "base/remove";
+//@forward "base/print";
 @forward "base/text";
-@forward "base/wallpaper";
+@forward "base/typography";
+@forward "base/remove";
+@forward "base/scrollbars";
+@forward "base/callouts";
+
+@forward "base/tables";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Source                   ║ Callouts                                                                                ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-@forward "callouts/callout";
-@forward "callouts/caption";
-@forward "callouts/colors";
-@forward "callouts/column";
-@forward "callouts/commands";
-@forward "callouts/contents";
-@forward "callouts/infobox";
-@forward "callouts/message";
-@forward "callouts/shortcuts";
-@forward "callouts/tables";
-@forward "callouts/tags";
-@forward "callouts/tasks";
+@forward "callouts/palette";
+
+
+//@forward "callouts/callout";
+//@forward "callouts/caption";
+//@forward "callouts/colors";
+@forward "callouts/buttons";
+@forward "callouts/chat";
+@forward "callouts/columns";
+//@forward "callouts/commands";
+//@forward "callouts/contents";
+//@forward "callouts/infobox";
+//@forward "callouts/message";
+//@forward "callouts/shortcuts";
+//@forward "callouts/tables";
+//@forward "callouts/tags";
+//@forward "callouts/tasks";
+
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Source                   ║ Components                                                                              ║
@@ -43,55 +50,221 @@
 @forward "components/sidebar";
 @forward "components/statusbar";
 @forward "components/titlebar";
+@forward "components/ui";
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Source                   ║ Effects                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+//@forward "effects/hover";
+//@forward "effects/imagezoom";
+@forward "effects/neumorphism";
+@forward "effects/order";
+@forward "effects/skinpreview";
+@forward "effects/wallpaper";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Source                   ║ Features                                                                                ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-@forward "features/cards";
-@forward "features/dashboard";
-@forward "features/flashcards";
-@forward "features/imagezoom";
+@forward "features/infobox";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Source                   ║ Plugins                                                                                 ║
+// ║ Source                   ║ Icons                                                                                   ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-@forward "plugins/banners";
-@forward "plugins/buttons";
-@forward "plugins/calendar";
-@forward "plugins/canvas";
-@forward "plugins/columns";
-@forward "plugins/customframes";
-@forward "plugins/editingtoolbar";
-@forward "plugins/flashcards";
-@forward "plugins/grandfather";
-@forward "plugins/graph";
-@forward "plugins/hometab";
-@forward "plugins/iconize";
-@forward "plugins/kanban";
-@forward "plugins/notegallery";
-@forward "plugins/opengates";
-@forward "plugins/pomodorotimer";
-@forward "plugins/recentfiles";
-@forward "plugins/search";
-@forward "plugins/settingssearch";
-@forward "plugins/stylesettings";
-@forward "plugins/sortable";
-@forward "plugins/tags";
-@forward "plugins/tenki";
-@forward "plugins/tokei";
-@forward "plugins/vaultstatistics";
+@forward "icons/explorer";
+@forward "icons/replace";
+@forward "icons/tabs";
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Source                   ║ Pages                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+@forward "pages/dashboard";
+@forward "pages/paper";
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Source                   ║ Plugins (Community)                                                                     ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+@forward "plugins/community/banners";
+@forward "plugins/community/buttons";
+@forward "plugins/community/calendar";
+@forward "plugins/community/columns";
+@forward "plugins/community/customframes";
+@forward "plugins/community/editingtoolbar";
+@forward "plugins/community/flashcards";
+@forward "plugins/community/grandfather";
+@forward "plugins/community/graph";
+@forward "plugins/community/hometab";
+@forward "plugins/community/iconize";
+@forward "plugins/community/kanban";
+@forward "plugins/community/metabind";
+@forward "plugins/community/notegallery";
+@forward "plugins/community/opengates";
+@forward "plugins/community/pomodorotimer";
+@forward "plugins/community/recentfiles";
+@forward "plugins/community/settingssearch";
+@forward "plugins/community/sortable";
+@forward "plugins/community/stylesettings";
+@forward "plugins/community/tenki";
+@forward "plugins/community/tokei";
+@forward "plugins/community/vaultstatistics";
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Source                   ║ Plugins (Core)                                                                          ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+@forward "plugins/core/bases";
+@forward "plugins/core/canvas";
+@forward "plugins/core/search";
+@forward "plugins/core/tags";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Source                   ║ Variables                                                                               ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 @forward "variables/dark";
-@forward "variables/default";
 @forward "variables/general";
 @forward "variables/light";
+@forward "variables/skins";
 
 // ╔════════════════════════════════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Testing...                                                                                                         ║
 // ╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+
+/*
+.theme-dark {
+  // Accent
+  --CREARTS-accent-h: var(--SKIN-accent-h, 264);
+  --CREARTS-accent-s: var(--SKIN-accent-s, 100%);
+  --CREARTS-accent-l: var(--SKIN-accent-l, 66%);
+  --CREARTS-accent-a: var(--SKIN-accent-a, 1);
+
+  // Content
+  --CREARTS-content-h: var(--SKIN-content-h, 235) !important;
+  --CREARTS-content-s: var(--SKIN-content-s, 10%) !important;
+  --CREARTS-content-l: var(--SKIN-content-l, 80%) !important;
+  --CREARTS-content-a: var(--SKIN-content-a, 1);
+
+  // Base
+  --CREARTS-base-h: var(--SKIN-base-h, 240) !important;
+  --CREARTS-base-s: var(--SKIN-base-s, 10%) !important;
+  --CREARTS-base-l: var(--SKIN-base-l, 14%) !important;
+  --CREARTS-base-a: var(--SKIN-base-a, 1) !important;
+}
+*/
+
+/*
+--interactive-accent
+--text-on-accent
+--interactive-accent-hover
+*/
+
+// ╔════════════════════════════════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Testing...                                                                                                         ║
+// ╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+/*
+.infobox {
+  background: red;
+  width: 200px;
+  float: right;
+  margin: 0px 0px 20px 20px;
+}
+*/
+
+/*
+.copy-code-button {
+  display: flex !important;
+
+  background: var(--CREARTS-background-primary) !important;
+  border-radius: var(--CREARTS-radius-secondary);
+  box-shadow: var(--CREARTS-effects-flat) !important;
+  margin: var(--CREARTS-spacing-primary) var(--CREARTS-spacing-primary) 0px 0px !important;
+  width: 36px !important;
+  height: 36px !important;
+  opacity: 0.3;
+}
+
+
+
+
+.copy-code-button::before {
+
+  content: "SCSS";
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--CREARTS-text-primary);
+  padding: var(--CREARTS-spacing-primary-half) var(--CREARTS-spacing-primary);
+  margin-top: var(--CREARTS-spacing-primary);
+  background: var(--CREARTS-background-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-radius: var(--CREARTS-radius-secondary);
+  margin-bottom: var(--CREARTS-spacing-primary);
+  font-family: var(--font-monospace);
+
+  position: absolute;
+right: 40px;
+}
+*/
+
+/*
+pre:has(.language-json)::before {
+  content: "JSON";
+}
+
+pre:has(.language-batch)::before {
+  content: "Batch";
+}
+
+pre:has(.language-css)::before {
+  content: "CSS";
+}
+*/
+
+/*
+pre:has(.language-scss)::before {
+  content: "SCSS";
+}
+*/
+
+
+/* WIO SPACING TEST */
+/*
+.has-list-bullet {
+  margin-top: calc(var(--p-spacing) * -1) !important;
+}
+  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.nav-folder-children {
+  opacity: 0.4;
+  transition: opacity 0.08s ease-in-out;
+}
+
+.nav-folder-children:hover {
+  opacity: 1.0 !important;
+    transition: opacity 0.08s ease-in-out;
+}
+*/
+

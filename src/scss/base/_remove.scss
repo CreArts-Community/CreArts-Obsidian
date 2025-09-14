@@ -1,28 +1,11 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Base                     ║ Remove                                                                                  ║
+// ║ Remove                   ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Help Icon
-.side-dock-settings .clickable-icon:nth-child(2) {
-  display: none !important;
-}
 
-// Readme
-[data-path="readme.md"] {
-  display: none;
-}
-
-// Manifest.json
-[data-path="manifest.json"] {
-  display: none;
-}
-
-// License
-[data-path="license"] {
-  display: none;
-}
-
+/*
 // Scrollbars
 ::-webkit-scrollbar {
   display: none !important;
 }
+*/

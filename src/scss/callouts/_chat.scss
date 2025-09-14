@@ -1,0 +1,264 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Chat)          ║ Vars                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.theme-dark, .theme-light {
+--chat-other-background: var(--CREARTS-interface-primary);
+--chat-other-border: var(--CREARTS-border-secondary);
+--chat-self-background: var(--CREARTS-background-primary);
+--chat-self-border: var(--CREARTS-border-primary);
+--chat-avatar: 36px; 
+--chat-title: 16px;
+--chat-date: 12px;
+--chat-tail: 12px;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Chat)          ║ Base                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Remove Icon
+.callout[data-callout="message-other"] .callout-icon,
+.callout[data-callout="message-self"] .callout-icon {
+  display: none;
+}
+
+// Spacing
+.callout[data-callout="message-other"],
+.callout[data-callout="message-self"] {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  position: relative;
+  padding: 0px 0px var(--CREARTS-spacing-tertiary) 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+// Background
+.callout[data-callout="message-other"] p,
+.callout[data-callout="message-self"] p {
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  padding: var(--CREARTS-spacing-primary);
+  margin-top: var(--CREARTS-spacing-secondary);
+  margin-bottom: var(--CREARTS-spacing-secondary);
+
+  width: fit-content;
+  max-width: 70%;
+  min-width: 10%;
+}
+
+// Title
+.callout[data-callout="message-self"] .callout-title-inner,
+.callout[data-callout="message-other"] .callout-title-inner {
+  font-size: var(--chat-title);
+  font-weight: 500;
+  height: var(--chat-avatar);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Chat)          ║ Message (Other)                                                                         ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.callout[data-callout="message-other"] p:first-child {
+  border-radius: 0px var(--CREARTS-spacing-secondary) var(--CREARTS-spacing-secondary) var(--CREARTS-spacing-secondary);
+}
+
+.callout[data-callout="message-other"] p {
+  border-color: var(--chat-other-border);
+  background: var(--chat-other-background);
+  color: var(--CREARTS-text-primary);
+  margin-right: auto;
+  text-align: left;
+  margin-left: calc(var(--chat-tail) + var(--chat-avatar) + var(--CREARTS-spacing-primary));
+  border-radius: var(--CREARTS-spacing-secondary);
+}
+
+// Tail
+.callout[data-callout="message-other"] p::after {
+  content: "";
+  position: absolute;
+  background: var(--CREARTS-interface-primary);
+  top: 48px;
+  left: calc(var(--chat-avatar) + var(--CREARTS-spacing-primary) + 1px);
+  width: var(--chat-tail);
+  height: var(--chat-tail);
+  clip-path: polygon(100% 100%, 100% 0, 0 0);
+  border-top: 1px solid var(--CREARTS-border-secondary);
+}
+
+// Avatar
+.callout[data-callout="message-other"] .callout-title-inner img {
+  width: var(--chat-avatar);
+  height: var(--chat-avatar);
+  border-radius: 100%;
+  box-shadow: none;
+  object-fit: cover;
+  top: 0px;
+  left: 0px;
+  user-select: none; 
+}
+
+// Title
+.callout[data-callout="message-other"] .callout-title {
+  text-align: left;
+  justify-content: flex-start;
+
+}
+
+.callout[data-callout="message-other"] .callout-title-inner {
+  display: flex;
+  flex-direction: row;
+  gap: var(--CREARTS-spacing-primary);
+  align-items: center;
+  line-height: 0;
+}
+
+// No Avatar
+.callout[data-callout="message-other"]:not(:has(.callout-title-inner img)) p {
+  margin-left: var(--CREARTS-spacing-primary);
+}
+
+.callout[data-callout="message-other"]:not(:has(.callout-title-inner img)) p::after {
+  left: 0px;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Chat)          ║ Message (Self)                                                                          ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.callout[data-callout="message-self"] p:first-child {
+  border-radius: var(--CREARTS-radius-secondary) 0px var(--CREARTS-radius-secondary) var(--CREARTS-radius-secondary);
+}
+
+.callout[data-callout="message-self"] p {
+  border-radius: var(--CREARTS-radius-secondary);
+  background: var(--chat-self-background);
+  border-color: var(--chat-self-border);
+  margin-left: auto;
+  text-align: left;
+  margin-right: calc(var(--CREARTS-spacing-primary) + var(--chat-avatar) + var(--chat-tail));
+}
+
+// Tail
+.callout[data-callout="message-self"] p::after {
+  content: "";
+  position: absolute;
+  background: var(--CREARTS-background-primary);
+  top: 48px;
+  right: calc(1px + var(--CREARTS-spacing-primary) + var(--chat-avatar));
+  width: var(--chat-tail);
+  height: var(--chat-tail);
+  clip-path: polygon(0 100%, 0 0, 100% 0);
+  border-top: 1px solid var(--CREARTS-border-primary);
+}
+
+// Avatar
+.callout[data-callout="message-self"] .callout-title-inner img {
+  width: var(--chat-avatar);
+  height: var(--chat-avatar);
+  border-radius: 100%;
+  box-shadow: none;
+  object-fit: cover;
+  top: 0;
+  right: 0px;
+  user-select: none; 
+}
+
+// Title
+.callout[data-callout="message-self"] .callout-title {
+  text-align: right;
+  justify-content: flex-end;}
+
+
+.callout[data-callout="message-self"] .callout-title-inner {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: var(--CREARTS-spacing-primary);
+  align-items: center;
+  line-height: 0;
+}
+
+// No Avatar
+.callout[data-callout="message-self"]:not(:has(.callout-title-inner img)) p {
+  margin-right: var(--CREARTS-spacing-primary);
+}
+
+.callout[data-callout="message-self"]:not(:has(.callout-title-inner img)) p::after {
+  right: 0px;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Chat)          ║ Message Date                                                                            ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout="message-date"] {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  text-align: center;
+  color: var(--CREARTS-text-tertiary);
+  font-size: var(--chat-date);
+  font-weight: 500;
+  width: 100%;
+
+  padding: 0px;
+  user-select: none; 
+}
+
+// Spacing
+.callout[data-callout="message-date"] .callout-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.callout[data-callout="message-date"] .callout-content::before,
+.callout[data-callout="message-date"] .callout-content::after {
+  content: "";
+  flex-grow: 1;
+  height: 1.5px;
+  background: var(--CREARTS-interface-primary);
+}
+
+.callout[data-callout="message-date"] .callout-content::before {
+  right: 100%;
+}
+
+.callout[data-callout="message-date"] .callout-content::after {
+  left: 100%;
+}
+
+// Remove Title
+.callout[data-callout="message-date"] .callout-title {
+  display: none;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Chat)          ║ Gap                                                                                     ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout="message-gap"] {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  text-align: center;
+  margin: 0px;
+}
+
+// Content
+.callout[data-callout="message-gap"]::before {
+  content: "· · ·";
+  font-size: 30px;
+  line-height: 30px;
+}
+
+// Remove Title
+.callout[data-callout="message-gap"] .callout-title {
+  display: none;
+}

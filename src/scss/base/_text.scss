@@ -1,20 +1,82 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Base                     ║ Text                                                                                    ║
+// ║ Text                     ║ Preview                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Live Preview
-.markdown-preview-view {
+// Text
+.markdown-preview-view p {
   hyphens: auto;
   text-align: justify;
   text-align-last: left;
   text-justify: inter-word;
+  line-height: 1.6;
+//word-spacing: 0.04em;
+  letter-spacing: 0.02em;
+}
+
+// Header
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+  hyphens: auto;
+  text-align: left;
+  text-align-last: left;
+  line-height: 1.4;
+  word-spacing: 0.04em;
+  letter-spacing: 0.02em;
 }
 
 // Bullet List
 .has-list-bullet {
-  text-align: left !important;
+  hyphens: auto;
+  text-align: left;
+  text-align-last: left;
+  line-height: 1.6;
+  word-spacing: 0.04em;
+  letter-spacing: 0.02em;
 }
 
-table {
-  text-align: left !important;
+.has-list-bullet li {
+  hyphens: auto;
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+  line-height: 1.6;
+  word-spacing: 0.04em;
+  letter-spacing: 0.02em;
+}
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Text                     ║ Editor                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Text
+.cm-line {
+  hyphens: auto;
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+  line-height: 1.6;
+// word-spacing: 0.04em;
+  letter-spacing: 0.02em;
+  
+}
+
+// Inline HTML Background
+.cm-line:has(.cm-tag) {
+  background: var(--CREARTS-background-primary); /* dezenter Hintergrund */
+  text-align: left;
+}
+
+// Header
+.HyperMD-header {
+  hyphens: auto;
+  text-align: left;
+  text-align-last: left;
+  line-height: 1.4;
+//word-spacing: 0.04em;
+  letter-spacing: 0.02em;
 }

@@ -34,8 +34,7 @@
   background: var(--CREARTS-background-secondary);
   border-radius: var(--CREARTS-radius-primary);
   margin: var(--CREARTS-layout-margin-half);
-  max-height: var(--CREARTS-height-header);
-  height: var(--CREARTS-height-header);
+  min-height: var(--CREARTS-height-header);
 }
 
 // Content
@@ -328,8 +327,4 @@ width: 20px;
 
 .workspace-drawer-vault-actions {
   order: -1;
-}
-
-.workspace-drawer-vault-actions .clickable-icon:nth-child(1) {
-  display: none !important;
 }

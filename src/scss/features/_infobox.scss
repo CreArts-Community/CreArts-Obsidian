@@ -1,0 +1,52 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Infobox                  ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.infobox {
+  background: var(--CREARTS-background-primary);
+  border-radius: var(--CREARTS-radius-primary);
+  width: 250px;
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Infobox                  ║ Right                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Float
+.infobox.float-right {
+  margin-top: var(--CREARTS-spacing-primary-half);
+  margin-left: var(--CREARTS-spacing-tertiary);
+  margin-bottom: var(--CREARTS-spacing-tertiary);
+  float: right;
+  clear: right;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Infobox                  ║ Table                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.infobox table {
+  margin: 0px 0px var(--CREARTS-spacing-primary) 0px !important;
+  padding: 0px !important;
+  width: 100%;
+}
+
+
+
+
+// td
+.infobox th {
+background: transparent !important;
+border: none !important;
+}
+
+
+.infobox tr {
+  background: red !important;
+}
