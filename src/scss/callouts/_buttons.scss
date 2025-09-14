@@ -1,0 +1,19 @@
+.button {
+  background: var(--CREARTS-background-primary);
+  border-radius: var(--CREARTS-radius-secondary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+  padding: var(--CREARTS-spacing-tertiary);
+  color: var(--CREARTS-text-primary);
+  text-decoration: none;
+}
+
+
+.button:hover {
+  background: var(--CREARTS-background-secondary);
+  box-shadow: var(--CREARTS-effects-pressed);
+  color: var(--CREARTS-text-primary);
+  text-decoration: none;
+}

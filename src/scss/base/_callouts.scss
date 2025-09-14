@@ -282,6 +282,20 @@
   box-shadow: var(--CREARTS-effects-colors);
 }
 
+// Checkbox
+.callout[data-callout="success"] input,
+.callout[data-callout="check"] input,
+.callout[data-callout="done"] input {
+  border-color: rgba(var(--color-green-rgb), 1.0);
+}
+
+.callout[data-callout="success"] .is-checked input,
+.callout[data-callout="check"] .is-checked input,
+.callout[data-callout="done"] .is-checked input {
+    background-color: rgba(var(--color-green-rgb), 1.0);
+    border-color: rgba(var(--color-green-rgb), 1.0);
+}
+
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Callouts (Default)       ║ Orange                                                                                  ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
@@ -348,6 +362,26 @@
   background: transparent !important;
   border-color: rgba(var(--color-orange-rgb), 0.2);
   box-shadow: var(--CREARTS-effects-colors);
+}
+
+// Checkbox
+.callout[data-callout="question"] input,
+.callout[data-callout="help"] input,
+.callout[data-callout="faq"] input,
+.callout[data-callout="warning"] input,
+.callout[data-callout="caution"] input,
+.callout[data-callout="attention"] input {
+  border-color: rgba(var(--color-orange-rgb), 1.0);
+}
+
+.callout[data-callout="question"] .is-checked input,
+.callout[data-callout="help"] .is-checked input,
+.callout[data-callout="faq"] .is-checked input,
+.callout[data-callout="warning"] .is-checked input,
+.callout[data-callout="caution"] .is-checked input,
+.callout[data-callout="attention"].is-checked input {
+    background-color: rgba(var(--color-orange-rgb), 1.0);
+    border-color: rgba(var(--color-orange-rgb), 1.0);
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -418,6 +452,26 @@
   box-shadow: var(--CREARTS-effects-colors);
 }
 
+// Checkbox
+.callout[data-callout="failure"] input,
+.callout[data-callout="fail"] input,
+.callout[data-callout="missing"] input,
+.callout[data-callout="danger"] input,
+.callout[data-callout="error"] input,
+.callout[data-callout="bug"] input {
+  border-color: rgba(var(--color-red-rgb), 1.0);
+}
+
+.callout[data-callout="failure"] .is-checked input,
+.callout[data-callout="fail"] .is-checked input,
+.callout[data-callout="missing"] .is-checked input,
+.callout[data-callout="danger"] .is-checked input,
+.callout[data-callout="error"] .is-checked input,
+.callout[data-callout="bug"] .is-checked input {
+    background-color: rgba(var(--color-red-rgb), 1.0);
+    border-color: rgba(var(--color-red-rgb), 1.0);
+}
+
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Callouts (Default)       ║ Purple                                                                                  ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
@@ -456,6 +510,17 @@
   box-shadow: var(--CREARTS-effects-colors);
 } 
 
+// Checkbox
+.callout[data-callout="example"] input {
+  border-color: rgba(var(--color-purple-rgb), 1.0);
+}
+
+.callout[data-callout="example"] .is-checked input {
+    background-color: rgba(var(--color-purple-rgb), 1.0);
+    border-color: rgba(var(--color-purple-rgb), 1.0);
+}
+
+
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Callouts (Default)       ║ Yellow                                                                                  ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
@@ -492,6 +557,16 @@
   background: transparent !important;
   border-color: rgba(var(--color-yellow-rgb), 0.2);
   box-shadow: var(--CREARTS-effects-colors);
+}
+
+// Quote
+.callout[data-callout="example"] input {
+  border-color: rgba(var(--color-yellow-rgb), 1.0);
+}
+
+.callout[data-callout="example"] .is-checked input {
+    background-color: rgba(var(--color-yellow-rgb), 1.0);
+    border-color: rgba(var(--color-yellow-rgb), 1.0);
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗

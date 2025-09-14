@@ -1,0 +1,59 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Scrollbars               ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+
+// Sidebar
+.nav-files-container {
+  scrollbar-gutter: auto;
+  scrollbar-width: thin !important;
+  scrollbar-color: transparent transparent !important;
+  overflow: overlay !important;
+  container-type: inline-size;
+  container-name: dropdown;
+}
+
+.nav-files-container:hover {
+  scrollbar-color: var(--CREARTS-interface-primary) var(--CREARTS-background-secondary) !important;
+}
+
+// Content
+.view-content {
+  scrollbar-gutter: auto;
+  scrollbar-width: thin !important;
+  scrollbar-color: transparent transparent !important;
+  overflow: overlay !important;
+    container-type: inline-size;
+container-name: dropdown;
+}
+
+.view-content:hover {
+  scrollbar-color: var(--CREARTS-interface-primary) var(--CREARTS-background-secondary) !important;
+}
+
+
+
+
+/*
+// width
+::-webkit-scrollbar {
+  width: 10px !important;
+
+}
+
+// Tack
+::-webkit-scrollbar-track {
+  background: red !important;
+}
+
+
+// Handle
+::-webkit-scrollbar-thumb {
+  background: blue !important;
+}
+
+// Handle (Hover)
+::-webkit-scrollbar-thumb:hover {
+  background: green !important;
+}
+*/

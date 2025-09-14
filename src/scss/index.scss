@@ -11,6 +11,7 @@
 @forward "base/text";
 @forward "base/typography";
 @forward "base/remove";
+@forward "base/scrollbars";
 @forward "base/callouts";
 
 @forward "base/tables";
@@ -25,6 +26,7 @@
 //@forward "callouts/callout";
 //@forward "callouts/caption";
 //@forward "callouts/colors";
+@forward "callouts/buttons";
 @forward "callouts/chat";
 @forward "callouts/columns";
 //@forward "callouts/commands";
@@ -265,3 +267,4 @@ pre:has(.language-scss)::before {
     transition: opacity 0.08s ease-in-out;
 }
 */
+
