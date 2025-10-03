@@ -1,0 +1,89 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ KBD                      ║ Variables                                                                               ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+kbd {
+  --kbd-radius-primary: 6px;
+  --kbd-radius-secondary: 4px;
+  --kbd-height: 20px;
+  --kbd-highlight-top: 1px;
+  --kbd-highlight-right: 1px;
+  --kbd-highlight-bottom: 1px;
+  --kbd-highlight-left: 1px;
+  --kbd-font-size: calc(var(--font-text-size) - 4px);
+  --kbd-font-weight: 500;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ KBD                      ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+kbd {
+  display: inline-flex;
+  z-index: 1;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: var(--kbd-height);
+  min-width: var(--kbd-height);
+  font-size: var(--kbd-font-size);
+  font-weight: var(--kbd-font-weight);
+  padding: 0px 14px 0px 10px;
+  border-style: var(--CREARTS-border-style);
+  border-radius: var(--kbd-radius-primary);
+  border-color: var(--CREARTS-background-tertiary);
+  border-width: 2px;
+}
+
+// Hover
+kbd:hover {
+  transform: scale(0.94);
+  transition: transform 100ms ease-in;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ KBD                      ║ Before                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+kbd::before {
+  z-index: -2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, var(--CREARTS-background-primary), var(--CREARTS-background-secondary));
+  content: "";
+}
+
+// Hover
+kbd:hover::before {
+  background: linear-gradient(180deg, var(--CREARTS-background-secondary), var(--CREARTS-background-secondary));
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ KBD                      ║ After                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+kbd::after {
+  z-index: -1;
+  position: absolute;
+  top: var(--kbd-highlight-top);
+  right: var(--kbd-highlight-right);
+  bottom: var(--kbd-highlight-bottom);
+  left:  var(--kbd-highlight-left);
+  border-radius: var(--kbd-radius-secondary);
+  background: linear-gradient(90deg, var(--CREARTS-background-secondary), var(--CREARTS-interface-secondary));
+  box-shadow: -10px -10px 10px var(--CREARTS-interface-secondary);
+  content: "";
+}
+
+// Hover
+kbd:hover::after {
+  background: linear-gradient(90deg, var(--CREARTS-background-secondary), var(--CREARTS-interface-tertiary));
+  box-shadow: -10px -10px 10px var(--CREARTS-interface-tertiary);
+}

@@ -1,8 +1,12 @@
+::-webkit-scrollbar {
+  display: none !important;
+}
+
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Scrollbars               ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-
+/*
 // Sidebar
 .nav-files-container {
   scrollbar-gutter: auto;
@@ -17,19 +21,28 @@
   scrollbar-color: var(--CREARTS-interface-primary) var(--CREARTS-background-secondary) !important;
 }
 
-// Content
-.view-content {
-  scrollbar-gutter: auto;
-  scrollbar-width: thin !important;
-  scrollbar-color: transparent transparent !important;
-  overflow: overlay !important;
-    container-type: inline-size;
-container-name: dropdown;
+
+
+
+.view-content ::-webkit-scrollbar {
+  display: none !important;
 }
 
-.view-content:hover {
-  scrollbar-color: var(--CREARTS-interface-primary) var(--CREARTS-background-secondary) !important;
+
+
+.view-content:hover ::-webkit-scrollbar {
+  display: unset !important;
 }
+*/
+
+
+
+
+
+
+
+
+
 
 
 
@@ -55,5 +68,30 @@ container-name: dropdown;
 // Handle (Hover)
 ::-webkit-scrollbar-thumb:hover {
   background: green !important;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+/*
+// Content
+.view-content {
+  scrollbar-gutter: auto;
+  scrollbar-width: thin !important;
+  scrollbar-color: transparent transparent !important;
+  overflow: overlay !important;
+    container-type: inline-size;
+container-name: dropdown;
+}
+
+.view-content:hover {
+  scrollbar-color: var(--CREARTS-interface-primary) var(--CREARTS-background-secondary) !important;
 }
 */

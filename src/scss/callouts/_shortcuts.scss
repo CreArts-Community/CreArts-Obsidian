@@ -1,59 +1,37 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Features                 ║ Dashboard                                                                               ║
+// ║ Callouts (Shortcuts)     ║ Variables                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Spacing
-.dashboard .block-language-search-bar {
-  margin-top: var(--CREARTS-spacing-tertiary);
-  margin-bottom: var(--CREARTS-spacing-tertiary);
+.callout[data-callout="shortcuts"] kbd {
+  --kbd-radius-primary: 8px;
+  --kbd-radius-secondary: 6px;
+  --kbd-height: 40px;
+  --kbd-highlight-top: 2px;
+  --kbd-highlight-right: 6px;
+  --kbd-highlight-bottom: 6px;
+  --kbd-highlight-left: 2px;
+  --kbd-font-size: calc(var(--font-text-size) - 2px);
 }
 
-.dashboard h1,
-.dashboard h2,
-.dashboard h3 {
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Shortcuts)     ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout="shortcuts"] {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  margin: 0px;
+  padding-left: 0px;
+}
+
+// Spacing
+.callout[data-callout="shortcuts"] p {
   margin: 0px;
 }
 
-
-.dashboard .button .mb-button-inner {
-  width: 100% !important;
-  margin-bottom: var(--CREARTS-spacing-primary);
-
-
-  border-width: var(--CREARTS-border-width) !important;
-  border-style: var(--CREARTS-border-style) !important;
-  border-radius: var(--CREARTS-radius-primary);
-  border-color: var(--CREARTS-border-primary) !important;
-  background: var(--CREARTS-background-primary);
-  box-shadow: var(--CREARTS-effects-flat);
-}
-
-/*
-
-// Spacing
-.dashboard .markdown-preview-sizer {
-  padding-bottom: 0px !important;
-}
-
-// Buttons
-.dashboard .button-normal {
-  width: 100%;
-}
-*/
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Features                 ║ Dashboard                                                                               ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// Spacing
-.dashboard .bases-view {
-  overflow: visible !important;
-}
-
-.dashboard .bases-header {
+// Remove
+.callout[data-callout="shortcuts"] .callout-title {
   display: none;
-}
-
-.dashboard .bases-view {
-   height: 100%;
 }

@@ -1,0 +1,141 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Tasks                    ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.callout[data-callout="tasks"] {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+// Background
+.callout[data-callout="tasks"] .callout-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--CREARTS-spacing-secondary);
+}
+
+// Title
+.callout[data-callout="tasks"] .callout-title {
+    display: none;
+}
+
+// Icon
+.callout[data-callout="tasks"] .callout-icon {
+  display: none;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Tasks                    ║ Habits                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.callout[data-callout="tasks"][data-callout-metadata="habits"] {
+  background: var(--CREARTS-background-primary);
+  border-radius: var(--CREARTS-radius-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+  padding: var(--CREARTS-spacing-tertiary);
+}
+
+// Background
+.callout[data-callout="tasks"][data-callout-metadata="habits"] .callout-content {
+  display: flex;
+  flex-direction: column;
+}
+
+// Title
+.callout[data-callout="tasks"][data-callout-metadata="habits"] .callout-title {
+    display: flex;
+}
+
+// Tag
+[data-tag-name="#habits"] {
+  display: none;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Tasks                    ║ Dailies                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.callout[data-callout="tasks"][data-callout-metadata="dailies"] {
+  background: var(--CREARTS-background-primary);
+  border-radius: var(--CREARTS-radius-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+  padding: var(--CREARTS-spacing-tertiary);
+}
+
+// Background
+.callout[data-callout="tasks"][data-callout-metadata="dailies"] .callout-content {
+  display: flex;
+  flex-direction: column;
+}
+
+// Title
+.callout[data-callout="tasks"][data-callout-metadata="dailies"] .callout-title {
+    display: flex;
+}
+
+// Tag
+[data-tag-name="#dailies"] {
+  display: none;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Tasks                    ║ ToDo                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.callout[data-callout="tasks"][data-callout-metadata="todo"] {
+  background: var(--CREARTS-background-primary);
+  border-radius: var(--CREARTS-radius-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+  padding: var(--CREARTS-spacing-tertiary);
+}
+
+// Background
+.callout[data-callout="tasks"][data-callout-metadata="todo"] .callout-content {
+  display: flex;
+  flex-direction: column;
+}
+
+// Title
+.callout[data-callout="tasks"][data-callout-metadata="todo"] .callout-title {
+    display: flex;
+}
+
+// Tag
+[data-tag-name="#todo"] {
+  display: none;
+}
+
+
+
+
+
+
+.callout[data-callout="tasks"] .block-language-tasks div {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+
+
+
+.callout[data-callout="tasks"] .task-list-item {
+  background: var(--CREARTS-interface-primary);
+  border-radius: var(--CREARTS-radius-secondary);
+  margin-bottom: var(--CREARTS-spacing-primary);
+}

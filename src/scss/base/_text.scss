@@ -56,27 +56,16 @@
 // Text
 .cm-line {
   hyphens: auto;
-  text-align: justify;
+  text-align: left;
   text-align-last: left;
   text-justify: inter-word;
   line-height: 1.6;
 // word-spacing: 0.04em;
   letter-spacing: 0.02em;
-  
 }
 
 // Inline HTML Background
 .cm-line:has(.cm-tag) {
   background: var(--CREARTS-background-primary); /* dezenter Hintergrund */
   text-align: left;
-}
-
-// Header
-.HyperMD-header {
-  hyphens: auto;
-  text-align: left;
-  text-align-last: left;
-  line-height: 1.4;
-//word-spacing: 0.04em;
-  letter-spacing: 0.02em;
 }

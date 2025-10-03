@@ -6,6 +6,7 @@
 @forward "base/cursor";
 @forward "base/fullscreen";
 @forward "base/image";
+@forward "base/kbd";
 @forward "base/mobile";
 //@forward "base/print";
 @forward "base/text";
@@ -33,7 +34,7 @@
 //@forward "callouts/contents";
 //@forward "callouts/infobox";
 //@forward "callouts/message";
-//@forward "callouts/shortcuts";
+@forward "callouts/shortcuts";
 //@forward "callouts/tables";
 //@forward "callouts/tags";
 //@forward "callouts/tasks";
@@ -60,6 +61,7 @@
 //@forward "effects/imagezoom";
 @forward "effects/neumorphism";
 @forward "effects/order";
+//@forward "effects/pets";
 @forward "effects/skinpreview";
 @forward "effects/wallpaper";
 
@@ -68,6 +70,8 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 @forward "features/infobox";
+//@forward "features/notebutton";
+@forward "features/tasks";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Source                   ║ Icons                                                                                   ║
@@ -248,14 +252,6 @@ pre:has(.language-scss)::before {
 
 
 
-
-
-
-
-
-
-
-
 /*
 .nav-folder-children {
   opacity: 0.4;
@@ -267,4 +263,3 @@ pre:has(.language-scss)::before {
     transition: opacity 0.08s ease-in-out;
 }
 */
-
