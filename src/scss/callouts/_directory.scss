@@ -1,16 +1,53 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Remove                   ║ General                                                                                 ║
+// ║ Callouts (Directory)     ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Scrollbars
-::-webkit-scrollbar {
-  display: none !important;
+// Spacing
+.callout[data-callout="directory"] {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  overflow: visible;
+}
+
+// Remove Title
+.callout[data-callout="directory"] .callout-title {
+  display: none;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Remove                   ║ Settings Accent Color                                                                   ║
+// ║ Callouts (Directory)     ║                                                                                         ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.setting-item + .setting-item:has(input[type="color"]) {
+.callout[data-callout="directory"] {
+  font-family: var(--font-monospace);
+}
+
+
+
+
+
+
+.callout[data-callout="directory"] .list-bullet::after {
   display: none;
 }
+
+
+
+.callout[data-callout="directory"] .collapse-indicator {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

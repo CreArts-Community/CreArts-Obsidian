@@ -1,0 +1,146 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Chat)          ║ Vars                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.theme-dark, .theme-light {
+--timeline-background: var(--CREARTS-interface-primary);
+--timeline-border: var(--CREARTS-border-secondary);
+--timeline-width-line: 2px; 
+--timeline-width-dot: 20px; 
+--timeline-height: 90px;
+--timeline-spacing: 60px;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Timeline)      ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.callout[data-callout="timeline"] {
+  display: flex;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  column-gap: var(--timeline-spacing);
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  padding: 0px;
+}
+
+// Direction
+.callout[data-callout="timeline"][data-callout-metadata="left"] {
+  flex-direction: row;
+}
+
+// Remove Icon
+.callout[data-callout="timeline"] .callout-icon {
+  display: none;
+}
+
+// Remove Break
+.callout[data-callout="timeline"] br {
+  display: none;
+}
+
+
+// Hover
+.callout[data-callout="timeline"]:hover .callout-title,
+.callout[data-callout="timeline"]:hover .callout-content {
+  background: var(--CREARTS-interface-primary);
+}
+
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Timeline)      ║ Content                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+
+// Background
+.callout[data-callout="timeline"] .callout-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--CREARTS-background-primary);
+  border-radius: var(--CREARTS-radius-secondary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+  color: var(--CREARTS-text-primary) !important;
+  flex: 1 1 200px;
+  order: 3;
+  z-index: 2;
+  margin: 0px;
+  user-select: all;
+}
+
+// Text
+.callout[data-callout="timeline"] .callout-content p {
+  padding: var(--CREARTS-spacing-primary);
+  margin: 0px;
+  height: var(--timeline-height);
+  overflow-y: scroll;
+
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Timeline)      ║ Title                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout="timeline"] .callout-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--CREARTS-background-primary);
+  border-radius: var(--CREARTS-radius-secondary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+  color: var(--CREARTS-text-primary) !important;
+  text-decoration: none;
+  flex: 1 1 200px;
+  order: 1;
+  z-index: 2;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  user-select: all;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Timeline)      ║ Timeline                                                                                ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Timeline
+.callout[data-callout="timeline"]::before {
+  content: "";
+  position: absolute;
+  height: calc(var(--timeline-height) + 20px);
+  width: var(--timeline-width-line);
+  background: var(--CREARTS-interface-primary);
+  border-radius: var(--CREARTS-radius-secondary);
+  z-index: 1;
+}
+
+// Dot
+.callout[data-callout="timeline"]::after {
+  content: "";
+  position: absolute;
+  height: var(--timeline-width-dot);
+  width: var(--timeline-width-dot);
+  background: var(--CREARTS-background-secondary);
+  border-radius: 100%;
+  z-index: 2;
+
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+}
+
+// Hover
+.callout[data-callout="timeline"]:hover::after {
+  background: var(--CREARTS-accent-primary);
+}

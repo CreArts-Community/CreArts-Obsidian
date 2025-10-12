@@ -11,7 +11,7 @@
   box-shadow: var(--CREARTS-effects-pressed) !important;
   border-radius: var(--CREARTS-radius-primary) !important;
   margin-bottom: var(--CREARTS-spacing-tertiary) !important;
-
+  min-width: unset !important;
 }
 
 // Background (Active)

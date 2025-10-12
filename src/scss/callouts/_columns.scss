@@ -1,9 +1,9 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Callouts (Columns)       ║ Base                                                                                    ║
+// ║ Callouts (Columns)       ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
-.callout[data-callout="columns"] .callout .callout-content {
+.callout[data-callout="columns"] .callout-content {
   margin-top: calc(-1 * var(--CREARTS-spacing-tertiary));
 }
 
@@ -15,17 +15,6 @@
   border: none;
   overflow: visible;
   padding: 0px;
-
-}
-
-.callout[data-callout="columns"] .callout {
-  background: transparent;
-  border-radius: 0px;
-  box-shadow: none;
-  border: none;
-  overflow: visible;
-  margin-top: 0px;
-  padding: 0px;
 }
 
 // Spacing
@@ -34,13 +23,27 @@
   flex-wrap: wrap;
   align-items: flex-start;
   column-gap: var(--CREARTS-spacing-tertiary);
-  row-gap: var(--CREARTS-spacing-tertiary);
   overflow: visible;
 }
 
 // Remove Title
 .callout[data-callout="columns"] .callout-title {
   display: none;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Columns)       ║ Column                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+
+.callout[data-callout="column"] {
+  background: transparent;
+  border-radius: 0px;
+  box-shadow: none;
+  border: none;
+  overflow: visible;
+
+  padding: 0px;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗

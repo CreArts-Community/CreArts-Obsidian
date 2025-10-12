@@ -1,0 +1,97 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Infobox                  ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout="infobox-right"] {
+  background: var(--CREARTS-background-primary);
+  border-radius: var(--CREARTS-radius-primary);
+  width: 250px;
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+  padding: 0px;
+
+  margin-top: var(--CREARTS-spacing-primary-half);
+  margin-left: var(--CREARTS-spacing-tertiary);
+  margin-bottom: var(--CREARTS-spacing-tertiary);
+  float: right;
+  clear: right;
+}
+
+// Remove Title
+.callout[data-callout="infobox-right"] .callout-title {
+  margin-top: var(--CREARTS-spacing-primary);
+  margin-bottom: var(--CREARTS-spacing-primary);
+  margin-left: var(--CREARTS-spacing-primary);
+  display: flex;
+  justify-content: start;
+  align-items: left;
+  flex-direction: row-reverse;
+}
+
+
+.callout[data-callout="infobox-right"][data-callout-metadata="no-title"] .callout-title {
+  display: none;
+}
+
+
+.callout[data-callout="infobox-right"] .callout-icon {
+  display: none;
+}
+
+.callout[data-callout="infobox-right"] h1,
+.callout[data-callout="infobox-right"] h2,
+.callout[data-callout="infobox-right"] h3,
+.callout[data-callout="infobox-right"] h4 {
+  margin-left: var(--CREARTS-spacing-primary);
+}
+
+table {
+  margin-left: 0px var(--CREARTS-spacing-primary) var(--CREARTS-spacing-primary) 0px;
+}
+
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Infobox                  ║ Image                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.callout[data-callout="infobox-right"] p:has(img) {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  padding: 0px;
+}
+
+// Image
+.callout[data-callout="infobox-right"] img {
+  border-radius: var(--CREARTS-radius-primary);
+  object-fit: cover !important;
+  max-height: 220px;
+  width: 100%;
+}
+
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Infobox                  ║ Table                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.callout[data-callout="infobox-right"] table {
+  margin: 0px 0px var(--CREARTS-spacing-primary) 0px !important;
+  padding: 0px !important;
+  width: 100%;
+}
+
+// td
+.callout[data-callout="infobox-right"] th {
+background: transparent !important;
+border: none !important;
+}
+
+
+
+

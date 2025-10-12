@@ -1,5 +1,5 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Callouts (Default)       ║ Base                                                                                    ║
+// ║ Callouts (Default)       ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
@@ -39,6 +39,17 @@
   border-width: var(--CREARTS-border-width);
   border-style: var(--CREARTS-border-style);
   border-color: var(--CREARTS-border-primary);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Default)       ║ Flat                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout-metadata="flat"] {
+  background: var(--CREARTS-background-primary);
+  border-radius: var(--CREARTS-radius-primary);
+  box-shadow: var(--CREARTS-effects-flat);
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -596,16 +607,37 @@
 }
 */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Callouts (Default)       ║ Headless                                                                                ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
-.callout[data-callout-metadata="flat-headless"] .callout-content,
-.callout[data-callout-metadata="pressed-headless"] .callout-content,
-.callout[data-callout-metadata="outline-headless"] .callout-content,
-.callout[data-callout-metadata="red-headless"] .callout-content,
-.callout[data-callout-metadata="green-headless"] .callout-content {
+.callout[data-callout-metadata="flat|headless"] .callout-content,
+.callout[data-callout-metadata="red|headless"] .callout-content,
+.callout[data-callout-metadata="green|headless"] .callout-content,
+.callout[data-callout-metadata="yellow|headless"] .callout-content,
+.callout[data-callout-metadata="orange|headless"] .callout-content,
+.callout[data-callout-metadata="blue|headless"] .callout-content,
+.callout[data-callout-metadata="purple|headless"] .callout-content {
   margin-top: calc(-1 * var(--CREARTS-spacing-tertiary));
 }
 
@@ -619,9 +651,9 @@
 }
 
 // Remove Icon
-.callout[data-callout-metadata="flat"] .callout-icon,
-.callout[data-callout-metadata="pressed"] .callout-icon,
-.callout[data-callout-metadata="outline"] .callout-icon,
+//.callout[data-callout-metadata="flat"] .callout-icon,
+//.callout[data-callout-metadata="pressed"] .callout-icon,
+//.callout[data-callout-metadata="outline"] .callout-icon,
 .callout[data-callout-metadata="red-headless"] .callout-icon,
 .callout[data-callout-metadata="green-headless"] .callout-icon {
   display: none;
@@ -631,3 +663,650 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts                 ║ Red                                                                                     ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout-metadata="flat|red"],
+.callout[data-callout-metadata="flat|red|-header"],
+.callout[data-callout-metadata="flat|red|-icon"],
+.callout[data-callout-metadata="outline|red"],
+.callout[data-callout-metadata="outline|red|-header"],
+.callout[data-callout-metadata="outline|red|-icon"],
+.callout[data-callout-metadata="pressed|red"],
+.callout[data-callout-metadata="pressed|red|-header"],
+.callout[data-callout-metadata="pressed|red|-icon"] {
+  background: rgba(var(--CREARTS-colors-red), 0.1);
+  border-color: rgba(var(--CREARTS-colors-red), 0.4);
+}
+
+// Icon
+.callout[data-callout-metadata="flat|red"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="flat|red|-header"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="flat|red|-icon"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="outline|red"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="outline|red|-header"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="outline|red|-icon"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="pressed|red"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="pressed|red|-header"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="pressed|red|-icon"] > .callout-title .svg-icon {
+  color: rgba(var(--CREARTS-colors-red), 1.0);
+}
+
+// Title
+.callout[data-callout-metadata="flat|red"] > .callout-title,
+.callout[data-callout-metadata="flat|red|-header"] > .callout-title,
+.callout[data-callout-metadata="flat|red|-icon"] > .callout-title,
+.callout[data-callout-metadata="outline|red"] > .callout-title,
+.callout[data-callout-metadata="outline|red|-header"] > .callout-title,
+.callout[data-callout-metadata="outline|red|-icon"] > .callout-title,
+.callout[data-callout-metadata="pressed|red"] > .callout-title,
+.callout[data-callout-metadata="pressed|red|-header"] > .callout-title,
+.callout[data-callout-metadata="pressed|red|-icon"] > .callout-title {
+  color: rgba(var(--CREARTS-colors-red), 1.0);
+}
+
+// Arrow
+.callout[data-callout-metadata="flat|red"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="flat|red|-header"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="flat|red|-icon"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="outline|red"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="outline|red|-header"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="outline|red|-icon"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="pressed|red"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="pressed|red|-header"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="pressed|red|-icon"] > .callout-title .lucide-chevron-down {
+  background: rgba(var(--CREARTS-colors-red), 1.0);
+}
+
+// Code
+.callout[data-callout-metadata="flat|red"] code:not(pre code),
+.callout[data-callout-metadata="flat|red|-header"] code:not(pre code),
+.callout[data-callout-metadata="flat|red|-icon"] code:not(pre code),
+.callout[data-callout-metadata="outline|red"] code:not(pre code),
+.callout[data-callout-metadata="outline|red|-header"] code:not(pre code),
+.callout[data-callout-metadata="outline|red|-icon"] code:not(pre code),
+.callout[data-callout-metadata="pressed|red"] code:not(pre code),
+.callout[data-callout-metadata="pressed|red|-header"] code:not(pre code),
+.callout[data-callout-metadata="pressed|red|-icon"] code:not(pre code) {
+  background: rgba(var(--CREARTS-colors-red), 0.2);
+  color: rgba(var(--CREARTS-colors-red), 1.0);
+}
+
+// Codeblock
+.callout[data-callout-metadata="flat|red"] pre,
+.callout[data-callout-metadata="flat|red|-header"] pre,
+.callout[data-callout-metadata="flat|red|-icon"] pre,
+.callout[data-callout-metadata="outline|red"] pre,
+.callout[data-callout-metadata="outline|red|-header"] pre,
+.callout[data-callout-metadata="outline|red|-icon"] pre,
+.callout[data-callout-metadata="pressed|red"] pre,
+.callout[data-callout-metadata="pressed|red|-header"] pre,
+.callout[data-callout-metadata="pressed|red|-icon"] pre {
+  background: transparent !important;
+  border-color: rgba(var(--CREARTS-colors-red), 0.2);
+  box-shadow: var(--CREARTS-effects-colors);
+}
+
+// Checkbox
+.callout[data-callout-metadata="flat|red"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="flat|red|-header"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="flat|red|-icon"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="outline|red"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="outline|red|-header"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="outline|red|-icon"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="pressed|red"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="pressed|red|-header"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="pressed|red|-icon"] input[type=checkbox]:checked {
+  background-color: rgba(var(--CREARTS-colors-red), 1.0);
+  border-color: rgba(var(--CREARTS-colors-red), 1.0);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts                 ║ Green                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout-metadata="flat|green"],
+.callout[data-callout-metadata="flat|green|-header"],
+.callout[data-callout-metadata="flat|green|-icon"],
+.callout[data-callout-metadata="outline|green"],
+.callout[data-callout-metadata="outline|green|-header"],
+.callout[data-callout-metadata="outline|green|-icon"],
+.callout[data-callout-metadata="pressed|green"],
+.callout[data-callout-metadata="pressed|green|-header"],
+.callout[data-callout-metadata="pressed|green|-icon"] {
+  background: rgba(var(--CREARTS-colors-green), 0.1);
+  border-color: rgba(var(--CREARTS-colors-green), 0.4);
+}
+
+// Icon
+.callout[data-callout-metadata="flat|green"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="flat|green|-header"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="flat|green|-icon"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="outline|green"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="outline|green|-header"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="outline|green|-icon"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="pressed|green"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="pressed|green|-header"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="pressed|green|-icon"] > .callout-title .svg-icon {
+  color: rgba(var(--CREARTS-colors-green), 1.0);
+}
+
+// Title
+.callout[data-callout-metadata="flat|green"] > .callout-title,
+.callout[data-callout-metadata="flat|green|-header"] > .callout-title,
+.callout[data-callout-metadata="flat|green|-icon"] > .callout-title,
+.callout[data-callout-metadata="outline|green"] > .callout-title,
+.callout[data-callout-metadata="outline|green|-header"] > .callout-title,
+.callout[data-callout-metadata="outline|green|-icon"] > .callout-title,
+.callout[data-callout-metadata="pressed|green"] > .callout-title,
+.callout[data-callout-metadata="pressed|green|-header"] > .callout-title,
+.callout[data-callout-metadata="pressed|green|-icon"] > .callout-title {
+  color: rgba(var(--CREARTS-colors-green), 1.0);
+}
+
+// Arrow
+.callout[data-callout-metadata="flat|green"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="flat|green|-header"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="flat|green|-icon"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="outline|green"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="outline|green|-header"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="outline|green|-icon"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="pressed|green"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="pressed|green|-header"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="pressed|green|-icon"] > .callout-title .lucide-chevron-down {
+  background: rgba(var(--CREARTS-colors-green), 1.0);
+}
+
+// Code
+.callout[data-callout-metadata="flat|green"] code:not(pre code),
+.callout[data-callout-metadata="flat|green|-header"] code:not(pre code),
+.callout[data-callout-metadata="flat|green|-icon"] code:not(pre code),
+.callout[data-callout-metadata="outline|green"] code:not(pre code),
+.callout[data-callout-metadata="outline|green|-header"] code:not(pre code),
+.callout[data-callout-metadata="outline|green|-icon"] code:not(pre code),
+.callout[data-callout-metadata="pressed|green"] code:not(pre code),
+.callout[data-callout-metadata="pressed|green|-header"] code:not(pre code),
+.callout[data-callout-metadata="pressed|green|-icon"] code:not(pre code) {
+  background: rgba(var(--CREARTS-colors-green), 0.2);
+  color: rgba(var(--CREARTS-colors-green), 1.0);
+}
+
+// Codeblock
+.callout[data-callout-metadata="flat|green"] pre,
+.callout[data-callout-metadata="flat|green|-header"] pre,
+.callout[data-callout-metadata="flat|green|-icon"] pre,
+.callout[data-callout-metadata="outline|green"] pre,
+.callout[data-callout-metadata="outline|green|-header"] pre,
+.callout[data-callout-metadata="outline|green|-icon"] pre,
+.callout[data-callout-metadata="pressed|green"] pre,
+.callout[data-callout-metadata="pressed|green|-header"] pre,
+.callout[data-callout-metadata="pressed|green|-icon"] pre {
+  background: transparent !important;
+  border-color: rgba(var(--CREARTS-colors-green), 0.2);
+  box-shadow: var(--CREARTS-effects-colors);
+}
+
+// Checkbox
+.callout[data-callout-metadata="flat|green"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="flat|green|-header"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="flat|green|-icon"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="outline|green"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="outline|green|-header"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="outline|green|-icon"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="pressed|green"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="pressed|green|-header"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="pressed|green|-icon"] input[type=checkbox]:checked {
+  background-color: rgba(var(--CREARTS-colors-green), 1.0);
+  border-color: rgba(var(--CREARTS-colors-green), 1.0);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts                 ║ Yellow                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout-metadata="flat|yellow"],
+.callout[data-callout-metadata="flat|yellow|-header"],
+.callout[data-callout-metadata="flat|yellow|-icon"],
+.callout[data-callout-metadata="outline|yellow"],
+.callout[data-callout-metadata="outline|yellow|-header"],
+.callout[data-callout-metadata="outline|yellow|-icon"],
+.callout[data-callout-metadata="pressed|yellow"],
+.callout[data-callout-metadata="pressed|yellow|-header"],
+.callout[data-callout-metadata="pressed|yellow|-icon"] {
+  background: rgba(var(--CREARTS-colors-yellow), 0.1);
+  border-color: rgba(var(--CREARTS-colors-yellow), 0.4);
+}
+
+// Icon
+.callout[data-callout-metadata="flat|yellow"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="flat|yellow|-header"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="flat|yellow|-icon"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="outline|yellow"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="outline|yellow|-header"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="outline|yellow|-icon"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="pressed|yellow"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="pressed|yellow|-header"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="pressed|yellow|-icon"] > .callout-title .svg-icon {
+  color: rgba(var(--CREARTS-colors-yellow), 1.0);
+}
+
+// Title
+.callout[data-callout-metadata="flat|yellow"] > .callout-title,
+.callout[data-callout-metadata="flat|yellow|-header"] > .callout-title,
+.callout[data-callout-metadata="flat|yellow|-icon"] > .callout-title,
+.callout[data-callout-metadata="outline|yellow"] > .callout-title,
+.callout[data-callout-metadata="outline|yellow|-header"] > .callout-title,
+.callout[data-callout-metadata="outline|yellow|-icon"] > .callout-title,
+.callout[data-callout-metadata="pressed|yellow"] > .callout-title,
+.callout[data-callout-metadata="pressed|yellow|-header"] > .callout-title,
+.callout[data-callout-metadata="pressed|yellow|-icon"] > .callout-title {
+  color: rgba(var(--CREARTS-colors-yellow), 1.0);
+}
+
+// Arrow
+.callout[data-callout-metadata="flat|yellow"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="flat|yellow|-header"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="flat|yellow|-icon"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="outline|yellow"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="outline|yellow|-header"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="outline|yellow|-icon"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="pressed|yellow"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="pressed|yellow|-header"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="pressed|yellow|-icon"] > .callout-title .lucide-chevron-down {
+  background: rgba(var(--CREARTS-colors-yellow), 1.0);
+}
+
+// Code
+.callout[data-callout-metadata="flat|yellow"] code:not(pre code),
+.callout[data-callout-metadata="flat|yellow|-header"] code:not(pre code),
+.callout[data-callout-metadata="flat|yellow|-icon"] code:not(pre code),
+.callout[data-callout-metadata="outline|yellow"] code:not(pre code),
+.callout[data-callout-metadata="outline|yellow|-header"] code:not(pre code),
+.callout[data-callout-metadata="outline|yellow|-icon"] code:not(pre code),
+.callout[data-callout-metadata="pressed|yellow"] code:not(pre code),
+.callout[data-callout-metadata="pressed|yellow|-header"] code:not(pre code),
+.callout[data-callout-metadata="pressed|yellow|-icon"] code:not(pre code) {
+  background: rgba(var(--CREARTS-colors-yellow), 0.2);
+  color: rgba(var(--CREARTS-colors-yellow), 1.0);
+}
+
+// Codeblock
+.callout[data-callout-metadata="flat|yellow"] pre,
+.callout[data-callout-metadata="flat|yellow|-header"] pre,
+.callout[data-callout-metadata="flat|yellow|-icon"] pre,
+.callout[data-callout-metadata="outline|yellow"] pre,
+.callout[data-callout-metadata="outline|yellow|-header"] pre,
+.callout[data-callout-metadata="outline|yellow|-icon"] pre,
+.callout[data-callout-metadata="pressed|yellow"] pre,
+.callout[data-callout-metadata="pressed|yellow|-header"] pre,
+.callout[data-callout-metadata="pressed|yellow|-icon"] pre {
+  background: transparent !important;
+  border-color: rgba(var(--CREARTS-colors-yellow), 0.2);
+  box-shadow: var(--CREARTS-effects-colors);
+}
+
+// Checkbox
+.callout[data-callout-metadata="flat|yellow"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="flat|yellow|-header"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="flat|yellow|-icon"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="outline|yellow"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="outline|yellow|-header"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="outline|yellow|-icon"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="pressed|yellow"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="pressed|yellow|-header"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="pressed|yellow|-icon"] input[type=checkbox]:checked {
+  background-color: rgba(var(--CREARTS-colors-yellow), 1.0);
+  border-color: rgba(var(--CREARTS-colors-yellow), 1.0);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts                 ║ Orange                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout-metadata="flat|orange"],
+.callout[data-callout-metadata="flat|orange|-header"],
+.callout[data-callout-metadata="flat|orange|-icon"],
+.callout[data-callout-metadata="outline|orange"],
+.callout[data-callout-metadata="outline|orange|-header"],
+.callout[data-callout-metadata="outline|orange|-icon"],
+.callout[data-callout-metadata="pressed|orange"],
+.callout[data-callout-metadata="pressed|orange|-header"],
+.callout[data-callout-metadata="pressed|orange|-icon"] {
+  background: rgba(var(--CREARTS-colors-orange), 0.1);
+  border-color: rgba(var(--CREARTS-colors-orange), 0.4);
+}
+
+// Icon
+.callout[data-callout-metadata="flat|orange"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="flat|orange|-header"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="flat|orange|-icon"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="outline|orange"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="outline|orange|-header"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="outline|orange|-icon"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="pressed|orange"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="pressed|orange|-header"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="pressed|orange|-icon"] > .callout-title .svg-icon {
+  color: rgba(var(--CREARTS-colors-orange), 1.0);
+}
+
+// Title
+.callout[data-callout-metadata="flat|orange"] > .callout-title,
+.callout[data-callout-metadata="flat|orange|-header"] > .callout-title,
+.callout[data-callout-metadata="flat|orange|-icon"] > .callout-title,
+.callout[data-callout-metadata="outline|orange"] > .callout-title,
+.callout[data-callout-metadata="outline|orange|-header"] > .callout-title,
+.callout[data-callout-metadata="outline|orange|-icon"] > .callout-title,
+.callout[data-callout-metadata="pressed|orange"] > .callout-title,
+.callout[data-callout-metadata="pressed|orange|-header"] > .callout-title,
+.callout[data-callout-metadata="pressed|orange|-icon"] > .callout-title {
+  color: rgba(var(--CREARTS-colors-orange), 1.0);
+}
+
+// Arrow
+.callout[data-callout-metadata="flat|orange"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="flat|orange|-header"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="flat|orange|-icon"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="outline|orange"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="outline|orange|-header"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="outline|orange|-icon"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="pressed|orange"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="pressed|orange|-header"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="pressed|orange|-icon"] > .callout-title .lucide-chevron-down {
+  background: rgba(var(--CREARTS-colors-orange), 1.0);
+}
+
+// Code
+.callout[data-callout-metadata="flat|orange"] code:not(pre code),
+.callout[data-callout-metadata="flat|orange|-header"] code:not(pre code),
+.callout[data-callout-metadata="flat|orange|-icon"] code:not(pre code),
+.callout[data-callout-metadata="outline|orange"] code:not(pre code),
+.callout[data-callout-metadata="outline|orange|-header"] code:not(pre code),
+.callout[data-callout-metadata="outline|orange|-icon"] code:not(pre code),
+.callout[data-callout-metadata="pressed|orange"] code:not(pre code),
+.callout[data-callout-metadata="pressed|orange|-header"] code:not(pre code),
+.callout[data-callout-metadata="pressed|orange|-icon"] code:not(pre code) {
+  background: rgba(var(--CREARTS-colors-orange), 0.2);
+  color: rgba(var(--CREARTS-colors-orange), 1.0);
+}
+
+// Codeblock
+.callout[data-callout-metadata="flat|orange"] pre,
+.callout[data-callout-metadata="flat|orange|-header"] pre,
+.callout[data-callout-metadata="flat|orange|-icon"] pre,
+.callout[data-callout-metadata="outline|orange"] pre,
+.callout[data-callout-metadata="outline|orange|-header"] pre,
+.callout[data-callout-metadata="outline|orange|-icon"] pre,
+.callout[data-callout-metadata="pressed|orange"] pre,
+.callout[data-callout-metadata="pressed|orange|-header"] pre,
+.callout[data-callout-metadata="pressed|orange|-icon"] pre {
+  background: transparent !important;
+  border-color: rgba(var(--CREARTS-colors-orange), 0.2);
+  box-shadow: var(--CREARTS-effects-colors);
+}
+
+// Checkbox
+.callout[data-callout-metadata="flat|orange"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="flat|orange|-header"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="flat|orange|-icon"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="outline|orange"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="outline|orange|-header"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="outline|orange|-icon"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="pressed|orange"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="pressed|orange|-header"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="pressed|orange|-icon"] input[type=checkbox]:checked {
+  background-color: rgba(var(--CREARTS-colors-orange), 1.0);
+  border-color: rgba(var(--CREARTS-colors-orange), 1.0);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts                 ║ Blue                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout-metadata="flat|blue"],
+.callout[data-callout-metadata="flat|blue|-header"],
+.callout[data-callout-metadata="flat|blue|-icon"],
+.callout[data-callout-metadata="outline|blue"],
+.callout[data-callout-metadata="outline|blue|-header"],
+.callout[data-callout-metadata="outline|blue|-icon"],
+.callout[data-callout-metadata="pressed|blue"],
+.callout[data-callout-metadata="pressed|blue|-header"],
+.callout[data-callout-metadata="pressed|blue|-icon"] {
+  background: rgba(var(--CREARTS-colors-blue), 0.1);
+  border-color: rgba(var(--CREARTS-colors-blue), 0.4);
+}
+
+// Icon
+.callout[data-callout-metadata="flat|blue"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="flat|blue|-header"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="flat|blue|-icon"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="outline|blue"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="outline|blue|-header"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="outline|blue|-icon"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="pressed|blue"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="pressed|blue|-header"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="pressed|blue|-icon"] > .callout-title .svg-icon {
+  color: rgba(var(--CREARTS-colors-blue), 1.0);
+}
+
+// Title
+.callout[data-callout-metadata="flat|blue"] > .callout-title,
+.callout[data-callout-metadata="flat|blue|-header"] > .callout-title,
+.callout[data-callout-metadata="flat|blue|-icon"] > .callout-title,
+.callout[data-callout-metadata="outline|blue"] > .callout-title,
+.callout[data-callout-metadata="outline|blue|-header"] > .callout-title,
+.callout[data-callout-metadata="outline|blue|-icon"] > .callout-title,
+.callout[data-callout-metadata="pressed|blue"] > .callout-title,
+.callout[data-callout-metadata="pressed|blue|-header"] > .callout-title,
+.callout[data-callout-metadata="pressed|blue|-icon"] > .callout-title {
+  color: rgba(var(--CREARTS-colors-blue), 1.0);
+}
+
+// Arrow
+.callout[data-callout-metadata="flat|blue"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="flat|blue|-header"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="flat|blue|-icon"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="outline|blue"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="outline|blue|-header"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="outline|blue|-icon"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="pressed|blue"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="pressed|blue|-header"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="pressed|blue|-icon"] > .callout-title .lucide-chevron-down {
+  background: rgba(var(--CREARTS-colors-blue), 1.0);
+}
+
+// Code
+.callout[data-callout-metadata="flat|blue"] code:not(pre code),
+.callout[data-callout-metadata="flat|blue|-header"] code:not(pre code),
+.callout[data-callout-metadata="flat|blue|-icon"] code:not(pre code),
+.callout[data-callout-metadata="outline|blue"] code:not(pre code),
+.callout[data-callout-metadata="outline|blue|-header"] code:not(pre code),
+.callout[data-callout-metadata="outline|blue|-icon"] code:not(pre code),
+.callout[data-callout-metadata="pressed|blue"] code:not(pre code),
+.callout[data-callout-metadata="pressed|blue|-header"] code:not(pre code),
+.callout[data-callout-metadata="pressed|blue|-icon"] code:not(pre code) {
+  background: rgba(var(--CREARTS-colors-blue), 0.2);
+  color: rgba(var(--CREARTS-colors-blue), 1.0);
+}
+
+// Codeblock
+.callout[data-callout-metadata="flat|blue"] pre,
+.callout[data-callout-metadata="flat|blue|-header"] pre,
+.callout[data-callout-metadata="flat|blue|-icon"] pre,
+.callout[data-callout-metadata="outline|blue"] pre,
+.callout[data-callout-metadata="outline|blue|-header"] pre,
+.callout[data-callout-metadata="outline|blue|-icon"] pre,
+.callout[data-callout-metadata="pressed|blue"] pre,
+.callout[data-callout-metadata="pressed|blue|-header"] pre,
+.callout[data-callout-metadata="pressed|blue|-icon"] pre {
+  background: transparent !important;
+  border-color: rgba(var(--CREARTS-colors-blue), 0.2);
+  box-shadow: var(--CREARTS-effects-colors);
+}
+
+// Checkbox
+.callout[data-callout-metadata="flat|blue"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="flat|blue|-header"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="flat|blue|-icon"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="outline|blue"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="outline|blue|-header"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="outline|blue|-icon"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="pressed|blue"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="pressed|blue|-header"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="pressed|blue|-icon"] input[type=checkbox]:checked {
+  background-color: rgba(var(--CREARTS-colors-blue), 1.0);
+  border-color: rgba(var(--CREARTS-colors-blue), 1.0);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts                 ║ Purple                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout-metadata="flat|purple"],
+.callout[data-callout-metadata="flat|purple|-header"],
+.callout[data-callout-metadata="flat|purple|-icon"],
+.callout[data-callout-metadata="outline|purple"],
+.callout[data-callout-metadata="outline|purple|-header"],
+.callout[data-callout-metadata="outline|purple|-icon"],
+.callout[data-callout-metadata="pressed|purple"],
+.callout[data-callout-metadata="pressed|purple|-header"],
+.callout[data-callout-metadata="pressed|purple|-icon"] {
+  background: rgba(var(--CREARTS-colors-purple), 0.1);
+  border-color: rgba(var(--CREARTS-colors-purple), 0.4);
+}
+
+// Icon
+.callout[data-callout-metadata="flat|purple"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="flat|purple|-header"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="flat|purple|-icon"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="outline|purple"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="outline|purple|-header"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="outline|purple|-icon"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="pressed|purple"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="pressed|purple|-header"] > .callout-title .svg-icon,
+.callout[data-callout-metadata="pressed|purple|-icon"] > .callout-title .svg-icon {
+  color: rgba(var(--CREARTS-colors-purple), 1.0);
+}
+
+// Title
+.callout[data-callout-metadata="flat|purple"] > .callout-title,
+.callout[data-callout-metadata="flat|purple|-header"] > .callout-title,
+.callout[data-callout-metadata="flat|purple|-icon"] > .callout-title,
+.callout[data-callout-metadata="outline|purple"] > .callout-title,
+.callout[data-callout-metadata="outline|purple|-header"] > .callout-title,
+.callout[data-callout-metadata="outline|purple|-icon"] > .callout-title,
+.callout[data-callout-metadata="pressed|purple"] > .callout-title,
+.callout[data-callout-metadata="pressed|purple|-header"] > .callout-title,
+.callout[data-callout-metadata="pressed|purple|-icon"] > .callout-title {
+  color: rgba(var(--CREARTS-colors-purple), 1.0);
+}
+
+// Arrow
+.callout[data-callout-metadata="flat|purple"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="flat|purple|-header"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="flat|purple|-icon"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="outline|purple"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="outline|purple|-header"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="outline|purple|-icon"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="pressed|purple"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="pressed|purple|-header"] > .callout-title .lucide-chevron-down,
+.callout[data-callout-metadata="pressed|purple|-icon"] > .callout-title .lucide-chevron-down {
+  background: rgba(var(--CREARTS-colors-purple), 1.0);
+}
+
+// Code
+.callout[data-callout-metadata="flat|purple"] code:not(pre code),
+.callout[data-callout-metadata="flat|purple|-header"] code:not(pre code),
+.callout[data-callout-metadata="flat|purple|-icon"] code:not(pre code),
+.callout[data-callout-metadata="outline|purple"] code:not(pre code),
+.callout[data-callout-metadata="outline|purple|-header"] code:not(pre code),
+.callout[data-callout-metadata="outline|purple|-icon"] code:not(pre code),
+.callout[data-callout-metadata="pressed|purple"] code:not(pre code),
+.callout[data-callout-metadata="pressed|purple|-header"] code:not(pre code),
+.callout[data-callout-metadata="pressed|purple|-icon"] code:not(pre code) {
+  background: rgba(var(--CREARTS-colors-purple), 0.2);
+  color: rgba(var(--CREARTS-colors-purple), 1.0);
+}
+
+// Codeblock
+.callout[data-callout-metadata="flat|purple"] pre,
+.callout[data-callout-metadata="flat|purple|-header"] pre,
+.callout[data-callout-metadata="flat|purple|-icon"] pre,
+.callout[data-callout-metadata="outline|purple"] pre,
+.callout[data-callout-metadata="outline|purple|-header"] pre,
+.callout[data-callout-metadata="outline|purple|-icon"] pre,
+.callout[data-callout-metadata="pressed|purple"] pre,
+.callout[data-callout-metadata="pressed|purple|-header"] pre,
+.callout[data-callout-metadata="pressed|purple|-icon"] pre {
+  background: transparent !important;
+  border-color: rgba(var(--CREARTS-colors-purple), 0.2);
+  box-shadow: var(--CREARTS-effects-colors);
+}
+
+// Checkbox
+.callout[data-callout-metadata="flat|purple"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="flat|purple|-header"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="flat|purple|-icon"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="outline|purple"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="outline|purple|-header"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="outline|purple|-icon"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="pressed|purple"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="pressed|purple|-header"] input[type=checkbox]:checked,
+.callout[data-callout-metadata="pressed|purple|-icon"] input[type=checkbox]:checked {
+  background-color: rgba(var(--CREARTS-colors-purple), 1.0);
+  border-color: rgba(var(--CREARTS-colors-purple), 1.0);
+}

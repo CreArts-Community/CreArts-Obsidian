@@ -72,3 +72,30 @@
     --icon-stroke: var(--icon-s-stroke-width);
 }
 
+
+
+
+
+
+
+
+
+
+.canvas-node-placeholder {
+  font-size: 80px;
+}
+
+.canvas-node-placeholder::after {
+display: none;
+}
+
+
+
+.canvas-node-container {
+  background: var(--CREARTS-background-primary);
+  border-radius: var(--CREARTS-radius-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+}

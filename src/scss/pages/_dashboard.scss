@@ -1,48 +1,28 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Features                 ║ Dashboard                                                                               ║
+// ║ Dashboard                ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Dashboard                ║ Home Tab                                                                                ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
+.dashboard .home-tab-searchbar {
+  margin: 0px !important;
+}
+
+// Background
 .dashboard .block-language-search-bar {
   margin-top: var(--CREARTS-spacing-tertiary);
   margin-bottom: var(--CREARTS-spacing-tertiary);
+  margin: 0px !important;
+  padding: 0px !important;
 }
-
-.dashboard h1,
-.dashboard h2,
-.dashboard h3 {
-  margin: 0px;
-}
-
-
-.dashboard .button .mb-button-inner {
-  width: 100% !important;
-  margin-bottom: var(--CREARTS-spacing-primary);
-
-
-  border-width: var(--CREARTS-border-width) !important;
-  border-style: var(--CREARTS-border-style) !important;
-  border-radius: var(--CREARTS-radius-primary);
-  border-color: var(--CREARTS-border-primary) !important;
-  background: var(--CREARTS-background-primary);
-  box-shadow: var(--CREARTS-effects-flat);
-}
-
-/*
-
-// Spacing
-.dashboard .markdown-preview-sizer {
-  padding-bottom: 0px !important;
-}
-
-// Buttons
-.dashboard .button-normal {
-  width: 100%;
-}
-*/
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Features                 ║ Dashboard                                                                               ║
+// ║ Dashboard                ║ Bases                                                                                   ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing

@@ -1,4 +1,18 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins (Bases)          ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.bases-view {
+  padding: var(--CREARTS-spacing-secondary);
+  margin: 0px;
+}
+
+.bases-cards-group {
+  padding: 0px;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Plugins (Bases)          ║ Header                                                                                  ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
@@ -22,15 +36,20 @@
 // Background
 .bases-cards-item {
   background: var(--CREARTS-background-primary);
-  border-radius: var(--CREARTS-spacing-primary);
   border-width: var(--CREARTS-border-width);
   border-style: var(--CREARTS-border-style);
   border-radius: var(--CREARTS-radius-secondary);
   border-color: var(--CREARTS-border-primary);
   background: var(--CREARTS-background-primary);
   box-shadow: var(--CREARTS-effects-flat);
-
 }
+
+
+.bases-cards-item:hover {
+
+  box-shadow: var(--CREARTS-effects-flat);
+}
+
 
 .bases-cards-cover {
   background: transparent;
@@ -53,6 +72,25 @@
 
 
 
-.bases-view {
-    margin: var(--CREARTS-spacing-secondary);
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins (Bases)          ║ Groups                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+/*
+//Background
+.bases-cards-group {
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+  box-shadow: var(--CREARTS-effects-pressed);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+  box-sizing: border-box;
+  mix-blend-mode: unset;
+  overflow: visible;
+  padding: var(--CREARTS-spacing-tertviary);
 }
+*/
+

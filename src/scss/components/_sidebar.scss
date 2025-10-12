@@ -1,313 +1,123 @@
+// .workspace-split
+// .mod-horizontal
+// .mod-sidedock
+// .mod-left-split
+// .mod-right-split
+// .mod-top
+
+// Show Ribbon
+// .show-ribbon
+
+// Show Inline Title
+// .show-inline-title
+
+// Show tab title bar
+// .show-view-header
+
+
+/*
+.mod-left-split .workspace-tabs.mod-top {
+  background: rgba(255, 0, 0, 0.200);
+}
+*/
+
+
+
+
+
+
+
+
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Sidebar                  ║ Left                                                                                    ║
+// ║ Sidebar                  ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Width
-.mod-left-split {
+// Spacing
+.mod-left-split,
+.mod-right-split {
   min-width: var(--CREARTS-width-left);
 }
 
-// Spacing (Top)
-.mod-left-split .workspace-tabs:nth-child(4) .workspace-leaf-content {
-  margin-top: var(--CREARTS-layout-margin-half);
-}
-
-// Spacing (Bottom)
-.mod-left-split .workspace-tabs:last-child .workspace-leaf-content {
-  margin-bottom: calc(var(--CREARTS-layout-margin-half));
-}
-
-.mod-left-split .workspace-tabs:last-child .workspace-leaf-content .nav-files-container,
-.mod-left-split .workspace-tabs:last-child .workspace-leaf-content .view-content,
-.mod-left-split .workspace-tabs:last-child .workspace-leaf-content .tag-container,
-.mod-left-split .workspace-tabs:last-child .workspace-leaf-content .search-result-container {
-  margin-bottom: 0px;
-  margin-top: var(--CREARTS-layout-margin-half) !important;
+// Ribbon
+body:not(.show-ribbon) .mod-left-split .workspace-tab-container {
+  margin-left: var(--CREARTS-layout-margin) !important;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Sidebar                  ║ Left (Top)                                                                              ║
+// ║ Sidebar                  ║ Workspace (Top)                                                                         ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// Nav Header
-.mod-left-split .mod-top .nav-header {
-  background: var(--CREARTS-background-secondary);
-  border-radius: var(--CREARTS-radius-primary);
-  margin: var(--CREARTS-layout-margin-half);
-  min-height: var(--CREARTS-height-header);
-}
-
-// Content
-.mod-left-split .mod-top .nav-files-container,
-.mod-left-split .mod-top .view-content,
-.mod-left-split .mod-top .tag-container,
-.mod-left-split .mod-top .search-result-container {
-  background: var(--CREARTS-background-secondary);
-  border-radius: var(--CREARTS-radius-primary);
-  margin: var(--CREARTS-layout-margin-half);
-  width: auto;
-  padding: var(--CREARTS-spacing-secondary);
-}
-
-
-.mod-left-split .workspace-tabs:not(.mod-top, :last-child) .nav-files-container,
-.mod-left-split .workspace-tabs:not(.mod-top, :last-child) .view-content,
-.mod-left-split .workspace-tabs:not(.mod-top, :last-child) .tag-container,
-.mod-left-split .workspace-tabs:not(.mod-top, :last-child) .search-result-container {
-  margin-bottom: var(--CREARTS-layout-margin-half);
-}
-
-// Resize Handle
-.mod-left-split .workspace-leaf-resize-handle {
-  margin-left: var(--CREARTS-layout-margin-half);
-}
-
-// Buttons
-.mod-left-split .nav-buttons-container {
-  justify-content: flex-start;
-  height: 100%;
-}
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Sidebar                  ║ Left (Bottom)                                                                           ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// Header
-.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
-  margin: var(--CREARTS-layout-margin-half) var(--CREARTS-layout-margin-half) 0px var(--CREARTS-layout-margin-half);
-  border: none;
-  border-radius: var(--CREARTS-radius-primary);
-  background: var(--CREARTS-background-secondary);
-  min-height: var(--CREARTS-height-header);
-}
-
-// Content
-.mod-left-split .workspace-tabs:not(.mod-top) .nav-files-container,
-.mod-left-split .workspace-tabs:not(.mod-top) .view-content,
-.mod-left-split .workspace-tabs:not(.mod-top) .tag-container,
-.mod-left-split .workspace-tabs:not(.mod-top) .search-result-container {
-  background: var(--CREARTS-background-secondary);
-  border-radius: var(--CREARTS-radius-primary);
-  margin: var(--CREARTS-layout-margin-half);
-  width: auto;
-}
-
-// Nav Header
-.mod-left-split .workspace-tabs:not(.mod-top) .nav-header {
-  background: var(--CREARTS-background-secondary);
-  border-radius: var(--CREARTS-radius-primary);
-  margin: var(--CREARTS-layout-margin-half) var(--CREARTS-layout-margin-half) 0px var(--CREARTS-layout-margin-half);
-  min-height: var(--CREARTS-height-header);
-}
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Sidebar                  ║ Right                                                                                   ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// Width
-.mod-right-split {
-  min-width: var(--CREARTS-width-right);
-}
 
 // Spacing
-.mod-right-split .workspace-tabs:nth-child(3) .workspace-leaf-content {
-  margin-top: var(--CREARTS-layout-margin-half);
+.mod-left-split .workspace-tabs.mod-top .workspace-tab-container,
+.mod-right-split .workspace-tabs.mod-top .workspace-tab-container {
+  margin: var(--CREARTS-layout-margin) var(--CREARTS-layout-margin-half) var(--CREARTS-layout-margin-half) var(--CREARTS-layout-margin-half);
 }
 
-.mod-right-split .workspace-tabs:last-child .workspace-leaf-content {
-  margin-bottom: calc(var(--CREARTS-layout-margin) + var(--CREARTS-height-statusbar));
-}
-
-.mod-right-split .workspace-tabs:last-child .workspace-leaf-content .nav-files-container,
-.mod-right-split .workspace-tabs:last-child .workspace-leaf-content .view-content,
-.mod-right-split .workspace-tabs:last-child .workspace-leaf-content .tag-container,
-.mod-right-split .workspace-tabs:last-child .workspace-leaf-content .search-result-container {
-  margin-bottom: 0px;
-}
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Sidebar                  ║ Right (Top)                                                                             ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// Nav Header
-.mod-right-split .mod-top .nav-header {
+// header
+.mod-left-split .workspace-tabs.mod-top .nav-header,
+.mod-right-split .workspace-tabs.mod-top .nav-header {
   background: var(--CREARTS-background-secondary);
   border-radius: var(--CREARTS-radius-primary);
-  margin: var(--CREARTS-layout-margin-half) var(--CREARTS-layout-margin-half) 0px var(--CREARTS-layout-margin-half);
-  max-height: var(--CREARTS-height-header);
-  height: var(--CREARTS-height-header);
+  margin-bottom: var(--CREARTS-layout-margin);
+  min-height: var(--CREARTS-height-header);
 }
 
 // Content
-.mod-right-split .mod-top .nav-files-container,
-.mod-right-split .mod-top .view-content,
-.mod-right-split .mod-top .tag-container,
-.mod-right-split .mod-top .search-result-container,
-.mod-right-split .mod-top .weather-container,
-.mod-right-split .mod-top .clock-container {
-  width: auto;
-  margin: var(--CREARTS-layout-margin-half) var(--CREARTS-layout-margin) var(--CREARTS-layout-margin-half) var(--CREARTS-layout-margin-half);
-  border-radius: var(--CREARTS-radius-primary);
+.mod-left-split .workspace-tabs.mod-top .view-content,
+.mod-left-split .workspace-tabs.mod-top .nav-files-container,
+.mod-left-split .workspace-tabs.mod-top .tag-container,
+.mod-left-split .workspace-tabs.mod-top .search-result-container,
+
+.mod-right-split .workspace-tabs.mod-top .view-content,
+.mod-right-split .workspace-tabs.mod-top .nav-files-container,
+.mod-right-split .workspace-tabs.mod-top .tag-container,
+.mod-right-split .workspace-tabs.mod-top .search-result-container{
   background: var(--CREARTS-background-secondary);
-}
-
-// Resize Handle
-.mod-right-split .workspace-leaf-resize-handle {
-  margin-right: var(--CREARTS-layout-margin-half);
-}
-
-// Buttons
-.mod-right-split .nav-buttons-container {
-  justify-content: flex-start;
-  height: 100%;
+  border-radius: var(--CREARTS-radius-primary);
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Sidebar                  ║ Right (Bottom)                                                                          ║
+// ║ Sidebar                  ║ Workspace                                                                               ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Header
+// Spacing
+.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-container,
+.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-container {
+  margin: var(--CREARTS-layout-margin-half);
+}
+
+.mod-right-split .workspace-tabs:not(.mod-top):last-child {
+  margin-bottom: calc(var(--CREARTS-layout-margin-half) + var(--CREARTS-height-statusbar));
+}
+
+// Tab header
+.mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container,
 .mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
   background: var(--CREARTS-background-secondary);
   border-radius: var(--CREARTS-radius-primary);
-  margin: var(--CREARTS-layout-margin-half) var(--CREARTS-layout-margin) 0px var(--CREARTS-layout-margin-half) !important;
+  margin: var(--CREARTS-layout-margin-half);
   border: none;
-}
-
-// Content
-.mod-right-split .workspace-tabs:not(.mod-top) .nav-files-container,
-.mod-right-split .workspace-tabs:not(.mod-top) .view-content,
-.mod-right-split .workspace-tabs:not(.mod-top) .tag-container,
-.mod-right-split .workspace-tabs:not(.mod-top) .search-result-container,
-.mod-right-split .workspace-tabs:not(.mod-top) .weather-container,
-.mod-right-split .workspace-tabs:not(.mod-top) .clock-container {
-  background: var(--CREARTS-background-secondary);
-  border-radius: var(--CREARTS-radius-primary);
-  margin: var(--CREARTS-layout-margin-half) var(--CREARTS-layout-margin) 0px var(--CREARTS-layout-margin-half);
-  width: auto;
-}
-
-.mod-right-split .workspace-tabs:not(.mod-top, :last-child) .nav-files-container,
-.mod-right-split .workspace-tabs:not(.mod-top, :last-child) .view-content,
-.mod-right-split .workspace-tabs:not(.mod-top, :last-child) .tag-container,
-.mod-right-split .workspace-tabs:not(.mod-top, :last-child) .search-result-container,
-.mod-right-split .workspace-tabs:not(.mod-top, :last-child) .weather-container,
-.mod-right-split .workspace-tabs:not(.mod-top, :last-child) .clock-container  {
-  margin-bottom: var(--CREARTS-layout-margin-half);
-}
-
-// Header
-.mod-right-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container {
-  min-height: var(--CREARTS-height-header);
-  margin-bottom: var(--CREARTS-layout-margin-half);
-}
-
-// Nav Header
-.mod-right-split .workspace-tabs:not(.mod-top) .nav-header {
-  min-height: var(--CREARTS-height-header);
-  margin-top: var(--CREARTS-layout-margin-half);
-  margin-right: var(--CREARTS-layout-margin-half);
-  margin-bottom: var(--CREARTS-layout-margin-half);
-  margin-left: var(--CREARTS-layout-margin-half);
-  border-radius: var(--CREARTS-radius-primary);
-  background: var(--CREARTS-background-secondary);
-}
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Sidebar                  ║ Folder                                                                                  ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// Spacing (Item)
-.tree-item-self.is-clickable {
-  border-radius: var(--CREARTS-radius-secondary) !important;
-  border-width: var(--CREARTS-border-width);
-  border-style: var(--CREARTS-border-style);
-  border-color: transparent;
-  margin: 0px;
 }
 
 // Background
-.nav-files-container > .nav-folder > .nav-folder-children > .nav-folder:not(.is-collapsed) {
-  background: var(--CREARTS-background-primary) !important;
-  border-radius: var(--CREARTS-radius-secondary) !important;
-  transition: 0.1s ease;
-  margin-bottom: var(--CREARTS-spacing-primary);
-  box-shadow: var(--CREARTS-effects-flat);
+.mod-left-split .workspace-tabs:not(.mod-top) .workspace-leaf-content,
+.mod-right-split .workspace-tabs:not(.mod-top) .workspace-leaf-content {
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+}
 
+// Header
+.mod-left-split .workspace-tabs:not(.mod-top) .nav-header,
+.mod-right-split .workspace-tabs:not(.mod-top) .nav-header {
+  padding: var(--CREARTS-spacing-primary) 0px;
   border-width: var(--CREARTS-border-width);
   border-style: var(--CREARTS-border-style);
+  border-radius: var(--CREARTS-radius-secondary);
   border-color: var(--CREARTS-border-primary);
-  border-color: var(--CREARTS-border-primary);
+  background: var(--CREARTS-background-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  margin: var(--CREARTS-layout-margin-half);
 }
-
-// Remove
-/*
-.nav-folder .tree-item-children .nav-folder-children {
-  border: none !important;
-}
-*/
-
-.nav-folder.mod-root .nav-folder > .nav-folder-children {
-  border-left: 2px solid;
-  border-color: var(--CREARTS-border-primary);
-}
-
-
-/*
-.nav-folder.mod-root .nav-folder > .nav-folder-children .tree-item::before {
-  content: "";
-  position: absolute;
-
-  border-left: 2px solid;
-
-  border-color: var(--CREARTS-border-primary);
-  margin-left: -6px !important;
-
-height: 30px;
-width: 20px;
-
-}
-*/
-
-
-
-.nav-folder.mod-root .nav-folder > .nav-folder-children .tree-item::before {
-  content: "";
-  position: absolute;
-  border-radius: var(--CREARTS-radius-primary) !important;
-  border-width: 2px;
-  border-style: var(--CREARTS-border-style);
-  border-color: var(--CREARTS-border-primary);
-  margin-left: -6px !important;
-  margin-top: 6px;
-  clip-path: inset(50% 50% 0 0);
-  width: 16px;
-  height: 8px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.mod-left-split .workspace-tab-header-container-inner, .mod-right-split .workspace-tab-header-container-inner {
-  padding: 0px;
-  margin:  var(--CREARTS-spacing-primary) 0px ;
-  gap: var(--CREARTS-spacing-primary-half);
-}
-
-
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Sidebar                  ║ Vault Profile                                                                           ║
@@ -324,7 +134,24 @@ width: 20px;
   margin-bottom: calc(var(--CREARTS-layout-margin) + var(--CREARTS-height-statusbar));
 }
 
-
+// Order
 .workspace-drawer-vault-actions {
   order: -1;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Sidebar                  ║ Plugin (Nav Files)                                                                      ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.nav-files-container {
+  padding: var(--CREARTS-layout-margin-half);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Sidebar                  ║ Plugin (Tokei)                                                                          ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.clock-container {
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
 }
