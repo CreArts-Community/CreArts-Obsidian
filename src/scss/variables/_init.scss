@@ -1,0 +1,11 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Variables (Init)         ║                                                                                         ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Purpose:
+// Forces Sass to evaluate all forwarded variable modules before any component CSS is rendered.
+// Contains no real theme logic or variables.
+
+:root {
+  --CREARTS-init: "active";
+}

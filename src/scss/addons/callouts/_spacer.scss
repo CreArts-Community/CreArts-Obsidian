@@ -1,0 +1,58 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Spacer)        ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.callout[data-callout^="spacer"] {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  min-height: 0;
+}
+
+.callout[data-callout^="spacer"] .callout-title,
+.callout[data-callout^="spacer"] .callout-content {
+  display: none;
+}
+
+.callout[data-callout="spacer"][data-callout-metadata="10"] {
+  height: 10px;
+}
+
+.callout[data-callout="spacer"][data-callout-metadata="20"] {
+  height: 20px;
+}
+
+.callout[data-callout="spacer"][data-callout-metadata="30"] {
+  height: 30px;
+}
+
+.callout[data-callout="spacer"][data-callout-metadata="40"] {
+  height: 40px;
+}
+
+.callout[data-callout="spacer"][data-callout-metadata="50"] {
+  height: 50px;
+}
+
+.callout[data-callout="spacer"][data-callout-metadata="60"] {
+  height: 60px;
+}
+
+.callout[data-callout="spacer"][data-callout-metadata="70"] {
+  height: 70px;
+}
+
+.callout[data-callout="spacer"][data-callout-metadata="80"] {
+  height: 80px;
+}
+
+.callout[data-callout="spacer"][data-callout-metadata="90"] {
+  height: 90px;
+}
+
+.callout[data-callout="spacer"][data-callout-metadata="100"] {
+  height: 100px;
+}

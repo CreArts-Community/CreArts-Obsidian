@@ -1,0 +1,208 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Flat)          ║ Style                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout-metadata="flat"],
+.callout[data-callout-metadata="flat|-icon"],
+.callout[data-callout-metadata="flat|-header"] {
+  border-color: var(--CREARTS-border-primary);
+  background: var(--CREARTS-background-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+}
+
+// Codeblock
+.callout[data-callout-metadata="flat"] pre,
+.callout[data-callout-metadata="flat|-icon"] pre,
+.callout[data-callout-metadata="flat|-header"] pre {
+  border-color: var(--CREARTS-border-primary);
+  background: var(--CREARTS-background-secondary);
+  box-shadow: var(--CREARTS-effects-pressed);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Flat)          ║ Mixins                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+@mixin callout-flat-default($name, $rgb) {
+  // Background
+  .callout[data-callout="#{$name}"] {
+    border-color: rgba(#{$rgb}, var(--CREARTS-callouts-border));
+    background: rgba(#{$rgb}, var(--CREARTS-callouts-background));
+  }
+
+  // Icon
+  .callout[data-callout="#{$name}"] > .callout-title .svg-icon {
+    --CREARTS-callouts-icon: rgba(#{$rgb}, var(--CREARTS-callouts-color));
+    color: var(--CREARTS-callouts-icon);
+  }
+
+  // Title
+  .callout[data-callout="#{$name}"] > .callout-title,
+  .callout[data-callout-metadata="#{$name}"] > .callout-title .svg-icon {
+    color: rgba(#{$rgb}, var(--CREARTS-callouts-color));
+  }
+
+  // Arrow
+  .callout[data-callout="#{$name}"] > .callout-title .lucide-chevron-down {
+    --CREARTS-callouts-icon: rgba(#{$rgb}, var(--CREARTS-callouts-color));
+    color: var(--CREARTS-callouts-icon);
+  }
+
+  // Code
+  .callout[data-callout="#{$name}"] code:not(pre code) {
+    background: rgba(#{$rgb}, var(--CREARTS-callouts-code));
+    color: rgba(#{$rgb}, var(--CREARTS-callouts-color));
+  }
+
+  // Code (Hover)
+  .callout[data-callout="#{$name}"] code:not(pre code):hover {
+    background: rgba(#{$rgb}, var(--CREARTS-callouts-code-hover));
+    color: rgba(#{$rgb}, var(--CREARTS-callouts-color));
+  }
+
+  // Codeblock
+  .callout[data-callout="#{$name}"] pre {
+    border-color: rgba(#{$rgb}, var(--CREARTS-callouts-border-half));
+    background: transparent;
+    box-shadow: var(--CREARTS-effects-colors);
+  }
+
+  // Checkbox
+  .callout[data-callout="#{$name}"] input {
+    border-color: rgba(#{$rgb}, var(--CREARTS-callouts-color));
+  }
+
+  .callout[data-callout="#{$name}"] .task-list-item.is-checked input {
+    border-color: rgba(#{$rgb}, var(--CREARTS-callouts-color));
+    background-color: rgba(#{$rgb}, var(--CREARTS-callouts-color));
+  }
+
+  // Checkbox (Hover)
+  .callout[data-callout="#{$name}"] .task-list-item.is-checked:hover input {
+    border-color: rgba(#{$rgb}, var(--CREARTS-callouts-checkbox-hover));
+    background-color: rgba(#{$rgb}, var(--CREARTS-callouts-checkbox-hover));
+  }
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Flat)          ║ Mixins (Custom)                                                                         ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+@mixin callout-flat-custom($name, $rgb) {
+
+  // Background
+  .callout[data-callout="#{$name}"] {
+    border-color: rgba(#{$rgb}, var(--CREARTS-callouts-border));
+    background: rgba(#{$rgb}, var(--CREARTS-callouts-background));
+  }
+
+  // Icon
+  .callout[data-callout="#{$name}"] > .callout-title .svg-icon {
+    --CREARTS-callouts-icon: rgba(#{$rgb}, var(--CREARTS-callouts-color));
+    color: var(--CREARTS-callouts-icon);
+  }
+
+  // Title
+  .callout[data-callout="#{$name}"] > .callout-title .svg-icon {
+    color: rgba(#{$rgb}, var(--CREARTS-callouts-color));
+  }
+
+  // Arrow
+  .callout[data-callout="#{$name}"] > .callout-title .lucide-chevron-down {
+    --CREARTS-callouts-icon: rgba(#{$rgb}, var(--CREARTS-callouts-color));
+    color: var(--CREARTS-callouts-icon);
+  }
+
+  // Code
+  .callout[data-callout="#{$name}"] code:not(pre code) {
+    background: rgba(#{$rgb}, var(--CREARTS-callouts-code));
+    color: rgba(#{$rgb}, var(--CREARTS-callouts-color));
+  }
+
+  // Code (Hover)
+  .callout[data-callout="#{$name}"] code:not(pre code):hover {
+    background: rgba(#{$rgb}, var(--CREARTS-callouts-code-hover));
+    color: rgba(#{$rgb}, var(--CREARTS-callouts-color));
+  }
+
+  // Codeblock
+  .callout[data-callout="#{$name}"] pre {
+    border-color: rgba(#{$rgb}, var(--CREARTS-callouts-border-half));
+    background: transparent;
+    box-shadow: var(--CREARTS-effects-colors);
+  }
+
+  // Checkbox
+  .callout[data-callout="#{$name}"] input {
+    border-color: rgba(#{$rgb}, var(--CREARTS-callouts-color));
+  }
+
+  .callout[data-callout="#{$name}"] .task-list-item.is-checked input {
+    border-color: rgba(#{$rgb}, var(--CREARTS-callouts-color));
+    background-color: rgba(#{$rgb}, var(--CREARTS-callouts-color));
+  }
+
+  // Checkbox (Hover)
+  .callout[data-callout="#{$name}"] .task-list-item.is-checked:hover input {
+    border-color: rgba(#{$rgb}, var(--CREARTS-callouts-checkbox-hover));
+    background-color: rgba(#{$rgb}, var(--CREARTS-callouts-checkbox-hover));
+  }
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Flat)          ║ Default                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Cyan
+@include callout-flat-default(tip, var(--color-cyan-rgb));
+    @include callout-flat-default(hint, var(--color-cyan-rgb));
+    @include callout-flat-default(important, var(--color-cyan-rgb));
+@include callout-flat-default(abstract, var(--color-cyan-rgb));
+    @include callout-flat-default(summary, var(--color-cyan-rgb));
+    @include callout-flat-default(tldr, var(--color-cyan-rgb));
+
+// Blue
+@include callout-flat-default(note, var(--color-blue-rgb));
+@include callout-flat-default(info, var(--color-blue-rgb));
+@include callout-flat-default(todo, var(--color-blue-rgb));
+
+// Green
+@include callout-flat-default(success, var(--color-green-rgb));
+    @include callout-flat-default(check, var(--color-green-rgb));
+    @include callout-flat-default(done, var(--color-green-rgb));
+
+// Orange
+@include callout-flat-default(question, var(--color-orange-rgb));
+    @include callout-flat-default(help, var(--color-orange-rgb));
+    @include callout-flat-default(faq, var(--color-orange-rgb));
+@include callout-flat-default(warning, var(--color-orange-rgb));
+    @include callout-flat-default(caution, var(--color-orange-rgb));
+    @include callout-flat-default(attention, var(--color-orange-rgb));
+
+// Red
+@include callout-flat-default(failure, var(--color-red-rgb));
+    @include callout-flat-default(fail, var(--color-red-rgb));
+    @include callout-flat-default(missing, var(--color-red-rgb));
+@include callout-flat-default(danger, var(--color-red-rgb));
+    @include callout-flat-default(error, var(--color-red-rgb));
+@include callout-flat-default(bug, var(--color-red-rgb));
+
+// Purple
+@include callout-flat-default(example, var(--color-purple-rgb));
+
+// Yellow
+@include callout-flat-default(quote, var(--color-yellow-rgb));
+    @include callout-flat-default(cite, var(--color-yellow-rgb));
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Flat)          ║ Custom                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+@include callout-flat-custom("red", var(--CREARTS-colors-red));
+@include callout-flat-custom("green", var(--CREARTS-colors-green));
+@include callout-flat-custom("yellow", var(--CREARTS-colors-yellow));
+@include callout-flat-custom("orange", var(--CREARTS-colors-orange));
+@include callout-flat-custom("blue", var(--CREARTS-colors-blue));
+@include callout-flat-custom("purple", var(--CREARTS-colors-purple));
+@include callout-flat-custom("pink", var(--CREARTS-colors-pink));

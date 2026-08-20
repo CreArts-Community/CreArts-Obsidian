@@ -1,0 +1,59 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Dynamic Views            ║ Base                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+/*
+// Spacing
+.dynamic-views-masonry,
+.dynamic-views-group {
+    overflow: visible !important;
+}
+*/
+
+.dynamic-views .card {
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-radius: var(--CREARTS-radius-secondary);
+  border-color: var(--CREARTS-border-primary);
+  background: var(--CREARTS-background-primary);
+//box-shadow: var(--CREARTS-effects-flat);
+  transition: none;
+  translate: none;
+}
+
+// Hover
+.dynamic-views .card:hover {
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-radius: var(--CREARTS-spacing-primary);
+  border-radius: var(--CREARTS-radius-secondary);
+  border-color: var(--CREARTS-interface-secondary);
+  background: var(--CREARTS-interface-primary);
+}
+
+
+body:not(.dynamic-views-card-hover-disable-elevate) .workspace-leaf-content[data-type=bases] .dynamic-views .card.hover-intent-active:hover {
+  transition: none;
+  translate: none;
+  background: var(--CREARTS-interface-primary);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Dynamic Views            ║ Remove                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Remove Border
+.dynamic-views .card::after {
+  display: none;
+}
+
+// Remove Group Heading Background
+body:not(.dynamic-views-disable-sticky-group-header) .dynamic-views.is-grouped .bases-cards-container .dynamic-views-group-section > .bases-group-heading:not(.collapsed) > .bases-group-collapse-region::before {
+  display: none;
+  position: relative !important;
+}
+
+// Remove Indicator
+.dynamic-views-end-indicator {
+  display: none;
+}

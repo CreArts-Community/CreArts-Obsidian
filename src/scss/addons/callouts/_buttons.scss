@@ -1,0 +1,115 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Buttons)       ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.callout[data-callout="buttons"] {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  padding: 0px;  
+}
+
+.callout[data-callout="buttons"] .callout-content p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  column-gap: var(--CREARTS-spacing-tertiary);
+  row-gap: var(--CREARTS-spacing-tertiary);
+  overflow: visible;
+  margin: 0px;
+  padding-bottom: var(--CREARTS-spacing-tertiary);
+}
+
+.callout[data-callout="buttons"] .callout-content a {
+  flex: 1 1 200px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+// Remove
+.callout[data-callout="buttons"] .callout-title {
+  display: none;
+}
+
+// Remove Break
+.callout[data-callout="buttons"] br {
+  display: none;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Buttons)       ║ Button                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout="buttons"] .external-link,
+.callout[data-callout="buttons"] .internal-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--CREARTS-background-primary);
+  border-radius: var(--CREARTS-radius-secondary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+  color: var(--CREARTS-text-primary) !important;
+  text-decoration: none;
+  height: var(--CREARTS-height-button);
+  padding: 0px;
+}
+
+// Hover
+.callout[data-callout="buttons"] .external-link:hover ,
+.callout[data-callout="buttons"] .internal-link:hover {
+  background: var(--CREARTS-background-secondary);
+  box-shadow: var(--CREARTS-effects-pressed);
+  color: var(--CREARTS-text-primary) !important;
+  text-decoration: none !important;
+}
+
+// Default
+.callout[data-callout="buttons"][data-callout-metadata="200"] .callout-content a {
+  flex: 1 1 200px;
+}
+
+.callout[data-callout="buttons"][data-callout-metadata="400"] .callout-content a {
+  flex: 1 1 400px;
+}
+
+.callout[data-callout="buttons"][data-callout-metadata="600"] .callout-content a {
+  flex: 1 1 600px;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Cards)         ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.callout[data-callout="buttons"][data-callout-metadata="image"] .external-link,
+.callout[data-callout="buttons"][data-callout-metadata="image"] .internal-link {
+  height: unset;
+  overflow: hidden;
+}
+
+.callout[data-callout="buttons"][data-callout-metadata="image"] p,
+.callout[data-callout="buttons"][data-callout-metadata="image"] p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.callout[data-callout="buttons"][data-callout-metadata="image"] img {
+  display: block;
+  border-radius: 0px;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.3s ease;
+}
+
+// Image (Hover)
+.callout[data-callout="buttons"][data-callout-metadata="image"] .media-embed:hover img {
+  transform: scale(1.1);
+}

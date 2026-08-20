@@ -1,93 +1,28 @@
+// Scrollbars
+::-webkit-scrollbar {
+  display: none !important;
+}
+
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Scrollbars               ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 /*
+// Remove
+.workspace-tabs ::-webkit-scrollbar {
+  display: none;
+}
+
 // Sidebar
-.nav-files-container {
+.nav-files-container,
+.markdown-preview-view {
   scrollbar-gutter: auto;
-  scrollbar-width: thin !important;
-  scrollbar-color: transparent transparent !important;
-  overflow: overlay !important;
-  container-type: inline-size;
-  container-name: dropdown;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
 }
 
-.nav-files-container:hover {
-  scrollbar-color: var(--CREARTS-interface-primary) var(--CREARTS-background-secondary) !important;
-}
-
-
-
-
-.view-content ::-webkit-scrollbar {
-  display: none !important;
-}
-
-
-
-.view-content:hover ::-webkit-scrollbar {
-  display: unset !important;
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-// width
-::-webkit-scrollbar {
-  width: 10px !important;
-
-}
-
-// Tack
-::-webkit-scrollbar-track {
-  background: red !important;
-}
-
-
-// Handle
-::-webkit-scrollbar-thumb {
-  background: blue !important;
-}
-
-// Handle (Hover)
-::-webkit-scrollbar-thumb:hover {
-  background: green !important;
-}
-*/
-
-
-
-
-
-
-
-
-
-
-/*
-// Content
-.view-content {
-  scrollbar-gutter: auto;
-  scrollbar-width: thin !important;
-  scrollbar-color: transparent transparent !important;
-  overflow: overlay !important;
-    container-type: inline-size;
-container-name: dropdown;
-}
-
-.view-content:hover {
-  scrollbar-color: var(--CREARTS-interface-primary) var(--CREARTS-background-secondary) !important;
+.nav-files-container:hover,
+.markdown-preview-view:hover {
+  scrollbar-color: var(--CREARTS-interface-primary) transparent;
 }
 */

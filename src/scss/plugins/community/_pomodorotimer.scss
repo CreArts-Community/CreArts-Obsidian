@@ -5,12 +5,12 @@
 .plugin-pomodoro-timer {
   position: absolute;
   right: calc(var(--CREARTS-spacing-primary) / 2);
-  height: calc(100% - var(--CREARTS-spacing-primary)) !important;
+  height: calc(100% - var(--CREARTS-spacing-primary));
 }
 
 .status-bar:has(.plugin-obsidian-grandfather) .plugin-pomodoro-timer {
   position: absolute;
   right: calc(var(--CREARTS-spacing-primary) / 2 + 40px);
-  height: calc(100% - var(--CREARTS-spacing-primary)) !important;
+  height: calc(100% - var(--CREARTS-spacing-primary));
   width: 64px;
 }

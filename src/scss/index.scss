@@ -1,92 +1,89 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Source                   ║ Base                                                                                    ║
+// ║ Source                   ║ Variables                                                                               ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-@forward "base/colors";
-@forward "base/cursor";
-@forward "base/fullscreen";
-@forward "base/icons";
-@forward "base/image";
-@forward "base/kbd";
-@forward "base/mobile";
-//@forward "base/print";
-@forward "base/text";
-@forward "base/typography";
-@forward "base/remove";
-@forward "base/scrollbars";
-@forward "base/callouts";
-
-@forward "base/tables";
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Source                   ║ Callouts                                                                                ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-@forward "callouts/banners";
-@forward "callouts/buttons";
-@forward "callouts/colors";
-@forward "callouts/columns";
-@forward "callouts/directory";
-@forward "callouts/gallery";
-@forward "callouts/infobox";
-@forward "callouts/messages";
-@forward "callouts/shortcuts";
-@forward "callouts/spacer";
-@forward "callouts/image";
-@forward "callouts/timeline";
-
-
-//@forward "callouts/callout";
-//@forward "callouts/caption";
-//@forward "callouts/colors";
-//@forward "callouts/commands";
-//@forward "callouts/contents";
-//@forward "callouts/infobox";
-//@forward "callouts/message";
-//@forward "callouts/tables";
-//@forward "callouts/tags";
-//@forward "callouts/tasks";
+@forward "variables/init";
+@forward "variables/dark";
+@forward "variables/general";
+@forward "variables/light";
+@forward "variables/skins";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Source                   ║ Components                                                                              ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 @forward "components/content";
-@forward "components/header";
 @forward "components/ribbon";
-@forward "components/settings";
+@forward "components/settings"; // NEED REWORK
 @forward "components/sidebar";
 @forward "components/statusbar";
 @forward "components/titlebar";
 @forward "components/ui";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Source                   ║ Effects                                                                                 ║
+// ║ Source                   ║ Base                                                                                    ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-//@forward "effects/hover";
-//@forward "effects/imagezoom";
-@forward "effects/neumorphism";
-@forward "effects/order";
-//@forward "effects/pets";
-@forward "effects/skinpreview";
-//@forward "effects/wallpaper";
+@forward "base/cursor";
+@forward "base/image";
+@forward "base/kbd";
+//@forward "base/mobile"; // NEED REWORK
+//@forward "base/print"; // NEED REWORK
+@forward "base/remove";
+@forward "base/scrollbars";
+@forward "base/tables";
+@forward "base/text";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Source                   ║ Features                                                                                ║
+// ║ Source                   ║ Icons                                                                                   ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-@forward "features/checkbox";
-//@forward "features/infobox";
-//@forward "features/notebutton";
-//@forward "features/tasks";
+@forward "icons/checklist";
+@forward "icons/files";
+@forward "icons/replace"; // use Mixin
+@forward "icons/settings"; // use Mixin
+@forward "icons/tabs"; // use Mixin
+//@forward "icons/tenki";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Source                   ║ Pages                                                                                   ║
+// ║ Source                   ║ Callouts                                                                                ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-@forward "pages/dashboard";
-@forward "pages/paper";
+@forward "callouts/general";
+@forward "callouts/flat"; // use Mixin
+//@forward "callouts/outline"; // use Mixin
+//@forward "callouts/pressed"; // use Mixin
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Source                   ║ Addons                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Callouts
+@forward "addons/callouts/alignment"; // Done
+@forward "addons/callouts/banners"; // Done
+@forward "addons/callouts/buttons"; // Done
+@forward "addons/callouts/caption"; // Done
+@forward "addons/callouts/colors";
+@forward "addons/callouts/columns";
+@forward "addons/callouts/directory";
+@forward "addons/callouts/gallery"; // Done
+@forward "addons/callouts/infobox";
+@forward "addons/callouts/messages"; // Done
+@forward "addons/callouts/shortcuts"; // Done
+@forward "addons/callouts/spacer"; // Done
+@forward "addons/callouts/timeline"; // Done
+
+// Features
+@forward "addons/features/hometab";
+//@forward "addons/features/pluginorder";
+//@forward "addons/features/skinpreview";
+
+// Pages
+@forward "addons/pages/paper";
+@forward "addons/pages/verses";
+
+// Toggle
+//@forward "addons/toggle/neumorphism";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Source                   ║ Plugins (Community)                                                                     ║
@@ -95,16 +92,10 @@
 @forward "plugins/community/banners";
 @forward "plugins/community/calendar";
 @forward "plugins/community/customframes";
+@forward "plugins/community/dynamicviews";
 @forward "plugins/community/editingtoolbar";
 @forward "plugins/community/grandfather";
-@forward "plugins/community/graph";
-@forward "plugins/community/hometab";
-@forward "plugins/community/kanban";
-@forward "plugins/community/notegallery";
 @forward "plugins/community/pomodorotimer";
-@forward "plugins/community/recentfiles";
-@forward "plugins/community/settingssearch";
-@forward "plugins/community/sortable";
 @forward "plugins/community/stylesettings";
 @forward "plugins/community/tenki";
 @forward "plugins/community/tokei";
@@ -116,22 +107,13 @@
 @forward "plugins/core/bases";
 @forward "plugins/core/canvas";
 @forward "plugins/core/files";
+@forward "plugins/core/graph";
 @forward "plugins/core/search";
 @forward "plugins/core/tags";
 
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Source                   ║ Variables                                                                               ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-@forward "variables/dark";
-@forward "variables/general";
-@forward "variables/light";
-@forward "variables/skins";
-
 // ╔════════════════════════════════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Testing...                                                                                                         ║
+// ║ Skin Testing...                                                                                                    ║
 // ╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-
 
 /*
 .theme-dark {
@@ -142,68 +124,120 @@
   --CREARTS-accent-a: var(--SKIN-accent-a, 1);
 
   // Content
-  --CREARTS-content-h: var(--SKIN-content-h, 235) !important;
-  --CREARTS-content-s: var(--SKIN-content-s, 10%) !important;
-  --CREARTS-content-l: var(--SKIN-content-l, 80%) !important;
+  --CREARTS-content-h: var(--SKIN-content-h, 235);
+  --CREARTS-content-s: var(--SKIN-content-s, 10%);
+  --CREARTS-content-l: var(--SKIN-content-l, 80%);
   --CREARTS-content-a: var(--SKIN-content-a, 1);
 
   // Base
-  --CREARTS-base-h: var(--SKIN-base-h, 240) !important;
-  --CREARTS-base-s: var(--SKIN-base-s, 10%) !important;
-  --CREARTS-base-l: var(--SKIN-base-l, 14%) !important;
-  --CREARTS-base-a: var(--SKIN-base-a, 1) !important;
+  --CREARTS-base-h: var(--SKIN-base-h, 240);
+  --CREARTS-base-s: var(--SKIN-base-s, 10%);
+  --CREARTS-base-l: var(--SKIN-base-l, 14%);
+  --CREARTS-base-a: var(--SKIN-base-a, 1);
 }
 */
 
 // ╔════════════════════════════════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Testing...                                                                                                         ║
+// ║ CSS Testing...                                                                                                     ║
 // ╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+/*
+--color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
+--color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+--interactive-normal: var(--color-base-30);
+--interactive-accent-hover: var(--color-accent-1);
+*/
+
+
+
+
+
 
 
 /*
-// Ribbon Vault Profile
+author: BunkerD
+source: https://forum.obsidian.md/t/a-callout-for-a-folder-structure/61366
+*/
 
-.workspace-sidedock-vault-profile {
-  position: fixed;
-  left: var(--CREARTS-layout-margin);
-  bottom: calc(var(--CREARTS-height-statusbar) + var(--CREARTS-layout-margin));
-  z-index: 20;
-  background: red !important;
-
-  display: flex;
-  flex-direction: column-reverse;
-  margin: 0px !important;
-
-  padding: 0px !important;
-
-
-  width: var(--CREARTS-width-ribbon) !important;
+.callout[data-callout="folder" i] {
+  --list-indent: 0em;
+  --indentation-guide-color: transparent;
+  overflow: scroll;
 }
 
-
-.workspace-drawer-vault-switcher {
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--size-2-2) var(--size-2-3);
-    cursor: var(--cursor);
-    border-radius: var(--clickable-icon-radius);
-    color: var(--icon-color);
-    opacity: var(--icon-opacity);
-    transition: opacity var(--anim-duration-fast) ease-in-out;
-    height: 40px !important;
-}
-
-
-
-.mod-left-split .workspace-tabs.mod-top .workspace-tab-container,
-.mod-right-split .workspace-tabs.mod-top .workspace-tab-container {
-  margin: var(--CREARTS-layout-margin) var(--CREARTS-layout-margin-half) calc(var(--CREARTS-height-statusbar) + var(--CREARTS-layout-margin)) var(--CREARTS-layout-margin-half);
-}
-
-
-.workspace-drawer-vault-name {
+.callout[data-callout="folder" i] .list-bullet {
   display: none;
 }
-*/
+
+.callout[data-callout="folder" i] ul {
+  -webkit-margin-after: 0;
+  margin-block-end: 0;
+}
+
+.callout[data-callout="folder" i] li {
+  --list-indent: 1.5em;
+  list-style-type: none;
+  font-family: var(--font-monospace);
+  white-space: nowrap;
+}
+
+.callout[data-callout="folder" i] li li {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.callout[data-callout="folder" i] li li::before,
+.callout[data-callout="folder" i] li li::after {
+  content: "";
+  position: absolute;
+  left: -1em;
+  background: var(--list-marker-color);
+}
+
+.callout[data-callout="folder" i] li li::before {
+  top: 0.85em;
+  width: 10px;
+  height: 1.5px;
+  margin: auto;
+}
+
+.callout[data-callout="folder" i] li li::after {
+  top: 0;
+  bottom: 0;
+  width: 1.5px;
+  height: 100%;
+}
+
+.callout[data-callout="folder" i] li li:last-child::after {
+  height: 0.85em;
+}
+
+.callout[data-callout="folder" i] li .list-collapse-indicator {
+  position: absolute;
+  left: -2em;
+  margin: 0;
+}
+
+.callout[data-callout="folder" i] li em {
+  opacity: 0.5;
+  font-family: var(--font-text);
+}
+
+.callout[data-callout="folder" i] li code {
+  font-size: 1em;
+  font-family: var(--font-monospace);
+  font-style: normal !important;
+  background: none;
+  white-space: pre;
+  margin: 0;
+  padding: 0;
+}
+
+.callout[data-callout="folder" i] li mark {
+  font-style: italic;
+  color: #d3a3e5;
+}
+
+.callout[data-callout="folder" i] .callout-content {
+  overflow-x: visible;
+}

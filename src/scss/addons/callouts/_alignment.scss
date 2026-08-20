@@ -1,0 +1,41 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Alignment)     ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.callout[data-callout="alignment"] {
+  background: transparent;
+  border-radius: 0px;
+  box-shadow: none;
+  border: none;
+  overflow: visible;
+  padding: 0px;
+  margin: 0px;
+}
+
+// Background
+.callout[data-callout="alignment"] {
+  background: transparent;
+  border-radius: 0px;
+  box-shadow: none;
+  border: none;
+  overflow: visible;
+}
+
+// Remove Title
+.callout[data-callout="alignment"] .callout-title {
+  display: none;
+}
+
+// Text Alignment
+.callout[data-callout="alignment"][data-callout-metadata="left"] p {
+    text-align-last: left;
+}
+
+.callout[data-callout="alignment"][data-callout-metadata="center"] p {
+    text-align-last: center;
+}
+
+.callout[data-callout="alignment"][data-callout-metadata="right"] p {
+    text-align-last: right;
+}

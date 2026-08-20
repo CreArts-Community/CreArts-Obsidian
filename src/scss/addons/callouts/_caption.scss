@@ -1,0 +1,122 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════╗
+// ║ Callouts (Caption)       ║ General                                                                     ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.markdown-preview-view :has(> .callout[data-callout="caption"]) {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.callout[data-callout="caption"] .callout-content {
+  margin: 0px;
+}
+
+// Background
+.callout[data-callout="caption"] {
+  display: inline-flex;
+  position: relative;
+  flex-direction: column;
+  width: 180px;
+  margin: 0px var(--CREARTS-spacing-tertiary) var(--CREARTS-spacing-tertiary) 0px;
+  padding: 0px;
+  overflow: visible;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  vertical-align: top;
+}
+
+// Remove Title
+.callout[data-callout="caption"] .callout-title {
+  display: none;
+}
+
+// Text
+.callout[data-callout="caption"] .callout-content p {
+  margin: 0px;
+  font-size: small;
+  text-align: left;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════╗
+// ║ Callouts (Caption)       ║ Image                                                                       ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.callout[data-callout="caption"] .media-embed {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  margin-bottom: -16px;
+  overflow: hidden;
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-radius: var(--CREARTS-radius-secondary);
+  border-color: var(--CREARTS-border-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  text-decoration: none;
+}
+
+// Image
+.callout[data-callout="caption"] .media-embed img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0px;
+  background: var(--CREARTS-background-primary);
+  transition: transform 0.3s ease;
+}
+
+// Image (Hover)
+.callout[data-callout="caption"] .media-embed:hover img {
+  transform: scale(1.1);
+  background: var(--CREARTS-interface-primary);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════╗
+// ║ Callouts (Caption)       ║ Frame                                                                       ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.callout[data-callout="caption"][data-callout-metadata="square"],
+.callout[data-callout="caption"][data-callout-metadata="portrait"],
+.callout[data-callout="caption"][data-callout-metadata="landscape"] {
+  align-items: flex-start;
+  width: auto;
+  min-width: 0px;
+  max-width: none;
+}
+
+// Image
+.callout[data-callout="caption"][data-callout-metadata="square"] .media-embed img,
+.callout[data-callout="caption"][data-callout-metadata="portrait"] .media-embed img,
+.callout[data-callout="caption"][data-callout-metadata="landscape"] .media-embed img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+// Square
+.callout[data-callout="caption"][data-callout-metadata="square"] .media-embed {
+  aspect-ratio: 1 / 1;
+  width: auto;
+  height: 180px;
+}
+
+// Portrait
+.callout[data-callout="caption"][data-callout-metadata="portrait"] .media-embed {
+  aspect-ratio: 3 / 4;
+  width: auto;
+  height: 180px;
+}
+
+// Landscape
+.callout[data-callout="caption"][data-callout-metadata="landscape"] .media-embed {
+  aspect-ratio: 16 / 9;
+  width: auto;
+  height: 180px;
+}

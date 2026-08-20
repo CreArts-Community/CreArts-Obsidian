@@ -2,8 +2,8 @@
 // ║ Plugins                  ║ Grandfather                                                                             ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.plugin-obsidian-grandfather {
+.plugin-obsidian-grandfather.status-bar-item {
   position: absolute;
   right: calc(var(--CREARTS-spacing-primary) / 2);
-  height: calc(100% - var(--CREARTS-spacing-primary)) !important;
+  height: calc(100% - var(--CREARTS-spacing-primary));
 }

@@ -1,0 +1,20 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Bible                    ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.verses h6 {
+  position: absolute;
+  margin: 4px 0px 0px 0px !important;
+  color: var(--text-faint);
+  font-size: 0.7em;
+  font-family: var(--font-monospace);
+}
+
+.verses h6 .collapse-indicator {
+  display: none;
+}
+
+.verses .el-h6 + .el-p p,
+.verses .el-p + .el-p p { 
+  margin-left: 20px;
+}

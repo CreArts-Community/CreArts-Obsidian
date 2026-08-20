@@ -22,6 +22,13 @@
   text-align: center;
 }
 
+
+
+
+.markdown-preview-view th {
+  text-align: center;
+}
+
 /*
 // Image Spacing
 .markdown-preview-view td:not(:has(img)) {
@@ -34,32 +41,47 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 .markdown-preview-view thead th {
-  border: none  !important;
+  border: none;
 }
+
+.markdown-preview-view td:has(strong) {
+border: none;
+}
+
+
+.markdown-preview-view td:has(strong) {
+background: transparent !important;
+}
+
+
 
 
 // Odd
 .markdown-preview-view tbody tr:nth-child(odd) {
-  background: var(--CREARTS-interface-primary) !important;
+  background: var(--CREARTS-interface-primary);
 }
 
 // Border
 .markdown-preview-view tbody tr:nth-child(odd) td {
-  border-color: var(--CREARTS-border-secondary) !important;
+  border-color: var(--CREARTS-border-secondary);
 }
 
 // Even
 .markdown-preview-view tbody tr:nth-child(even) {
-  background: var(--CREARTS-background-primary) !important;
+  background: var(--CREARTS-background-primary);
 }
 
 // Border
 .markdown-preview-view tbody tr:nth-child(even) td {
-  border-color: var(--CREARTS-border-primary) !important;
+  border-color: var(--CREARTS-border-primary);
 }
 
-
-
+/*
+// Hover
+.markdown-preview-view td:hover {
+  background: var(--CREARTS-interface-secondary) !important;
+}
+*/
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Table                    ║ Empty                                                                                   ║
@@ -92,11 +114,4 @@ td img {
 
 td img:hover {
   transform: scale(1.2);
-}
-
-
-
-// Hover
-.markdown-preview-view td:hover {
-  background: var(--CREARTS-interface-secondary) !important;
 }

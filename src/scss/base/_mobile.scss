@@ -11,7 +11,7 @@
   background: var(--CREARTS-background-secondary);
   border-radius: var(--CREARTS-radius-primary);
   height: var(--CREARTS-height-header);
-  margin: 0px var(--CREARTS-layout-margin) var(--CREARTS-layout-margin) var(--CREARTS-layout-margin);
+  margin: 0px var(--CREARTS-layout-margin) calc(var(--CREARTS-layout-margin) + 50px) var(--CREARTS-layout-margin);
   padding: 0px;
 }
 
@@ -30,6 +30,12 @@
 .is-mobile .mobile-navbar-action .mobile-navbar-tabs-action {
   width: 20px;
   height: 20px;
+}
+
+
+// Remove
+.mobile-navbar-action-new-tab {
+  display: none;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗

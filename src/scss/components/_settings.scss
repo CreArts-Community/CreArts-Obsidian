@@ -1,3 +1,25 @@
+
+// Footer als eigenständiges Element NACH dem scrollenden Container, nicht als ::after davon
+.vertical-tab-header::after {
+  content: "CreArts " var(--CREARTS-info-version) "\a";
+  white-space: pre;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  height: 90px;
+  margin: var(--CREARTS-spacing-tertiary);
+  padding: var(--CREARTS-spacing-tertiary);
+
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+
+  font-size: var(--font-ui-medium);
+  font-weight: var(--font-semibold);
+  color: var(--CREARTS-text-primary);
+  cursor: text;
+}
+
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Settings                 ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
@@ -21,6 +43,39 @@
   line-height: var(--line-height-tight);
 }
 
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Settings                 ║ Sidebar                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.modal.mod-settings .vertical-tab-header .vertical-tab-header-group-container {
+  padding: 0px;
+}
+
+.vertical-tab-header-group:last-child {
+  margin: 0px;
+}
+
+.modal.mod-settings .vertical-tab-header {
+  padding: var(--CREARTS-layout-margin);
+  border: none;
+  width: var(--CREARTS-width-settings);
+  min-width: var(--CREARTS-width-settings);
+}
+
+// Background
+.vertical-tab-header-group-container {
+  border-radius: var(--CREARTS-radius-primary);
+}
+
+.vertical-tab-header-group {
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+  margin: 0px 0px var(--CREARTS-layout-margin) 0px;
+  padding: var(--CREARTS-spacing-primary);
+}
+
+// Header
 .vertical-tab-header-group-title {
   font-size: var(--font-ui-medium);
   color: var(--CREARTS-text-primary);
@@ -35,29 +90,29 @@
 
 
 
+
+
+
+
+
+
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Settings                 ║ Header                                                                                  ║
+// ║ Settings                 ║ Searchbar                                                                               ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
-.vertical-tab-header {
-  padding: var(--CREARTS-layout-margin);
-  border: none !important;
-  width: var(--width) !important;
-  min-width: var(--width) !important;
-  max-width: var(--width) !important;
-  --width: var(--CREARTS-width-settings) !important;
+.modal.mod-settings .vertical-tab-header .setting-search-container {
+  margin: 0px 0px var(--CREARTS-layout-margin) 0px;
+  padding: 0px;
 }
 
 // Background
-.vertical-tab-header-group {
+.modal.mod-settings .vertical-tab-header .setting-search-results {
   background: var(--CREARTS-background-secondary);
   border-radius: var(--CREARTS-radius-primary);
   margin: 0px 0px var(--CREARTS-layout-margin) 0px;
   padding: var(--CREARTS-spacing-primary);
-
 }
-
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Settings                 ║ Content                                                                                 ║
@@ -68,34 +123,38 @@
   background: var(--CREARTS-background-secondary);
   border-radius: var(--CREARTS-radius-primary);
   margin: var(--CREARTS-layout-margin) var(--CREARTS-layout-margin) var(--CREARTS-layout-margin) 0px;
+  padding: var(--size-4-8);
 }
 
+// Header
+.setting-group .setting-item-heading {
+  padding: 0px;
+}
 
+// Items
+.setting-group .setting-group-search:not(:empty) + .setting-items > .setting-item:first-child {
+  border-top-left-radius: var(--CREARTS-radius-primary);
+  border-top-right-radius: var(--CREARTS-radius-primary);
+}
 
+.setting-group .setting-item:not(.setting-item-heading),
+.setting-item:not(.setting-item-heading) {
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-radius: var(--CREARTS-radius-primary);
+  border-color: var(--CREARTS-border-primary);
+  background: var(--CREARTS-background-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  margin-bottom: var(--CREARTS-spacing-tertiary);
+  padding: var(--CREARTS-spacing-tertiary);
+}
 
-
-
-
+/*
 .vertical-tab-content-container .installed-plugins-container {
   padding-top: 0px;
   border-top: unset;
 }
-
-// Item
-.vertical-tab-content-container .setting-item:not(.setting-item-heading) {
-  border-width: var(--CREARTS-border-width) !important;
-  border-style: var(--CREARTS-border-style) !important;
-  border-radius: var(--CREARTS-radius-primary);
-  border-color: var(--CREARTS-border-primary) !important;
-  background: var(--CREARTS-background-primary);
-  box-shadow: var(--CREARTS-effects-flat);
-  margin-bottom: var(--CREARTS-spacing-tertiary);
-  padding: var(--CREARTS-spacing-tertiary) !important;
-}
-
-
-
-
+*/
 
 
 
@@ -139,6 +198,13 @@
   border: none;
 }
 */
+
+
+
+
+
+
+
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Settings                 ║ Plugins                                                                                 ║
@@ -187,6 +253,7 @@
 
 
 
+
 .setting-item-control input{
   background: var(--CREARTS-background-secondary);
   box-shadow: var(--CREARTS-effects-pressed);
@@ -205,6 +272,32 @@
   border-width: var(--CREARTS-border-width);
   border-style: var(--CREARTS-border-style);
   border-color: var(--CREARTS-border-primary);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Spacing
+.setting-group .setting-group-search {
+    padding: 0px 0px var(--CREARTS-layout-margin) 0px;
+}
+
+.setting-group .setting-group-search > .search-input-container {
+    margin-inline: 0px;
 }
 
 

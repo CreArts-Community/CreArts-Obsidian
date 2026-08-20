@@ -1,96 +1,300 @@
+
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Plugins (Bases)          ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
 .bases-view {
-  padding: var(--CREARTS-spacing-secondary);
   margin: 0px;
+  padding: var(--CREARTS-spacing-secondary);
 }
-
-.bases-cards-group {
-  padding: 0px;
-}
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Plugins (Bases)          ║ Header                                                                                  ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
 .bases-header {
   margin: var(--CREARTS-spacing-secondary) var(--CREARTS-spacing-secondary) 0px var(--CREARTS-spacing-secondary);
-  border-radius: var(--CREARTS-spacing-primary);
-  background: var(--CREARTS-background-primary);
   border-width: var(--CREARTS-border-width);
   border-style: var(--CREARTS-border-style);
+  border-radius: var(--CREARTS-spacing-primary);
   border-radius: var(--CREARTS-radius-secondary);
   border-color: var(--CREARTS-border-primary);
   background: var(--CREARTS-background-primary);
+  background: var(--CREARTS-background-primary);
   box-shadow: var(--CREARTS-effects-flat);
+}
+
+// Embed
+.bases-embed {
+  overflow: visible;
+}
+
+.bases-embed .bases-header {
+  margin: var(--CREARTS-spacing-secondary) 0px;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Plugins (Bases)          ║ Cards                                                                                   ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
+// Spacing
+.bases-cards-group {
+  padding: 0px;
+}
+
 // Background
 .bases-cards-item {
-  background: var(--CREARTS-background-primary);
   border-width: var(--CREARTS-border-width);
   border-style: var(--CREARTS-border-style);
   border-radius: var(--CREARTS-radius-secondary);
   border-color: var(--CREARTS-border-primary);
   background: var(--CREARTS-background-primary);
   box-shadow: var(--CREARTS-effects-flat);
-}
-
-
-.bases-cards-item:hover {
-
-  box-shadow: var(--CREARTS-effects-flat);
-}
-
-
-.bases-cards-cover {
-  background: transparent;
+//  box-shadow: none;
 }
 
 // Hover
 .bases-cards-item:hover {
-  background: var(--CREARTS-interface-primary);
-  border-radius: var(--CREARTS-spacing-primary);
   border-width: var(--CREARTS-border-width);
   border-style: var(--CREARTS-border-style);
   border-radius: var(--CREARTS-radius-secondary);
   border-color: var(--CREARTS-interface-secondary);
+  background: var(--CREARTS-interface-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+//  box-shadow: none;
 }
 
+.bases-cards-cover {
+  background-color: transparent;
+}
 
+// Groups
+.is-grouped .bases-cards-container .bases-cards-group {
+  border: none;
+  padding: 0px;
+}
 
+.is-grouped .bases-cards-container .bases-group-heading {
+   position: absolute;
+}
 
-
-
-
-
-
+// Remove Label
+.bases-cards-label {
+  display: none;
+}
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Plugins (Bases)          ║ Groups                                                                                  ║
+// ║ Plugins (Bases)          ║ Table                                                                                   ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-/*
-//Background
-.bases-cards-group {
-  background: var(--CREARTS-background-secondary);
-  border-radius: var(--CREARTS-radius-primary);
-  box-shadow: var(--CREARTS-effects-pressed);
+// Spacing
+.bases-view[data-view-type="table"] {
+  margin-right: var(--CREARTS-spacing-secondary);
+}
+
+// Image
+.bases-td[data-property="formula.Image"] img {
+  box-shadow: none;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+// Text
+.bases-td .metadata-input-longtext:not(:empty),
+.bases-td .metadata-input-number,
+.bases-td .internal-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  text-align: center;
+  height: 100%;
+}
+
+// Internal Link
+.bases-table-cell .internal-link {
+  width: 100%;
+  color: var(--CREARTS-text-primary);
+  font-weight: 600;
+  text-align: center;
+}
+
+// ╔══════════════════════════╗
+// ║ Embed                    ║
+// ╚══════════════════════════╝
+
+.workspace-leaf-content[data-type="markdown"] .bases-embed .bases-view[data-view-type="table"] {
+  border: none;
+}
+
+.bases-embed .bases-view[data-view-type="table"] {
+  margin-right: 0px;
+}
+
+// ╔══════════════════════════╗
+// ║ Head                     ║
+// ╚══════════════════════════╝
+
+.bases-view[data-view-type="table"] .bases-thead {
+  background: var(--CREARTS-background-primary);
+  border-color: var(--CREARTS-border-secondary);
   border-width: var(--CREARTS-border-width);
   border-style: var(--CREARTS-border-style);
-  border-color: var(--CREARTS-border-primary);
-  box-sizing: border-box;
-  mix-blend-mode: unset;
-  overflow: visible;
-  padding: var(--CREARTS-spacing-tertviary);
+  border-radius: var(--CREARTS-radius-primary);
+  box-shadow: var(--CREARTS-effects-flat); 
+  //box-shadow: none;
 }
-*/
 
+.bases-thead .bases-td {
+  box-shadow: none;
+}
+
+.bases-table-header:hover {
+  background: transparent;
+}
+
+// ╔══════════════════════════╗
+// ║ Body                     ║
+// ╚══════════════════════════╝
+
+// Spacing
+.bases-tbody {
+  display: flex;
+  margin-top: calc(var(--CREARTS-layout-margin-half) + var(--CREARTS-spacing-primary-half));
+  box-shadow: none;
+  background: transparent;
+}
+
+// data
+.bases-tbody .bases-td {
+  padding: var(--CREARTS-spacing-primary-half);
+}
+
+.bases-tbody .bases-td:first-child {
+  padding-left: calc(var(--CREARTS-spacing-primary-half) * -1);
+}
+
+.bases-tbody .bases-td:last-child {
+  padding-right: calc(var(--CREARTS-spacing-primary-half) * -1);
+}
+
+// ╔══════════════════════════╗
+// ║ Cell                     ║
+// ╚══════════════════════════╝
+
+// Background
+.bases-table-cell {
+  display: flex;
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-radius: var(--CREARTS-radius-primary);
+  border-radius: var(--CREARTS-radius-primary);
+  //box-shadow: var(--CREARTS-effects-flat);
+  margin: 0px;
+  padding: 0px;
+  z-index: 1;
+}
+
+// Background (ODD)
+.bases-tr:nth-child(odd) .bases-table-cell {
+  border-color: var(--CREARTS-border-secondary);
+  background: var(--CREARTS-interface-primary);
+}
+
+.bases-tr:nth-child(odd) .bases-td:hover .bases-table-cell {
+  background: var(--CREARTS-interface-secondary);
+}
+
+.bases-tr:nth-child(odd) .bases-td:focus-within .bases-table-cell {
+  background: var(--CREARTS-interface-secondary);
+}
+
+// Background (Even)
+.bases-tr:nth-child(even) .bases-table-cell {
+  border-color: var(--CREARTS-border-primary);
+  background: var(--CREARTS-background-primary);
+}
+
+.bases-tr:nth-child(odd) .bases-td:focus-within .bases-table-cell,
+.bases-tr:nth-child(even) .bases-td:focus-within .bases-table-cell {
+  background: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Focus
+.bases-td:focus-within {
+  height: 100%;
+  background: transparent;
+}
+
+// Remove Outline
+.bases-tbody .bases-tr,
+.bases-tbody .bases-td,
+.bases-thead {
+  background: transparent;
+  box-shadow: none;
+}
+
+.bases-thead .bases-tr {
+  background: var(--CREARTS-background-primary);
+  border-color: var(--CREARTS-border-secondary);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-radius: var(--CREARTS-radius-primary);
+  z-index: 3;
+  box-shadow: none;
+  border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bases-thead,
+.bases-tr {
+
+    min-width: 100%;
+}

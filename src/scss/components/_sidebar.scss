@@ -1,33 +1,3 @@
-// .workspace-split
-// .mod-horizontal
-// .mod-sidedock
-// .mod-left-split
-// .mod-right-split
-// .mod-top
-
-// Show Ribbon
-// .show-ribbon
-
-// Show Inline Title
-// .show-inline-title
-
-// Show tab title bar
-// .show-view-header
-
-
-/*
-.mod-left-split .workspace-tabs.mod-top {
-  background: rgba(255, 0, 0, 0.200);
-}
-*/
-
-
-
-
-
-
-
-
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Sidebar                  ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
@@ -38,9 +8,18 @@
   min-width: var(--CREARTS-width-left);
 }
 
+.mod-left-split .view-content,
+.mod-right-split .view-content {
+  padding: var(--CREARTS-spacing-primary);
+}
+
 // Ribbon
-body:not(.show-ribbon) .mod-left-split .workspace-tab-container {
-  margin-left: var(--CREARTS-layout-margin) !important;
+body:not(.show-ribbon) .mod-left-split .workspace-tabs.mod-top .workspace-tab-container {
+  margin-left: var(--CREARTS-layout-margin);
+}
+
+body:not(.is-mobile):not(.show-ribbon) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  margin-left: var(--CREARTS-layout-margin);
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -75,6 +54,8 @@ body:not(.show-ribbon) .mod-left-split .workspace-tab-container {
   background: var(--CREARTS-background-secondary);
   border-radius: var(--CREARTS-radius-primary);
 }
+
+
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Sidebar                  ║ Workspace                                                                               ║
@@ -124,20 +105,22 @@ body:not(.show-ribbon) .mod-left-split .workspace-tab-container {
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
-.mod-left-split .workspace-sidedock-vault-profile {
-  background: var(--CREARTS-background-secondary) !important;
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+  background: var(--CREARTS-background-secondary);
   border-radius: var(--CREARTS-radius-primary);
   margin: var(--CREARTS-layout-margin-half);
   width: auto;
   padding: var(--CREARTS-spacing-secondary);
-  border: none !important;
+  border: none;
   margin-bottom: calc(var(--CREARTS-layout-margin) + var(--CREARTS-height-statusbar));
+  height: var(--CREARTS-height-header);
 }
 
 // Order
 .workspace-drawer-vault-actions {
   order: -1;
 }
+
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Sidebar                  ║ Plugin (Nav Files)                                                                      ║

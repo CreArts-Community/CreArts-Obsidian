@@ -1,0 +1,55 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Features                 ║ Homet                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Normal
+[aria-label="Home"],
+[aria-label="Links"] {
+  max-width: 40px !important;
+}
+
+// Spacing
+.mod-root [aria-label="Home"] .workspace-tab-header-inner,
+.mod-root [aria-label="Links"] .workspace-tab-header-inner {
+  padding: 0px;
+}
+
+[aria-label="Home"] .workspace-tab-header-inner-title,
+[aria-label="Links"] .workspace-tab-header-inner-title {
+  display: none;
+}
+
+[aria-label="Home"] .mod-pinned,
+[aria-label="Links"] .mod-pinned {
+  display: none;
+}
+
+[aria-label="Home"] .workspace-tab-header-inner-close-button,
+[aria-label="Links"] .workspace-tab-header-inner-close-button {
+  display: none;
+}
+
+// Hover
+[aria-label="Home"]:hover,
+[aria-label="Links"]:hover {
+  max-width: 80px !important;
+}
+
+[aria-label="Home"]:hover .workspace-tab-header-inner-title,
+[aria-label="Links"]:hover .workspace-tab-header-inner-title {
+  display: none;
+}
+
+[aria-label="Home"]:hover .mod-pinned,
+[aria-label="Links"]:hover .mod-pinned {
+  display: flex;
+}
+
+[aria-label="Home"]:hover .workspace-tab-header-inner-close-button,
+[aria-label="Links"]:hover .workspace-tab-header-inner-close-button {
+  display: block;
+}
+
+.workspace-tab-header:not([aria-label="Home"],[aria-label="Links"]) {
+  max-width: 140px !important;
+}

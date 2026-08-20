@@ -1,0 +1,82 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (General)       ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.callout-content {
+  margin-bottom: calc(-1 * var(--CREARTS-spacing-tertiary));
+  overflow: visible;
+}
+
+// Background
+.callout {
+  box-sizing: border-box;
+  padding: var(--CREARTS-spacing-tertiary);
+  overflow: visible;
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-radius: var(--CREARTS-radius-primary);
+  border-color: var(--CREARTS-border-primary);
+  background: var(--CREARTS-background-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+  mix-blend-mode: unset;
+}
+
+// Codeblock
+.callout pre {
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-radius: var(--CREARTS-radius-secondary);
+  border-color: var(--CREARTS-border-primary);
+  background: var(--CREARTS-background-secondary);
+  box-shadow: var(--CREARTS-effects-pressed);
+}
+
+// Icon
+.callout-icon .svg-icon {
+  color: var(--CREARTS-text-primary);
+}
+
+// Title
+.callout-title {
+  color: var(--CREARTS-text-primary);
+  font-size: var(--h2-size);
+}
+
+// Code
+.callout code {
+  background: var(--CREARTS-interface-primary);
+}
+
+// Nested
+.callout .callout {
+  box-shadow: none;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (General)       ║ Metadata                                                                                ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.callout[data-callout-metadata="-header"] .callout-content,
+.callout[data-callout-metadata="flat|-header"] .callout-content,
+.callout[data-callout-metadata="outline|-header"] .callout-content,
+.callout[data-callout-metadata="pressed|-header"] .callout-content {
+  margin-top: calc(-1 * var(--CREARTS-spacing-tertiary));
+}
+
+// Remove Title
+.callout[data-callout-metadata="-header"] .callout-title,
+.callout[data-callout-metadata="flat|-header"] .callout-title,
+.callout[data-callout-metadata="outline|-header"] .callout-title,
+.callout[data-callout-metadata="pressed|-header"] .callout-title {
+  display: none;
+}
+
+// Remove Icon
+.callout[data-callout-metadata="-icon"] .callout-icon,
+.callout[data-callout-metadata="flat|-icon"] .callout-icon,
+.callout[data-callout-metadata="outline|-icon"] .callout-icon,
+.callout[data-callout-metadata="pressed|-icon"] .callout-icon {
+  display: none;
+}

@@ -1,0 +1,126 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Outline)       ║ Style                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout-metadata="pressed"] {
+  border-color: transparent;
+  background: var(--CREARTS-background-secondary);
+  box-shadow: var(--CREARTS-effects-pressed);
+}
+
+// Codeblock
+.callout[data-callout-metadata="pressed"] pre {
+  border-color: var(--CREARTS-border-secondary);
+  background: var(--CREARTS-background-primary);
+  box-shadow: var(--CREARTS-effects-flat);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Flat)          ║ Mixins                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+@mixin callout-pressed-default($name, $rgb) {
+  // Background
+  .callout[data-callout="#{$name}"][data-callout-metadata="pressed"] {
+    border-color: rgba(#{$rgb}, var(--CREARTS-callouts-border));
+    background: rgba(#{$rgb}, var(--CREARTS-callouts-background-half));
+  }
+
+  // Icon
+  .callout[data-callout="#{$name}"][data-callout-metadata="pressed"] > .callout-title .svg-icon {
+    --CREARTS-callouts-icon: rgba(#{$rgb}, var(--CREARTS-callouts-color));
+    color: var(--CREARTS-callouts-icon);
+  }
+
+  // Title
+  .callout[data-callout="#{$name}"][data-callout-metadata="pressed"] > .callout-title {
+    color: rgba(#{$rgb}, var(--CREARTS-callouts-color));
+  }
+
+  // Arrow
+  .callout[data-callout="#{$name}"][data-callout-metadata="pressed"] > .callout-title .lucide-chevron-down {
+    --CREARTS-callouts-icon: rgba(#{$rgb}, var(--CREARTS-callouts-color));
+    color: var(--CREARTS-callouts-icon);
+  }
+
+  // Code
+  .callout[data-callout="#{$name}"][data-callout-metadata="pressed"] code:not(pre code) {
+    background: rgba(#{$rgb}, var(--CREARTS-callouts-code));
+    color: rgba(#{$rgb}, var(--CREARTS-callouts-color));
+  }
+
+  // Code (Hover)
+  .callout[data-callout="#{$name}"][data-callout-metadata="pressed"] code:not(pre code):hover {
+    background: rgba(#{$rgb}, var(--CREARTS-callouts-code-hover));
+    color: rgba(#{$rgb}, var(--CREARTS-callouts-color));
+  }
+
+  // Codeblock
+  .callout[data-callout="#{$name}"][data-callout-metadata="pressed"] pre {
+    border-color: rgba(#{$rgb}, var(--CREARTS-callouts-border));
+    background: rgba(#{$rgb}, var(--CREARTS-callouts-background-half));
+    box-shadow: none;
+  }
+
+  // Checkbox
+  .callout[data-callout="#{$name}"][data-callout-metadata="pressed"] input {
+    border-color: rgba(#{$rgb}, var(--CREARTS-callouts-color));
+  }
+
+  .callout[data-callout="#{$name}"][data-callout-metadata="pressed"] .task-list-item.is-checked input {
+    border-color: rgba(#{$rgb}, var(--CREARTS-callouts-color));
+    background-color: rgba(#{$rgb}, var(--CREARTS-callouts-color));
+  }
+
+  // Checkbox (Hover)
+  .callout[data-callout="#{$name}"][data-callout-metadata="pressed"] .task-list-item.is-checked:hover input {
+    border-color: rgba(#{$rgb}, var(--CREARTS-callouts-checkbox-hover));
+    background-color: rgba(#{$rgb}, var(--CREARTS-callouts-checkbox-hover));
+  }
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Flat)          ║ Default                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Cyan
+@include callout-pressed-default(tip, var(--color-cyan-rgb));
+    @include callout-pressed-default(hint, var(--color-cyan-rgb));
+    @include callout-pressed-default(important, var(--color-cyan-rgb));
+@include callout-pressed-default(abstract, var(--color-cyan-rgb));
+    @include callout-pressed-default(summary, var(--color-cyan-rgb));
+    @include callout-pressed-default(tldr, var(--color-cyan-rgb));
+
+// Blue
+@include callout-pressed-default(note, var(--color-blue-rgb));
+@include callout-pressed-default(info, var(--color-blue-rgb));
+@include callout-pressed-default(todo, var(--color-blue-rgb));
+
+// Green
+@include callout-pressed-default(success, var(--color-green-rgb));
+    @include callout-pressed-default(check, var(--color-green-rgb));
+    @include callout-pressed-default(done, var(--color-green-rgb));
+
+// Orange
+@include callout-pressed-default(question, var(--color-orange-rgb));
+    @include callout-pressed-default(help, var(--color-orange-rgb));
+    @include callout-pressed-default(faq, var(--color-orange-rgb));
+@include callout-pressed-default(warning, var(--color-orange-rgb));
+    @include callout-pressed-default(caution, var(--color-orange-rgb));
+    @include callout-pressed-default(attention, var(--color-orange-rgb));
+
+// Red
+@include callout-pressed-default(failure, var(--color-red-rgb));
+    @include callout-pressed-default(fail, var(--color-red-rgb));
+    @include callout-pressed-default(missing, var(--color-red-rgb));
+@include callout-pressed-default(danger, var(--color-red-rgb));
+    @include callout-pressed-default(error, var(--color-red-rgb));
+@include callout-pressed-default(bug, var(--color-red-rgb));
+
+// Purple
+@include callout-pressed-default(example, var(--color-purple-rgb));
+
+// Yellow
+@include callout-pressed-default(quote, var(--color-yellow-rgb));
+    @include callout-pressed-default(cite, var(--color-yellow-rgb));

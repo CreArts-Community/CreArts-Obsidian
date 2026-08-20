@@ -12,7 +12,6 @@
   border-top: var(--tab-outline-width) solid var(--tab-outline-color);
   border-left: none;
   border-radius: 0px;
-  background: var(--CREARTS-background-tertiary);
 }
 
 // Items
@@ -47,10 +46,21 @@
   order: 4;
 }
 
+
+
+
+
 // Backlinks
 .status-bar .plugin-backlink {
   order: 5;
 }
+
+.status-bar .plugin-obsidian-day-planner {
+  order: 6;
+}
+
+
+
 
 // My Snippets
 .status-bar .status-bar-item.plugin-mysnippets-plugin {
@@ -66,8 +76,6 @@
   display: none;
   order: 20;
 }
-
-
 
 
 

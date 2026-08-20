@@ -1,25 +1,148 @@
+
+
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components               ║ Titlebar                                                                                ║
+// ║ Components (Titlebar)    ║ Zoom Fix                                                                                ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+body.is-frameless.in-progress, body.is-frameless.is-hidden-frameless.starter,
+body.is-frameless.is-hidden-frameless.is-popout-modal:not(.is-fullscreen),
+body.is-frameless:not(.is-hidden-frameless, .is-fullscreen) {
+    padding-top: calc(var(--CREARTS-height-titlebar) / var(--zoom-factor));
+}
+
+body.is-frameless.in-progress .titlebar,
+body.is-frameless.is-hidden-frameless.starter .titlebar,
+body.is-frameless.is-hidden-frameless.is-popout-modal:not(.is-fullscreen) .titlebar,
+body.is-frameless:not(.is-hidden-frameless, .is-fullscreen) .titlebar {
+  height: calc(var(--CREARTS-height-titlebar) / var(--zoom-factor));
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components (Titlebar)    ║ Base                                                                                    ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
 .titlebar {
-  z-index: 90;
-  height: var(--CREARTS-height-titlebar);
-  background: var(--CREARTS-background-tertiary);
+    background: var(--CREARTS-background-tertiary);
 }
 
-// Focused
-.is-focused .titlebar {
-  background: var(--CREARTS-background-tertiary);
-}
-
-// Title
+// Text
 .titlebar-text {
-  font-size: 0px;
+  font-size: calc(var(--font-ui-small) / var(--zoom-factor));
+  opacity: 0.6;
 }
 
 .titlebar-text::after {
-  content: "CreArts " var(--CREARTS-info-version) " - " var(--CREARTS-info-skin) " - by " var(--CREARTS-info-author);
-  font-size: var(--font-ui-small);
+//  content: "- CreArts " var(--CREARTS-info-version) " - " var(--CREARTS-info-skin) " - by " var(--CREARTS-info-author);
+  content: "- CreArts " var(--CREARTS-info-version);
+  font-size: calc(var(--font-ui-small) / var(--zoom-factor));
 }
+
+// Logo
+.mod-linux .titlebar-button.mod-logo,
+.mod-windows .titlebar-button.mod-logo {
+  width: 0 var(--CREARTS-spacing-primary);
+  background: var(--CREARTS-background-tertiary);
+}
+
+// Buttons
+.mod-linux .titlebar-button,
+.mod-windows .titlebar-button {
+  background: var(--CREARTS-background-tertiary);
+  padding: 0 var(--CREARTS-spacing-secondary);
+}
+
+// Hover
+.titlebar-button.mod-minimize:hover {
+  background: var(--CREARTS-interface-primary);
+}
+
+.titlebar-button.mod-maximize:hover {
+  background: var(--CREARTS-interface-primary);
+}
+
+
+
+// Focused
+.is-focused .titlebar-text {
+  opacity: 1;
+}
+
+
+
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components (Titlebar)    ║ Testing                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+
+
+
+
+/*
+body.is-frameless.in-progress, body.is-frameless.is-hidden-frameless.starter,
+body.is-frameless.is-hidden-frameless.is-popout-modal:not(.is-fullscreen),
+body.is-frameless:not(.is-hidden-frameless, .is-fullscreen) {
+    padding-top: calc(var(--CREARTS-height-titlebar) / var(--zoom-factor));
+}
+
+.titlebar {
+  height: calc(var(--CREARTS-height-titlebar) / var(--zoom-factor)) !important;
+}
+
+.titlebar-inner {
+  height: calc(var(--CREARTS-height-titlebar) / var(--zoom-factor)) !important;
+}
+
+.titlebar-text {
+  height: calc(var(--CREARTS-height-titlebar) / var(--zoom-factor)) !important;
+}
+
+.titlebar-button-container {
+  height: calc(var(--CREARTS-height-titlebar) / var(--zoom-factor)) !important;
+}
+
+
+.titlebar-button.mod-logo {
+  height: calc(var(--CREARTS-height-titlebar) / var(--zoom-factor)) !important;
+  width: calc(44px / var(--zoom-factor)) !important;
+
+  background: blue;
+}
+*/
+
+
+// Height 30 px -> 38px
+
+//--CREARTS-height-titlebar: 30px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

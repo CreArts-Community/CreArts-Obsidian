@@ -1,66 +1,96 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Search                   ║ Search                                                                                  ║
+// ║ Plugins (Search)         ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.search-input-container:before {
+  top: 25%;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins (Search)         ║ Search Row                                                                              ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
 .search-row {
-  margin-top: 0px;
+  margin: 0px 0px var(--CREARTS-layout-margin) 0px;
   gap: var(--CREARTS-layout-margin);
 }
 
 // Background
 .search-input-container input {
   min-height: var(--CREARTS-height-header);
-  border: none;
-  border-radius: var(--CREARTS-radius-primary);
   background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+  box-shadow: var(--CREARTS-effects-pressed);
+  border: none;
 }
 
-.search-row > .clickable-icon {
+.mod-sidedock .workspace-leaf-content .search-input-container + .clickable-icon {
+  min-width: var(--CREARTS-height-header);
+  min-height: var(--CREARTS-height-header);
+  border-radius: var(--CREARTS-radius-primary);
+  background: var(--CREARTS-background-secondary);
+  box-shadow: none;
+}
+
+/*
+.search-input-container + .clickable-icon {
   min-width: var(--CREARTS-height-header);
   min-height: var(--CREARTS-height-header);
   border-radius: var(--CREARTS-radius-primary);
   background: var(--CREARTS-background-secondary);
 }
+*/
 
-.search-results-info {
-  min-height: var(--CREARTS-height-header);
-  margin-top: var(--CREARTS-layout-margin-half);
-  margin-right: calc(var(--CREARTS-layout-margin) / 2);
-  margin-left: calc(var(--CREARTS-layout-margin) / 2);
-  padding: var(--CREARTS-spacing-primary);
-  border: none;
-  border-radius: var(--CREARTS-radius-primary);
-  background: var(--CREARTS-background-secondary);
-}
 
-.search-params {
-  min-height: var(--CREARTS-height-header);
-  margin-top: var(--CREARTS-layout-margin-half);
-  margin-right: calc(var(--CREARTS-layout-margin) / 2);
-  margin-bottom: var(--CREARTS-layout-margin-half);
-  margin-left: calc(var(--CREARTS-layout-margin) / 2);
-  border-radius: var(--CREARTS-radius-primary);
-  background: var(--CREARTS-background-secondary);
-}
 
-.search-params .setting-item {
-  padding: var(--CREARTS-spacing-primary);
-}
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins (Search)         ║ Info                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 .search-info-container {
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+  min-height: var(--CREARTS-height-header);
+  margin-bottom: var(--CREARTS-layout-margin);
+  padding: var(--CREARTS-spacing-primary);
   display: flex;
   align-items: center;
   justify-content: left;
-  height: var(--CREARTS-height-header);
-  margin-top: var(--CREARTS-layout-margin-half);
-  margin-right: calc(var(--CREARTS-layout-margin) / 2);
-  margin-bottom: var(--CREARTS-layout-margin-half);
-  margin-left: calc(var(--CREARTS-layout-margin) / 2);
-  border-radius: var(--CREARTS-radius-primary);
-  background: var(--CREARTS-background-secondary);
+
 }
 
-.search-input-container:before {
-  top: 25%;
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins (Search)         ║ Search Params                                                                           ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.search-params {
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+  margin: 0px 0px var(--CREARTS-layout-margin) 0px;
+  padding: var(--CREARTS-spacing-primary);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins (Search)         ║ Result Info                                                                             ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.search-results-info {
+  border: none;
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+  margin-bottom: var(--CREARTS-layout-margin);
+  min-height: var(--CREARTS-height-header);
+  padding-bottom: 0px;
+}
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Plugins (Search)         ║ Result                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.search-result-container {
+  padding: var(--CREARTS-spacing-primary);
 }

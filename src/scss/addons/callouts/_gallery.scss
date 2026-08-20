@@ -1,0 +1,91 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════╗
+// ║ Callouts (Gallery)       ║ General                                                                     ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.callout[data-callout="gallery"] {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.callout[data-callout="gallery"] p {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--CREARTS-spacing-tertiary);
+  margin: 0px;
+  padding: 0px;
+}
+
+// Remove Title
+.callout[data-callout="gallery"] .callout-title {
+  display: none;
+}
+
+// Remove Break
+.callout[data-callout="gallery"] br {
+  display: none;
+}
+
+// Remove Icon
+.callout[data-callout="gallery"] .external-link {
+  background-image: none;
+  padding: 0px;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════╗
+// ║ Callouts (Gallery)       ║ Image                                                                       ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.callout[data-callout="gallery"] .media-embed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--CREARTS-radius-secondary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+  text-decoration: none;
+  overflow: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
+  aspect-ratio: 1 / 1;
+}
+
+// Square
+.callout[data-callout="gallery"][data-callout-metadata="square"] .media-embed {
+  aspect-ratio: 1 / 1;
+}
+
+// Portrait
+.callout[data-callout="gallery"][data-callout-metadata="portrait"] .media-embed {
+  aspect-ratio: 3 / 4;
+}
+
+// Landscape
+.callout[data-callout="gallery"][data-callout-metadata="landscape"] .media-embed {
+  aspect-ratio: 16 / 9;
+}
+
+// Image
+.callout[data-callout="gallery"] .media-embed img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 0px;
+  transition: transform 0.3s ease;
+  background: var(--CREARTS-background-primary);
+}
+
+// Image (Hover)
+.callout[data-callout="gallery"] .media-embed:hover img {
+  transform: scale(1.1);
+  background: var(--CREARTS-interface-primary);
+}

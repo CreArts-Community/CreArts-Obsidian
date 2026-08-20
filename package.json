@@ -17,7 +17,7 @@
     "stylelint-scss": "^5.3.2"
   },
   "scripts": {
-    "watch": "sass --no-source-map --watch src/scss/index.scss theme.css --style compressed",
+    "watch": "sass --no-source-map --watch src/scss/index.scss theme.css --style=expanded",
     "lint": "stylelint \"**/src/scss/**/*.scss\"",
     "format": "prettier --write \"**/src/scss/**/*.{scss,css}\"",
     "convert": "node scripts/convert.js",

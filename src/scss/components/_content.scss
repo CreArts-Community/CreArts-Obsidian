@@ -1,5 +1,5 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components (Default)     ║ Content                                                                                 ║
+// ║ Components (Content)     ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
@@ -8,33 +8,46 @@
   margin-bottom: calc(var(--CREARTS-layout-margin) + var(--CREARTS-height-statusbar));
 }
 
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components (Content)     ║ View Header                                                                             ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
 // Header
-.mod-root .view-header {
+.view-header{
   min-height: var(--CREARTS-height-header);
   margin-right: var(--CREARTS-layout-margin);
   margin-bottom: var(--CREARTS-layout-margin-half);
-  margin-left: calc(var(--CREARTS-layout-margin) / 2);
+  margin-left: var(--CREARTS-layout-margin-half);
   border-radius: var(--CREARTS-radius-primary);
-  background: var(--CREARTS-background-secondary) !important;
+  background: var(--CREARTS-background-secondary);
 }
 
+.is-focused .workspace-leaf.mod-active .view-header {
+    background: var(--CREARTS-background-secondary);
+}
+
+// Sidedock open
 .is-right-sidedock-open .mod-root .view-header {
-  margin-right: calc(var(--CREARTS-layout-margin) / 2);
+  margin-right: var(--CREARTS-layout-margin-half);
 }
 
-// Content
-.mod-root .view-content {
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components (Content)     ║ Content                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.workspace-split.mod-root .view-content {
   width: auto;
   margin-top: var(--CREARTS-layout-margin-half);
   margin-right: var(--CREARTS-layout-margin);
-  margin-left: calc(var(--CREARTS-layout-margin) / 2);
+  margin-left: var(--CREARTS-layout-margin-half);
   border-radius: var(--CREARTS-radius-primary);
-  background: var(--CREARTS-background-secondary) !important;
-
+  background: var(--CREARTS-background-secondary);
 }
 
+// Sidedock open
 .is-right-sidedock-open .mod-root .view-content {
-  margin-right: calc(var(--CREARTS-layout-margin) / 2);
+  margin-right: var(--CREARTS-layout-margin-half);
 }
 
 // Remove Gradient
@@ -143,17 +156,75 @@
   margin-bottom: var(--CREARTS-layout-margin);
 }
 
-
 // Header
 .is-popout-window .mod-top-right-space .view-header {
-  margin-right: var(--CREARTS-layout-margin);
+  margin-right: var(--CREARTS-layout-margin-half);
   margin-left: var(--CREARTS-layout-margin-half);
 }
-
 
 // Content
 .is-popout-window .mod-top-right-space .view-content  {
-  margin-right: var(--CREARTS-layout-margin);
+  margin-right: var(--CREARTS-layout-margin-half);
   margin-left: var(--CREARTS-layout-margin-half);
 }
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components (Popout)      ║ Search                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.mod-active .document-search-container {
+  background-color: transparent;
+  margin: var(--CREARTS-spacing-primary);
+}
+
+.document-search, .document-replace {
+  gap: var(--size-4-2);
+  padding: 0px;
+}
+
+
+.document-search-buttons {
+  gap: var(--size-4-2);
+}
+
+// Buttons
+.document-search-buttons .clickable-icon {
+  height: 100% !important;
+  margin: 0px !important;
+  background: var(--CREARTS-background-primary);
+  border-radius: var(--CREARTS-radius-secondary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+}
+
+.document-search-buttons .clickable-icon:hover {
+  background: var(--CREARTS-background-secondary);
+  box-shadow: var(--CREARTS-effects-pressed);
+  color: var(--CREARTS-text-primary);
+}
+
+// Close Button
+.document-search-close-button {
+  background: var(--CREARTS-background-primary);
+  border-radius: var(--CREARTS-radius-secondary);
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  border-color: var(--CREARTS-border-primary);
+}
+
+.document-search-close-button:hover {
+  background: var(--CREARTS-background-secondary);
+  box-shadow: var(--CREARTS-effects-pressed);
+  color: var(--CREARTS-text-primary);
+}
+
+
+
+
+
+
 

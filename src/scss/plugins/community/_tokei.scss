@@ -19,10 +19,7 @@
 .clock-container {
   height: 100%;
   padding: var(--CREARTS-spacing-primary);
-
-
-  
-  padding-bottom: 0px !important;
+  padding-bottom: 0px;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -55,6 +52,10 @@
   font-size: 2rem;
   font-family: Varela;
   text-shadow: none;
+}
+
+.timezone-time {
+  font-family: Varela;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -91,7 +92,7 @@
   color: var(--CREARTS-text-primary);
   font-weight: 400;
   font-size: 1rem;
-  font-family: Varela !important;
+  font-family: Varela;
   text-shadow: none;
 }
 
@@ -146,7 +147,7 @@
   border-color: var(--CREARTS-border-primary);
   background: var(--CREARTS-background-primary);
   box-shadow: var(--CREARTS-effects-flat);
-  color: var(--CREARTS-text-primary) !important;
+  color: var(--CREARTS-text-primary);
   font-weight: 400;
   font-size: 0.8rem;
   font-family: Varela;
@@ -173,8 +174,8 @@
   width: 100%;
   min-width: unset;
   height: 40%;
-  padding: 0px !important;
-  margin-bottom: var(--CREARTS-spacing-primary) !important;
+  padding: 0px;
+  margin-bottom: var(--CREARTS-spacing-primary);
   margin-top: var(--CREARTS-spacing-primary);
   gap: var(--CREARTS-spacing-primary);
 }

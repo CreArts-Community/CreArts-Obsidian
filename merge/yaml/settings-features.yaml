@@ -10,6 +10,12 @@
     - 
         id: neumorphism
         title: Neumorphism
-        description: Toggle the Neumorphism effects off.
+        description: Disable Neumorphism effect.
+        type: class-toggle
+        default: false
+    - 
+        id: pets
+        title: Pets
+        description: Enable Statusbar Pet.
         type: class-toggle
         default: false

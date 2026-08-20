@@ -1,0 +1,623 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Chat)          ║ Vars                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.theme-dark, .theme-light {
+--chat-other-background: var(--CREARTS-interface-primary);
+--chat-other-border: var(--CREARTS-border-secondary);
+--chat-self-background: var(--CREARTS-background-primary);
+--chat-self-border: var(--CREARTS-border-primary);
+--chat-avatar: 36px; 
+--chat-title: 16px;
+--chat-date: 12px;
+--chat-tail: 12px;
+--chat-gutter: 8px;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Chat)          ║ Base                                                                                    ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Remove Icon
+.callout[data-callout="message-other"] .callout-icon,
+.callout[data-callout="message-self"] .callout-icon {
+  display: none;
+}
+
+// Spacing
+.callout[data-callout="message-other"],
+.callout[data-callout="message-self"] {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  position: relative;
+  padding: 0px 0px var(--CREARTS-spacing-tertiary) 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+// Background
+.callout[data-callout="message-other"] p,
+.callout[data-callout="message-other"] h1,
+.callout[data-callout="message-other"] h2,
+.callout[data-callout="message-other"] h3,
+.callout[data-callout="message-other"] h4,
+.callout[data-callout="message-other"] h5,
+.callout[data-callout="message-other"] h6,
+.callout[data-callout="message-self"] p,
+.callout[data-callout="message-self"] h1,
+.callout[data-callout="message-self"] h2,
+.callout[data-callout="message-self"] h3,
+.callout[data-callout="message-self"] h4,
+.callout[data-callout="message-self"] h5,
+.callout[data-callout="message-self"] h6 {
+  box-shadow: var(--CREARTS-effects-flat);
+  border-width: var(--CREARTS-border-width);
+  border-style: var(--CREARTS-border-style);
+  padding: var(--CREARTS-spacing-primary);
+  margin-top: var(--CREARTS-spacing-secondary);
+  margin-bottom: var(--CREARTS-spacing-secondary);
+
+  width: fit-content;
+  max-width: 70%;
+  min-width: 10%;
+}
+
+// Title
+.callout[data-callout="message-self"] .callout-title-inner,
+.callout[data-callout="message-other"] .callout-title-inner {
+  font-size: var(--chat-title);
+  font-weight: 500;
+  height: var(--chat-avatar);
+}
+
+// Image
+.callout[data-callout="message-self"] .callout-content img,
+.callout[data-callout="message-other"] .callout-content img {
+  max-width: 200px;
+}
+
+.callout[data-callout="message-self"] .callout-content p:has(img),
+.callout[data-callout="message-other"] .callout-content p:has(img) {
+  padding: 0px;
+  background: transparent ;
+  box-shadow: none;
+  border: none;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Chat)          ║ Message (Other)                                                                         ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.callout[data-callout="message-other"] p:first-child,
+.callout[data-callout="message-other"] h1:first-child,
+.callout[data-callout="message-other"] h2:first-child,
+.callout[data-callout="message-other"] h3:first-child,
+.callout[data-callout="message-other"] h4:first-child,
+.callout[data-callout="message-other"] h5:first-child,
+.callout[data-callout="message-other"] h6:first-child {
+  border-radius: 0px var(--CREARTS-spacing-secondary) var(--CREARTS-spacing-secondary) var(--CREARTS-spacing-secondary);
+}
+
+.callout[data-callout="message-other"] p,
+.callout[data-callout="message-other"] h1,
+.callout[data-callout="message-other"] h2,
+.callout[data-callout="message-other"] h3,
+.callout[data-callout="message-other"] h4,
+.callout[data-callout="message-other"] h5,
+.callout[data-callout="message-other"] h6 {
+  border-color: var(--chat-other-border);
+  background: var(--chat-other-background);
+  color: var(--CREARTS-text-primary);
+  margin-right: auto;
+  text-align: left;
+  margin-left: calc(var(--chat-tail) + var(--chat-avatar) + var(--CREARTS-spacing-primary));
+  border-radius: var(--CREARTS-spacing-secondary);
+}
+
+// Tail
+.callout[data-callout="message-other"] p:not(:has(span))::after,
+.callout[data-callout="message-other"] h1::after,
+.callout[data-callout="message-other"] h2::after,
+.callout[data-callout="message-other"] h3::after,
+.callout[data-callout="message-other"] h4::after,
+.callout[data-callout="message-other"] h5::after,
+.callout[data-callout="message-other"] h6::after {
+  content: "";
+  position: absolute;
+  background: var(--CREARTS-interface-primary);
+  top: 48px;
+  left: calc(var(--chat-avatar) + var(--CREARTS-spacing-primary) + 1px);
+  width: var(--chat-tail);
+  height: var(--chat-tail);
+  clip-path: polygon(100% 100%, 100% 0, 0 0);
+  border-top: 1px solid var(--CREARTS-border-secondary);
+}
+
+// Avatar
+.callout[data-callout="message-other"] .callout-title-inner img {
+  width: var(--chat-avatar);
+  height: var(--chat-avatar);
+  border-radius: 100%;
+  box-shadow: none;
+  object-fit: cover;
+  top: 0px;
+  left: 0px;
+  user-select: none; 
+}
+
+// Title
+.callout[data-callout="message-other"] .callout-title {
+  text-align: left;
+  justify-content: flex-start;
+
+}
+
+.callout[data-callout="message-other"] .callout-title-inner {
+  display: flex;
+  flex-direction: row;
+  gap: var(--CREARTS-spacing-primary);
+  align-items: center;
+  line-height: 0;
+}
+
+// No Avatar
+.callout[data-callout="message-other"]:not(:has(.callout-title-inner img)) p {
+  margin-left: var(--CREARTS-spacing-primary);
+}
+
+.callout[data-callout="message-other"]:not(:has(.callout-title-inner img)) p::after {
+  left: 0px;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Chat)          ║ Message (Self)                                                                          ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.callout[data-callout="message-self"] p:first-child,
+.callout[data-callout="message-self"] h1:first-child,
+.callout[data-callout="message-self"] h2:first-child,
+.callout[data-callout="message-self"] h3:first-child,
+.callout[data-callout="message-self"] h4:first-child,
+.callout[data-callout="message-self"] h5:first-child,
+.callout[data-callout="message-self"] h6:first-child {
+  border-radius: var(--CREARTS-radius-secondary) 0px var(--CREARTS-radius-secondary) var(--CREARTS-radius-secondary);
+}
+
+.callout[data-callout="message-self"] p,
+.callout[data-callout="message-self"] h1,
+.callout[data-callout="message-self"] h2,
+.callout[data-callout="message-self"] h3,
+.callout[data-callout="message-self"] h4,
+.callout[data-callout="message-self"] h5,
+.callout[data-callout="message-self"] h6 {
+  border-radius: var(--CREARTS-radius-secondary);
+  background: var(--chat-self-background);
+  border-color: var(--chat-self-border);
+  margin-left: auto;
+  text-align: left;
+  margin-right: calc(var(--CREARTS-spacing-primary) + var(--chat-avatar) + var(--chat-tail));
+}
+
+// Tail
+.callout[data-callout="message-self"] p:not(:has(span))::after,
+.callout[data-callout="message-self"] h1::after,
+.callout[data-callout="message-self"] h2::after,
+.callout[data-callout="message-self"] h3::after,
+.callout[data-callout="message-self"] h4::after,
+.callout[data-callout="message-self"] h5::after,
+.callout[data-callout="message-self"] h6::after {
+  content: "";
+  position: absolute;
+  background: var(--CREARTS-background-primary);
+  top: 48px;
+  right: calc(1px + var(--CREARTS-spacing-primary) + var(--chat-avatar));
+  width: var(--chat-tail);
+  height: var(--chat-tail);
+  clip-path: polygon(0 100%, 0 0, 100% 0);
+  border-top: 1px solid var(--CREARTS-border-primary);
+}
+
+// Avatar
+.callout[data-callout="message-self"] .callout-title-inner img {
+  width: var(--chat-avatar);
+  height: var(--chat-avatar);
+  border-radius: 100%;
+  box-shadow: none;
+  object-fit: cover;
+  top: 0;
+  right: 0px;
+  user-select: none; 
+}
+
+// Title
+.callout[data-callout="message-self"] .callout-title {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+
+.callout[data-callout="message-self"] .callout-title-inner {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: var(--CREARTS-spacing-primary);
+  align-items: center;
+  line-height: 0;
+}
+
+// No Avatar
+.callout[data-callout="message-self"]:not(:has(.callout-title-inner img)) p {
+  margin-right: var(--CREARTS-spacing-primary);
+}
+
+.callout[data-callout="message-self"]:not(:has(.callout-title-inner img)) p::after {
+  right: 0px;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Chat)          ║ Message Date                                                                            ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout="message-date"] {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  text-align: center;
+  color: var(--CREARTS-text-tertiary);
+  font-size: var(--chat-date);
+  font-weight: 500;
+  width: 100%;
+
+  padding: 0px;
+  user-select: none; 
+}
+
+// Spacing
+.callout[data-callout="message-date"] .callout-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.callout[data-callout="message-date"] .callout-content::before,
+.callout[data-callout="message-date"] .callout-content::after {
+  content: "";
+  flex-grow: 1;
+  height: 1.5px;
+  background: var(--CREARTS-interface-primary);
+}
+
+.callout[data-callout="message-date"] .callout-content::before {
+  right: 100%;
+}
+
+.callout[data-callout="message-date"] .callout-content::after {
+  left: 100%;
+}
+
+// Remove Title
+.callout[data-callout="message-date"] .callout-title {
+  display: none;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Chat)          ║ Gap                                                                                     ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout="message-gap"] {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  text-align: center;
+  margin: 0px;
+}
+
+// Content
+.callout[data-callout="message-gap"]::before {
+  content: "· · ·";
+  font-size: 30px;
+  line-height: 30px;
+}
+
+// Remove Title
+.callout[data-callout="message-gap"] .callout-title {
+  display: none;
+}
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Chat)          ║ Header                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout="message-header"] {
+
+    display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-direction: column;
+
+
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+// Remove Icon
+.callout[data-callout="message-header"] .callout-icon {
+  display: none;
+}
+
+// Avatar
+.callout[data-callout="message-header"] .callout-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.callout[data-callout="message-header"] .callout-title .callout-title-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.callout[data-callout="message-header"] .callout-title img {
+  width: 48px;
+  height: 48px;
+  border-radius: 90%;
+  margin-bottom: var(--CREARTS-spacing-primary);
+}
+
+// Content
+.callout[data-callout="message-header"] .callout-content {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 80%;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Chat)          ║ Reply (Other)                                                                           ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.callout[data-callout="message-other"][data-callout-metadata="reply"] {
+  display: flex;
+  padding: 0px;
+
+  margin-left: calc(var(--chat-avatar) + 6px);
+
+}
+
+// Remove
+.callout[data-callout="message-other"][data-callout-metadata="reply"] p::after {
+  display: none;
+}
+
+// Background
+.callout[data-callout="message-other"][data-callout-metadata="reply"] p,
+.callout[data-callout="message-other"][data-callout-metadata="reply"] h1,
+.callout[data-callout="message-other"][data-callout-metadata="reply"] h2,
+.callout[data-callout="message-other"][data-callout-metadata="reply"] h3,
+.callout[data-callout="message-other"][data-callout-metadata="reply"] h4,
+.callout[data-callout="message-other"][data-callout-metadata="reply"] h5,
+.callout[data-callout="message-other"][data-callout-metadata="reply"] h6 {
+  background: transparent;
+  box-shadow: none;
+  border-style: none;
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+}
+
+// Spacing
+.callout[data-callout="message-other"][data-callout-metadata="reply"] .callout-title-inner {
+  font-size: 12px;
+  width: 90px;
+}
+
+// Content
+.callout[data-callout="message-other"][data-callout-metadata="reply"] .callout-content {
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+  margin: 0px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.callout[data-callout="message-other"][data-callout-metadata="reply"] p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  max-width: 100%;
+}
+
+
+// Avatar
+.callout[data-callout="message-other"][data-callout-metadata="reply"] img {
+  width: calc(var(--chat-avatar) / 2);
+  height: calc(var(--chat-avatar) / 2);
+}
+
+// Line
+.callout[data-callout="message-other"][data-callout-metadata~="reply"]::before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-color: var(--CREARTS-text-secondary);
+  border-block-width: 2px 0;
+  border-inline-width: 2px 0;
+  border-start-start-radius: 6px;
+  top: 50%;
+  inset-inline: calc((var(--chat-avatar) / 2 + var(--chat-gutter)) * -1) 100%;
+  bottom: 0;
+  margin-inline: calc(2px * -0.5) var(--chat-gutter);
+  margin-top: calc(2px * -0.5);
+  margin-bottom: var(--chat-gutter);
+  margin-left: 1px;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Chat)          ║ Reply (Self)                                                                           ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.callout[data-callout="message-self"][data-callout-metadata="reply"] {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0px;
+
+  margin-right: calc(var(--chat-avatar) + 6px);
+
+}
+
+// Remove
+.callout[data-callout="message-self"][data-callout-metadata="reply"] p::after {
+  display: none;
+}
+
+// Background
+.callout[data-callout="message-self"][data-callout-metadata="reply"] p,
+.callout[data-callout="message-self"][data-callout-metadata="reply"] h1,
+.callout[data-callout="message-self"][data-callout-metadata="reply"] h2,
+.callout[data-callout="message-self"][data-callout-metadata="reply"] h3,
+.callout[data-callout="message-self"][data-callout-metadata="reply"] h4,
+.callout[data-callout="message-self"][data-callout-metadata="reply"] h5,
+.callout[data-callout="message-self"][data-callout-metadata="reply"] h6 {
+  background: transparent;
+  box-shadow: none;
+  border-style: none;
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+}
+
+// Spacing
+.callout[data-callout="message-self"][data-callout-metadata="reply"] .callout-title-inner {
+  font-size: 12px;
+  width: 90px;
+  
+}
+
+// Content
+.callout[data-callout="message-self"][data-callout-metadata="reply"] .callout-content {
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+  margin: 0px;
+  width: 100%;
+  overflow: hidden;
+
+}
+
+.callout[data-callout="message-self"][data-callout-metadata="reply"] p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  max-width: 100%;
+  text-align: right;
+  margin-left: auto;
+}
+
+// Avatar
+.callout[data-callout="message-self"][data-callout-metadata="reply"] img {
+  width: calc(var(--chat-avatar) / 2);
+  height: calc(var(--chat-avatar) / 2);
+}
+
+// Line
+.callout[data-callout="message-self"][data-callout-metadata~="reply"]::before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-color: var(--CREARTS-text-secondary);
+  border-block-width: 2px 0;
+  border-inline-width: 0 2px;
+  border-start-end-radius: 6px;
+  top: 50%;
+  inset-inline: 100% calc((var(--chat-avatar) / 2 + var(--chat-gutter)) * -1);
+  bottom: 0;
+  margin-inline: calc(2px * -0.5) var(--chat-gutter);
+  margin-top: calc(2px * -0.5);
+  margin-bottom: var(--chat-gutter);
+  margin-right: 1px;
+  margin-left: var(--chat-gutter);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

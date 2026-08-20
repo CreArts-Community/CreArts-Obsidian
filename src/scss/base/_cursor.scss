@@ -1,65 +1,27 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Cursor                   ║ General                                                                                 ║
+// ║ Base (Cursor)            ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.clickable-icon {
-  cursor: pointer !important;
-}
-
-.titlebar-button {
-  cursor: pointer !important;
-}
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Cursor                   ║ Tabs                                                                                    ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-
-.workspace-tab-header:not(.is-active) {
-  cursor: pointer !important;
-}
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Cursor                   ║ Callout                                                                                 ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
+button,
+.titlebar-button,
+.clickable-icon,
+.workspace-drawer-vault-switcher,
+.workspace-tab-header:not(.is-active) .workspace-tab-header-inner,
+.tree-item-self.is-clickable,
+.vertical-tab-nav-item,
+.checkbox-container,
+.community-item,
+.dropdown,
+.status-bar-item,
+.status-bar-item.plugin-editor-status
+.status-bar-item.plugin-properties,
+.metadata-input-checkbox,
+.metadata-add-button,
+.text-icon-buttonm,
 .callout.is-collapsible .callout-title {
-  cursor: pointer !important;
-}
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Cursor                   ║ Files                                                                                   ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-body:not(.is-grabbing) .tree-item-self.is-clickable:hover {
-  cursor: pointer !important;
-}
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Cursor                   ║ Settings                                                                                ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-button {
   cursor: pointer;
 }
 
-.dropdown {
-  cursor: pointer;
+.status-bar-item.plugin-obsidian-reading-time {
+  cursor: default;
 }
-
-.dropdown option[value="obsidian"] {
-  cursor: pointer !important;
-}
-
-.checkbox-container {
-  cursor: pointer;
-}
-
-input[type="color"] {
-  cursor: pointer;
-}
-
-.vertical-tab-nav-item {
-  cursor: pointer;
-}
-

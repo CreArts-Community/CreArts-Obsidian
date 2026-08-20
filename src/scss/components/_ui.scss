@@ -1,4 +1,22 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components (UI)          ║ Header                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+.is-focused .mod-left:before {
+  width: calc(var(--CREARTS-layout-margin) + var(--CREARTS-width-ribbon) + var(--CREARTS-layout-margin));
+  //background: var(--CREARTS-background-tertiary) !important;
+}
+
+// Spacing
+.workspace-ribbon .sidebar-toggle-button {
+  width: calc(var(--CREARTS-layout-margin) + var(--CREARTS-width-ribbon) + var(--CREARTS-layout-margin));
+}
+
+.workspace-ribbon.mod-left:before {
+  width: calc(var(--CREARTS-layout-margin) + var(--CREARTS-width-ribbon) + var(--CREARTS-layout-margin-half));
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Components (UI)          ║ Navigation                                                                              ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
@@ -26,36 +44,6 @@
   background: var(--CREARTS-interface-primary);
   box-shadow: var(--CREARTS-effects-flat);
 }
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components (UI)          ║ Sidedock                                                                                ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// Order
-.workspace-drawer-vault-actions .clickable-icon:nth-child(1) {
-  order: 2;
-}
-
-.workspace-drawer-vault-actions .clickable-icon:nth-child(2) {
-  order: 1;
-}
-
-// Spacing
-.workspace-sidedock-vault-profile {
-  height: var(--CREARTS-height-header) !important;
-}
-
-// Switcher
-/*
-.workspace-drawer-vault-switcher {
-  background: var(--CREARTS-background-primary);
-  border-radius: var(--CREARTS-radius-secondary) !important;
-  box-shadow: var(--CREARTS-effects-flat);
-  border-width: var(--CREARTS-border-width);
-  border-style: var(--CREARTS-border-style);
-  border-color: var(--CREARTS-border-primary);
-}
-*/
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Components (UI)          ║ Sidebar Toogle Button                                                                   ║
@@ -116,13 +104,12 @@
   border-width: var(--CREARTS-border-width);
   border-style: var(--CREARTS-border-style);
   border-color: transparent;
-  border-bottom: none !important;
+  border-bottom: none;
 }
 
 // Background (Active)
 .mod-root .workspace-tab-header.is-active {
   border-color: var(--CREARTS-border-primary);
-  background: var(--CREARTS-background-primary) !important;
   box-shadow: var(--CREARTS-effects-flat);
 }
 
@@ -139,11 +126,9 @@
   margin: var(--CREARTS-spacing-primary-half) -5px calc(var(--tab-outline-width)* -1);
 }
 
-
-
-
-
-
+.workspace-tab-header-inner {
+  gap: 0px;
+}
 
 
 
@@ -193,7 +178,7 @@
 
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components (UI)          ║ Content (Table)                                                                         ║
+// ║ Components (UI)          ║ Table                                                                                   ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 table {
@@ -201,7 +186,7 @@ table {
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components (UI)          ║ Content (Divider)                                                                       ║
+// ║ Components (UI)          ║ Divider                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 hr {
@@ -209,7 +194,7 @@ hr {
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components (UI)          ║ Content (Frontmatter)                                                                   ║
+// ║ Components (UI)          ║ Frontmatter                                                                             ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 /* color YAML value text */
@@ -219,18 +204,18 @@ span.cm-meta.cm-hmd-frontmatter + span.cm-hmd-frontmatter {
 
 /* color YAML value - if it's a number */
 span.cm-number.cm-hmd-frontmatter {
-  color: inherit !important;
+  color: inherit;
 }
 
 /* color YAML key text */
 span.cm-atom.cm-hmd-frontmatter {
-  color: #CD0952 !important;
+  color: var(--interactive-accent);
   font-weight: 600;
 }
 
 /* color YAML separator text */
 span.cm-meta.cm-hmd-frontmatter {
-  color: #CD0952 !important;
+  color: var(--interactive-accent);
   font-weight: 600;
 }
 
@@ -287,8 +272,8 @@ span.cm-meta.cm-hmd-frontmatter {
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 .cm-hmd-callout {
-  color: var(--CREARTS-accent-primary) !important;
-  font-weight: 600;
+  color: var(--interactive-accent) !important;
+  font-weight: 800;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -296,8 +281,8 @@ span.cm-meta.cm-hmd-frontmatter {
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 .menu {
-  max-height: 70vh;
   background: var(--CREARTS-background-primary);
+  max-height: 70vh;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -316,25 +301,51 @@ span.cm-meta.cm-hmd-frontmatter {
   transform: none;
 }
 
-
-
-
-
-
-
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Components (UI)          ║ Internal Link                                                                           ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Normal
-.internal-link {
-  color: var(--CREARTS-text-secondary) !important;
-  text-decoration: none !important;
-  transition: color 0.3s ease-in-out;
+.metadata-property-value .internal-link,
+.markdown-rendered .internal-link {
+  text-decoration: none;
 }
 
-// Hover
-.internal-link:hover {
-  color: var(--CREARTS-accent-primary) !important;
-  text-decoration: underline !important;
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Components (UI)          ║ PDF                                                                                     ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Spacing
+.workspace-leaf-content[data-type="pdf"] .view-content {
+  flex-direction: column-reverse;
+  background: transparent;
+  gap: 20px;
+}
+
+// Background
+.pdf-sidebar-content {
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+  margin-right: var(--CREARTS-layout-margin-half);
+}
+
+// Toolbar
+.pdf-toolbar {
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+  min-height: var(--CREARTS-height-header);
+  border: none;
+}
+
+.pdf-sidebar-content-wrapper {
+margin-right: var(--CREARTS-layout-margin-half);
+}
+
+.pdf-viewer-container {
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+}
+
+.pdf-content-container.sidebarOpen .pdf-viewer-container {
+  margin-left: var(--CREARTS-layout-margin-half);
 }
