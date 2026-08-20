@@ -7,6 +7,7 @@
   "private": true,
   "devDependencies": {
     "fs-extra": "^11.2.0",
+    "jsonfile": "^6.2.1",
     "merge-files": "^0.1.2",
     "pnpm": "^8.15.9",
     "prettier": "^3.4.1",
@@ -17,7 +18,6 @@
     "stylelint-scss": "^5.3.2"
   },
   "scripts": {
-    "watch": "sass --no-source-map --watch src/scss/index.scss theme.css --style=expanded",
     "lint": "stylelint \"**/src/scss/**/*.scss\"",
     "format": "prettier --write \"**/src/scss/**/*.{scss,css}\"",
     "convert": "node scripts/convert.js",
@@ -26,8 +26,11 @@
     "version": "node scripts/version.js",
     "compile": "sass --no-source-map src/scss/index.scss src/css/main.css",
     "compile:min": "sass --no-source-map src/scss/index.scss src/css/main.min.css --style compressed",
-    "build": "pnpm run version && pnpm run compile:min && pnpm run skins && pnpm run merge",
-    "release": "pnpm run version && pnpm run compile && pnpm run compile:min && pnpm run skins && pnpm run merge"
+    "snippets": "node scripts/snippets.js",
+    "snippets:watch": "node scripts/snippets.js --watch",
+    "watch": "sass --no-source-map --watch src/scss/index.scss theme.css --style=expanded",
+    "build": "pnpm run version && pnpm run compile:min && pnpm run skins && pnpm run merge && pnpm run snippets",
+    "release": "pnpm run version && pnpm run compile && pnpm run compile:min && pnpm run skins && pnpm run merge && pnpm run snippets"
   },
   "prettier": {
     "plugins": [

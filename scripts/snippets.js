@@ -1,54 +1,68 @@
 // ╔════════════════════════════════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ CreArts Script                                                                                                     ║
 // ╠══════════════════════════╦═════════════════════════════════════════════════════════════════════════════════════════╣
-// ║ Name:                    ║ Convert                                                                                 ║
+// ║ Name:                    ║ Snippets                                                                                ║
 // ║ Version:                 ║ 1.0.0                                                                                   ║
 // ║ Author:                  ║ AI, Corellan                                                                            ║
 // ║ License:                 ║ MIT                                                                                     ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-const fs = require('fs');
+const fs = require('fs-extra');
 const path = require('path');
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Convert                  ║ Paths                                                                                   ║
+// ║ Snippets                 ║ Paths                                                                                   ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Directory where the SCSS files are located
-const directory = './src/scss';
+// Define absolute paths referencing the local Obsidian vault structure
+const VAULT_ROOT = path.resolve(__dirname, '../../../');
+const SOURCE = path.join(VAULT_ROOT, 'themes', 'CreArts-Obsidian', 'snippets');
+const TARGET = path.join(VAULT_ROOT, 'snippets');
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Convert                  ║ Logic                                                                                   ║
+// ║ Snippets                 ║ Logic                                                                                   ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Function to recursively find SCSS files and convert block comments to line comments
-function convertCommentsInDirectory(dir) {
-  const files = fs.readdirSync(dir);
-
-  files.forEach((file) => {
-    const filePath = path.join(dir, file);
-    const stats = fs.statSync(filePath);
-
-    if (stats.isDirectory()) {
-      // If it's a directory, recursively call the function for subdirectories
-      convertCommentsInDirectory(filePath);
-    } else if (file.endsWith('.scss')) {
-      // If it's an SCSS file, read and convert the comments
-      const content = fs.readFileSync(filePath, 'utf-8');
-      const updatedContent = content.replace(/\/\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*+\//g, (match) => {
-        // Replace '/*' with '//' and remove '*/' completely
-        return match.replace(/\/\*/g, '//').replace(/\s*\*\//g, '');
-      });
-
-      fs.writeFileSync(filePath, updatedContent, 'utf-8');
-      console.log(`[CONVERT] Converted comments in ${filePath}`);
-    }
-  });
+// Function to copy the snippet files to the global Obsidian snippets folder
+async function sync() {
+  try {
+    // Ensure the script is executed within an active .obsidian environment
+    if (path.basename(VAULT_ROOT) !== '.obsidian' || !await fs.pathExists(SOURCE)) return;
+    
+    await fs.ensureDir(TARGET);
+    
+    // Copy all files, explicitly dereferencing any symlinks to enforce physical copies
+    await fs.copy(SOURCE, TARGET, { overwrite: true, dereference: true });
+    
+    console.log('[COPY] 📦 Snippets physically updated.');
+  } catch (err) {
+    console.error('[COPY] Error:', err.message);
+  }
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Convert                  ║ Execution                                                                               ║
+// ║ Snippets                 ║ Execution & Watch                                                                       ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Start the conversion process
-convertCommentsInDirectory(directory);
+(async () => {
+  // Execute an initial synchronization on startup
+  await sync();
+  
+  // Keep running and watch for file modifications if the '--watch' argument is provided
+  if (process.argv.includes('--watch')) {
+    console.log('[WATCH] 👀 Watching snippets for changes...');
+    
+    let timeout;
+    
+    // Listen for file events and debounce the execution to prevent overlapping syncs
+    fs.watch(SOURCE, { recursive: true }, (eventType, filename) => {
+      if (filename) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+          console.log(`[WATCH] 🔄 Change detected in: ${filename}`);
+          sync();
+        }, 100);
+      }
+    });
+  }
+})();

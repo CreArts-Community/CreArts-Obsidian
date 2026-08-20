@@ -1,108 +1,108 @@
 // ╔════════════════════════════════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Version                                                                                                            ║
-// ╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-
-const fs = require('fs-extra');
-const jsonfile = require('jsonfile');
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Versions                 ║ Paths                                                                                   ║
+// ║ CreArts Script                                                                                                     ║
+// ╠══════════════════════════╦═════════════════════════════════════════════════════════════════════════════════════════╣
+// ║ Name:                    ║ Version                                                                                 ║
+// ║ Version:                 ║ 1.0.0                                                                                   ║
+// ║ Author:                  ║ AI, Corellan                                                                            ║
+// ║ License:                 ║ MIT                                                                                     ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Paths to the files
+const fs = require('fs-extra');
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Version                  ║ Paths                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Define paths to the required project files
 const manifestJsonPath = 'manifest.json';
 const packageJsonPath = 'package.json';
 const cssInfoFilePath = 'merge/css/header-info.css';
 const cssVariablesFilePath = 'src/scss/variables/_general.scss';
 
-// Path to the cache folder and cache file
+// Define the cache directory and cache file path
 const cacheFolderPath = '.cache';
 const cacheFilePath = `${cacheFolderPath}/version.cache`;
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Versions                 ║ Copy Version                                                                            ║
+// ║ Version                  ║ Logic                                                                                   ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Function to copy the version from manifest.json to package.json
+// Function to extract the current version from manifest.json and apply it to package.json
 function copyVersionToPackageJson() {
-  const manifestJson = jsonfile.readFileSync(manifestJsonPath);
+  const manifestJson = fs.readJsonSync(manifestJsonPath);
   const newVersion = manifestJson.version;
 
-  const packageJson = jsonfile.readFileSync(packageJsonPath);
+  const packageJson = fs.readJsonSync(packageJsonPath);
   packageJson.version = newVersion;
 
-  jsonfile.writeFileSync(packageJsonPath, packageJson, { spaces: 2 });
+  // Write back to package.json with 2 spaces for indentation
+  fs.writeJsonSync(packageJsonPath, packageJson, { spaces: 2 });
 }
 
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Versions                 ║ Info                                                                                    ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-//Regular expression to update the version number in the CSS file.
+// Regular expression to locate and update the version string within the CSS header info file
 const regexInfo = /\/\* ║ Version:.*(\d+\.\d+\.\d+).* \*\//;
 
-// Function to update the version number in the CSS file
 function updateCssInfoFileVersion(newVersion) {
   let cssInfoContent = fs.readFileSync(cssInfoFilePath, 'utf-8');
   
-  // Use the regex to replace the old version number
-  cssInfoContent = cssInfoContent.replace(regexInfo, `/* ║ Version:                 ║ ${newVersion}                                                                                   ║ */`);
-
+  // Replace the matched line with the freshly updated version number
+  cssInfoContent = cssInfoContent.replace(
+    regexInfo,
+    `/* ║ Version:                 ║ ${newVersion}                                                                                   ║ */`
+  );
+  
   fs.writeFileSync(cssInfoFilePath, cssInfoContent);
 }
 
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Versions                 ║ Variables                                                                               ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-//Regular expression to update the version number in the CSS file.
+// Regular expression to locate and update the SCSS version variable
 const regexVariables = /--CREARTS-info-version:\s*"v?([^"]*)"/;
 
-// Function to update the version number in the CSS file
 function updateCssVariablesFileVersion(newVersion) {
   let cssVariablesContent = fs.readFileSync(cssVariablesFilePath, 'utf-8');
   
-  // Use the regex to replace the old version number
-  cssVariablesContent = cssVariablesContent.replace(regexVariables, `--CREARTS-info-version: "v${newVersion}"`);
-
+  // Replace the matched variable definition with the new version number
+  cssVariablesContent = cssVariablesContent.replace(
+    regexVariables,
+    `--CREARTS-info-version: "v${newVersion}"`
+  );
+  
   fs.writeFileSync(cssVariablesFilePath, cssVariablesContent);
 }
 
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Versions                 ║ Cache                                                                                   ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// Function to get the version from the cache
+// Function to read the previously cached version string
 function getVersionFromCache() {
   try {
     return fs.readFileSync(cacheFilePath, 'utf-8').trim();
   } catch (err) {
-    // If the cache file doesn't exist or an error occurs, return an empty string
+    // Return an empty string if the cache file does not exist yet
     return '';
   }
 }
 
-// Function to save the version to the cache
+// Function to write the newly processed version string into the cache file
 function saveVersionToCache(version) {
-  fs.ensureDirSync(cacheFolderPath); // Ensure cache folder exists
+  fs.ensureDirSync(cacheFolderPath);
   fs.writeFileSync(cacheFilePath, version);
 }
 
-// Get the current version from manifest.json
-const currentVersion = jsonfile.readFileSync(manifestJsonPath).version;
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Version                  ║ Execution                                                                               ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Get the cached version from the cache file
+// Read the current source of truth for the version (manifest.json)
+const currentVersion = fs.readJsonSync(manifestJsonPath).version;
+
+// Retrieve the last processed version from the cache
 const cachedVersion = getVersionFromCache();
 
-// Compare the current version with the cached version
+// Compare and execute updates only if the version has changed
 if (currentVersion !== cachedVersion) {
-  // If they don't match, update package.json, the CSS file, and the cache
   copyVersionToPackageJson();
   updateCssInfoFileVersion(currentVersion);
   updateCssVariablesFileVersion(currentVersion);
   saveVersionToCache(currentVersion);
-  console.log('Version updated in package.json and CSS file');
+  
+  console.log('[VERSION] 🚀 Version updated in package.json and CSS file.');
 } else {
-  // If they match, print a message indicating no change
-  console.log('No change in version, script not executed');
+  console.log('[VERSION] 🚀 No change in version, script not executed.');
 }
