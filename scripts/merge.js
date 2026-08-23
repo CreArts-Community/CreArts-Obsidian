@@ -18,8 +18,7 @@ const path = require("path");
 // Define the file paths to be merged in sequential order
 const filePaths = [
   "merge/css/header-info.css",
-  "merge/css/header-license.css",
-  "merge/css/header-commands.css",
+//"merge/css/header-license.css",
   "merge/css/header-settings.css",
   "merge/txt/settings-top.txt",
   "merge/yaml/settings-info.yaml",
@@ -109,9 +108,9 @@ async function mergeAllFiles() {
       }
     }
 
-    console.log("[MERGE] Files successfully merged!");
+    console.log("[MERGE] 💡 Files successfully merged!");
   } catch (err) {
-    console.error("[MERGE] Error while merging files:", err);
+    console.error("[MERGE] 💡 Error while merging files:", err);
   }
 }
 

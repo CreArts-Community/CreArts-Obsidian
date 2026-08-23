@@ -5,7 +5,7 @@
 .theme-dark {
 
 // Info
---CREARTS-info-skin: var(--SKIN-info-skin, "Default (Dark)");
+--CREARTS-info-skin: var(--SKIN-info-skin, "Default");
 
 // Text
 --CREARTS-text-primary: hsla(var(--CREARTS-content-h), var(--CREARTS-content-s), var(--CREARTS-content-l), calc(var(--CREARTS-content-a) - 0));

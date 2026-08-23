@@ -1,0 +1,37 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════╗
+// ║ Callouts (Text)          ║ General                                                                     ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout="text"] {
+  background: transparent;
+  border-radius: 0px;
+  box-shadow: none;
+  border: none;
+  overflow: visible;
+  padding: 0px;
+}
+
+// Spacing
+.callout[data-callout="text"] .callout-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  column-gap: var(--CREARTS-spacing-tertiary);
+  overflow: visible;
+}
+
+
+.callout[data-callout="text"] .callout-title {
+  display: none;
+}
+
+// Small
+.callout[data-callout="text"][data-callout-metadata="small"] .callout-content p {
+  font-size: 0.6em;
+}
+
+// Big
+.callout[data-callout="text"][data-callout-metadata="big"] .callout-content p {
+  font-size: 1.6em;
+}

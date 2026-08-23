@@ -1,0 +1,47 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Callouts (Divider)       ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Background
+.callout[data-callout="divider"] {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  padding: 0px 0px var(--CREARTS-spacing-tertiary) 0px;
+}
+
+// Title
+.callout[data-callout="divider"] .callout-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--CREARTS-text-tertiary);
+  font-size: var(--font-ui-small);
+  font-weight: 500;
+  user-select: none;
+}
+
+// Remove Icon
+.callout[data-callout="divider"] .callout-icon {
+  display: none;
+}
+
+// Center
+.callout[data-callout="divider"] .callout-title::before,
+.callout[data-callout="divider"] .callout-title::after {
+  content: "";
+  flex-grow: 1;
+  height: 1.5px;
+  background: var(--CREARTS-interface-primary);
+}
+
+// Left
+.callout[data-callout="divider"][data-callout-metadata="left"] .callout-title::before {
+  display: none;
+}
+
+// Right
+.callout[data-callout="divider"][data-callout-metadata="right"] .callout-title::after {
+  display: none;
+}

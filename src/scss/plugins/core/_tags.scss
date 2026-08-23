@@ -2,6 +2,27 @@
 // ║ Plugins                  ║ Tags                                                                                    ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-.tree-item-self:not(.mod-collapsible) .tree-item-inner-text > .tree-item-inner-text::before {
+.tag-container .tree-item-self:not(.mod-collapsible) .tree-item-inner-text > .tree-item-inner-text::before {
   content: "# ";
 }
+
+
+/*
+.tag-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag-container .tree-item-self:not(.mod-collapsible) {
+  order: -1 !important;
+}
+
+
+
+.tag-container .tree-item-self:has(.mod-collapsible) {
+  order: -1;
+  background: red !important;
+}
+*/

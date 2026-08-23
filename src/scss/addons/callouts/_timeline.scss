@@ -70,7 +70,6 @@
   border-width: var(--CREARTS-border-width);
   border-style: var(--CREARTS-border-style);
   border-color: var(--CREARTS-border-primary);
-  color: var(--CREARTS-text-primary) !important;
   flex: 1 1 200px;
   order: 3;
   z-index: 2;
@@ -84,7 +83,6 @@
   margin: 0px;
   height: var(--timeline-height);
   overflow-y: scroll;
-
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -102,7 +100,6 @@
   border-width: var(--CREARTS-border-width);
   border-style: var(--CREARTS-border-style);
   border-color: var(--CREARTS-border-primary);
-  color: var(--CREARTS-text-primary) !important;
   text-decoration: none;
   flex: 1 1 200px;
   order: 1;
