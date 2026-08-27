@@ -6,9 +6,9 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "concurrently": "^10.0.5",
     "fs-extra": "^11.2.0",
     "jsonfile": "^6.2.1",
-    "merge-files": "^0.1.2",
     "mini-svg-data-uri": "^1.4.4",
     "pnpm": "^8.15.9",
     "sass": "^1.81.0",
@@ -23,13 +23,15 @@
     "compile:min": "sass --no-source-map src/scss/index.scss src/css/main.min.css --style compressed",
     "merge": "node scripts/merge.js",
     "skins": "node scripts/skins.js",
-    "snippets": "node scripts/snippets.js",
-    "snippets:watch": "node scripts/snippets.js --watch",
     "version": "node scripts/version.js",
     "svgo": "node scripts/svgo.js --write",
+    "snippets": "node scripts/snippets.js",
+    "snippets:watch": "node scripts/snippets.js --watch",
+    "mobile": "node scripts/mobile.js",
+    "mobile:watch": "node scripts/mobile.js --watch",
     "watch": "sass --no-source-map --watch src/scss/index.scss theme.css --style=expanded",
-    "build": "pnpm run version && pnpm run compile:min && pnpm run skins && pnpm run merge && pnpm run snippets",
-    "release": "pnpm run version && pnpm run compile && pnpm run compile:min && pnpm run skins && pnpm run merge && pnpm run snippets"
+    "dev": "concurrently --kill-others \"pnpm run watch\" \"pnpm run snippets:watch\"",
+    "build": "pnpm run version && pnpm run compile && pnpm run compile:min && pnpm run skins && pnpm run merge && pnpm run snippets"
   },
   "stylelint": {
     "plugins": [

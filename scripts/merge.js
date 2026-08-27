@@ -2,12 +2,11 @@
 // ║ CreArts Script                                                                                                     ║
 // ╠══════════════════════════╦═════════════════════════════════════════════════════════════════════════════════════════╣
 // ║ Name:                    ║ Merge                                                                                   ║
-// ║ Version:                 ║ 1.0.0                                                                                   ║
-// ║ Author:                  ║ AI, Corellan                                                                            ║
+// ║ Version:                 ║ 2.0.0                                                                                   ║
+// ║ Author:                  ║ AI                                                                                      ║
 // ║ License:                 ║ MIT                                                                                     ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-const mergeFiles = require("merge-files");
 const fs = require("fs").promises;
 const path = require("path");
 
@@ -17,6 +16,7 @@ const path = require("path");
 
 // Define the file paths to be merged in sequential order
 const filePaths = [
+
   "merge/css/header-info.css",
 //"merge/css/header-license.css",
   "merge/css/header-settings.css",
@@ -72,6 +72,20 @@ async function fileExists(filePath) {
 // ║ Merge                    ║ Core Logic                                                                              ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
+// Native function to read, clean BOM (U+FEFF), and merge files sequentially
+async function mergeFilesClean(inputPaths, destination) {
+  const contents = await Promise.all(
+    inputPaths.map(async (filePath) => {
+      let content = await fs.readFile(filePath, "utf8");
+      // Strips any potential Byte Order Mark (U+FEFF) from the start of each file
+      return content.replace(/^\uFEFF/, "");
+    })
+  );
+
+  // Join all file contents cleanly separated by a newline
+  await fs.writeFile(destination, contents.join("\n"), "utf8");
+}
+
 // Main function to execute the file merging process
 async function mergeAllFiles() {
   try {
@@ -83,7 +97,7 @@ async function mergeAllFiles() {
 
     if (!isCached) {
       // Merge all source files directly if no cache exists
-      await mergeFiles(filePaths, outputPath);
+      await mergeFilesClean(filePaths, outputPath);
 
       // Store a copy of the newly merged file in the cache directory
       await fs.copyFile(outputPath, cacheFilePath);
@@ -101,7 +115,7 @@ async function mergeAllFiles() {
 
       if (sourceChanged) {
         // Re-merge the files because at least one source file was modified
-        await mergeFiles(filePaths, outputPath);
+        await mergeFilesClean(filePaths, outputPath);
 
         // Update the cache file with the newly generated output
         await fs.copyFile(outputPath, cacheFilePath);

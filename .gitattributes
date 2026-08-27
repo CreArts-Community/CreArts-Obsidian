@@ -1,0 +1,29 @@
+# 1. Global default: Enforce LF line endings for all text files
+* text=auto eol=lf
+
+# 2. Source code, stylesheets & web assets
+*.js        text eol=lf
+*.json      text eol=lf
+*.css       text eol=lf
+*.scss      text eol=lf
+*.svg       text eol=lf
+
+# 3. Build configs, metadata & Obsidian theme files
+*.yaml      text eol=lf
+*.yml       text eol=lf
+*.txt       text eol=lf
+*.md        text eol=lf
+.editorconfig text eol=lf
+.gitignore    text eol=lf
+LICENSE       text eol=lf
+README        text eol=lf
+
+# 4. Binary files (prevent text line-ending conversion)
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.ico       binary
+*.woff      binary
+*.woff2     binary
+*.ttf       binary
