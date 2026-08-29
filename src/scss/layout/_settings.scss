@@ -1,24 +1,54 @@
 
-// Footer als eigenständiges Element NACH dem scrollenden Container, nicht als ::after davon
+
+
+
+
+
+
+
+.vertical-tab-header {
+  container-type: size;
+  container-name: settings-info;
+}
+
 .vertical-tab-header::after {
-  content: "CreArts " var(--CREARTS-info-version) "\a";
+//  content:"Theme:" "\a" "・" var(--CREARTS-info-theme-name) " " var(--CREARTS-info-theme-version) "\a" "・by " var(--CREARTS-info-theme-author) "\a" "\a" "Skin:" "\a" "・" var(--CREARTS-info-skin-name) " " var(--CREARTS-info-skin-version) "\a" "・by " var(--CREARTS-info-skin-author) "\a";
+ content:"Theme: " var(--CREARTS-info-theme-name) " " var(--CREARTS-info-theme-version) "\a" "by " var(--CREARTS-info-theme-author) "\a" "\a" "Skin: " var(--CREARTS-info-skin-name) " " var(--CREARTS-info-skin-version) "\a" "by " var(--CREARTS-info-skin-author) "\a";
+
+
   white-space: pre;
   flex-shrink: 0;
 
+
   display: flex;
-  align-items: center;
-  height: 90px;
-  margin: var(--CREARTS-spacing-tertiary);
-  padding: var(--CREARTS-spacing-tertiary);
+  align-items: top;
+  height: auto;
+
+  margin: var(--CREARTS-spacing-tertiary) 0px 0px 0px;
+  padding: calc(var(--CREARTS-spacing-tertiary) + 0px) var(--CREARTS-spacing-tertiary);
 
   background: var(--CREARTS-background-secondary);
   border-radius: var(--CREARTS-radius-primary);
 
-  font-size: var(--font-ui-medium);
-  font-weight: var(--font-semibold);
+  font-size: var(--CREARTS-font-size-quaternary);
+  font-weight: var(--CREARTS-font-weight-semibold);
   color: var(--CREARTS-text-primary);
-  cursor: text;
+
+
+  overflow: hidden;
 }
+
+@container settings-info (max-height: 450px) {
+  .vertical-tab-header::after {
+    display: none;
+  }
+}
+
+
+
+
+
+//  content: "- CreArts " var(--CREARTS-info-version) " (" var(--CREARTS-info-skin) " by " var(--CREARTS-info-author) ")";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Settings                 ║ General                                                                                 ║
@@ -32,15 +62,15 @@
   padding-inline-end: var(--CREARTS-spacing-tertiary);
 }
 
-.vertical-tab-content .setting-item-headin {
-  font-weight: var(--font-semibold);
+.vertical-tab-content .setting-item-heading {
+  font-weight: var(--CREARTS-font-weight-semibold);
 }
 
 // Font
 .setting-item.setting-item-heading .setting-item-name {
   color: var(--text-normal);
-  font-size: var(--font-ui-large);
-  line-height: var(--line-height-tight);
+  font-size: var(--CREARTS-font-size-ui-quaternary);
+
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -59,8 +89,8 @@
 .modal.mod-settings .vertical-tab-header {
   padding: var(--CREARTS-layout-margin);
   border: none;
-  width: var(--CREARTS-width-settings);
-  min-width: var(--CREARTS-width-settings);
+  max-width: var(--CREARTS-width-settings);
+// min-width: var(--CREARTS-width-settings);
 }
 
 // Background
@@ -77,11 +107,26 @@
 
 // Header
 .vertical-tab-header-group-title {
-  font-size: var(--font-ui-medium);
+  font-size: var(--CREARTS-font-size-ui-tertiary);
   color: var(--CREARTS-text-primary);
 }
 
 
+
+
+/* Standard für schmale Bildschirme / Laptops */
+.modal.mod-settings .vertical-tab-header {
+  width: 2220px; /* Obsidian Standard liegt meist bei 200-240px */
+}
+
+/* Widescreen-Optimierung: Ab 1600px Bildschirmbreite */
+@media (min-width: 1600px) {
+  .modal.mod-settings .vertical-tab-header {
+    width: 280px; /* Mehr Platz für Menüpunkte & deine Info-Box */
+  }
+
+
+}
 
 
 
@@ -155,6 +200,23 @@
   border-top: unset;
 }
 */
+
+// Remove Divider
+.setting-group .setting-item:not(.setting-item-heading)::before {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -299,5 +361,9 @@
 .setting-group .setting-group-search > .search-input-container {
     margin-inline: 0px;
 }
+
+
+
+
 
 

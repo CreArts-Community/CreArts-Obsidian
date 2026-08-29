@@ -1,15 +1,9 @@
-/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
-/* ║ Skin                                                                      ║ */
-/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
-/* ║ Skin:                    ║ Nebula                                         ║ */
-/* ║ Author:                  ║ Corellan & Loremly                             ║ */
-/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
-
 .theme-dark.skin-dark-nebula {
 
 /* Info */
---SKIN-info-skin: "Nebula";
---SKIN-info-author: "Corellan & Loremly";
+--SKIN-info-name: "Nebula";
+--SKIN-info-author: "Core & Loremly";
+--SKIN-info-version: "v1.0.0";
 
 /* Settings */
 --SKIN-lightness: 0%;

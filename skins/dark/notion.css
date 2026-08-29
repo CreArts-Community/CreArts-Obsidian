@@ -1,15 +1,9 @@
-/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
-/* ║ Skin                                                                      ║ */
-/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
-/* ║ Skin:                    ║ Notion                                         ║ */
-/* ║ Author:                  ║ Corellan                                       ║ */
-/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
-
 .theme-dark.skin-dark-notion {
 
 /* Info */
---SKIN-info-skin: "Notion";
---SKIN-info-author: "Corellan";
+--SKIN-info-name: "Notion";
+--SKIN-info-author: "Core";
+--SKIN-info-version: "v1.0.0";
 
 /* Settings */
 --SKIN-lightness: 0%;

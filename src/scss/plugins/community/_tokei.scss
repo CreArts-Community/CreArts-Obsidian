@@ -1,4 +1,4 @@
-
+/*
 // Show Date
 .date-container {
   display: none;
@@ -8,6 +8,9 @@
 .week-quarter-container {
   display: none;
 }
+*/
+
+
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Tokei                    ║ General                                                                                 ║
@@ -16,7 +19,9 @@
 // Spacing
 .clock-container {
   height: 100%;
+  width: 100%;
   padding: var(--CREARTS-spacing-primary);
+  overflow-y: scroll;
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
@@ -154,6 +159,7 @@
 // ║ Tokei                    ║ Timezone                                                                                ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
+
 // Spacing
 .timedate-container + div {
   display: flex;
@@ -164,20 +170,13 @@
 }
 
 .timezone-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
   min-width: unset;
-  height: 40%;
+  min-height: 20px;
   padding: 0px;
   margin-top: var(--CREARTS-spacing-primary);
   gap: var(--CREARTS-spacing-primary);
 
-  /*
-  flex-wrap: wrap;
-  */
+  overflow: scroll;
 }
 
 // Background
@@ -199,7 +198,7 @@
   background: var(--CREARTS-background-primary);
   box-shadow: var(--CREARTS-effects-flat);
   font-size: var(--font-small);
-
+flex: 1 0 3% !important;
 
 }
 

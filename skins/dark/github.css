@@ -1,14 +1,8 @@
-/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
-/* ║ Skin                                                                      ║ */
-/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
-/* ║ Skin:                    ║ GitHub                                         ║ */
-/* ║ Author:                  ║ Corellan                                       ║ */
-/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
-
 .theme-dark.skin-dark-github {
 /* Info */
---SKIN-info-skin: "GitHub";
---SKIN-info-author: "Corellan";
+--SKIN-info-name: "GitHub";
+--SKIN-info-author: "Core";
+--SKIN-info-version: "v1.0.0";
 
 /* Settings */
 --SKIN-lightness: 0%;

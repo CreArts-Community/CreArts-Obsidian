@@ -1,15 +1,9 @@
-/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
-/* ║ Skin                                                                      ║ */
-/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
-/* ║ Skin:                    ║ Default                                        ║ */
-/* ║ Author:                  ║ Corellan                                       ║ */
-/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
-
 .theme-dark.skin-dark-default {
 
 /* Info */
---SKIN-info-skin: "Default";
---SKIN-info-author: "Corellan";
+--SKIN-info-name: "Default";
+--SKIN-info-author: "Core";
+--SKIN-info-version: "v1.0.0";
 
 /* Settings */
 --SKIN-lightness: 0%;

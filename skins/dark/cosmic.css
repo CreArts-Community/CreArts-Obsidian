@@ -1,15 +1,9 @@
-/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
-/* ║ Skin                                                                      ║ */
-/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
-/* ║ Skin:                    ║ Cosmic                                         ║ */
-/* ║ Author:                  ║ Corellan & WmeLuna                             ║ */
-/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
-
 .theme-dark.skin-dark-cosmic {
 
 /* Info */
---SKIN-info-skin: "Cosmic";
---SKIN-info-author: "Corellan & WmeLuna";
+--SKIN-info-name: "Cosmic";
+--SKIN-info-author: "Core & WmeLuna";
+--SKIN-info-version: "v1.0.0";
 
 /* Settings */
 --SKIN-lightness: 0%;

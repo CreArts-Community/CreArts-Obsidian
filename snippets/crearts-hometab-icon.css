@@ -1,0 +1,70 @@
+/* ╔════════════════════════════════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗ */
+/* ║ CreArts Add-On                                                                                                     ║ */
+/* ╠══════════════════════════╦═════════════════════════════════════════════════════════════════════════════════════════╣ */
+/* ║ Name:                    ║ Hometab Icon                                                                            ║ */
+/* ║ Version:                 ║ 1.0.0                                                                                   ║ */
+/* ║ Author:                  ║ Corellan                                                                                ║ */
+/* ║ License:                 ║ MIT                                                                                     ║ */
+/* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
+
+/* ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗ */
+/* ║ Remove Help              ║ General                                                                                 ║ */
+/* ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝ */
+
+/* Normal */
+.workspace .mod-root .workspace-tab-header[aria-label="Home"],
+.workspace .mod-root .workspace-tab-header[aria-label="Desktop"],
+.workspace .mod-root .workspace-tab-header[aria-label="Mobile"] {
+  max-width: 40px;
+}
+
+/* Spacing */
+.workspace .mod-root .workspace-tab-header[aria-label="Home"] .workspace-tab-header-inner,
+.workspace .mod-root .workspace-tab-header[aria-label="Desktop"] .workspace-tab-header-inner,
+.workspace .mod-root .workspace-tab-header[aria-label="Mobile"] .workspace-tab-header-inner {
+  padding: 0px;
+}
+
+.workspace .mod-root .workspace-tab-header[aria-label="Home"] .workspace-tab-header-inner-title,
+.workspace .mod-root .workspace-tab-header[aria-label="Home"] .mod-pinned,
+.workspace .mod-root .workspace-tab-header[aria-label="Home"] .workspace-tab-header-inner-close-button,
+.workspace .mod-root .workspace-tab-header[aria-label="Desktop"] .workspace-tab-header-inner-title,
+.workspace .mod-root .workspace-tab-header[aria-label="Desktop"] .mod-pinned,
+.workspace .mod-root .workspace-tab-header[aria-label="Desktop"] .workspace-tab-header-inner-close-button,
+.workspace .mod-root .workspace-tab-header[aria-label="Mobile"] .workspace-tab-header-inner-title,
+.workspace .mod-root .workspace-tab-header[aria-label="Mobile"] .mod-pinned,
+.workspace .mod-root .workspace-tab-header[aria-label="Mobile"] .workspace-tab-header-inner-close-button {
+  display: none;
+}
+
+/* Hover */
+.workspace .mod-root .workspace-tab-header[aria-label="Home"]:hover,
+.workspace .mod-root .workspace-tab-header[aria-label="Desktop"]:hover,
+.workspace .mod-root .workspace-tab-header[aria-label="Mobile"]:hover {
+  max-width: 80px;
+}
+
+.workspace .mod-root .workspace-tab-header[aria-label="Home"]:hover .workspace-tab-header-inner-title,
+.workspace .mod-root .workspace-tab-header[aria-label="Desktop"]:hover .workspace-tab-header-inner-title,
+.workspace .mod-root .workspace-tab-header[aria-label="Mobile"]:hover .workspace-tab-header-inner-title {
+  display: none;
+}
+
+.workspace .mod-root .workspace-tab-header[aria-label="Home"]:hover .mod-pinned,
+.workspace .mod-root .workspace-tab-header[aria-label="Desktop"]:hover .mod-pinned,
+.workspace .mod-root .workspace-tab-header[aria-label="Mobile"]:hover .mod-pinned {
+  display: flex;
+}
+
+.workspace .mod-root .workspace-tab-header[aria-label="Home"]:hover .workspace-tab-header-inner-close-button,
+.workspace .mod-root .workspace-tab-header[aria-label="Desktop"]:hover .workspace-tab-header-inner-close-button,
+.workspace .mod-root .workspace-tab-header[aria-label="Mobile"]:hover .workspace-tab-header-inner-close-button {
+  display: block;
+}
+
+/* Icon */
+.workspace .mod-root .workspace-tab-header[data-type="markdown"][aria-label*="Home"] .workspace-tab-header-inner::before,
+.workspace .mod-root .workspace-tab-header[data-type="markdown"][aria-label*="Desktop"] .workspace-tab-header-inner::before ,
+.workspace .mod-root .workspace-tab-header[data-type="markdown"][aria-label*="Mobile"] .workspace-tab-header-inner::before  {
+  --icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='m20.86 8.37-6.93-5.54c-1.07-.86-2.8-.86-3.86-.01L3.14 8.37c-.78.62-1.28 1.93-1.11 2.91l1.33 7.96c.24 1.42 1.6 2.57 3.04 2.57h11.2c1.43 0 2.8-1.16 3.04-2.57l1.33-7.96c.16-.98-.34-2.29-1.11-2.91M12 15.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5'/%3e%3c/svg%3e");
+}

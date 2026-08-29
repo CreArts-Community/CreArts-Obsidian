@@ -1,15 +1,9 @@
-/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
-/* ║ Skin                                                                      ║ */
-/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
-/* ║ Skin:                    ║ Default                                        ║ */
-/* ║ Author:                  ║ Corellan & Obscure                             ║ */
-/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
-
 .theme-dark.skin-dark-lavender {
 
 /* Info */
---SKIN-info-skin: "Lavender";
---SKIN-info-author: "Corellan & Obscure";
+--SKIN-info-name: "Lavender";
+--SKIN-info-author: "Core & Obscure";
+--SKIN-info-version: "v1.0.0";
 
 /* Settings */
 --SKIN-lightness: 0%;

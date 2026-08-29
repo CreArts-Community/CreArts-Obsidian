@@ -19,7 +19,7 @@
   },
   "scripts": {
     "lint": "stylelint \"**/src/scss/**/*.scss\"",
-    "compile": "sass --no-source-map src/scss/index.scss src/css/main.css",
+    "compile": "sass --no-source-map src/scss/index.scss src/css/main.css --style=expanded",
     "compile:min": "sass --no-source-map src/scss/index.scss src/css/main.min.css --style compressed",
     "merge": "node scripts/merge.js",
     "skins": "node scripts/skins.js",

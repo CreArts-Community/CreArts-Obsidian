@@ -4,9 +4,6 @@
 
 .theme-light {
 
-// Info
---CREARTS-info-skin: var(--SKIN-info-skin, "Default (Light)");
-
 // Text
 --CREARTS-text-primary: hsla(var(--CREARTS-content-h), var(--CREARTS-content-s), var(--CREARTS-content-l), calc(var(--CREARTS-content-a) - 0));
 --CREARTS-text-secondary: hsla(var(--CREARTS-content-h), var(--CREARTS-content-s), var(--CREARTS-content-l), calc(var(--CREARTS-content-a) - 0.2));

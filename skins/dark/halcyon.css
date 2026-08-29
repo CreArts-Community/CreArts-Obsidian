@@ -1,15 +1,9 @@
-/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
-/* ║ Skin                                                                      ║ */
-/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
-/* ║ Skin:                    ║ Halcyon                                        ║ */
-/* ║ Author:                  ║ Corellan                                       ║ */
-/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
-
 .theme-dark.skin-dark-halcyon {
 
 /* Info */
---SKIN-info-skin: "Halcyon";
---SKIN-info-author: "Corellan";
+--SKIN-info-name: "Halcyon";
+--SKIN-info-author: "Core";
+--SKIN-info-version: "v1.0.0";
 
 /* Settings */
 --SKIN-lightness: 0%;

@@ -55,7 +55,7 @@ function updateCssInfoFileVersion(newVersion) {
 }
 
 // Regular expression to locate and update the SCSS version variable
-const regexVariables = /--CREARTS-info-version:\s*"v?([^"]*)"/;
+const regexVariables = /--CREARTS-info-theme-version:\s*"v?([^"]*)"/;
 
 function updateCssVariablesFileVersion(newVersion) {
   let cssVariablesContent = fs.readFileSync(cssVariablesFilePath, 'utf-8');
@@ -63,7 +63,7 @@ function updateCssVariablesFileVersion(newVersion) {
   // Replace the matched variable definition with the new version number
   cssVariablesContent = cssVariablesContent.replace(
     regexVariables,
-    `--CREARTS-info-version: "v${newVersion}"`
+    `--CREARTS-info-theme-version: "v${newVersion}"`
   );
   
   fs.writeFileSync(cssVariablesFilePath, cssVariablesContent);

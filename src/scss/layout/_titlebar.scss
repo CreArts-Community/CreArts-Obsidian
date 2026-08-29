@@ -32,7 +32,7 @@ body.is-frameless:not(.is-hidden-frameless, .is-fullscreen) .titlebar {
 }
 
 .titlebar-text::after {
-  content: "- CreArts " var(--CREARTS-info-version) " (" var(--CREARTS-info-skin) " by " var(--CREARTS-info-author) ")";
+  content: "- " var(--CREARTS-info-theme-name) " " var(--CREARTS-info-theme-version);
   font-size: calc(var(--font-ui-small) / var(--zoom-factor));
 }
 

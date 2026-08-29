@@ -1,15 +1,9 @@
-/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
-/* ║ Skin                                                                      ║ */
-/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
-/* ║ Skin:                    ║ Default                                        ║ */
-/* ║ Author:                  ║ Corellan                                       ║ */
-/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
-
 .theme-dark.skin-dark-goon {
 
 /* Info */
---SKIN-info-skin: "Goon";
---SKIN-info-author: "Corellan";
+--SKIN-info-name: "Goon";
+--SKIN-info-author: "Core";
+--SKIN-info-version: "v1.0.0";
 
 /* Settings */
 --SKIN-lightness: 0%;

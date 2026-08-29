@@ -7,7 +7,8 @@
 .skin-light-default {
 /* Info */
 --SKIN-info-skin: "Default";
---SKIN-info-author: "Corellan";
+--SKIN-info-author: "Core";
+--SKIN-info-version: "v1.0.0";
 
 /* Lightness */
 --SKIN-lightness: 0%;

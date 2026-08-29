@@ -9,30 +9,35 @@
 @forward "variables/skins";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Source                   ║ Components                                                                              ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-@forward "components/content";
-@forward "components/ribbon";
-@forward "components/settings"; // NEED REWORK
-@forward "components/sidebar";
-@forward "components/statusbar";
-@forward "components/titlebar";
-@forward "components/ui";
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Source                   ║ Base                                                                                    ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 @forward "base/cursor";
-@forward "base/image";
-@forward "base/kbd";
 //@forward "base/mobile"; // NEED REWORK
 //@forward "base/print"; // NEED REWORK
 @forward "base/remove";
-@forward "base/scrollbars";
-@forward "base/tables";
-@forward "base/text";
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Source                   ║ Layout                                                                                  ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+@forward "layout/ribbon";
+@forward "layout/settings";
+@forward "layout/sidebar";
+@forward "layout/statusbar";
+@forward "layout/titlebar";
+@forward "layout/ui";
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Source                   ║ Components                                                                              ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+@forward "components/content";
+@forward "components/image";
+@forward "components/kbd";
+@forward "components/scrollbars";
+@forward "components/tables";
+@forward "components/text";
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Source                   ║ Icons                                                                                   ║

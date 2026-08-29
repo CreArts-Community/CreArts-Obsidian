@@ -1,15 +1,9 @@
-/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
-/* ║ Skin                                                                      ║ */
-/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
-/* ║ Skin:                    ║ Default                                        ║ */
-/* ║ Author:                  ║ Corellan                                       ║ */
-/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
-
 .theme-dark.skin-dark-default {
 
 /* Info */
---SKIN-info-skin: "Default";
---SKIN-info-author: "Corellan";
+--SKIN-info-name: "Default";
+--SKIN-info-author: "Core";
+--SKIN-info-version: "v1.0.0";
 
 /* Settings */
 --SKIN-lightness: 0%;
@@ -44,18 +38,12 @@
 --SKIN-grading-interface-tertiary: 24%;
 }
 
-/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
-/* ║ Skin                                                                      ║ */
-/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
-/* ║ Skin:                    ║ Cosmic                                         ║ */
-/* ║ Author:                  ║ Corellan & WmeLuna                             ║ */
-/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
-
 .theme-dark.skin-dark-cosmic {
 
 /* Info */
---SKIN-info-skin: "Cosmic";
---SKIN-info-author: "Corellan & WmeLuna";
+--SKIN-info-name: "Cosmic";
+--SKIN-info-author: "Core & WmeLuna";
+--SKIN-info-version: "v1.0.0";
 
 /* Settings */
 --SKIN-lightness: 0%;
@@ -90,17 +78,11 @@
 --SKIN-grading-interface-tertiary: 24%;
 }
 
-/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
-/* ║ Skin                                                                      ║ */
-/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
-/* ║ Skin:                    ║ GitHub                                         ║ */
-/* ║ Author:                  ║ Corellan                                       ║ */
-/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
-
 .theme-dark.skin-dark-github {
 /* Info */
---SKIN-info-skin: "GitHub";
---SKIN-info-author: "Corellan";
+--SKIN-info-name: "GitHub";
+--SKIN-info-author: "Core";
+--SKIN-info-version: "v1.0.0";
 
 /* Settings */
 --SKIN-lightness: 0%;
@@ -135,18 +117,12 @@
 --SKIN-grading-interface-tertiary: 24%;
 }
 
-/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
-/* ║ Skin                                                                      ║ */
-/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
-/* ║ Skin:                    ║ Default                                        ║ */
-/* ║ Author:                  ║ Corellan                                       ║ */
-/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
-
 .theme-dark.skin-dark-goon {
 
 /* Info */
---SKIN-info-skin: "Goon";
---SKIN-info-author: "Corellan";
+--SKIN-info-name: "Goon";
+--SKIN-info-author: "Core";
+--SKIN-info-version: "v1.0.0";
 
 /* Settings */
 --SKIN-lightness: 0%;
@@ -181,18 +157,12 @@
 --SKIN-grading-interface-tertiary: 24%;
 }
 
-/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
-/* ║ Skin                                                                      ║ */
-/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
-/* ║ Skin:                    ║ Halcyon                                        ║ */
-/* ║ Author:                  ║ Corellan                                       ║ */
-/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
-
 .theme-dark.skin-dark-halcyon {
 
 /* Info */
---SKIN-info-skin: "Halcyon";
---SKIN-info-author: "Corellan";
+--SKIN-info-name: "Halcyon";
+--SKIN-info-author: "Core";
+--SKIN-info-version: "v1.0.0";
 
 /* Settings */
 --SKIN-lightness: 0%;
@@ -227,18 +197,12 @@
 --SKIN-grading-interface-tertiary: 24%;
 }
 
-/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
-/* ║ Skin                                                                      ║ */
-/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
-/* ║ Skin:                    ║ Default                                        ║ */
-/* ║ Author:                  ║ Corellan & Obscure                             ║ */
-/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
-
 .theme-dark.skin-dark-lavender {
 
 /* Info */
---SKIN-info-skin: "Lavender";
---SKIN-info-author: "Corellan & Obscure";
+--SKIN-info-name: "Lavender";
+--SKIN-info-author: "Core & Obscure";
+--SKIN-info-version: "v1.0.0";
 
 /* Settings */
 --SKIN-lightness: 0%;
@@ -273,18 +237,12 @@
 --SKIN-grading-interface-tertiary: 24%;
 }
 
-/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
-/* ║ Skin                                                                      ║ */
-/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
-/* ║ Skin:                    ║ Nebula                                         ║ */
-/* ║ Author:                  ║ Corellan & Loremly                             ║ */
-/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
-
 .theme-dark.skin-dark-nebula {
 
 /* Info */
---SKIN-info-skin: "Nebula";
---SKIN-info-author: "Corellan & Loremly";
+--SKIN-info-name: "Nebula";
+--SKIN-info-author: "Core & Loremly";
+--SKIN-info-version: "v1.0.0";
 
 /* Settings */
 --SKIN-lightness: 0%;
@@ -319,18 +277,12 @@
 --SKIN-grading-interface-tertiary: 24%;
 }
 
-/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
-/* ║ Skin                                                                      ║ */
-/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
-/* ║ Skin:                    ║ Notion                                         ║ */
-/* ║ Author:                  ║ Corellan                                       ║ */
-/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
-
 .theme-dark.skin-dark-notion {
 
 /* Info */
---SKIN-info-skin: "Notion";
---SKIN-info-author: "Corellan";
+--SKIN-info-name: "Notion";
+--SKIN-info-author: "Core";
+--SKIN-info-version: "v1.0.0";
 
 /* Settings */
 --SKIN-lightness: 0%;
@@ -365,48 +317,42 @@
 --SKIN-grading-interface-tertiary: 24%;
 }
 
-/* ╔═══════════════════════════════════════════════════════════════════════════╗ */
-/* ║ Skin                                                                      ║ */
-/* ╠══════════════════════════╦════════════════════════════════════════════════╣ */
-/* ║ Skin:                    ║ Obsidian                                       ║ */
-/* ║ Author:                  ║ Corellan                                       ║ */
-/* ╚══════════════════════════╩════════════════════════════════════════════════╝ */
-
 .theme-dark.skin-dark-obsidian {
 
-  /* Info */
-  --SKIN-info-skin: "Obsidian";
-  --SKIN-info-author: "Corellan";
-  
-  /* Settings */
-  --SKIN-lightness: 0%;
-  --SKIN-saturation: 0%;
-  --SKIN-alpha: 0%;
-  
-  /* Accent */
-  --SKIN-accent-h: 254;
-  --SKIN-accent-s: 76%;
-  --SKIN-accent-l: 67%;
-  --SKIN-accent-a: 1;
-  
-  /* Content */
-  --SKIN-content-h: 0;
-  --SKIN-content-s: 0%;
-  --SKIN-content-l: 85%;
-  --SKIN-content-a: 1;
-  
-  /* Base */
-  --SKIN-base-h: 0;
-  --SKIN-base-s: 0%;
-  --SKIN-base-l: 18%;
-  --SKIN-base-a: 1;
-  
-  /* Grading */
-  --SKIN-grading-background-primary: 0%;
-  --SKIN-grading-background-secondary: 3%;
-  --SKIN-grading-background-tertiary: 6%;
-  
-  --SKIN-grading-interface-primary: 8%;
-  --SKIN-grading-interface-secondary: 16%;
-  --SKIN-grading-interface-tertiary: 24%;
-  }  
+/* Info */
+--SKIN-info-name: "Obsidian";
+--SKIN-info-author: "Core";
+--SKIN-info-version: "v1.0.0";
+
+/* Settings */
+--SKIN-lightness: 0%;
+--SKIN-saturation: 0%;
+--SKIN-alpha: 0%;
+
+/* Accent */
+--SKIN-accent-h: 254;
+--SKIN-accent-s: 76%;
+--SKIN-accent-l: 67%;
+--SKIN-accent-a: 1;
+
+/* Content */
+--SKIN-content-h: 0;
+--SKIN-content-s: 0%;
+--SKIN-content-l: 85%;
+--SKIN-content-a: 1;
+
+/* Base */
+--SKIN-base-h: 0;
+--SKIN-base-s: 0%;
+--SKIN-base-l: 18%;
+--SKIN-base-a: 1;
+
+/* Grading */
+--SKIN-grading-background-primary: 0%;
+--SKIN-grading-background-secondary: 3%;
+--SKIN-grading-background-tertiary: 6%;
+
+--SKIN-grading-interface-primary: 8%;
+--SKIN-grading-interface-secondary: 16%;
+--SKIN-grading-interface-tertiary: 24%;
+}  

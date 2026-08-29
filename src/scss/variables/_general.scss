@@ -8,16 +8,45 @@
 // ║ Custom                   ║
 // ╚══════════════════════════╝
 
-// Info
---CREARTS-info-version: "v1.0.0";
---CREARTS-info-author: var(--SKIN-info-author, "Corellan");
+// Theme
+--CREARTS-info-theme-name: "CreArts";
+--CREARTS-info-theme-author: "Corellan";
+--CREARTS-info-theme-version: "v1.0.0";
 
-// Fonts
+// Skin
+--CREARTS-info-skin-name: var(--SKIN-info-name, "Default");
+--CREARTS-info-skin-author: var(--SKIN-info-author, "Corellan");
+--CREARTS-info-skin-version: var(--SKIN-info-version, "v1.0.0");
+
+// Font
 --CREARTS-font-interface: "Quicksand", "M PLUS Rounded 1c", "Chiron GoRound TC", "Noto Color Emoji";
 --CREARTS-font-text: "Quicksand", "M PLUS Rounded 1c", "Chiron GoRound TC", "Noto Color Emoji";
 --CREARTS-font-print: "Quicksand", "M PLUS Rounded 1c", "Chiron GoRound TC", "Noto Color Emoji";
 --CREARTS-font-monospace: "Fira Code", "Chiron GoRound TC", "Noto Color Emoji";
 --CREARTS-font-mermaid: "Quicksand", "M PLUS Rounded 1c", "Chiron GoRound TC", "Noto Color Emoji";
+
+// Font Size
+--CREARTS-font-size-primary: 16px;
+--CREARTS-font-size-secondary: 0.933em;
+--CREARTS-font-size-tertiary: 0.875em;
+--CREARTS-font-size-quaternary: 0.8em;
+
+// Font Size UI
+--CREARTS-font-size-ui-primary: 12px;
+--CREARTS-font-size-ui-secondary: 13px;
+--CREARTS-font-size-ui-tertiary: 15px;
+--CREARTS-font-size-ui-quaternary: 20px;
+
+// Font Weight
+--CREARTS-font-weight-thin: 100;
+--CREARTS-font-weight-extralight: 200;
+--CREARTS-font-weight-light: 300;
+--CREARTS-font-weight-normal: 400;
+--CREARTS-font-weight-medium: 500;
+--CREARTS-font-weight-semibold: 600;
+--CREARTS-font-weight-bold: 700;
+--CREARTS-font-weight-extrabold: 800;
+--CREARTS-font-weight-black: 900;
 
 // Layout
 --CREARTS-layout-margin: 16px; // Default: 16px
@@ -34,14 +63,14 @@
 
 // Height
 --CREARTS-height-header: 40px; // Default: 40px
---CREARTS-height-button: 36px; // Default: 40px
+--CREARTS-height-button: 36px; // Default: 36px
 --CREARTS-height-titlebar: 30px; // Default: 30px
 --CREARTS-height-statusbar: 30px; // Default: 30px
 --CREARTS-height-banner: 180px; // Default: 180px
 
 // Width
 --CREARTS-width-ribbon: 44px; // Default: 44px
---CREARTS-width-tab: 34px; // Default: 28px
+--CREARTS-width-tab: 140px; // Default: 140px
 --CREARTS-width-left: 240px; // Default: 240px
 --CREARTS-width-right: 240px; // Default: 240px
 --CREARTS-width-settings: 240px; // Default: 240px
@@ -409,26 +438,50 @@
 --font-mermaid-theme: var(--CREARTS-font-mermaid); //'??';
 --font-mermaid: var(--font-mermaid-override), var(--font-mermaid-theme), var(--font-default); //var(--font-text);
 
-//--font-text-size: 16px;
-//--font-smallest: 0.8em;
-//--font-smaller: 0.875em;
-//--font-small: 0.933em;
+--font-text-size: var(--CREARTS-font-size-primary); // 16px;
+--font-smallest: var(--CREARTS-font-size-quaternary); // 0.8em;
+--font-smaller: var(--CREARTS-font-size-tertiary); // 0.875em;
+--font-small: var(--CREARTS-font-size-secondary); // 0.933em;
 //--flair-background: var(--interactive-normal);
 //--flair-color: var(--text-normal);
-//--font-ui-smaller: 12px;
-//--font-ui-small: 13px;
-//--font-ui-medium: 15px;
-//--font-ui-large: 20px;
+--font-ui-smaller: var(--CREARTS-font-size-ui-primary); // 12;
+--font-ui-small: var(--CREARTS-font-size-ui-secondary); // 13;
+--font-ui-medium: var(--CREARTS-font-size-ui-tertiary); // 15;
+--font-ui-large: var(--CREARTS-font-size-ui-quaternary); // 20;
 //--font-weight: var(--font-normal);
-//--font-thin: 100;
-//--font-extralight: 200;
-//--font-light: 300;
-//--font-normal: 400;
-//--font-medium: 500;
-//--font-semibold: 600;
-//--font-bold: 700;
-//--font-extrabold: 800;
-//--font-black: 900;
+--font-thin: var(--CREARTS-font-weight-thin); // 100;
+--font-extralight: var(--CREARTS-font-weight-extralight); // 200;
+--font-light: var(--CREARTS-font-weight-light); // 300;
+--font-normal: var(--CREARTS-font-weight-normal); // 400;
+--font-medium: var(--CREARTS-font-weight-medium); // 500;
+--font-semibold: var(--CREARTS-font-weight-semibold); // 600;
+--font-bold: var(--CREARTS-font-weight-bold); // 700;
+--font-extrabold: var(--CREARTS-font-weight-extrabold); //800;
+--font-black: var(--CREARTS-font-weight-black); // 900;
+
+
+// Font Size
+--CREARTS-font-size-primary: 16px;
+--CREARTS-font-size-secondary: 0.933em;
+--CREARTS-font-size-tertiary: 0.875em;
+--CREARTS-font-size-quaternary: 0.8em;
+
+// Font Size UI
+--CREARTS-font-size-ui-primary: 12px;
+--CREARTS-font-size-ui-secondary: 13px;
+--CREARTS-font-size-ui-tertiary: 15px;
+--CREARTS-font-size-ui-quaternary: 20px;
+
+// Font Weight
+--CREARTS-font-weight-thin: 100;
+--CREARTS-font-weight-extralight: 200;
+--CREARTS-font-weight-light: 300;
+--CREARTS-font-weight-normal: 400;
+--CREARTS-font-weight-medium: 500;
+--CREARTS-font-weight-semibold: 600;
+--CREARTS-font-weight-bold: 700;
+--CREARTS-font-weight-extrabold: 800;
+--CREARTS-font-weight-black: 900;
 
 // ╔══════════════════════════╗
 // ║ Footnote                 ║
