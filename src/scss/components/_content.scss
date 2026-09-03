@@ -12,18 +12,59 @@
 // ║ Components (Content)     ║ View Header                                                                             ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Header
+// Spacing
 .view-header{
+  background: transparent;
   min-height: var(--CREARTS-height-header);
   margin-right: var(--CREARTS-layout-margin);
   margin-bottom: var(--CREARTS-layout-margin-half);
   margin-left: var(--CREARTS-layout-margin-half);
   border-radius: var(--CREARTS-radius-primary);
-  background: var(--CREARTS-background-secondary);
+  padding-right: 0px;
+  padding-left: 0px;
+  gap: var(--CREARTS-layout-margin-half);
+
 }
 
+.view-header-left {
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+  padding-right: var(--CREARTS-spacing-secondary);
+  padding-left: var(--CREARTS-spacing-secondary);
+}
+
+.view-header-title-container {
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+  padding-right: var(--CREARTS-spacing-secondary);
+  padding-left: var(--CREARTS-spacing-secondary);
+}
+
+
+.view-actions {
+  background: var(--CREARTS-background-secondary);
+  border-radius: var(--CREARTS-radius-primary);
+  padding-right: var(--CREARTS-spacing-secondary);
+  padding-left: var(--CREARTS-spacing-secondary);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .is-focused .workspace-leaf.mod-active .view-header {
-    background: var(--CREARTS-background-secondary);
+    background: transparent;
 }
 
 // Sidedock open
@@ -221,10 +262,3 @@
   box-shadow: var(--CREARTS-effects-pressed);
   color: var(--CREARTS-text-primary);
 }
-
-
-
-
-
-
-

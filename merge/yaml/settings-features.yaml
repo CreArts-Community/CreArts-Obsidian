@@ -9,13 +9,8 @@
         collapsed: true
     - 
         id: neumorphism
-        title: Neumorphism
-        description: Disable Neumorphism effect.
-        type: class-toggle
-        default: false
-    - 
-        id: pets
-        title: Pets
-        description: Enable Statusbar Pet.
+        title: Disable Neumorphism
+        description: Disables the global Neumorphism effect (soft shadows on cards, buttons and callouts) for a flatter look.
+        description.de: "Deaktiviert den globalen Neumorphismus-Effekt (weiche Schatten an Karten, Buttons und Callouts) für ein flacheres Erscheinungsbild."
         type: class-toggle
         default: false

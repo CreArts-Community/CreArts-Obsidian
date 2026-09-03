@@ -2,85 +2,144 @@
 // ║ CreArts Script                                                                                                     ║
 // ╠══════════════════════════╦═════════════════════════════════════════════════════════════════════════════════════════╣
 // ║ Name:                    ║ Skins                                                                                   ║
-// ║ Version:                 ║ 1.0.0                                                                                   ║
+// ║ Version:                 ║ 2.2.1                                                                                   ║
 // ║ Author:                  ║ AI                                                                                      ║
 // ║ License:                 ║ MIT                                                                                     ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 const fs = require("fs").promises;
+const fsSync = require("fs");
 const path = require("path");
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Skins                    ║ Paths                                                                                   ║
+// ║ Config                   ║ Paths                                                                                   ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Define the targeted skin variants and file extensions
 const skinTypes = ['dark', 'light'];
-const fileTypes = ['yaml', 'css'];
-
-// Define the input and output folder paths for CSS and YAML processing
-const inputCssFolderPath = 'skins';
-const inputYamlFolderPath = 'skins';
+const inputBaseFolder = 'skins';
 const outputCssFolderPath = 'merge/css';
 const outputYamlFolderPath = 'merge/yaml';
+const outputSnippetFolderPath = 'snippets';
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Skins                    ║ Logic                                                                                   ║
+// ║ Helpers                  ║ JSON to CSS & Minify                                                                    ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Function to merge skin files based on their specific type (CSS or YAML)
-async function mergeSkinFiles(skinType, fileType, inputPath, outputPath) {
+function jsonToCssVars(obj, prefix = '--SKIN') {
+  let vars = [];
+  for (const [key, value] of Object.entries(obj)) {
+    const varName = `${prefix}-${key}`;
+    if (typeof value === 'object' && value !== null) {
+      vars = vars.concat(jsonToCssVars(value, varName));
+    } else {
+      let cleanValue;
+      if (prefix.includes('info')) {
+        cleanValue = typeof value === 'string' ? `"${value.replace(/^["'](.*)["']$/, '$1')}"` : value;
+      } else {
+        cleanValue = typeof value === 'string' ? value.replace(/^["'](.*)["']$/, '$1') : value;
+      }
+      vars.push(`${varName}:${cleanValue};`);
+    }
+  }
+  return vars;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Core Logic               ║ Processing                                                                              ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+async function processSkins() {
   try {
-    // Construct the target folder path for the skin variation
-    const folderPath = path.join(inputPath, skinType);
+    for (const skinType of skinTypes) {
+      const folderPath = path.join(inputBaseFolder, skinType);
+      
+      try {
+        await fs.access(folderPath);
+      } catch {
+        console.warn(`[SKINS] ⚠️ Folder "${folderPath}" not found.`);
+        continue;
+      }
 
-    // Read all files contained within the folder
-    const files = await fs.readdir(folderPath);
+      const files = await fs.readdir(folderPath);
+      const jsonFiles = files.filter(f => path.extname(f) === '.json');
 
-    // Filter the file list based on the requested file extension
-    const filteredFiles = files.filter(file => path.extname(file) === `.${fileType}`);
+      jsonFiles.sort((a, b) => (a === 'default.json' ? -1 : b === 'default.json' ? 1 : a.localeCompare(b)));
 
-    // Separate the default file from the rest of the files for prioritization
-    const defaultFile = filteredFiles.find(file => file === `default.${fileType}`);
-    const otherFiles = filteredFiles.filter(file => file !== `default.${fileType}`);
+      const mergedMinifiedCss = [];
+      const yamlOptions = [];
 
-    // Define the full path for the output file
-    const outputFile = path.join(outputPath, `${skinType}.${fileType}`);
+      for (const file of jsonFiles) {
+        const fileContent = await fs.readFile(path.join(folderPath, file), 'utf-8');
+        const json = JSON.parse(fileContent);
+        
+        const fileSlug = path.basename(file, '.json');
+        const displayName = json.info?.name || (fileSlug.charAt(0).toUpperCase() + fileSlug.slice(1));
+        const skinClass = `skin-${skinType}-${fileSlug}`;
+        const snippetFileName = `crearts-${skinClass}.css`;
 
-    // Array to hold the merged content
-    const mergedContent = [];
+        yamlOptions.push(
+          `            -\n` +
+          `                label: ${displayName}\n` +
+          `                value: ${skinClass}`
+        );
 
-    // Inject the default file content first, if it exists
-    if (defaultFile) {
-      const defaultContent = await fs.readFile(path.join(folderPath, defaultFile), 'utf-8');
-      mergedContent.push(defaultContent);
+        const cssVars = jsonToCssVars(json);
+        const minified = `.theme-${skinType}.${skinClass}{${cssVars.join('')}}`;
+        mergedMinifiedCss.push(minified);
+
+        // Fügt bei allen Variablen (inklusive Info) ein !important hinzu
+        const formattedVars = cssVars.map(v => `  ${v.replace(';', ' !important;')}`).join('\n');
+
+        const snippetContent = `/* Skin: ${displayName} (${skinType}) */\n.theme-${skinType} {\n${formattedVars}\n}`;
+        
+        await fs.mkdir(outputSnippetFolderPath, { recursive: true });
+        await fs.writeFile(
+          path.join(outputSnippetFolderPath, snippetFileName),
+          snippetContent,
+          'utf-8'
+        );
+      }
+
+      await fs.mkdir(outputCssFolderPath, { recursive: true });
+      await fs.mkdir(outputYamlFolderPath, { recursive: true });
+
+      await fs.writeFile(path.join(outputCssFolderPath, `skins-${skinType}.css`), mergedMinifiedCss.join('\n'), 'utf-8');
+      await fs.writeFile(path.join(outputYamlFolderPath, `skins-${skinType}.yaml`), yamlOptions.join('\n'), 'utf-8');
+
+      console.log(`[SKINS] 🏷️  ${skinType.toUpperCase()} Skins (${jsonFiles.length} JSONs) processed!`);
     }
-
-    // Append the content from all remaining files
-    for (const file of otherFiles) {
-      const content = await fs.readFile(path.join(folderPath, file), 'utf-8');
-      mergedContent.push(content);
-    }
-
-    // Ensure the output directory exists, then write the final merged content
-    await fs.mkdir(outputPath, { recursive: true });
-    await fs.writeFile(outputFile, mergedContent.join('\n'), 'utf-8');
-
-    console.log(`[SKINS] 🏷️  Files for "${skinType}" (${fileType}) successfully merged!`);
   } catch (err) {
-    console.error(`[SKINS] 🏷️  Error while merging files for "${skinType}" (${fileType}):`, err);
+    console.error("[SKINS] 🏷️  Error processing skins:", err);
   }
 }
 
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Skins                    ║ Execution                                                                               ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// Loop through each skin variant and file type to trigger the merge process
-for (const skinType of skinTypes) {
-  for (const fileType of fileTypes) {
-    const inputPath = fileType === 'css' ? inputCssFolderPath : inputYamlFolderPath;
-    const outputPath = fileType === 'css' ? outputCssFolderPath : outputYamlFolderPath;
-    mergeSkinFiles(skinType, fileType, inputPath, outputPath);
-  }
+function debounce(fn, delay) {
+  let timer = null;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), delay);
+  };
 }
+
+(async () => {
+  await processSkins();
+
+  if (process.argv.includes('--watch')) {
+    console.log('[WATCH] 👀 Watching skins for changes...');
+
+    const debouncedProcess = debounce(() => {
+      processSkins();
+    }, 100);
+
+    if (fsSync.existsSync(inputBaseFolder)) {
+      fsSync.watch(inputBaseFolder, { recursive: true }, (eventType, filename) => {
+        if (filename) {
+          console.log(`[WATCH] 🔄 Change detected in skin file: ${filename}`);
+          debouncedProcess();
+        }
+      });
+    } else {
+      console.warn(`[WATCH] ⚠️  Folder "${inputBaseFolder}" not found, skipping watch.`);
+    }
+  }
+})();

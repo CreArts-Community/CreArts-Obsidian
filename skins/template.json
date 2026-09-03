@@ -1,0 +1,37 @@
+{
+  "info": {
+    "name": "Template",
+    "author": "Your Name",
+    "version": "v1.0.0"
+  },
+  "settings": {
+    "lightness": "0%",
+    "saturation": "0%",
+    "alpha": "0%"
+  },
+  "accent": {
+    "h": "0",
+    "s": "0%",
+    "l": "0%"
+  },
+  "content": {
+    "h": "0",
+    "s": "0%",
+    "l": "0%",
+    "a": "1"
+  },
+  "base": {
+    "h": "0",
+    "s": "0%",
+    "l": "0%",
+    "a": "1"
+  },
+  "grading": {
+    "background-primary": "0%",
+    "background-secondary": "3%",
+    "background-tertiary": "6%",
+    "interface-primary": "8%",
+    "interface-secondary": "16%",
+    "interface-tertiary": "24%"
+  }
+}

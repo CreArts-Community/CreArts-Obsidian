@@ -1,0 +1,26 @@
+/* Skin: Obsidian (dark) */
+.theme-dark {
+  --SKIN-info-name:"Obsidian" !important;
+  --SKIN-info-author:"Core" !important;
+  --SKIN-info-version:"v1.0.0" !important;
+  --SKIN-settings-lightness:0% !important;
+  --SKIN-settings-saturation:0% !important;
+  --SKIN-settings-alpha:0% !important;
+  --SKIN-accent-h:254 !important;
+  --SKIN-accent-s:76% !important;
+  --SKIN-accent-l:67% !important;
+  --SKIN-content-h:0 !important;
+  --SKIN-content-s:0% !important;
+  --SKIN-content-l:85% !important;
+  --SKIN-content-a:1 !important;
+  --SKIN-base-h:0 !important;
+  --SKIN-base-s:0% !important;
+  --SKIN-base-l:19% !important;
+  --SKIN-base-a:1 !important;
+  --SKIN-grading-background-primary:0% !important;
+  --SKIN-grading-background-secondary:3% !important;
+  --SKIN-grading-background-tertiary:6% !important;
+  --SKIN-grading-interface-primary:8% !important;
+  --SKIN-grading-interface-secondary:16% !important;
+  --SKIN-grading-interface-tertiary:24% !important;
+}

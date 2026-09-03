@@ -21,17 +21,16 @@
   height: 100%;
   width: 100%;
   padding: var(--CREARTS-spacing-primary);
-  overflow-y: scroll;
+  
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Tokei                    ║ Time Date                                                                               ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Spacing
 .timedate-container {
   width: 100%;
-  height: 100%;
+
 }
 
 // ╔══════════════════════════╗
@@ -45,8 +44,8 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
-  padding: var(--CREARTS-spacing-primary);
+height: var(--CREARTS-height-widget);
+padding: var(--CREARTS-spacing-primary);
   border-width: var(--CREARTS-border-width);
   border-style: var(--CREARTS-border-style);
   border-radius: var(--CREARTS-radius-secondary);
@@ -55,7 +54,7 @@
   box-shadow: var(--CREARTS-effects-flat);
   color: var(--CREARTS-text-primary);
   font-weight: 400;
-  font-size: 2.2rem;
+  font-size: 40px;
   font-family: Varela;
   text-shadow: none;
 }
@@ -93,7 +92,7 @@
   box-shadow: var(--CREARTS-effects-flat);
   color: var(--CREARTS-text-primary);
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 20px;
   font-family: Varela;
   text-shadow: none;
 }
@@ -130,7 +129,7 @@
   box-shadow: var(--CREARTS-effects-flat);
   color: var(--CREARTS-text-primary);
   font-weight: 400;
-  font-size: 0.8rem;
+  font-size: 16px;
   font-family: Varela;
 }
 
@@ -151,7 +150,7 @@
   box-shadow: var(--CREARTS-effects-flat);
   color: var(--CREARTS-text-primary);
   font-weight: 400;
-  font-size: 0.8rem;
+  font-size: 16px;
   font-family: Varela;
 }
 
@@ -175,8 +174,7 @@
   padding: 0px;
   margin-top: var(--CREARTS-spacing-primary);
   gap: var(--CREARTS-spacing-primary);
-
-  overflow: scroll;
+  overflow: visible;
 }
 
 // Background
@@ -197,8 +195,8 @@
   backdrop-filter: none;
   background: var(--CREARTS-background-primary);
   box-shadow: var(--CREARTS-effects-flat);
-  font-size: var(--font-small);
-flex: 1 0 3% !important;
+  font-size: 12px;
+  flex: 1 0 3% !important;
 
 }
 

@@ -32,10 +32,10 @@
 --CREARTS-font-size-quaternary: 0.8em;
 
 // Font Size UI
---CREARTS-font-size-ui-primary: 12px;
---CREARTS-font-size-ui-secondary: 13px;
---CREARTS-font-size-ui-tertiary: 15px;
---CREARTS-font-size-ui-quaternary: 20px;
+--CREARTS-font-size-ui-primary: 12px; // 12px; // Default UI Text
+--CREARTS-font-size-ui-secondary: 14px; // 13px; //Menu Points
+--CREARTS-font-size-ui-tertiary: 15px; // 15px; // Sub Header
+--CREARTS-font-size-ui-quaternary: 20px; // 20px; // Big Header
 
 // Font Weight
 --CREARTS-font-weight-thin: 100;
@@ -67,6 +67,8 @@
 --CREARTS-height-titlebar: 30px; // Default: 30px
 --CREARTS-height-statusbar: 30px; // Default: 30px
 --CREARTS-height-banner: 180px; // Default: 180px
+--CREARTS-height-widget: 60px;
+--CREARTS-height-widget-half: calc(var(--CREARTS-height-widget) / 2);
 
 // Width
 --CREARTS-width-ribbon: 44px; // Default: 44px
@@ -444,10 +446,11 @@
 --font-small: var(--CREARTS-font-size-secondary); // 0.933em;
 //--flair-background: var(--interactive-normal);
 //--flair-color: var(--text-normal);
---font-ui-smaller: var(--CREARTS-font-size-ui-primary); // 12;
---font-ui-small: var(--CREARTS-font-size-ui-secondary); // 13;
---font-ui-medium: var(--CREARTS-font-size-ui-tertiary); // 15;
---font-ui-large: var(--CREARTS-font-size-ui-quaternary); // 20;
+--font-ui-smaller: var(--CREARTS-font-size-ui-primary); // 12px;
+--font-ui-small: var(--CREARTS-font-size-ui-secondary); // 13px;
+--font-ui-medium: var(--CREARTS-font-size-ui-tertiary); // 15px;
+--font-ui-large: var(--CREARTS-font-size-ui-quaternary); // 20px;
+
 //--font-weight: var(--font-normal);
 --font-thin: var(--CREARTS-font-weight-thin); // 100;
 --font-extralight: var(--CREARTS-font-weight-extralight); // 200;
@@ -458,30 +461,6 @@
 --font-bold: var(--CREARTS-font-weight-bold); // 700;
 --font-extrabold: var(--CREARTS-font-weight-extrabold); //800;
 --font-black: var(--CREARTS-font-weight-black); // 900;
-
-
-// Font Size
---CREARTS-font-size-primary: 16px;
---CREARTS-font-size-secondary: 0.933em;
---CREARTS-font-size-tertiary: 0.875em;
---CREARTS-font-size-quaternary: 0.8em;
-
-// Font Size UI
---CREARTS-font-size-ui-primary: 12px;
---CREARTS-font-size-ui-secondary: 13px;
---CREARTS-font-size-ui-tertiary: 15px;
---CREARTS-font-size-ui-quaternary: 20px;
-
-// Font Weight
---CREARTS-font-weight-thin: 100;
---CREARTS-font-weight-extralight: 200;
---CREARTS-font-weight-light: 300;
---CREARTS-font-weight-normal: 400;
---CREARTS-font-weight-medium: 500;
---CREARTS-font-weight-semibold: 600;
---CREARTS-font-weight-bold: 700;
---CREARTS-font-weight-extrabold: 800;
---CREARTS-font-weight-black: 900;
 
 // ╔══════════════════════════╗
 // ║ Footnote                 ║
@@ -570,12 +549,12 @@
 // ║ Header Size              ║
 // ╚══════════════════════════╝
 
---h1-size: 1.5rem; //1.618em;
---h2-size: 1.4rem; //1.462em;
---h3-size: 1.3rem; //1.318em;
---h4-size: 1.2rem; //1.188em;
---h5-size: 1.1rem; //1.076em;
---h6-size: 1rem; //1em;
+--h1-size: 1.8em; //1.618em;
+--h2-size: 1.4em; //1.462em;
+--h3-size: 1.3em; //1.318em;
+--h4-size: 1.2em; //1.188em;
+--h5-size: 1.1em; //1.076em;
+--h6-size: 1.0em; //1em;
 
 // ╔══════════════════════════╗
 // ║ Header Style             ║
@@ -1286,12 +1265,12 @@
 //--vault-profile-radius: var(--radius-s);
 
 // ╔══════════════════════════╗
-// ║ Accenz                   ║
+// ║ Accent                   ║
 // ╚══════════════════════════╝
 
-//--accent-h: 258;
-//--accent-s: 88%;
-//--accent-l: 66%;
+--accent-h: var(--CREARTS-accent-h); // 258;
+--accent-s: var(--CREARTS-accent-s); // 88%;
+--accent-l: var(--CREARTS-accent-l); // 66%;
 
 // ╔══════════════════════════╗
 // ║ Background               ║
@@ -1345,6 +1324,4 @@
 //--interactive-accent: var(--color-accent-1);
 //--interactive-accent-hover: var(--color-accent-2);
 //--interactive-accent-hsl: var(--color-accent-hsl);
-
-
 }

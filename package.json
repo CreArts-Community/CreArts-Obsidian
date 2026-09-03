@@ -1,5 +1,5 @@
 {
-  "name": "crearts-obsidian-theme",
+  "name": "CreArts-Obsidian",
   "version": "1.0.0",
   "author": "corellan",
   "description": "CreArts is a customizable Obsidian theme that changes the appearance of Obsidian.",
@@ -17,22 +17,31 @@
     "stylelint-scss": "^5.3.2",
     "svgo": "^4.0.2"
   },
-  "scripts": {
-    "lint": "stylelint \"**/src/scss/**/*.scss\"",
-    "compile": "sass --no-source-map src/scss/index.scss src/css/main.css --style=expanded",
-    "compile:min": "sass --no-source-map src/scss/index.scss src/css/main.min.css --style compressed",
-    "merge": "node scripts/merge.js",
-    "skins": "node scripts/skins.js",
-    "version": "node scripts/version.js",
-    "svgo": "node scripts/svgo.js --write",
-    "snippets": "node scripts/snippets.js",
-    "snippets:watch": "node scripts/snippets.js --watch",
-    "mobile": "node scripts/mobile.js",
-    "mobile:watch": "node scripts/mobile.js --watch",
-    "watch": "sass --no-source-map --watch src/scss/index.scss theme.css --style=expanded",
-    "dev": "concurrently --kill-others \"pnpm run watch\" \"pnpm run snippets:watch\"",
-    "build": "pnpm run version && pnpm run compile && pnpm run compile:min && pnpm run skins && pnpm run merge && pnpm run snippets"
-  },
+"scripts": {
+  "lint": "stylelint \"**/src/scss/**/*.scss\"",
+  "compile": "sass --no-source-map src/scss/index.scss src/css/main.css --style=expanded",
+  "compile:min": "sass --no-source-map src/scss/index.scss src/css/main.min.css --style=compressed",
+  "compile:watch": "sass --no-source-map --watch src/scss/index.scss src/css/main.css --style=expanded",
+  "skins": "node scripts/skins.js",
+  "skins:watch": "node scripts/skins.js --watch",
+  "merge": "node scripts/merge.js",
+  "merge:watch": "node scripts/merge.js --watch",
+  "snippets": "node scripts/snippets.js",
+  "snippets:watch": "node scripts/snippets.js --watch",
+  "mobile": "node scripts/mobile.js",
+  "mobile:watch": "node scripts/mobile.js --watch",
+  "version": "node scripts/version.js",
+  "svgo": "node scripts/svgo.js --write",
+  "watch": "sass --no-source-map --watch src/scss/index.scss theme.css --style=expanded",
+
+  "dev:skins": "concurrently --kill-others \"pnpm run watch\" \"pnpm run skins:watch\" \"pnpm run merge:watch\"",
+  "dev:mobile": "concurrently --kill-others \"pnpm run watch\" \"pnpm run merge:watch\" \"pnpm run mobile:watch\" ",
+  "dev:snippets": "concurrently --kill-others \"pnpm run watch\" \"pnpm run merge:watch\" \"pnpm run snippets:watch\" ",
+  "dev:skins+snippets": "concurrently --kill-others \"pnpm run watch\" \"pnpm run skins:watch\" \"pnpm run merge:watch\" \"pnpm run snippets:watch\" ",
+  "dev:full": "concurrently --kill-others \"pnpm run watch\" \"pnpm run skins:watch\" \"pnpm run merge:watch\" \"pnpm run snippets:watch\" \"pnpm run mobile:watch\" ",
+
+  "build": "pnpm run version && pnpm run compile && pnpm run compile:min && pnpm run skins && pnpm run merge && pnpm run snippets"
+},
   "stylelint": {
     "plugins": [
       "stylelint-scss"

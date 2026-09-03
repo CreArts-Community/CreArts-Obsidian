@@ -1,0 +1,37 @@
+{
+  "info": {
+    "name": "Cosmic",
+    "author": "Core & WmeLuna",
+    "version": "v1.0.0"
+  },
+  "settings": {
+    "lightness": "0%",
+    "saturation": "0%",
+    "alpha": "0%"
+  },
+  "accent": {
+    "h": "270",
+    "s": "100%",
+    "l": "70%"
+  },
+  "content": {
+    "h": "222",
+    "s": "60%",
+    "l": "83%",
+    "a": 1
+  },
+  "base": {
+    "h": "250",
+    "s": "24%",
+    "l": "16%",
+    "a": "1"
+  },
+  "grading": {
+    "background-primary": "0%",
+    "background-secondary": "3%",
+    "background-tertiary": "6%",
+    "interface-primary": "8%",
+    "interface-secondary": "16%",
+    "interface-tertiary": "24%"
+  }
+}

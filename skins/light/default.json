@@ -1,0 +1,37 @@
+{
+  "info": {
+    "name": "Default",
+    "author": "Core",
+    "version": "v1.0.0"
+  },
+  "settings": {
+    "lightness": "0%",
+    "saturation": "0%",
+    "alpha": "0%"
+  },
+  "accent": {
+    "h": "338",
+    "s": "92%",
+    "l": "42%"
+  },
+  "content": {
+    "h": "230",
+    "s": "20%",
+    "l": "20%",
+    "a": "1"
+  },
+  "base": {
+    "h": "220",
+    "s": "20%",
+    "l": "100%",
+    "a": "1"
+  },
+  "grading": {
+    "background-primary": "0%",
+    "background-secondary": "3%",
+    "background-tertiary": "9%",
+    "interface-primary": "-8%",
+    "interface-secondary": "-16%",
+    "interface-tertiary": "-24%"
+  }
+}

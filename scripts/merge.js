@@ -2,17 +2,32 @@
 // ║ CreArts Script                                                                                                     ║
 // ╠══════════════════════════╦═════════════════════════════════════════════════════════════════════════════════════════╣
 // ║ Name:                    ║ Merge                                                                                   ║
-// ║ Version:                 ║ 2.0.0                                                                                   ║
+// ║ Version:                 ║ 2.2.0                                                                                   ║
 // ║ Author:                  ║ AI                                                                                      ║
 // ║ License:                 ║ MIT                                                                                     ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 const fs = require("fs").promises;
+const fsSync = require("fs");
 const path = require("path");
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Merge                    ║ Flags                                                                                   ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// --watch  : keeps the process running and re-merges on any relevant file change
+// --dev    : uses the expanded dev CSS instead of the minified production CSS
+//            (implied automatically when --watch is used)
+const isWatch = process.argv.includes("--watch");
+const isDev = process.argv.includes("--dev") || isWatch;
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Merge                    ║ Paths                                                                                   ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Source CSS produced by sass, switches depending on --dev/--watch
+const devSource = "src/css/main.css";
+const prodSource = "src/css/main.min.css";
 
 // Define the file paths to be merged in sequential order
 const filePaths = [
@@ -23,19 +38,19 @@ const filePaths = [
   "merge/txt/settings-top.txt",
   "merge/yaml/settings-info.yaml",
   "merge/yaml/settings-dark.yaml",
-  "merge/yaml/dark.yaml",
+  "merge/yaml/skins-dark.yaml",
   "merge/yaml/settings-light.yaml",
-  "merge/yaml/light.yaml",
+  "merge/yaml/skins-light.yaml",
   "merge/yaml/settings-palette.yaml",
   "merge/yaml/settings-shape.yaml",
   "merge/yaml/settings-typography.yaml",
   "merge/yaml/settings-features.yaml",
   "merge/txt/settings-bottom.txt",
   "merge/css/header-skins.css",
-  "merge/css/dark.css",
-  "merge/css/light.css",
+  "merge/css/skins-dark.css",
+  "merge/css/skins-light.css",
   "merge/css/header-code.css",
-  "src/css/main.min.css",
+  isDev ? devSource : prodSource,
 ];
 
 // Define the output path for the final merged file
@@ -92,6 +107,15 @@ async function mergeAllFiles() {
     // Ensure the cache directory is available
     await ensureCacheFolderExists();
 
+    // In watch mode we always want an immediate, unconditional merge on every
+    // trigger, so we skip the cache short-circuit entirely in that case.
+    if (isWatch) {
+      await mergeFilesClean(filePaths, outputPath);
+      await fs.copyFile(outputPath, cacheFilePath);
+      console.log(`[MERGE] 💡 Files successfully merged! (${isDev ? "dev" : "prod"})`);
+      return;
+    }
+
     // Verify if the merged file is already cached
     const isCached = await fileExists(cacheFilePath);
 
@@ -129,8 +153,66 @@ async function mergeAllFiles() {
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Merge                    ║ Watch Mode                                                                              ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Debounce helper: fs.watch can fire multiple events for a single logical save
+// (some editors/OSes write in several steps), so we collapse bursts of events
+// into a single merge call instead of re-merging many times per keystroke.
+function debounce(fn, delay) {
+  let timer = null;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), delay);
+  };
+}
+
+function startWatchMode() {
+  console.log("[MERGE] 👀 Watch mode started, using", isDev ? devSource : prodSource);
+
+  const debouncedMerge = debounce(() => {
+    mergeAllFiles();
+  }, 100);
+
+  // Run once immediately so theme.css is up to date as soon as the watcher starts
+  mergeAllFiles();
+
+  // Watch the entire merge/ folder (css, txt, yaml headers/snippets for Style Settings)
+  const mergeDir = "merge";
+  if (fsSync.existsSync(mergeDir)) {
+    fsSync.watch(mergeDir, { recursive: true }, (eventType, filename) => {
+      if (filename) {
+        console.log(`[MERGE] 🔄 Change detected in merge/${filename}`);
+      }
+      debouncedMerge();
+    });
+  } else {
+    console.warn(`[MERGE] ⚠️  Folder "${mergeDir}" not found, skipping watch on it.`);
+  }
+
+  // Watch the dev CSS file produced by "sass --watch" so merges happen right
+  // after every SCSS recompile as well, not just on merge/ changes.
+  const cssTarget = isDev ? devSource : prodSource;
+  const cssDir = path.dirname(cssTarget);
+  const cssFile = path.basename(cssTarget);
+
+  if (fsSync.existsSync(cssDir)) {
+    fsSync.watch(cssDir, (eventType, filename) => {
+      if (filename === cssFile) {
+        debouncedMerge();
+      }
+    });
+  } else {
+    console.warn(`[MERGE] ⚠️  Folder "${cssDir}" not found, skipping watch on it.`);
+  }
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Merge                    ║ Execution                                                                               ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
-// Start the merging process
-mergeAllFiles();
+if (isWatch) {
+  startWatchMode();
+} else {
+  mergeAllFiles();
+}
