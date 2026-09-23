@@ -58,17 +58,23 @@
 }
 
 // Square
-.callout[data-callout="gallery"][data-callout-metadata="square"] .media-embed {
+.callout[data-callout="gallery"][data-callout-metadata="square"] .media-embed,
+.callout[data-callout="gallery"][data-callout-metadata="square|small"] .media-embed,
+.callout[data-callout="gallery"][data-callout-metadata="square|big"] .media-embed {
   aspect-ratio: 1 / 1;
 }
 
 // Portrait
-.callout[data-callout="gallery"][data-callout-metadata="portrait"] .media-embed {
+.callout[data-callout="gallery"][data-callout-metadata="portrait"] .media-embed,
+.callout[data-callout="gallery"][data-callout-metadata="portrait|small"] .media-embed,
+.callout[data-callout="gallery"][data-callout-metadata="portrait|big"] .media-embed {
   aspect-ratio: 3 / 4;
 }
 
 // Landscape
-.callout[data-callout="gallery"][data-callout-metadata="landscape"] .media-embed {
+.callout[data-callout="gallery"][data-callout-metadata="landscape"] .media-embed,
+.callout[data-callout="gallery"][data-callout-metadata="landscape|small"] .media-embed,
+.callout[data-callout="gallery"][data-callout-metadata="landscape|big"] .media-embed {
   aspect-ratio: 16 / 9;
 }
 
@@ -88,4 +94,22 @@
 .callout[data-callout="gallery"] .media-embed:hover img {
   transform: scale(1.1);
   background: var(--CREARTS-interface-primary);
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════╗
+// ║ Callouts (Gallery)       ║ Size                                                                        ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════╝
+
+// Small
+.callout[data-callout="gallery"][data-callout-metadata="square|small"] p,
+.callout[data-callout="gallery"][data-callout-metadata="portrait|small"] p,
+.callout[data-callout="gallery"][data-callout-metadata="landscape|small"] p {
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+}
+
+// Big
+.callout[data-callout="gallery"][data-callout-metadata="square|big"] p,
+.callout[data-callout="gallery"][data-callout-metadata="portrait|big"] p,
+.callout[data-callout="gallery"][data-callout-metadata="landscape|big"] p {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }

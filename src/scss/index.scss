@@ -13,6 +13,7 @@
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 @forward "base/cursor";
+@forward "base/layer";
 //@forward "base/mobile"; // NEED REWORK
 //@forward "base/print"; // NEED REWORK
 @forward "base/remove";
@@ -32,10 +33,15 @@
 // ║ Source                   ║ Components                                                                              ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
+@forward "components/codeblock";
 @forward "components/content";
-@forward "components/image";
+@forward "components/gutter";
 @forward "components/kbd";
+@forward "components/media";
+@forward "components/pdf";
+@forward "components/lightbox";
 @forward "components/scrollbars";
+@forward "components/search";
 @forward "components/tables";
 @forward "components/text";
 
@@ -223,11 +229,118 @@
 
 
 
-// Resize Handle
-.workspace-leaf-resize-handle {
-  border-color: transparent;
+
+
+
+
+/*
+.task-list-item.is-checked {
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+background: rgba(255, 0, 0, 0.212);
+left: 0;
+}
+*/
+
+
+
+
+/*
+@keyframes floatText {
+  0%, 8% { transform: translateX(0); }
+  90%, 100% { transform: translateX(-30%); }
 }
 
-.workspace-split:hover .workspace-leaf-resize-handle {
-  border-color: var(--CREARTS-interface-primary) !important;
+
+.tree-item:not(.nav-folder) .tree-item-self {
+
+  overflow: hidden !important; 
+  
+
+  -webkit-mask-image: linear-gradient(90deg, transparent 0px, black 24px, black calc(100% - 12px), transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0px, black 24px, black calc(100% - 12px), transparent 100%);
 }
+
+
+.tree-item:not(.nav-folder) .tree-item-self:hover .tree-item-inner {
+  display: inline-block;
+  white-space: nowrap;
+  
+
+  overflow: visible; 
+
+  width: max-content; 
+  
+  animation: floatText 16s infinite linear;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+@keyframes floatText {
+  0%, 10% { transform: translateX(0); }
+  90%, 100% { transform: translateX(-100%); }
+}
+
+.tree-item-self {
+  position: relative;
+  overflow: hidden !important;
+}
+
+
+.tree-item:not(.nav-folder) .tree-item-self:hover .tree-item-inner {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: visible;
+  width: max-content;
+  
+  position: relative;
+  z-index: 1;
+  animation: floatText 16s infinite linear;
+}
+
+
+.tree-item:not(.nav-folder) .tree-item-self:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 60px; 
+  
+
+  background: linear-gradient(90deg, 
+    var(--nav-item-background-hover, var(--background-modifier-hover)) 24px, 
+    transparent 100%
+  );
+  
+  z-index: 5;
+  pointer-events: none;
+}
+
+
+.tree-item-self::before,
+.tree-item-self > svg,
+.tree-item-icon {
+  position: relative;
+  z-index: 10;
+}
+*/

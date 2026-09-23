@@ -25,6 +25,7 @@
 --CREARTS-font-monospace: "Fira Code", "Chiron GoRound TC", "Noto Color Emoji";
 --CREARTS-font-mermaid: "Quicksand", "M PLUS Rounded 1c", "Chiron GoRound TC", "Noto Color Emoji";
 
+
 // Font Size
 --CREARTS-font-size-primary: 16px;
 --CREARTS-font-size-secondary: 0.933em;
@@ -289,8 +290,8 @@
 // ║ Checklist                ║
 // ╚══════════════════════════╝
 
-//--checklist-done-decoration: line-through;
-//--checklist-done-color: var(--text-muted);
+--checklist-done-decoration: none; //line-through;
+//--checklist-done-color: var(--interactive-accent); //var(--text-muted);
 
 // ╔══════════════════════════╗
 // ║ Code                     ║

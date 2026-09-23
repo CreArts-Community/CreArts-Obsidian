@@ -2,16 +2,17 @@
 // ║ Base (Cursor)            ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
+/*
 button,
-.titlebar-button,
-.clickable-icon,
+
+
 .workspace-drawer-vault-switcher,
 .workspace-tab-header:not(.is-active) .workspace-tab-header-inner,
 .tree-item-self.is-clickable,
 .vertical-tab-nav-item,
 .checkbox-container,
 .community-item,
-.dropdown,
+
 .status-bar-item,
 .status-bar-item.plugin-editor-status
 .status-bar-item.plugin-properties,
@@ -24,4 +25,124 @@ button,
 
 .status-bar-item.plugin-obsidian-reading-time {
   cursor: default;
+}
+*/
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Base (Cursor)            ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Titlebar Button
+.titlebar-button {
+  cursor: pointer;
+}
+
+// Clickable
+.is-clickable:not(.is-active) {
+  cursor: pointer;
+}
+
+// Tappable
+.tappable:not(.is-active) {
+  cursor: pointer;
+}
+
+// clickable Icon
+.clickable-icon {
+  cursor: pointer;
+}
+
+
+// Breadcrumb
+.view-header-breadcrumb {
+  cursor: pointer;
+}
+
+// Checkbox Container
+.checkbox-container,
+.checkbox-container.is-enabled {
+  cursor: pointer;
+}
+
+.checkbox-container input {
+  pointer-events: none;
+}
+
+// Checkbox
+.task-list-item input {
+  cursor: pointer;
+}
+
+// Dropdown
+.dropdown {
+  cursor: pointer;
+}
+
+// Button
+button {
+  cursor: pointer;
+}
+
+// Toolbar
+.status-bar-item.mod-clickable,
+.status-bar-item.plugin-editing-toolbar {
+  cursor: pointer;
+}
+
+// Vault Switcher
+.workspace-drawer-vault-switcher {
+  cursor: pointer;
+}
+
+/*
+input[type="color"] {
+  cursor: pointer !important;
+}
+*/
+
+
+
+// Collapse Indicator
+.collapse-indicator.collapse-icon {
+  cursor: pointer;
+}
+
+
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Base (Cursor)            ║ Core Plugins                                                                            ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Properties view
+.metadata-add-button {
+  cursor: pointer;
+}
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Base (Cursor)            ║ Commmunity Plugins                                                                      ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Editing Toolbar
+#cMenuToolbarModalBar .menu-item {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+.image-embed {
+  cursor: pointer;
+}
+
+
+
+
+
+
+// Lightbox
+.lightbox img {
+  cursor: zoom-in;
 }

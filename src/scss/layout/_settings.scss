@@ -316,7 +316,7 @@
 
 
 
-.setting-item-control input{
+.setting-item-control input:not([type="color"]){
   background: var(--CREARTS-background-secondary);
   box-shadow: var(--CREARTS-effects-pressed);
   border-radius: var(--CREARTS-radius-secondary);

@@ -4,6 +4,10 @@
 
 .theme-dark {
 
+// Accent
+--CREARTS-accent-primary: hsl(var(--CREARTS-accent-h),var(--CREARTS-accent-s),var(--CREARTS-accent-l));
+--CREARTS-accent-secondary: hsl(var(--CREARTS-accent-h),var(--CREARTS-accent-s),var(--CREARTS-accent-l));
+
 // Text
 --CREARTS-text-primary: hsla(var(--CREARTS-content-h), var(--CREARTS-content-s), var(--CREARTS-content-l), calc(var(--CREARTS-content-a) - 0));
 --CREARTS-text-secondary: hsla(var(--CREARTS-content-h), var(--CREARTS-content-s), var(--CREARTS-content-l), calc(var(--CREARTS-content-a) - 0.2));
@@ -37,4 +41,5 @@
 --CREARTS-colors-blue: 97, 136, 255;
 --CREARTS-colors-purple: 176, 97, 255;
 --CREARTS-colors-pink: 255, 120, 200;
+
 }

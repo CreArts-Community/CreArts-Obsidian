@@ -4,6 +4,11 @@
 
 .theme-light {
 
+// Accent
+--CREARTS-accent-primary: hsl(var(--CREARTS-accent-h),var(--CREARTS-accent-s),var(--CREARTS-accent-l));
+--CREARTS-accent-secondary: hsl(var(--CREARTS-accent-h),var(--CREARTS-accent-s),var(--CREARTS-accent-l));
+
+
 // Text
 --CREARTS-text-primary: hsla(var(--CREARTS-content-h), var(--CREARTS-content-s), var(--CREARTS-content-l), calc(var(--CREARTS-content-a) - 0));
 --CREARTS-text-secondary: hsla(var(--CREARTS-content-h), var(--CREARTS-content-s), var(--CREARTS-content-l), calc(var(--CREARTS-content-a) - 0.2));
@@ -27,4 +32,15 @@
 // Effects
 --CREARTS-effects-flat: 2px 2px 20px hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) - 3% + var(--CREARTS-lightness) - 6%), var(--CREARTS-base-a)), -2px -2px 12px var(--CREARTS-background-secondary);
 --CREARTS-effects-pressed: inset 6px 6px 20px hsla(var(--CREARTS-base-h), var(--CREARTS-base-s), calc(var(--CREARTS-base-l) - 3% + var(--CREARTS-lightness) - 6%), var(--CREARTS-base-a)), inset -6px -6px 20px var(--CREARTS-background-secondary);
+--CREARTS-effects-colors: inset 6px 6px 20px rgba(0, 0, 0, 0.40), inset -6px -6px 20px rgba(0, 0, 0, 0.40);
+
+// Colors
+--CREARTS-colors-red: 206, 9, 81;
+--CREARTS-colors-green: 9, 206, 133;
+--CREARTS-colors-yellow: 255, 215, 97;
+--CREARTS-colors-orange: 230, 114, 91;
+--CREARTS-colors-blue: 97, 136, 255;
+--CREARTS-colors-purple: 176, 97, 255;
+--CREARTS-colors-pink: 255, 120, 200;
+
 }

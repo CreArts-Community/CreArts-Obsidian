@@ -1,5 +1,5 @@
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components (Content)     ║ General                                                                                 ║
+// ║ Content (Components)     ║ General                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
@@ -9,7 +9,7 @@
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components (Content)     ║ View Header                                                                             ║
+// ║ Content (Components)     ║ View Header                                                                             ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
@@ -73,7 +73,7 @@
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components (Content)     ║ Content                                                                                 ║
+// ║ Content (Components)     ║ Content                                                                                 ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Background
@@ -96,26 +96,6 @@
   display: none;
 }
 
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components               ║ Content -> Gutters                                                                      ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// Spacing
-.cm-gutters .cm-gutterElement {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  font-weight: 600;
-}
-
-// Active
-.cm-gutters .cm-active {
-  font-weight: 800;
-}
-
-
-
 
 
 
@@ -139,7 +119,7 @@
 
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components (Popout)      ║ left                                                                                    ║
+// ║ Content (Components)     ║ left                                                                                    ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
@@ -163,7 +143,7 @@
 }
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components (Popout)      ║ Mid                                                                                     ║
+// ║ Content (Components)     ║ Mid                                                                                     ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
@@ -188,7 +168,7 @@
 
 
 // ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components (Popout)      ║ Right                                                                                   ║
+// ║ Content (Components)     ║ Right                                                                                   ║
 // ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
 
 // Spacing
@@ -207,58 +187,4 @@
 .is-popout-window .mod-top-right-space .view-content  {
   margin-right: var(--CREARTS-layout-margin-half);
   margin-left: var(--CREARTS-layout-margin-half);
-}
-
-// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
-// ║ Components (Popout)      ║ Search                                                                                  ║
-// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
-
-// Spacing
-.mod-active .document-search-container {
-  background-color: transparent;
-  margin: var(--CREARTS-spacing-primary);
-}
-
-.document-search, .document-replace {
-  gap: var(--size-4-2);
-  padding: 0px;
-}
-
-
-.document-search-buttons {
-  gap: var(--size-4-2);
-}
-
-// Buttons
-.document-search-buttons .clickable-icon {
-  height: 100% !important;
-  margin: 0px !important;
-  background: var(--CREARTS-background-primary);
-  border-radius: var(--CREARTS-radius-secondary);
-  box-shadow: var(--CREARTS-effects-flat);
-  border-width: var(--CREARTS-border-width);
-  border-style: var(--CREARTS-border-style);
-  border-color: var(--CREARTS-border-primary);
-}
-
-.document-search-buttons .clickable-icon:hover {
-  background: var(--CREARTS-background-secondary);
-  box-shadow: var(--CREARTS-effects-pressed);
-  color: var(--CREARTS-text-primary);
-}
-
-// Close Button
-.document-search-close-button {
-  background: var(--CREARTS-background-primary);
-  border-radius: var(--CREARTS-radius-secondary);
-  box-shadow: var(--CREARTS-effects-flat);
-  border-width: var(--CREARTS-border-width);
-  border-style: var(--CREARTS-border-style);
-  border-color: var(--CREARTS-border-primary);
-}
-
-.document-search-close-button:hover {
-  background: var(--CREARTS-background-secondary);
-  box-shadow: var(--CREARTS-effects-pressed);
-  color: var(--CREARTS-text-primary);
 }

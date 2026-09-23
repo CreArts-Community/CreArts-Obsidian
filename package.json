@@ -21,26 +21,26 @@
   "lint": "stylelint \"**/src/scss/**/*.scss\"",
   "compile": "sass --no-source-map src/scss/index.scss src/css/main.css --style=expanded",
   "compile:min": "sass --no-source-map src/scss/index.scss src/css/main.min.css --style=compressed",
-  "compile:watch": "sass --no-source-map --watch src/scss/index.scss src/css/main.css --style=expanded",
+
+  "dist-snippets": "node scripts/distribute-snippets.js",
+  "dist-snippets:watch": "node scripts/distribute-snippets.js --watch",
+  "dist-theme": "node scripts/distribute-theme.js",
+  "dist-theme:watch": "node scripts/distribute-theme.js --watch",
+
   "skins": "node scripts/skins.js",
   "skins:watch": "node scripts/skins.js --watch",
   "merge": "node scripts/merge.js",
   "merge:watch": "node scripts/merge.js --watch",
-  "snippets": "node scripts/snippets.js",
-  "snippets:watch": "node scripts/snippets.js --watch",
-  "mobile": "node scripts/mobile.js",
-  "mobile:watch": "node scripts/mobile.js --watch",
   "version": "node scripts/version.js",
   "svgo": "node scripts/svgo.js --write",
+
   "watch": "sass --no-source-map --watch src/scss/index.scss theme.css --style=expanded",
+  "build": "pnpm run version && pnpm run compile && pnpm run compile:min && pnpm run skins && pnpm run merge",
+  "deploy": "pnpm run build && pnpm run dist-theme && pnpm run dist-snippets",
 
-  "dev:skins": "concurrently --kill-others \"pnpm run watch\" \"pnpm run skins:watch\" \"pnpm run merge:watch\"",
-  "dev:mobile": "concurrently --kill-others \"pnpm run watch\" \"pnpm run merge:watch\" \"pnpm run mobile:watch\" ",
-  "dev:snippets": "concurrently --kill-others \"pnpm run watch\" \"pnpm run merge:watch\" \"pnpm run snippets:watch\" ",
-  "dev:skins+snippets": "concurrently --kill-others \"pnpm run watch\" \"pnpm run skins:watch\" \"pnpm run merge:watch\" \"pnpm run snippets:watch\" ",
-  "dev:full": "concurrently --kill-others \"pnpm run watch\" \"pnpm run skins:watch\" \"pnpm run merge:watch\" \"pnpm run snippets:watch\" \"pnpm run mobile:watch\" ",
-
-  "build": "pnpm run version && pnpm run compile && pnpm run compile:min && pnpm run skins && pnpm run merge && pnpm run snippets"
+  "dev:css": "concurrently --kill-others \"pnpm run watch\" \"pnpm run dist-theme:watch\"",
+  "dev:snippets": "concurrently --kill-others \"pnpm run watch\" \"pnpm run dist-theme:watch\" \"pnpm run dist-snippets:watch\"",
+  "dev:settings": "concurrently --kill-others \"pnpm run watch\" \"pnpm run skins:watch\" \"pnpm run merge:watch\" \"pnpm run dist-theme:watch\""
 },
   "stylelint": {
     "plugins": [

@@ -1,0 +1,24 @@
+//--layer-cover: 5;
+//--layer-sidedock: 10;
+//--layer-status-bar: 15;
+//--layer-popover: 30;
+//--layer-slides: 45;
+//--layer-modal: 50;
+//--layer-notice: 60;
+//--layer-menu: 65;
+//--layer-tooltip: 70;
+//--layer-dragged-item: 80;
+
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Layer (Base)             ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+// Titlebar
+.titlebar {
+    z-index: 40 !important;
+}
+
+// Lightbox
+.lightbox {
+  z-index: 20 !important;
+}

@@ -1,0 +1,64 @@
+// ╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+// ║ Lightbox (Components)    ║ General                                                                                 ║
+// ╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+
+/*
+
+
+.media-wrapper img {
+  margin: 20px !important;
+  padding: 8vh;
+}
+
+
+.lightbox .media-wrapper {
+margin: 0px !important;
+padding: 0px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.lightbox-titlebar-text {
+  position: fixed;
+  bottom: 4vh;
+}
+*/
+
+
+
+// Spacing
+body:not(.is-fullscreen) .lightbox {
+  margin-top: calc(var(--CREARTS-height-titlebar) / var(--zoom-factor));
+}
+
+.titlebar:has(.lightbox) {
+  background: red !important;
+}
+
+/*
+.lightbox.is-zoomed {
+  display: none;
+}
+*/
+
+// Image
+
+.lightbox img {
+box-shadow: none;
+transform: translate(0px, 0px) scale(0.9);
+}
+
+// Titlebar
+
+
+

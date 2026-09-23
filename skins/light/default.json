@@ -1,6 +1,6 @@
 {
   "info": {
-    "name": "Default",
+    "name": "Light (Light)",
     "author": "Core",
     "version": "v1.0.0"
   },
@@ -21,15 +21,15 @@
     "a": "1"
   },
   "base": {
-    "h": "220",
-    "s": "20%",
+    "h": "0",
+    "s": "0%",
     "l": "100%",
     "a": "1"
   },
   "grading": {
-    "background-primary": "0%",
-    "background-secondary": "3%",
-    "background-tertiary": "9%",
+    "background-primary": "9%",
+    "background-secondary": "0%",
+    "background-tertiary": "18%",
     "interface-primary": "-8%",
     "interface-secondary": "-16%",
     "interface-tertiary": "-24%"
